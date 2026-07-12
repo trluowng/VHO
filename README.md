@@ -32,6 +32,58 @@ Trong đó:
 
 ---
 
+## 1.1. Luồng sản phẩm hiện tại — 4 tính năng cốt lõi
+
+Đây là phạm vi thực tế đang triển khai, thu hẹp từ tầm nhìn đầy đủ ở trên xuống 4 luồng cụ thể.
+Tài liệu từ mục 2 trở đi vẫn là kiến trúc/thiết kế tham chiếu dài hạn cho toàn hệ thống — mục
+này chỉ tóm tắt **đang làm gì, tới đâu**.
+
+```mermaid
+flowchart TD
+    U[Người dùng] --> F1[1 . AI Tư vấn triệu chứng]
+    F1 -->|Bình thường| O1[Output: tư vấn / hướng dẫn tự chăm sóc]
+    F1 -->|Khẩn cấp| O2[Output: cảnh báo đỏ + gọi 115]
+
+    W[Đồng hồ đeo tay] --> F2[2 . Giám sát sinh hiệu real-time]
+    F2 --> O3[Lịch note nhịp tim/chỉ số theo từng thời điểm trong ngày]
+    F2 -->|Phát hiện bất thường| F1
+
+    O2 --> F3[3 . Quiz sơ cứu khẩn cấp]
+    F3 --> O4[Hướng dẫn xử trí tại chỗ trong lúc chờ 115]
+
+    O3 --> F4[4 . Lịch theo dõi sức khỏe]
+```
+
+### 1. AI Tư vấn triệu chứng + Cảnh báo khẩn cấp — ✅ Đã có
+- **Output:** tư vấn/hướng dẫn tự chăm sóc cho tình huống bình thường; cảnh báo đỏ + hướng
+  dẫn gọi 115 cho tình huống khẩn cấp.
+- Chat hỏi triệu chứng nhiều vòng, mỗi câu trả lời luôn kèm gợi ý cụ thể (không để bệnh nhân
+  chờ mà không có hướng dẫn gì — xem mục 13.3/2.2).
+- Sàng lọc red-flag bằng từ khóa **ngay tại client** trước khi gọi LLM, để tình huống khẩn
+  cấp không phải chờ round-trip API (xem mục 15.2).
+- Code: [`An/`](An/) — backend Gemini thật (`An/backend`), frontend chat (`An/frontend`).
+
+### 2. Giám sát sinh hiệu real-time — 🔲 Chưa làm
+- Theo dõi nhịp tim và chỉ số cơ thể (SpO2, nhiệt độ...) **mỗi ngày** từ đồng hồ đeo tay.
+- Phân tích bất thường real-time, liên thông sang luồng #1 khi phát hiện dấu hiệu nguy cơ
+  (xem Pipeline ECG/SpO2/nhiệt độ ở mục 6-8, Risk Fusion ở mục 17).
+- Lưu thành **lịch note theo từng thời điểm trong ngày** — nhật ký sinh hiệu dạng timeline,
+  không chỉ hiển thị số đo tức thời.
+- Ghi chú: từng có bản demo mặt đồng hồ (backend + simulator + frontend) — đã gỡ khỏi repo
+  này để tập trung hoàn thiện luồng #1 trước; dựng lại khi tới lượt ưu tiên.
+
+### 3. Quiz sơ cứu khẩn cấp — 🔲 Chưa làm
+- Bộ câu hỏi/mini khóa học dạy sơ cứu cho một vài tình huống khẩn cấp cụ thể (vd: ngất xỉu,
+  chảy máu, bỏng, hóc dị vật, nghi nhồi máu cơ tim...).
+- Mục tiêu: trang bị kỹ năng xử trí tại chỗ **trong lúc chờ 115 tới** — bổ trợ trực tiếp cho
+  luồng #1 ngay sau khi ra cảnh báo đỏ.
+
+### 4. Lịch theo dõi sức khỏe — 🔲 Chưa làm
+- Lịch nhắc đo lường định kỳ (nhịp tim, huyết áp, cân nặng...) và ghi nhận theo thời gian.
+- Hiển thị theo timeline trong ngày, dùng chung dữ liệu với "lịch note" của luồng #2.
+
+---
+
 # 2. Các khối chức năng chính
 
 ## 2.1. Wearable Health Monitoring
@@ -107,14 +159,14 @@ Thu thập dữ liệu:
 ## 2.1.1. AI Chat prototype — "An"
 
 Song song với thiết kế pipeline ở mục 2.2/13, có một **prototype thật** của AI Health Chat
-đặt trong [`triage-chat-ui/`](triage-chat-ui/) — "An", trợ lý phân loại triệu chứng: hỏi
-tối đa 3 câu, xác nhận lại điều đã hiểu, rồi đưa ra mức khẩn cấp + bước tiếp theo kèm độ
-chắc chắn (React + Vite, backend Gemini thật qua tool-calling). Chi tiết — xem
-[`triage-chat-ui/README.md`](triage-chat-ui/README.md).
+đặt trong [`An/`](An/) — trợ lý phân loại triệu chứng: hỏi tối đa 3 câu, xác nhận lại điều
+đã hiểu, rồi đưa ra mức khẩn cấp + bước tiếp theo kèm độ chắc chắn (React + Vite, backend
+Gemini thật qua tool-calling, sàng lọc red-flag tại client trước khi gọi LLM). Chi tiết —
+xem [`An/README.md`](An/README.md) và mục 1.1 (luồng sản phẩm hiện tại) ở đầu tài liệu.
 
 > Trước đó có thử ghép thêm một UI mô phỏng đồng hồ đeo tay (wearable simulator +
 > watch-face) nối vào An qua một tool đọc sinh hiệu. Đã bỏ để tập trung hoàn thiện An
-> trước — có thể làm lại sau nếu cần (xem lịch sử trò chuyện/commit).
+> trước — có thể làm lại khi tới lượt ưu tiên #2 ở mục 1.1.
 
 ---
 
