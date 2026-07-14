@@ -54,8 +54,8 @@ Mọi kết quả luôn kèm disclaimer **"Đây không phải chẩn đoán y k
 
 ## Thiết kế & kiến trúc
 
-- **Aesthetic "Serene Slate"** — nền giấy xanh xám dịu, mực xanh than sâu, thương hiệu
-  xanh dương trầm ấm, tín hiệu triage xanh/hổ phách/đất nung. Font **Fraunces** (display
+- **Aesthetic "Serene Blush"** — nền giấy hồng phấn dịu, mực nâu mận sâu, thương hiệu
+  hồng y tế, tín hiệu triage xanh/hổ phách/đất nung. Font **Fraunces** (display
   serif) + **Be Vietnam Pro** (UI, hỗ trợ tiếng Việt đầy đủ) + **Spline Sans Mono** (nhãn).
   Tránh "AI slop".
 - **Rail hồ sơ phiên** (trái): vòng tròn độ chắc chắn động, chip triệu chứng AI ghi nhận,
