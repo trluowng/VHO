@@ -2,6 +2,7 @@ node_modules
 dist
 dist-ssr
 backend/logs/
+backend/data/
 .env
 .env.local
 *.local

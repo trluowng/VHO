@@ -452,19 +452,22 @@ export function setSymptoms(prev, symptoms) {
 /* ============================================================
    Gắn AI THẬT (Google Gemini) — tùy chọn
    ------------------------------------------------------------
-   Frontend KHÔNG giữ API key. Backend Gemini nằm ở codebase/backend/
+   Frontend KHÔNG giữ API key. Backend Gemini nằm ở An/backend/
    (server.py) — gọi Gemini với system prompt triage và trả về cùng
-   schema { events, profile } mà UI dùng.
+   schema { events, profile } mà UI dùng. Nếu có token đăng nhập, backend
+   tự nạp hồ sơ sức khỏe (tuổi/giới tính/bệnh nền/chu kỳ) vào ngữ cảnh.
 
-   Bật: trỏ VITE_TRIAGE_API_URL → http://localhost:8787/triage
-   (xem .env.example và backend/README chi tiết). Lỗi → App tự fallback.
+   Bật: trỏ VITE_API_BASE_URL → http://localhost:8787
+   (xem .env.example và An/README.md chi tiết). Lỗi → App tự fallback.
    ============================================================ */
-export async function callRealModel(history, userText) {
-  const url = import.meta.env.VITE_TRIAGE_API_URL
-  if (!url) throw new Error('VITE_TRIAGE_API_URL chưa cấu hình — đang dùng rule-based engine.')
-  const res = await fetch(url, {
+export async function callRealModel(history, userText, token) {
+  const base = import.meta.env.VITE_API_BASE_URL
+  if (!base) throw new Error('VITE_API_BASE_URL chưa cấu hình — đang dùng rule-based engine.')
+  const headers = { 'Content-Type': 'application/json' }
+  if (token) headers.Authorization = `Bearer ${token}`
+  const res = await fetch(`${base.replace(/\/$/, '')}/triage`, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    headers,
     body: JSON.stringify({ history, message: userText }),
   })
   if (!res.ok) throw new Error('Triage API error ' + res.status)

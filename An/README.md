@@ -1,40 +1,41 @@
-# An · Conversational Symptom Triage Assistant
+# An · Trợ lý y tế cá nhân
 
 > Trợ lý phân loại triệu chứng — mô tả bằng ngôn ngữ tự nhiên, An xác nhận lại điều đã
-> hiểu, hỏi thêm tối đa 3 câu khi cần, rồi đưa ra **mức độ khẩn cấp + bước tiếp theo**
-> kèm độ chắc chắn và lý do. Lấy cảm hứng & cải tiến từ Ada Health (track Healthcare).
+> hiểu, hỏi thêm khi cần, rồi đưa ra **mức độ khẩn cấp + bước tiếp theo** kèm độ chắc
+> chắn và lý do. Có tài khoản + hồ sơ sức khỏe (tuổi, giới tính, bệnh nền, dị ứng) để An
+> nhớ mà không hỏi lại mỗi lần, cộng thêm lịch theo dõi sức khỏe (tài khoản nữ có thêm
+> tab theo dõi chu kỳ kinh nguyệt). Lấy cảm hứng & cải tiến từ Ada Health (track Healthcare).
 
-Prototype frontend cho Day 06 — built với React + Vite + Framer Motion.
+Prototype cho Day 06 — built với React + Vite + Framer Motion (frontend), FastAPI + SQLite (backend).
 
 ---
 
 ## Chạy thử
 
-```bash
-cd An/frontend
-npm install
-npm run dev          # chỉ frontend, mở http://localhost:5173
-```
-
-Build production: `npm run build` → `npm run preview`.
-
-> Cần Node ≥ 18. Mặc định **không cần API key** — engine triage chạy bằng rule-based
-> mô phỏng AI, đủ để demo cả 4 đường đi (xem dưới).
-
-### Chạy cả backend + frontend bằng 1 lệnh
-
-`npm run dev` chỉ khởi động frontend (Vite) — backend Gemini là script Python riêng, npm
-không tự biết để chạy cùng. Dùng `dev:all` để khởi động cả 2 song song, log gộp có prefix
-`[backend]`/`[frontend]` phân biệt:
+> ⚠️ Từ khi có tài khoản, **backend bắt buộc phải chạy** — đăng ký/đăng nhập gọi thẳng
+> backend (SQLite), không có đường rơi về rule-based cho phần auth. AI trả lời (Gemini)
+> vẫn tự fallback rule-based engine nếu thiếu `GEMINI_API_KEY`, nhưng riêng đăng nhập thì
+> không. Luôn dùng `npm run dev:all` (chạy cả 2), đừng chỉ `npm run dev`.
 
 ```bash
-cd An/frontend
+# 1) Backend — cài deps + điền key
+cd An/backend
+pip install -r requirements.txt
+cp .env.example .env                # điền GEMINI_API_KEY (xem phần Gemini bên dưới)
+
+# 2) Frontend — cài deps
+cd ../frontend
 npm install
-npm run dev:all      # chạy `python -X utf8 server.py` + `vite` cùng lúc
+
+# 3) Chạy cả 2 cùng lúc
+npm run dev:all      # chạy `python -X utf8 server.py` (:8787) + `vite` (:5173) cùng lúc
 ```
 
-Cần cấu hình `An/backend/.env` trước (xem phần Gemini bên dưới), nếu không backend sẽ báo
-thiếu `GEMINI_API_KEY` nhưng frontend vẫn chạy bình thường bằng rule-based fallback.
+Mở `http://localhost:5173` → màn hình landing → **Tạo tài khoản miễn phí** (chọn tuổi +
+giới tính) → vào thẳng khu chat, hồ sơ được lưu để không phải khai lại lần sau.
+
+Build production: `npm run build` → `npm run preview` (chỉ build frontend; backend chạy
+bằng `python server.py` như bình thường).
 
 ---
 
@@ -62,19 +63,46 @@ Mọi kết quả luôn kèm disclaimer **"Đây không phải chẩn đoán y k
   khẩn cấp.
 
 ```
-frontend/
-└── src/
-    ├── App.jsx                  # state machine hội thoại, phát sự kiện engine
-    ├── lib/triageEngine.js      # "AI" lõi: red-flag, trích xuất triệu chứng, confidence, 4 paths
-    ├── components/
-    │   ├── ProfileRail.jsx      # vòng confidence + chip triệu chứng + thông tin thiếu
-    │   ├── TriageResult.jsx     # thẻ kết quả (3 mức triage)
-    │   ├── Emergency.jsx        # màn hình red-flag / Gọi 115
-    │   ├── Message / Typing / QuickReplies / Composer / WelcomeHero / icons
-    └── index.css                # design system (CSS variables, atmosphere, animations)
+frontend/src/
+├── App.jsx                      # router: Landing / Login / Signup / (App: Chat, Lịch)
+├── context/AuthContext.jsx      # token + user + profile, persist localStorage
+├── lib/
+│   ├── api.js                   # client gọi backend (auth, profile, calendar, cycle)
+│   └── triageEngine.js          # "AI" lõi rule-based + callRealModel() gọi Gemini
+├── pages/
+│   ├── LandingPage.jsx          # trang giới thiệu (public)
+│   ├── LoginPage.jsx / SignupPage.jsx   # đăng nhập / đăng ký (chọn tuổi + giới tính)
+│   ├── ChatPage.jsx             # khu chat (== App.jsx cũ, giờ là 1 page trong router)
+│   └── CalendarPage.jsx         # lịch sức khỏe + sub-tab chu kỳ kinh nguyệt (nếu nữ)
+├── components/
+│   ├── RequireAuth.jsx          # bảo vệ /app/*, redirect /dang-nhap nếu chưa đăng nhập
+│   ├── TabNav.jsx                # tab Trò chuyện/Lịch + đăng xuất, dùng chung 2 page
+│   ├── HealthCalendar.jsx        # lưới lịch tháng + form thêm mục
+│   ├── CycleTracker.jsx          # tóm tắt dự đoán + lịch sử chu kỳ kinh nguyệt
+│   ├── ProfileRail.jsx / TriageResult.jsx / Emergency.jsx / ... (như cũ)
+└── index.css                     # design system (CSS variables, atmosphere, animations)
+
 backend/
-└── server.py                    # HTTP server nối frontend với Gemini (xem dưới)
+├── server.py                    # FastAPI: /triage, /auth/*, /profile, /calendar, /cycle
+├── db.py                        # SQLite (accounts, hồ sơ, lịch, chu kỳ) — file tại backend/data/app.db
+├── auth.py                      # hash mật khẩu (PBKDF2) + JWT session token
+└── artifacts/system_prompt.md   # hướng dẫn Gemini dùng hồ sơ bệnh nhân khi có
 ```
+
+---
+
+## Tài khoản & hồ sơ sức khỏe
+
+- Đăng ký cần **tuổi** + **giới tính** (nam/nữ/khác); bệnh nền, dị ứng, thuốc đang dùng có
+  thể bổ sung sau qua `PUT /profile`.
+- Mỗi lượt chat gửi kèm `Authorization: Bearer <token>` — backend tự nạp hồ sơ vào context
+  cho Gemini (xem `_profile_context_message()` trong `server.py`), nên An **không hỏi lại**
+  tuổi/giới tính/bệnh nền/dị ứng đã biết.
+- **Tài khoản nữ tự động có thêm sub-tab "Chu kỳ kinh nguyệt"** trong mục Lịch — không hỏi
+  bật/tắt, chỉ dựa vào `gender === 'nu'`. Ghi ngày bắt đầu kỳ kinh → hệ thống tự tính chu kỳ
+  trung bình, đang ở ngày mấy, dự đoán kỳ tiếp theo — và số này cũng được đưa vào context
+  chat nếu triệu chứng có thể liên quan (đau bụng dưới, ra máu bất thường...).
+- Mật khẩu hash bằng PBKDF2-SHA256 (200k vòng), không lưu plaintext. Token là JWT 30 ngày.
 
 ---
 
@@ -82,41 +110,38 @@ backend/
 
 | Hạng mục | Dùng gì |
 |---|---|
-| Framework | React 18 + Vite 5 |
-| Animation | Framer Motion |
+| Frontend | React 18 + Vite 5 + React Router 7 + Framer Motion |
+| Backend | FastAPI + Uvicorn + SQLite (stdlib `sqlite3`, không ORM) |
+| Auth | PBKDF2 password hash + JWT (PyJWT) |
 | Fonts | Fraunces · Be Vietnam Pro · Spline Sans Mono (Google Fonts) |
 | AI (mặc định) | Rule-based triage engine mô phỏng — `src/lib/triageEngine.js` |
-| AI thật | **Google Gemini** qua backend `backend/server.py` (xem dưới) |
+| AI thật | **Google Gemini** qua backend `backend/server.py` |
+
+### API chính
+
+| Route | Việc |
+|---|---|
+| `POST /auth/register`, `POST /auth/login` | Tài khoản → trả `{ token, user, profile }` |
+| `GET/PUT /profile` | Đọc/sửa hồ sơ sức khỏe (auth) |
+| `GET/POST/DELETE /calendar` | Lịch sức khỏe theo ngày (auth) |
+| `GET/POST/DELETE /cycle` | Chu kỳ kinh nguyệt + dự đoán (auth) |
+| `POST /triage` | Chat — `Authorization` tùy chọn, có thì nạp hồ sơ vào context |
 
 ### Chạy AI THẬT bằng Gemini (cho điểm "AI chạy thật trong ≥1 flow")
 
-Backend Gemini đã có sẵn trong [`backend/`](backend/) — server HTTP `server.py` (chỉ dùng
-stdlib cho tầng web) gọi Google Gemini qua `GeminiProvider`, trả về đúng schema
-`{ events, profile }` mà frontend render.
-
 ```bash
-# 1) Backend — cài deps + điền key
 cd An/backend
-pip install -r requirements.txt          # cần google-genai
-cp .env.example .env                      # rồi điền GEMINI_API_KEY
-#   lấy key tại https://aistudio.google.com/apikey
-
-# 2) Frontend — trỏ tới backend
-cd ../frontend
-echo 'VITE_TRIAGE_API_URL=http://localhost:8787/triage' > .env
-npm install
-
-# 3) Chạy cả 2 cùng lúc (xem "Chạy cả backend + frontend bằng 1 lệnh" ở trên)
-npm run dev:all
+cp .env.example .env    # điền GEMINI_API_KEY — lấy tại https://aistudio.google.com/apikey
 ```
 
-- Khi đã trỏ `VITE_TRIAGE_API_URL`, toàn bộ hội thoại đi qua **Gemini thật**; chỉnh sửa
-  triệu chứng cũng gửi correction về backend đánh giá lại.
-- Backend tắt / thiếu key / trả JSON hỏng → frontend **tự fallback rule-based engine**,
-  demo không bao giờ chết.
+- Khi có `GEMINI_API_KEY`, toàn bộ hội thoại đi qua **Gemini thật**; chỉnh sửa triệu chứng
+  cũng gửi correction về backend đánh giá lại.
+- Backend tắt / thiếu key / trả JSON hỏng → frontend **tự fallback rule-based engine** cho
+  riêng phần AI trả lời (đăng nhập/tài khoản thì không có fallback — xem cảnh báo ở trên).
 - Đổi model qua `TRIAGE_MODEL` trong `backend/.env` (mặc định dùng `gemini-2.5-flash`
   nếu bạn theo `.env.example`, hoặc model mặc định của provider nếu để trống).
-- **Không commit `.env`** (đã gitignore) — chỉ commit `.env.example`.
+- **Không commit `.env`** (đã gitignore) — chỉ commit `.env.example`. File DB
+  `backend/data/app.db` cũng gitignore — mỗi máy có DB local riêng.
 
 ---
 

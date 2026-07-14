@@ -57,11 +57,14 @@ flowchart TD
 ### 1. AI Tư vấn triệu chứng + Cảnh báo khẩn cấp — ✅ Đã có
 - **Output:** tư vấn/hướng dẫn tự chăm sóc cho tình huống bình thường; cảnh báo đỏ + hướng
   dẫn gọi 115 cho tình huống khẩn cấp.
+- Có **tài khoản + hồ sơ sức khỏe** (tuổi, giới tính, bệnh nền, dị ứng, thuốc đang dùng) —
+  đăng nhập rồi thì An không hỏi lại các thông tin đã biết ở mỗi phiên chat mới.
 - Chat hỏi triệu chứng nhiều vòng, mỗi câu trả lời luôn kèm gợi ý cụ thể (không để bệnh nhân
   chờ mà không có hướng dẫn gì — xem mục 13.3/2.2).
 - Sàng lọc red-flag bằng từ khóa **ngay tại client** trước khi gọi LLM, để tình huống khẩn
   cấp không phải chờ round-trip API (xem mục 15.2).
-- Code: [`An/`](An/) — backend Gemini thật (`An/backend`), frontend chat (`An/frontend`).
+- Code: [`An/`](An/) — backend FastAPI + Gemini + SQLite (`An/backend`), frontend
+  (`An/frontend`, gồm landing page, đăng ký/đăng nhập, chat, lịch).
 - Deploy lên Render — xem [`DEPLOY.md`](DEPLOY.md).
 
 ### 2. Giám sát sinh hiệu real-time — 🔲 Chưa làm
@@ -79,9 +82,12 @@ flowchart TD
 - Mục tiêu: trang bị kỹ năng xử trí tại chỗ **trong lúc chờ 115 tới** — bổ trợ trực tiếp cho
   luồng #1 ngay sau khi ra cảnh báo đỏ.
 
-### 4. Lịch theo dõi sức khỏe — 🔲 Chưa làm
-- Lịch nhắc đo lường định kỳ (nhịp tim, huyết áp, cân nặng...) và ghi nhận theo thời gian.
-- Hiển thị theo timeline trong ngày, dùng chung dữ liệu với "lịch note" của luồng #2.
+### 4. Lịch theo dõi sức khỏe — ✅ Đã có
+- Lịch dạng lưới theo tháng, ghi nhận mục theo ngày (ghi chú/đo lường/nhắc nhở).
+- **Tài khoản nữ tự động có thêm sub-tab "Chu kỳ kinh nguyệt"** (không hỏi bật/tắt) — ghi
+  ngày bắt đầu kỳ kinh, tự tính chu kỳ trung bình, đang ở ngày mấy, dự đoán kỳ tiếp theo;
+  thông tin này cũng được đưa vào context chat khi triệu chứng có thể liên quan.
+- Chưa làm: liên thông với dữ liệu sinh hiệu real-time của luồng #2 (khi luồng đó có).
 
 ---
 
@@ -162,8 +168,9 @@ Thu thập dữ liệu:
 Song song với thiết kế pipeline ở mục 2.2/13, có một **prototype thật** của AI Health Chat
 đặt trong [`An/`](An/) — trợ lý phân loại triệu chứng: hỏi tối đa 3 câu, xác nhận lại điều
 đã hiểu, rồi đưa ra mức khẩn cấp + bước tiếp theo kèm độ chắc chắn (React + Vite, backend
-Gemini thật qua tool-calling, sàng lọc red-flag tại client trước khi gọi LLM). Chi tiết —
-xem [`An/README.md`](An/README.md) và mục 1.1 (luồng sản phẩm hiện tại) ở đầu tài liệu.
+FastAPI + Gemini thật qua tool-calling, sàng lọc red-flag tại client trước khi gọi LLM).
+Có tài khoản + hồ sơ sức khỏe (SQLite) và lịch theo dõi sức khỏe/chu kỳ kinh nguyệt — xem
+mục 1.1 ở đầu tài liệu. Chi tiết — xem [`An/README.md`](An/README.md).
 
 > Trước đó có thử ghép thêm một UI mô phỏng đồng hồ đeo tay (wearable simulator +
 > watch-face) nối vào An qua một tool đọc sinh hiệu. Đã bỏ để tập trung hoàn thiện An
