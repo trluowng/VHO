@@ -1,4 +1,4 @@
-import { PhoneCall, ShieldAlert, Stethoscope, Watch, HelpCircle, Calendar } from 'lucide-react'
+import { PhoneCall, ShieldAlert, Stethoscope, Watch, HelpCircle, Calendar, Leaf } from 'lucide-react'
 import Header from '../components/landing/Header.jsx'
 import HeroSection from '../components/landing/HeroSection.jsx'
 import FeatureCard from '../components/landing/FeatureCard.jsx'
@@ -43,6 +43,15 @@ export default function LandingPage() {
     <div className="relative h-[100dvh] overflow-y-auto bg-gradient-to-br from-white via-white to-skytint-bg">
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute -right-40 top-0 h-[600px] w-[600px] rounded-full bg-[radial-gradient(circle,rgba(28,159,227,0.14),transparent_70%)] blur-2xl" />
+
+        {/* Lá cây mờ trang trí góc dưới-trái, giống ảnh tham chiếu */}
+        <Leaf className="absolute bottom-[8%] left-[-2%] h-32 w-32 -rotate-12 text-cyan/10" strokeWidth={1} />
+        <Leaf className="absolute bottom-[18%] left-[4%] h-20 w-20 rotate-[18deg] text-navy/10" strokeWidth={1} />
+        <Leaf className="absolute bottom-[2%] left-[9%] h-16 w-16 -rotate-45 text-cyan/10" strokeWidth={1} />
+
+        {/* Cụm lá xanh góc trên-phải, tràn nhẹ ra mép trang */}
+        <Leaf className="absolute -right-6 top-[12%] h-28 w-28 rotate-[24deg] text-statusgreen/20" strokeWidth={1} />
+        <Leaf className="absolute right-10 top-[22%] h-16 w-16 -rotate-12 text-teal/25" strokeWidth={1} />
       </div>
 
       <Header />
