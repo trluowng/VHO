@@ -6,7 +6,7 @@ import stethoscopePhoto from '../../assets/landing/stethoscope.png'
    src/assets/landing/stethoscope.png, không đụng vào phần còn lại. */
 export default function HealthIllustration() {
   return (
-    <div className="relative mx-auto h-[460px] w-full max-w-[640px] overflow-visible xl:mx-0" aria-hidden="true">
+    <div className="relative mx-auto h-[420px] w-full max-w-[560px] overflow-visible lg:mx-0 xl:h-[460px] xl:max-w-[640px]" aria-hidden="true">
       {/* Khối oval bo cong lớn phía sau */}
       <div className="absolute inset-[2%_2%_-2%_10%] rounded-[46%_54%_60%_40%/48%_42%_58%_52%] bg-gradient-to-br from-skytint-bg via-[#DCEFFB] to-white shadow-[0_30px_70px_rgba(16,42,92,0.14)]" />
 

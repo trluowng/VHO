@@ -57,7 +57,7 @@ export default function LandingPage() {
       <Header />
       <HeroSection />
 
-      <section className="relative z-10 mx-auto grid w-full max-w-[1600px] grid-cols-1 gap-5 px-6 pb-14 sm:grid-cols-2 sm:px-10 xl:grid-cols-4 xl:px-16">
+      <section className="relative z-10 mx-auto grid w-full max-w-[1600px] grid-cols-1 gap-5 px-6 pb-14 sm:grid-cols-2 sm:px-10 lg:grid-cols-4 lg:px-10 xl:px-16">
         {FEATURES.map((f) => (
           <FeatureCard key={f.title} {...f} />
         ))}
