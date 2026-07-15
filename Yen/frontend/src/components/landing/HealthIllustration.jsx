@@ -1,4 +1,5 @@
-import { Smile, Heart, Activity, ShieldCheck, MessageCircle, Stethoscope, Leaf } from 'lucide-react'
+import { Smile, Heart, Activity, ShieldCheck, MessageCircle, Leaf } from 'lucide-react'
+import StethoscopeArt from './StethoscopeArt.jsx'
 
 /* Minh hoạ bên phải hero. Ảnh ống nghe hiện là icon Lucide dựng lớn trên khối
    bo cong — tách riêng ở đây để sau này thay bằng ảnh chụp thật chỉ cần đổi
@@ -40,7 +41,7 @@ export default function HealthIllustration() {
 
       {/* Bề mặt trắng bo cong + minh hoạ ống nghe, góc dưới-phải */}
       <div className="stethoscope-plate absolute bottom-0 right-[2%] flex h-[190px] w-[230px] items-center justify-center rounded-[50%_50%_46%_54%/54%_54%_46%_46%] bg-white shadow-[0_24px_50px_rgba(16,42,92,0.16)]">
-        <Stethoscope className="h-[104px] w-[104px] text-teal-deep" strokeWidth={1.4} />
+        <StethoscopeArt className="h-[120px] w-[120px]" />
       </div>
 
       {/* Vài chiếc lá xanh nhạt cạnh khối ống nghe */}
