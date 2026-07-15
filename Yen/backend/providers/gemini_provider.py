@@ -104,10 +104,16 @@ class GeminiProvider:
             config_kwargs["system_instruction"] = system_instruction
         if declarations:
             config_kwargs["tools"] = [types.Tool(function_declarations=declarations)]
+        # Gemini 2.5 models "think" (internal reasoning tokens) by default, adding
+        # several seconds of latency per call. Triage doesn't need that — the system
+        # prompt already spells out the reasoning steps — so turn it off for speed.
+        resolved_model = model or self.default_model
+        if "2.5" in resolved_model:
+            config_kwargs["thinking_config"] = types.ThinkingConfig(thinking_budget=0)
 
         client = genai.Client(api_key=api_key)
         resp = client.models.generate_content(
-            model=model or self.default_model,
+            model=resolved_model,
             contents=contents,
             config=types.GenerateContentConfig(**config_kwargs),
         )
