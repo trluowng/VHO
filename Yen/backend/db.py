@@ -50,12 +50,19 @@ CREATE TABLE IF NOT EXISTS calendar_entries (
     type TEXT NOT NULL,
     title TEXT NOT NULL,
     note TEXT,
+    time_start TEXT,
+    time_end TEXT,
+    doctor TEXT,
+    location TEXT,
     created_at TEXT NOT NULL
 );
 
 CREATE INDEX IF NOT EXISTS idx_cycle_user ON cycle_entries(user_id, period_start_date);
 CREATE INDEX IF NOT EXISTS idx_calendar_user ON calendar_entries(user_id, entry_date);
 """
+
+# Cột thêm sau lần tạo bảng đầu tiên — DB cũ trên máy dev cần ALTER TABLE để có đủ cột.
+CALENDAR_ENTRIES_MIGRATIONS = ["time_start TEXT", "time_end TEXT", "doctor TEXT", "location TEXT"]
 
 
 @contextmanager
@@ -72,6 +79,11 @@ def get_conn():
 def init_db() -> None:
     with get_conn() as conn:
         conn.executescript(SCHEMA)
+        existing = {row["name"] for row in conn.execute("PRAGMA table_info(calendar_entries)")}
+        for column_def in CALENDAR_ENTRIES_MIGRATIONS:
+            column_name = column_def.split()[0]
+            if column_name not in existing:
+                conn.execute(f"ALTER TABLE calendar_entries ADD COLUMN {column_def}")
 
 
 def new_id() -> str:
@@ -182,14 +194,25 @@ def delete_cycle_entry(user_id: str, entry_id: str) -> bool:
 # ---------------------------------------------------------------------------
 
 def add_calendar_entry(
-    user_id: str, entry_date: str, entry_type: str, title: str, note: str | None, created_at: str
+    user_id: str,
+    entry_date: str,
+    entry_type: str,
+    title: str,
+    note: str | None,
+    created_at: str,
+    *,
+    time_start: str | None = None,
+    time_end: str | None = None,
+    doctor: str | None = None,
+    location: str | None = None,
 ) -> str:
     entry_id = new_id()
     with get_conn() as conn:
         conn.execute(
-            "INSERT INTO calendar_entries (id, user_id, entry_date, type, title, note, created_at) "
-            "VALUES (?, ?, ?, ?, ?, ?, ?)",
-            (entry_id, user_id, entry_date, entry_type, title, note, created_at),
+            "INSERT INTO calendar_entries "
+            "(id, user_id, entry_date, type, title, note, time_start, time_end, doctor, location, created_at) "
+            "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+            (entry_id, user_id, entry_date, entry_type, title, note, time_start, time_end, doctor, location, created_at),
         )
     return entry_id
 

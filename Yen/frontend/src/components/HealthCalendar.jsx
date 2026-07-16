@@ -1,10 +1,13 @@
 import { useEffect, useMemo, useState } from 'react'
 import { useAuth } from '../context/AuthContext.jsx'
 import { calendarApi } from '../lib/api.js'
+import { CATEGORIES, categoryMeta } from '../lib/calendarCategories.js'
+import { Calendar as CalendarIcon, Clock } from './icons.jsx'
+import CalendarSidebarLeft from './calendar/CalendarSidebarLeft.jsx'
+import CalendarSidebarRight from './calendar/CalendarSidebarRight.jsx'
+import CalendarEntryModal from './calendar/CalendarEntryModal.jsx'
 
 const WEEKDAYS = ['T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'CN']
-const TYPE_LABEL = { note: 'Ghi chú', measurement: 'Đo lường', reminder: 'Nhắc nhở' }
-const TYPE_DOT = { note: 'var(--sage)', measurement: 'var(--amber-warm)', reminder: 'var(--clay)' }
 
 function pad(n) {
   return String(n).padStart(2, '0')
@@ -16,14 +19,22 @@ function monthKey(d) {
   return `${d.getFullYear()}-${pad(d.getMonth() + 1)}`
 }
 
+// Lưới đủ 6 hàng x 7 cột, có kèm ngày đầu/cuối tháng liền kề (mờ đi) giống ảnh mẫu.
 function buildGrid(year, month) {
-  // month: 0-based. Lưới bắt đầu từ Thứ 2.
   const first = new Date(year, month, 1)
   const startOffset = (first.getDay() + 6) % 7 // 0 = Thứ 2
   const daysInMonth = new Date(year, month + 1, 0).getDate()
   const cells = []
-  for (let i = 0; i < startOffset; i++) cells.push(null)
-  for (let day = 1; day <= daysInMonth; day++) cells.push(new Date(year, month, day))
+  for (let i = startOffset; i > 0; i--) {
+    cells.push({ date: new Date(year, month, 1 - i), inMonth: false })
+  }
+  for (let day = 1; day <= daysInMonth; day++) {
+    cells.push({ date: new Date(year, month, day), inMonth: true })
+  }
+  while (cells.length % 7 !== 0 || cells.length < 42) {
+    const last = cells[cells.length - 1].date
+    cells.push({ date: new Date(last.getFullYear(), last.getMonth(), last.getDate() + 1), inMonth: false })
+  }
   return cells
 }
 
@@ -32,26 +43,20 @@ export default function HealthCalendar() {
   const [cursor, setCursor] = useState(() => new Date())
   const [entries, setEntries] = useState([])
   const [selected, setSelected] = useState(() => toISODate(new Date()))
-  const [title, setTitle] = useState('')
-  const [type, setType] = useState('note')
-  const [note, setNote] = useState('')
+  const [filter, setFilter] = useState('all')
+  const [modalDate, setModalDate] = useState(null)
   const [busy, setBusy] = useState(false)
-  const [error, setError] = useState(null)
 
   const key = monthKey(cursor)
+  const todayIso = toISODate(new Date())
   const grid = useMemo(() => buildGrid(cursor.getFullYear(), cursor.getMonth()), [cursor])
-  const entriesByDate = useMemo(() => {
-    const map = {}
-    for (const e of entries) (map[e.entry_date] ||= []).push(e)
-    return map
-  }, [entries])
 
   async function load() {
     try {
       const data = await calendarApi.list(token, key)
       setEntries(data.entries)
-    } catch (err) {
-      setError(err.message)
+    } catch {
+      // giữ danh sách cũ nếu tải lỗi — không chặn giao diện
     }
   }
 
@@ -60,118 +65,152 @@ export default function HealthCalendar() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [key])
 
-  async function addEntry(e) {
-    e.preventDefault()
-    if (!title.trim()) return
-    setBusy(true)
-    setError(null)
-    try {
-      await calendarApi.create(token, { entry_date: selected, type, title: title.trim(), note: note || null })
-      setTitle('')
-      setNote('')
-      await load()
-    } catch (err) {
-      setError(err.message)
-    } finally {
-      setBusy(false)
-    }
-  }
+  const entriesByDate = useMemo(() => {
+    const map = {}
+    for (const e of entries) (map[e.entry_date] ||= []).push(e)
+    return map
+  }, [entries])
+
+  const filteredEntries = useMemo(
+    () => (filter === 'all' ? entries : entries.filter((e) => e.type === filter)),
+    [entries, filter],
+  )
+
+  const upcoming = useMemo(
+    () => filteredEntries.filter((e) => e.entry_date >= todayIso).sort((a, b) => (a.entry_date + (a.time_start || '')).localeCompare(b.entry_date + (b.time_start || ''))),
+    [filteredEntries, todayIso],
+  )
+  const appointments = useMemo(
+    () => upcoming.filter((e) => e.type === 'kham_benh' || e.type === 'xet_nghiem'),
+    [upcoming],
+  )
+  const followUps = useMemo(() => upcoming.filter((e) => e.type === 'tiem_chung'), [upcoming])
+
+  const todayEntries = entriesByDate[todayIso] || []
+  const monthLabel = cursor.toLocaleDateString('vi-VN', { month: 'long', year: 'numeric' })
+  const selectedDate = new Date(selected + 'T00:00:00')
+  const selectedEntries = (entriesByDate[selected] || []).filter((e) => filter === 'all' || e.type === filter)
 
   async function removeEntry(id) {
     setBusy(true)
     try {
       await calendarApi.remove(token, id)
       await load()
-    } catch (err) {
-      setError(err.message)
     } finally {
       setBusy(false)
     }
   }
 
-  const selectedEntries = entriesByDate[selected] || []
-  const monthLabel = cursor.toLocaleDateString('vi-VN', { month: 'long', year: 'numeric' })
-
   return (
-    <div className="calendar">
-      <div className="calendar__grid-panel">
-        <div className="calendar__nav">
-          <button onClick={() => setCursor((d) => new Date(d.getFullYear(), d.getMonth() - 1, 1))}>‹</button>
-          <span className="calendar__month">{monthLabel}</span>
-          <button onClick={() => setCursor((d) => new Date(d.getFullYear(), d.getMonth() + 1, 1))}>›</button>
+    <div className="cal-page">
+      <CalendarSidebarLeft
+        activeFilter={filter}
+        onFilterChange={setFilter}
+        upcoming={upcoming}
+        onOpenModal={() => setModalDate(selected)}
+      />
+
+      <div className="cal-main">
+        <div className="cal-main__toolbar">
+          <div className="cal-main__nav">
+            <button onClick={() => setCursor((d) => new Date(d.getFullYear(), d.getMonth() - 1, 1))} aria-label="Tháng trước">‹</button>
+            <span className="cal-main__month">Tháng {cursor.getMonth() + 1}, {cursor.getFullYear()}</span>
+            <button onClick={() => setCursor((d) => new Date(d.getFullYear(), d.getMonth() + 1, 1))} aria-label="Tháng sau">›</button>
+          </div>
+          <div className="cal-main__view-toggle">
+            <button className="is-active">Tháng</button>
+            <button disabled title="Sắp ra mắt">Tuần</button>
+            <button disabled title="Sắp ra mắt">Danh sách</button>
+          </div>
         </div>
-        <div className="calendar__weekdays">
-          {WEEKDAYS.map((w) => (
-            <span key={w}>{w}</span>
+
+        <div className="cal-grid">
+          <div className="cal-grid__weekdays">
+            {WEEKDAYS.map((w) => <span key={w}>{w}</span>)}
+          </div>
+          <div className="cal-grid__cells">
+            {grid.map(({ date, inMonth }) => {
+              const iso = toISODate(date)
+              const dayEntries = entriesByDate[iso] || []
+              const isToday = iso === todayIso
+              const isSelected = iso === selected
+              return (
+                <button
+                  key={iso}
+                  className={`cal-grid__cell ${!inMonth ? 'is-muted' : ''} ${isSelected ? 'is-selected' : ''} ${isToday && !isSelected ? 'is-today' : ''}`}
+                  onClick={() => setSelected(iso)}
+                >
+                  <span>{date.getDate()}</span>
+                  {dayEntries.length > 0 && (
+                    <span className="cal-grid__dots">
+                      {dayEntries.slice(0, 3).map((e) => (
+                        <i key={e.id} style={{ background: categoryMeta(e.type).dot }} />
+                      ))}
+                    </span>
+                  )}
+                </button>
+              )
+            })}
+          </div>
+        </div>
+
+        <div className="cal-legend">
+          {CATEGORIES.map((c) => (
+            <span key={c.value} className="cal-legend__item">
+              <i style={{ background: c.dot }} /> {c.label}
+            </span>
           ))}
         </div>
-        <div className="calendar__cells">
-          {grid.map((d, i) => {
-            if (!d) return <span key={i} className="calendar__cell is-empty" />
-            const iso = toISODate(d)
-            const dayEntries = entriesByDate[iso] || []
-            const isToday = iso === toISODate(new Date())
-            const isSelected = iso === selected
-            return (
-              <button
-                key={iso}
-                className={`calendar__cell ${isSelected ? 'is-selected' : ''} ${isToday ? 'is-today' : ''}`}
-                onClick={() => setSelected(iso)}
-              >
-                <span>{d.getDate()}</span>
-                {dayEntries.length > 0 && (
-                  <span className="calendar__dots">
-                    {dayEntries.slice(0, 3).map((e) => (
-                      <i key={e.id} style={{ background: TYPE_DOT[e.type] }} />
-                    ))}
+
+        <div className="cal-today-card">
+          <span className="cal-today-card__icon"><CalendarIcon width={20} height={20} /></span>
+          <div className="cal-today-card__body">
+            <p className="cal-today-card__title">
+              {selected === todayIso ? 'Hôm nay' : 'Ngày đã chọn'} - {selectedDate.toLocaleDateString('vi-VN', { weekday: 'long', day: '2-digit', month: '2-digit', year: 'numeric' })}
+            </p>
+            <p className="cal-today-card__desc">
+              {selected === todayIso
+                ? (todayEntries.length > 0 ? `Bạn có ${todayEntries.length} lịch hẹn và nhắc nhở trong ngày.` : 'Bạn chưa có lịch hẹn hay nhắc nhở nào hôm nay.')
+                : (selectedEntries.length > 0 ? `${selectedEntries.length} mục trong ngày này.` : 'Chưa có lịch hẹn hay nhắc nhở nào cho ngày này.')}
+            </p>
+          </div>
+          <button type="button" className="btn btn--ghost cal-today-card__cta" onClick={() => setModalDate(selected)}>
+            Thêm lịch cho ngày này →
+          </button>
+        </div>
+
+        {selectedEntries.length > 0 && (
+          <ul className="cal-day-list">
+            {selectedEntries.map((e) => {
+              const meta = categoryMeta(e.type)
+              return (
+                <li key={e.id}>
+                  <span style={{ color: meta.dot }}><meta.icon width={16} height={16} /></span>
+                  <span className="cal-day-list__body">
+                    <span className="cal-day-list__title">{e.title}</span>
+                    <span className="cal-day-list__meta">
+                      {meta.label}
+                      {e.time_start && <> · <Clock width={11} height={11} /> {e.time_start}</>}
+                      {e.doctor && ` · ${e.doctor}`}
+                    </span>
                   </span>
-                )}
-              </button>
-            )
-          })}
-        </div>
+                  <button className="cycle-history__remove" onClick={() => removeEntry(e.id)} disabled={busy}>Xoá</button>
+                </li>
+              )
+            })}
+          </ul>
+        )}
+
+        <p className="cal-disclaimer">
+          Yên là trợ lý AI y tế. Nội dung chỉ mang tính tham khảo, không thay thế chẩn đoán y khoa.
+        </p>
       </div>
 
-      <div className="calendar__side">
-        <h3 className="panel__label">
-          {new Date(selected + 'T00:00:00').toLocaleDateString('vi-VN', { weekday: 'long', day: '2-digit', month: '2-digit' })}
-        </h3>
+      <CalendarSidebarRight appointments={appointments} followUps={followUps} />
 
-        <ul className="calendar__entries">
-          {selectedEntries.length === 0 && <li className="empty-hint">Chưa có mục nào cho ngày này.</li>}
-          {selectedEntries.map((e) => (
-            <li key={e.id}>
-              <span className="calendar__entry-dot" style={{ background: TYPE_DOT[e.type] }} />
-              <span className="calendar__entry-body">
-                <span className="calendar__entry-title">{e.title}</span>
-                <span className="calendar__entry-type">{TYPE_LABEL[e.type]}{e.note ? ` · ${e.note}` : ''}</span>
-              </span>
-              <button className="cycle-history__remove" onClick={() => removeEntry(e.id)} disabled={busy}>Xoá</button>
-            </li>
-          ))}
-        </ul>
-
-        <form className="calendar__form" onSubmit={addEntry}>
-          <label>
-            <span>Tiêu đề</span>
-            <input value={title} onChange={(e) => setTitle(e.target.value)} placeholder="vd: Uống thuốc huyết áp" required />
-          </label>
-          <label>
-            <span>Loại</span>
-            <select value={type} onChange={(e) => setType(e.target.value)}>
-              <option value="note">Ghi chú</option>
-              <option value="measurement">Đo lường</option>
-              <option value="reminder">Nhắc nhở</option>
-            </select>
-          </label>
-          <label>
-            <span>Chi tiết (tuỳ chọn)</span>
-            <input value={note} onChange={(e) => setNote(e.target.value)} placeholder="vd: 120/80 mmHg" />
-          </label>
-          {error && <p className="auth-error">{error}</p>}
-          <button className="btn btn--primary" type="submit" disabled={busy}>Thêm vào lịch</button>
-        </form>
-      </div>
+      {modalDate && (
+        <CalendarEntryModal date={modalDate} onClose={() => setModalDate(null)} onSaved={load} />
+      )}
     </div>
   )
 }

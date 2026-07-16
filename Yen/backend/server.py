@@ -386,7 +386,8 @@ def put_profile(payload: dict = Body(...), authorization: str | None = Header(No
 # Routes — health calendar
 # ---------------------------------------------------------------------------
 
-CALENDAR_TYPES = {"note", "measurement", "reminder"}
+CALENDAR_TYPES = {"kham_benh", "xet_nghiem", "thuoc", "tiem_chung", "khac"}
+TIME_RE = re.compile(r"\d{2}:\d{2}")
 
 
 @app.get("/calendar")
@@ -401,8 +402,12 @@ def list_calendar(month: str | None = None, authorization: str | None = Header(N
 def create_calendar_entry(payload: dict = Body(...), authorization: str | None = Header(None)) -> dict:
     user_id = _require_user_id(authorization)
     entry_date = payload.get("entry_date")
-    entry_type = payload.get("type", "note")
+    entry_type = payload.get("type", "khac")
     title = (payload.get("title") or "").strip()
+    time_start = (payload.get("time_start") or "").strip() or None
+    time_end = (payload.get("time_end") or "").strip() or None
+    doctor = (payload.get("doctor") or "").strip() or None
+    location = (payload.get("location") or "").strip() or None
 
     if not entry_date:
         raise HTTPException(status_code=400, detail="entry_date_required")
@@ -414,8 +419,15 @@ def create_calendar_entry(payload: dict = Body(...), authorization: str | None =
         raise HTTPException(status_code=400, detail="invalid_type")
     if not title:
         raise HTTPException(status_code=400, detail="title_required")
+    if time_start and not TIME_RE.fullmatch(time_start):
+        raise HTTPException(status_code=400, detail="invalid_time_start")
+    if time_end and not TIME_RE.fullmatch(time_end):
+        raise HTTPException(status_code=400, detail="invalid_time_end")
 
-    entry_id = db.add_calendar_entry(user_id, entry_date, entry_type, title, payload.get("note"), now_iso())
+    entry_id = db.add_calendar_entry(
+        user_id, entry_date, entry_type, title, payload.get("note"), now_iso(),
+        time_start=time_start, time_end=time_end, doctor=doctor, location=location,
+    )
     return {"id": entry_id}
 
 

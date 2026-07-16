@@ -110,3 +110,56 @@ export const Quiz = (p) => (
     <path {...S} d="M9.5 9.2a2.5 2.5 0 1 1 3.3 2.4c-.8.3-1.3 1-1.3 1.9v.3M12 17v.2" />
   </svg>
 )
+export const TestTube = (p) => (
+  <svg viewBox="0 0 24 24" {...p}>
+    <path {...S} d="M9 3h6M9.5 3.5v13a2.5 2.5 0 0 0 5 0v-13" />
+    <path {...S} d="M9.5 13h5" />
+  </svg>
+)
+export const Pill = (p) => (
+  <svg viewBox="0 0 24 24" {...p}>
+    <rect {...S} x="3.5" y="9.5" width="17" height="7" rx="3.5" transform="rotate(-35 12 13)" />
+    <path {...S} d="M12 8.6l3.4 3.4" />
+  </svg>
+)
+export const Syringe = (p) => (
+  <svg viewBox="0 0 24 24" {...p}>
+    <path {...S} d="M20.5 3.5l-2.3 2.3M17 7l-9.5 9.5-3.5 4 4-3.5L17.5 7.5" />
+    <path {...S} d="M14.5 5.5l4 4M12.5 7.5l2 2M10.5 9.5l2 2" />
+  </svg>
+)
+export const Bell = (p) => (
+  <svg viewBox="0 0 24 24" {...p}>
+    <path {...S} d="M6 10a6 6 0 0 1 12 0c0 4 1.5 5.5 1.5 5.5h-15S6 14 6 10z" />
+    <path {...S} d="M9.5 18.5a2.5 2.5 0 0 0 5 0" />
+  </svg>
+)
+export const ChevronRight = (p) => (
+  <svg viewBox="0 0 24 24" {...p}><path {...S} d="M9 5l7 7-7 7" /></svg>
+)
+export const ChevronDown = (p) => (
+  <svg viewBox="0 0 24 24" {...p}><path {...S} d="M5 9l7 7 7-7" /></svg>
+)
+export const MapPin = (p) => (
+  <svg viewBox="0 0 24 24" {...p}>
+    <path {...S} d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z" />
+    <circle {...S} cx="12" cy="9" r="2.4" />
+  </svg>
+)
+export const RefreshCw = (p) => (
+  <svg viewBox="0 0 24 24" {...p}>
+    <path {...S} d="M4 12a8 8 0 0 1 14-5.3M20 12a8 8 0 0 1-14 5.3" />
+    <path {...S} d="M18 3v4h-4M6 21v-4h4" />
+  </svg>
+)
+export const Filter = (p) => (
+  <svg viewBox="0 0 24 24" {...p}><path {...S} d="M4 5h16M7 12h10M10 19h4" /></svg>
+)
+export const Edit = (p) => (
+  <svg viewBox="0 0 24 24" {...p}>
+    <path {...S} d="M15.5 4.5l4 4L8 20H4v-4l11.5-11.5z" />
+  </svg>
+)
+export const X = (p) => (
+  <svg viewBox="0 0 24 24" {...p}><path {...S} d="M6 6l12 12M18 6L6 18" /></svg>
+)
