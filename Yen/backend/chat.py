@@ -91,6 +91,12 @@ def run_model_tool_loop(
 
     for round_index in range(1, max_tool_rounds + 1):
         response = provider.complete(working_messages, tools, model=model, temperature=0.0)
+        if not response.text and not response.tool_calls:
+            # Gemini occasionally returns a genuinely empty candidate (no visible text,
+            # no tool call) -- usually transient, so retry once before giving the
+            # patient a blank chat bubble.
+            print("⚠️  empty model response, retrying once")
+            response = provider.complete(working_messages, tools, model=model, temperature=0.0)
         calls = response.tool_calls
         round_record: dict[str, Any] = {
             "round": round_index,
@@ -101,9 +107,13 @@ def run_model_tool_loop(
 
         if not calls:
             rounds.append(round_record)
+            fallback_text = (
+                "Xin lỗi, mình chưa nhận được phản hồi rõ ràng. Bạn nhắn lại triệu chứng "
+                "hoặc câu trả lời vừa rồi giúp mình nhé."
+            )
             return {
                 "status": "answered",
-                "assistant_text": response.text or "",
+                "assistant_text": response.text or fallback_text,
                 "rounds": rounds,
                 "tool_events": all_tool_events,
             }
