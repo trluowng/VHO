@@ -132,10 +132,14 @@ def run_model_tool_loop(
             result = event.get("result", {})
             if isinstance(result, dict) and result.get("awaiting_user"):
                 question = result.get("question") or call.args.get("question") or "Bạn bổ sung thêm thông tin nhé."
+                # response.text thường là đoạn giải thích/xác nhận đầy đủ (vd: đã diễn giải
+                # đúng theo hồ sơ bệnh nhân, kèm gợi ý tự chăm sóc) đi trước lệnh gọi tool
+                # clarify() — chỉ dùng riêng "question" khi model không trả về đoạn đó.
+                assistant_text = response.text.strip() if response.text and response.text.strip() else question
                 rounds.append(round_record)
                 return {
                     "status": "waiting_for_user",
-                    "assistant_text": question,
+                    "assistant_text": assistant_text,
                     "rounds": rounds,
                     "tool_events": all_tool_events,
                 }
