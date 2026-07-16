@@ -2,41 +2,13 @@ import { useEffect, useMemo, useState } from 'react'
 import { useAuth } from '../context/AuthContext.jsx'
 import { calendarApi } from '../lib/api.js'
 import { CATEGORIES, categoryMeta } from '../lib/calendarCategories.js'
+import { toISODate, monthKey, buildMonthGrid } from '../lib/calendarGrid.js'
 import { Calendar as CalendarIcon, Clock } from './icons.jsx'
 import CalendarSidebarLeft from './calendar/CalendarSidebarLeft.jsx'
 import CalendarSidebarRight from './calendar/CalendarSidebarRight.jsx'
 import CalendarEntryModal from './calendar/CalendarEntryModal.jsx'
 
 const WEEKDAYS = ['T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'CN']
-
-function pad(n) {
-  return String(n).padStart(2, '0')
-}
-function toISODate(d) {
-  return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`
-}
-function monthKey(d) {
-  return `${d.getFullYear()}-${pad(d.getMonth() + 1)}`
-}
-
-// Lưới đủ 6 hàng x 7 cột, có kèm ngày đầu/cuối tháng liền kề (mờ đi) giống ảnh mẫu.
-function buildGrid(year, month) {
-  const first = new Date(year, month, 1)
-  const startOffset = (first.getDay() + 6) % 7 // 0 = Thứ 2
-  const daysInMonth = new Date(year, month + 1, 0).getDate()
-  const cells = []
-  for (let i = startOffset; i > 0; i--) {
-    cells.push({ date: new Date(year, month, 1 - i), inMonth: false })
-  }
-  for (let day = 1; day <= daysInMonth; day++) {
-    cells.push({ date: new Date(year, month, day), inMonth: true })
-  }
-  while (cells.length % 7 !== 0 || cells.length < 42) {
-    const last = cells[cells.length - 1].date
-    cells.push({ date: new Date(last.getFullYear(), last.getMonth(), last.getDate() + 1), inMonth: false })
-  }
-  return cells
-}
 
 export default function HealthCalendar() {
   const { token } = useAuth()
@@ -49,7 +21,7 @@ export default function HealthCalendar() {
 
   const key = monthKey(cursor)
   const todayIso = toISODate(new Date())
-  const grid = useMemo(() => buildGrid(cursor.getFullYear(), cursor.getMonth()), [cursor])
+  const grid = useMemo(() => buildMonthGrid(cursor.getFullYear(), cursor.getMonth()), [cursor])
 
   async function load() {
     try {

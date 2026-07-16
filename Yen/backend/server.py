@@ -443,14 +443,30 @@ def delete_calendar_entry(entry_id: str, authorization: str | None = Header(None
 # Routes — menstrual cycle tracking
 # ---------------------------------------------------------------------------
 
+DEFAULT_PERIOD_LENGTH_DAYS = 5   # không theo dõi ngày kết thúc thực tế, dùng ước lượng phổ biến
+LUTEAL_PHASE_DAYS = 14           # pha hoàng thể tương đối ổn định giữa các chu kỳ (khác pha nang trứng)
+FERTILE_DAYS_BEFORE_OVULATION = 5  # tinh trùng có thể sống vài ngày trong cơ thể
+FERTILE_DAYS_AFTER_OVULATION = 1   # trứng chỉ sống ~24h sau rụng
+
+
+def _add_days(d: date, days: int) -> date:
+    return d.fromordinal(d.toordinal() + days)
+
+
 def _cycle_prediction(entries: list[dict]) -> dict:
+    empty = {
+        "average_cycle_length_days": None,
+        "last_period_start_date": None,
+        "current_cycle_day": None,
+        "predicted_period_start": None,
+        "predicted_period_end": None,
+        "ovulation_date": None,
+        "fertile_window_start": None,
+        "fertile_window_end": None,
+        "period_length_days": DEFAULT_PERIOD_LENGTH_DAYS,
+    }
     if not entries:
-        return {
-            "average_cycle_length_days": None,
-            "last_period_start_date": None,
-            "current_cycle_day": None,
-            "predicted_next_period": None,
-        }
+        return empty
 
     starts = sorted((date.fromisoformat(e["period_start_date"]) for e in entries), reverse=True)
     last_start = starts[0]
@@ -460,13 +476,25 @@ def _cycle_prediction(entries: list[dict]) -> dict:
     avg_len = round(sum(gaps) / len(gaps)) if gaps else 28
 
     current_cycle_day = (date.today() - last_start).days + 1
-    predicted_next = last_start.fromordinal(last_start.toordinal() + avg_len)
+    predicted_start = _add_days(last_start, avg_len)
+    predicted_end = _add_days(predicted_start, DEFAULT_PERIOD_LENGTH_DAYS - 1)
+
+    # Ước lượng ngày rụng trứng lùi từ NGÀY DỰ ĐOÁN của kỳ kế tiếp (pha hoàng thể ổn định
+    # hơn pha nang trứng, nên tính lùi từ kỳ tới chính xác hơn tính xuôi từ kỳ vừa rồi).
+    ovulation = _add_days(predicted_start, -LUTEAL_PHASE_DAYS)
+    fertile_start = _add_days(ovulation, -FERTILE_DAYS_BEFORE_OVULATION)
+    fertile_end = _add_days(ovulation, FERTILE_DAYS_AFTER_OVULATION)
 
     return {
         "average_cycle_length_days": avg_len,
         "last_period_start_date": last_start.isoformat(),
         "current_cycle_day": current_cycle_day,
-        "predicted_next_period": predicted_next.isoformat(),
+        "predicted_period_start": predicted_start.isoformat(),
+        "predicted_period_end": predicted_end.isoformat(),
+        "ovulation_date": ovulation.isoformat(),
+        "fertile_window_start": fertile_start.isoformat(),
+        "fertile_window_end": fertile_end.isoformat(),
+        "period_length_days": DEFAULT_PERIOD_LENGTH_DAYS,
     }
 
 

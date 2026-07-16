@@ -1,7 +1,10 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { useAuth } from '../context/AuthContext.jsx'
 import { cycleApi } from '../lib/api.js'
-import { Droplet } from './icons.jsx'
+import { toISODate, buildMonthGrid } from '../lib/calendarGrid.js'
+import { Droplet, Info } from './icons.jsx'
+
+const WEEKDAYS = ['T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'CN']
 
 function formatVi(dateStr) {
   if (!dateStr) return '—'
@@ -9,10 +12,39 @@ function formatVi(dateStr) {
   return d.toLocaleDateString('vi-VN', { day: '2-digit', month: '2-digit', year: 'numeric' })
 }
 
+function addDaysIso(iso, days) {
+  const d = new Date(iso + 'T00:00:00')
+  d.setDate(d.getDate() + days)
+  return toISODate(d)
+}
+
+function inRange(iso, start, end) {
+  return start && end && iso >= start && iso <= end
+}
+
+/** Ngày kinh (đã ghi nhận hoặc dự đoán) > cửa sổ dễ thụ thai > còn lại là ngày an toàn. */
+function classifyDay(iso, entries, prediction) {
+  const periodLen = prediction?.period_length_days || 5
+  for (const e of entries) {
+    if (inRange(iso, e.period_start_date, addDaysIso(e.period_start_date, periodLen - 1))) return 'period'
+  }
+  if (inRange(iso, prediction?.predicted_period_start, prediction?.predicted_period_end)) return 'period-predicted'
+  if (inRange(iso, prediction?.fertile_window_start, prediction?.fertile_window_end)) return 'fertile'
+  return 'safe'
+}
+
+const DOT_CLASS = {
+  period: 'cycle-grid__dot--period',
+  'period-predicted': 'cycle-grid__dot--period-predicted',
+  fertile: 'cycle-grid__dot--fertile',
+  safe: 'cycle-grid__dot--safe',
+}
+
 export default function CycleTracker() {
   const { token } = useAuth()
   const [entries, setEntries] = useState([])
   const [prediction, setPrediction] = useState(null)
+  const [cursor, setCursor] = useState(() => new Date())
   const [newDate, setNewDate] = useState('')
   const [note, setNote] = useState('')
   const [busy, setBusy] = useState(false)
@@ -67,6 +99,10 @@ export default function CycleTracker() {
     }
   }
 
+  const grid = useMemo(() => buildMonthGrid(cursor.getFullYear(), cursor.getMonth()), [cursor])
+  const todayIso = toISODate(new Date())
+  const hasData = entries.length > 0
+
   if (!loaded) return null
 
   return (
@@ -87,10 +123,55 @@ export default function CycleTracker() {
           </div>
           <div>
             <span className="cycle-summary__label">Dự đoán kỳ tới</span>
-            <span className="cycle-summary__value">{formatVi(prediction?.predicted_next_period)}</span>
+            <span className="cycle-summary__value">
+              {prediction?.predicted_period_start ? `${formatVi(prediction.predicted_period_start)} - ${formatVi(prediction.predicted_period_end)}` : '—'}
+            </span>
           </div>
         </div>
       </div>
+
+      {hasData && (
+        <div className="cycle-grid-panel">
+          <div className="cycle-grid-panel__nav">
+            <button onClick={() => setCursor((d) => new Date(d.getFullYear(), d.getMonth() - 1, 1))} aria-label="Tháng trước">‹</button>
+            <span>Tháng {cursor.getMonth() + 1}, {cursor.getFullYear()}</span>
+            <button onClick={() => setCursor((d) => new Date(d.getFullYear(), d.getMonth() + 1, 1))} aria-label="Tháng sau">›</button>
+          </div>
+
+          <div className="cycle-grid__weekdays">
+            {WEEKDAYS.map((w) => <span key={w}>{w}</span>)}
+          </div>
+          <div className="cycle-grid__cells">
+            {grid.map(({ date, inMonth }) => {
+              const iso = toISODate(date)
+              const kind = classifyDay(iso, entries, prediction)
+              const isToday = iso === todayIso
+              return (
+                <span key={iso} className={`cycle-grid__cell ${!inMonth ? 'is-muted' : ''} ${isToday ? 'is-today' : ''}`}>
+                  <span>{date.getDate()}</span>
+                  <i className={`cycle-grid__dot ${DOT_CLASS[kind]}`} />
+                </span>
+              )
+            })}
+          </div>
+
+          <div className="cycle-legend">
+            <span className="cycle-legend__item"><i className="cycle-grid__dot--period" /> Ngày hành kinh</span>
+            <span className="cycle-legend__item"><i className="cycle-grid__dot--period-predicted" /> Dự đoán kỳ tới</span>
+            <span className="cycle-legend__item"><i className="cycle-grid__dot--fertile" /> Cửa sổ dễ thụ thai</span>
+            <span className="cycle-legend__item"><i className="cycle-grid__dot--safe" /> Ngày an toàn (ước lượng)</span>
+          </div>
+
+          <div className="cycle-disclaimer">
+            <Info width={14} height={14} />
+            <span>
+              Đây là ước lượng dựa trên độ dài chu kỳ trung bình đã ghi nhận, có thể lệch nếu chu
+              kỳ không đều. <strong>Không dùng để tránh thai</strong> — nếu cần biện pháp tránh
+              thai đáng tin cậy, hãy hỏi ý kiến bác sĩ.
+            </span>
+          </div>
+        </div>
+      )}
 
       <form className="cycle-form" onSubmit={addEntry}>
         <label>
