@@ -45,6 +45,7 @@ from auth import create_token, hash_password, verify_password, verify_token
 # Import the core agent loop and helpers from chat.py
 from chat import run_model_tool_loop, trim_history, write_transcript, safe_slug, now_iso
 from versioning import artifact_version_dict, build_artifact_version
+from seed_demo import seed_demo_accounts
 
 
 # ---------------------------------------------------------------------------
@@ -54,6 +55,7 @@ ROOT = Path(__file__).resolve().parent
 ARTIFACTS_DIR = ROOT / "artifacts"
 load_lab_env(ROOT)
 db.init_db()
+seed_demo_accounts()
 
 PROVIDER_NAME = os.getenv("TRIAGE_PROVIDER", "gemini")
 MODEL = os.getenv("TRIAGE_MODEL", None)          # None → provider's default_model

@@ -105,6 +105,20 @@ backend/
   chat nếu triệu chứng có thể liên quan (đau bụng dưới, ra máu bất thường...).
 - Mật khẩu hash bằng PBKDF2-SHA256 (200k vòng), không lưu plaintext. Token là JWT 30 ngày.
 
+### Tài khoản demo (đăng nhập thẳng, không cần đăng ký)
+
+Backend tự seed 5 tài khoản demo (idempotent, chạy lại mỗi lần khởi động — xem
+`backend/seed_demo.py`) với hồ sơ bệnh lý khác nhau để demo/QA việc AI dùng hồ sơ để suy
+luận, không cần đăng ký + điền hồ sơ thủ công. Mật khẩu chung: **`Demo123456`**.
+
+| Email | Hồ sơ | Minh hoạ cho |
+|---|---|---|
+| `demo1@yen.vn` | Nữ, 16 tuổi, đã có 1 mục chu kỳ kinh nguyệt | Tuổi dậy thì + tab Chu kỳ kinh nguyệt |
+| `demo2@yen.vn` | Nam, 45 tuổi, đái tháo đường type 2, dùng Metformin | Tham chiếu bệnh nền mạn tính |
+| `demo3@yen.vn` | Nữ, 30 tuổi, dị ứng đậu phộng + hải sản | Cảnh giác phản ứng dị ứng |
+| `demo4@yen.vn` | Nam, 70 tuổi, cao huyết áp, dùng Amlodipine | Tham chiếu thuốc đang dùng + tuổi già |
+| `demo5@yen.vn` | Nữ, 50 tuổi, không bệnh nền | Suy luận theo độ tuổi (tiền mãn kinh) |
+
 ---
 
 ## Công cụ & API
