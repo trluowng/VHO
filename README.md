@@ -63,7 +63,7 @@ flowchart TD
   chờ mà không có hướng dẫn gì — xem mục 13.3/2.2).
 - Sàng lọc red-flag bằng từ khóa **ngay tại client** trước khi gọi LLM, để tình huống khẩn
   cấp không phải chờ round-trip API (xem mục 15.2).
-- Code: [`Yen/`](Yen/) — backend FastAPI + Gemini + SQLite (`Yen/backend`), frontend
+- Code: [`Yen/`](Yen/) — backend FastAPI + Groq/Qwen3 + SQLite (`Yen/backend`), frontend
   (`Yen/frontend`, gồm landing page, đăng ký/đăng nhập, chat, lịch).
 - Deploy lên Render — xem [`DEPLOY.md`](DEPLOY.md).
 
@@ -168,7 +168,7 @@ Thu thập dữ liệu:
 Song song với thiết kế pipeline ở mục 2.2/13, có một **prototype thật** của AI Health Chat
 đặt trong [`Yen/`](Yen/) — trợ lý phân loại triệu chứng: hỏi tối đa 3 câu, xác nhận lại điều
 đã hiểu, rồi đưa ra mức khẩn cấp + bước tiếp theo kèm độ chắc chắn (React + Vite, backend
-FastAPI + Gemini thật qua tool-calling, sàng lọc red-flag tại client trước khi gọi LLM).
+FastAPI + Qwen3-32B trên Groq qua tool-calling, sàng lọc red-flag tại client trước khi gọi LLM).
 Có tài khoản + hồ sơ sức khỏe (SQLite) và lịch theo dõi sức khỏe/chu kỳ kinh nguyệt — xem
 mục 1.1 ở đầu tài liệu. Chi tiết — xem [`Yen/README.md`](Yen/README.md).
 
