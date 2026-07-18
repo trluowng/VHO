@@ -108,8 +108,8 @@ def run_model_tool_loop(
         if not calls:
             rounds.append(round_record)
             fallback_text = (
-                "Xin lỗi, mình chưa nhận được phản hồi rõ ràng. Bạn nhắn lại triệu chứng "
-                "hoặc câu trả lời vừa rồi giúp mình nhé."
+                "Xin lỗi, mình chưa nhận được phản hồi rõ ràng. Bạn nhắn lại câu hỏi về dịch vụ, "
+                "giá khám hoặc triệu chứng vừa rồi giúp mình nhé."
             )
             return {
                 "status": "answered",

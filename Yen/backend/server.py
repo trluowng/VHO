@@ -1,11 +1,11 @@
 """
-Yên — HTTP server
-=================
+Yên — HTTP server (Trợ lý Bệnh viện Tim Hà Nội)
+================================================
 Cầu nối giữa frontend React và logic agent trong chat.py, cộng thêm tài
-khoản người dùng + hồ sơ sức khỏe + lịch theo dõi sức khỏe/chu kỳ kinh nguyệt.
+khoản người dùng + hồ sơ sức khỏe + lịch theo dõi sức khỏe.
 
 - POST /triage              body: { history, message }, header Authorization tùy chọn
-                             trả về: { events, profile }
+                            trả về: { events, profile }
 - GET  /health               kiểm tra server
 - POST /auth/register        { email, password, age, gender } -> { token, user, profile }
 - POST /auth/login           { email, password } -> { token, user, profile }

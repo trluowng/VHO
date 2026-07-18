@@ -8,15 +8,12 @@ Unified item schema (minimal):
   - source    : "Danh mục" (danh mục giá)
   - id        : "Mã tương đương" (empty if absent)
   - context   : "Dịch vụ kỹ thuật" (tên dịch vụ)
-  - price     : primary service price (VNĐ)
-  - price_cs1 : "Giá Cơ sở 1 (VNĐ)"  (only when a second price kind exists)
-  - price_cs2 : "Giá Cơ sở 2 (VNĐ)"  (only when both cơ sở prices exist)
+  - price     : service price (VNĐ) — a plain string when one price, or an
+                object {"cs1": ..., "cs2": ...} when two cơ sở prices exist
   - stt       : "STT"
   - note      : "Ghi chú"
 
-If an item has both "Giá Cơ sở 1" and "Giá Cơ sở 2", the two cơ sở prices are
-exposed as `price_cs1` / `price_cs2`. Other price variants are folded into the
-single `price` field. "raw" is dropped.
+"raw" is dropped; all other price variants are folded into `price`.
 """
 from __future__ import annotations
 
@@ -27,6 +24,14 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 SOURCES = sorted(glob.glob(str(ROOT / "data" / "markdown_chunks_flat" / "*" / "merged.json")))
 OUT = ROOT / "data" / "services_merged.json"
+
+
+def build_price(doc: dict):
+    cs1 = doc.get("price_cs1", "")
+    cs2 = doc.get("price_cs2", "")
+    if cs1 and cs2:
+        return {"cs1": cs1, "cs2": cs2}
+    return doc.get("price", "")
 
 
 def merge() -> None:
@@ -42,15 +47,10 @@ def merge() -> None:
                 "source": doc.get("source", ""),
                 "id": doc.get("id", ""),
                 "context": doc.get("context", ""),
-                "price": doc.get("price", ""),
+                "price": build_price(doc),
                 "stt": doc.get("stt", ""),
                 "note": doc.get("note", ""),
             }
-            cs1 = doc.get("price_cs1", "")
-            cs2 = doc.get("price_cs2", "")
-            if cs1 and cs2:
-                item["price_cs1"] = cs1
-                item["price_cs2"] = cs2
             items.append(item)
         counts[source_id] = len(data.get("documents", []))
         print(f"merged {source_id}: {counts[source_id]} docs")

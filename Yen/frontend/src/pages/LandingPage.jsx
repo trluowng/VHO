@@ -9,24 +9,24 @@ const FEATURES = [
     iconBg: 'bg-skytint-bg',
     iconColor: 'text-cyan',
     status: 'Đã có',
-    title: 'Tư vấn triệu chứng AI',
-    desc: 'Hỏi đáp triệu chứng bằng hội thoại tự nhiên, chính xác và dễ hiểu.',
+    title: 'Tra cứu giá & dịch vụ',
+    desc: 'Hỏi nhanh bảng giá dịch vụ kỹ thuật, xét nghiệm và gói khám tại viện.',
   },
   {
     icon: Watch,
     iconBg: 'bg-rose-50',
     iconColor: 'text-rose-500',
     status: 'Đã có',
-    title: 'Giám sát sức khỏe mỗi ngày',
-    desc: 'Theo dõi chỉ số, nhắc lịch uống thuốc và cảnh báo bất thường.',
+    title: 'Hướng dẫn quy trình khám',
+    desc: 'Chuẩn bị giấy tờ, quy trình BHYT và các bước đến khám tại bệnh viện.',
   },
   {
     icon: HelpCircle,
     iconBg: 'bg-violet-50',
     iconColor: 'text-violet-500',
     status: 'Đã có',
-    title: 'Quản lý sức khỏe tổng thể',
-    desc: 'Lưu trữ hồ sơ, lịch sử bệnh và gợi ý chăm sóc cá nhân hóa.',
+    title: 'Hỗ trợ khách hàng 24/7',
+    desc: 'Giải đáp thắc mắc về dịch vụ, đặt lịch và quyền lợi người bệnh.',
   },
   {
     icon: Calendar,
@@ -34,7 +34,7 @@ const FEATURES = [
     iconColor: 'text-statusgreen',
     status: 'Đã có',
     title: 'Lịch khám & lời nhắc',
-    desc: 'Nhắc lịch khám, tiêm chủng, tái khám và chăm sóc định kỳ.',
+    desc: 'Nhắc lịch khám, tái khám và theo dõi sức khỏe tim mạch định kỳ.',
   },
 ]
 
@@ -54,7 +54,7 @@ export default function LandingPage() {
         <PhoneCall className="h-7 w-7 shrink-0" strokeWidth={1.8} />
         <p className="m-0 text-[14px] leading-relaxed">
           Khi phát hiện dấu hiệu khẩn cấp (đau ngực dữ dội, khó thở, đột quỵ...), Yên bỏ qua mọi
-          bước hỏi đáp và hướng dẫn gọi <strong>115</strong> ngay lập tức.
+          bước hỏi đáp và hướng dẫn gọi <strong>115</strong> hoặc đến khoa Cấp cứu Bệnh viện Tim Hà Nội ngay lập tức.
         </p>
       </section>
 
@@ -62,8 +62,8 @@ export default function LandingPage() {
         <div className="flex items-start justify-center gap-2.5 text-[11.5px] leading-relaxed text-slate-text">
           <ShieldAlert className="h-4 w-4 flex-none translate-y-[1px] text-slate-text" strokeWidth={1.8} />
           <span>
-            Yên là công cụ hỗ trợ phân loại mức độ khẩn cấp, <strong className="text-navy">không thay thế chẩn đoán y khoa</strong>.
-            Khi nghi ngờ, hãy liên hệ nhân viên y tế.
+            Yên là trợ lý hỗ trợ khách hàng của Bệnh viện Tim Hà Nội, <strong className="text-navy">không thay thế chẩn đoán y khoa</strong>.
+            Khi nghi ngờ, hãy liên hệ nhân viên y tế của bệnh viện.
           </span>
         </div>
       </footer>
