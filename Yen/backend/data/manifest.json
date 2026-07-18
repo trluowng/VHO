@@ -1,0 +1,4602 @@
+{
+  "generated_at": "2026-07-17T11:12:51Z",
+  "benh_vien": "Bệnh viện Tim Hà Nội",
+  "so_luong_tai_lieu": 7,
+  "so_luong_chunk": 357,
+  "documents": [
+    {
+      "source_id": "luat_kbcb_2023",
+      "title": "Luật Khám bệnh, chữa bệnh số 15/2023/QH15",
+      "loai_tai_lieu": "van_ban_phap_ly",
+      "raw_file": "raw/15_2023_QH15_372143.pdf",
+      "structured_files": [],
+      "markdown_chunk_dir": "markdown_chunks/luat_kbcb",
+      "chunk_count": 121,
+      "so_hieu": "15/2023/QH15",
+      "ngay_ban_hanh": "2023-01-09",
+      "ngay_hieu_luc": "2024-01-01",
+      "nguon": "https://thuvienphapluat.vn/van-ban/The-thao-Y-te/Luat-15-2023-QH15-kham-benh-chua-benh-372143.aspx"
+    },
+    {
+      "source_id": "huong_dan",
+      "title": "Hướng dẫn cho người bệnh (đặt lịch khám, chi phí khám chữa bệnh)",
+      "loai_tai_lieu": "huong_dan_hanh_chinh",
+      "raw_file": "raw/Hướng dẫn liên hệ đặt lịch khám.pdf",
+      "structured_files": [],
+      "markdown_chunk_dir": "markdown_chunks/huong_dan",
+      "chunk_count": 2
+    },
+    {
+      "source_id": "youmed_gioi_thieu",
+      "title": "Hướng dẫn chi tiết khám bệnh tại Bệnh viện Tim Hà Nội (YouMed)",
+      "loai_tai_lieu": "bai_viet_gioi_thieu",
+      "nguon_ben_thu_ba": true,
+      "raw_file": null,
+      "nguon": "https://youmed.vn/tin-tuc/benh-vien-tim-ha-noi/",
+      "tac_gia": "YouMed",
+      "ngay_dang": "2026-04-17",
+      "ngay_cap_nhat": "2026-06-10",
+      "structured_files": [],
+      "markdown_chunk_dir": "markdown_chunks/youmed_gioi_thieu",
+      "chunk_count": 3
+    },
+    {
+      "source_id": "bhyt_2023",
+      "title": "Bảng giá Bảo hiểm y tế - Bệnh viện Tim Hà Nội",
+      "loai_tai_lieu": "bang_gia_dich_vu",
+      "raw_file": "raw/banggiaBHYT.pdf",
+      "structured_files": [
+        "structured/bang_gia_BHYT_full.csv",
+        "structured/bang_gia_BHYT_full.xlsx"
+      ],
+      "markdown_chunk_dir": "markdown_chunks/bhyt_2023",
+      "chunk_count": 30,
+      "row_count": 701,
+      "co_so_phap_ly": "Thông tư 22/2023/TT-BYT"
+    },
+    {
+      "source_id": "dvkt_2025",
+      "title": "Giá dịch vụ kỹ thuật áp dụng tại Bệnh viện Tim Hà Nội 2025",
+      "loai_tai_lieu": "bang_gia_dich_vu",
+      "raw_file": "raw/gia_dv_ky_thuat_2025.pdf",
+      "structured_files": [
+        "structured/gia_dv_ky_thuat_2025_full.csv",
+        "structured/gia_dv_ky_thuat_2025_full.xlsx"
+      ],
+      "markdown_chunk_dir": "markdown_chunks/dvkt_2025",
+      "chunk_count": 159,
+      "row_count": 2946,
+      "co_so_phap_ly": "Phụ lục số 06 Nghị quyết số 45/2024/NQ-HĐND ngày 10/12/2024 của HĐND TP Hà Nội"
+    },
+    {
+      "source_id": "dvkt_thuong",
+      "title": "Bảng giá Dịch vụ kỹ thuật - Bệnh viện Tim Hà Nội",
+      "loai_tai_lieu": "bang_gia_dich_vu",
+      "raw_file": "raw/banggiaDVKT.pdf",
+      "structured_files": [
+        "structured/banggiaDVKT_full.csv",
+        "structured/banggiaDVKT_full.xlsx"
+      ],
+      "markdown_chunk_dir": "markdown_chunks/dvkt_thuong",
+      "chunk_count": 36,
+      "row_count": 925,
+      "co_so_phap_ly": "Thông tư 14/2019/TT-BYT"
+    },
+    {
+      "source_id": "dvkt_yeu_cau",
+      "title": "Bảng giá Dịch vụ kỹ thuật theo yêu cầu - Bệnh viện Tim Hà Nội",
+      "loai_tai_lieu": "bang_gia_dich_vu",
+      "raw_file": "raw/banggiaDVKTYC.pdf",
+      "structured_files": [
+        "structured/banggiaDVKTYC_full.csv",
+        "structured/banggiaDVKTYC_full.xlsx"
+      ],
+      "markdown_chunk_dir": "markdown_chunks/dvkt_yeu_cau",
+      "chunk_count": 6,
+      "row_count": 102,
+      "co_so_phap_ly": "Quyết định 2823/QĐ-BVT; Quyết định 3165/QĐ-BVT"
+    }
+  ],
+  "chunks": [
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_001",
+      "path": "markdown_chunks/luat_kbcb/dieu_001.md",
+      "chars": 1172,
+      "extra": {
+        "dieu": 1,
+        "tieu_de": "Phạm vi điều chỉnh",
+        "chuong": "Chương I. NHỮNG QUY ĐỊNH CHUNG",
+        "muc": ""
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_002",
+      "path": "markdown_chunks/luat_kbcb/dieu_002.md",
+      "chars": 6142,
+      "extra": {
+        "dieu": 2,
+        "tieu_de": "Giải thích từ ngữ",
+        "chuong": "Chương I. NHỮNG QUY ĐỊNH CHUNG",
+        "muc": ""
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_003",
+      "path": "markdown_chunks/luat_kbcb/dieu_003.md",
+      "chars": 1253,
+      "extra": {
+        "dieu": 3,
+        "tieu_de": "Nguyên tắc trong khám bệnh, chữa bệnh",
+        "chuong": "Chương I. NHỮNG QUY ĐỊNH CHUNG",
+        "muc": ""
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_004",
+      "path": "markdown_chunks/luat_kbcb/dieu_004.md",
+      "chars": 3089,
+      "extra": {
+        "dieu": 4,
+        "tieu_de": "Chính sách của Nhà nước về khám bệnh, chữa bệnh",
+        "chuong": "Chương I. NHỮNG QUY ĐỊNH CHUNG",
+        "muc": ""
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_005",
+      "path": "markdown_chunks/luat_kbcb/dieu_005.md",
+      "chars": 2841,
+      "extra": {
+        "dieu": 5,
+        "tieu_de": "Quản lý nhà nước về khám bệnh, chữa bệnh",
+        "chuong": "Chương I. NHỮNG QUY ĐỊNH CHUNG",
+        "muc": ""
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_006",
+      "path": "markdown_chunks/luat_kbcb/dieu_006.md",
+      "chars": 1814,
+      "extra": {
+        "dieu": 6,
+        "tieu_de": "Tổ chức xã hội - nghề nghiệp về khám bệnh, chữa bệnh",
+        "chuong": "Chương I. NHỮNG QUY ĐỊNH CHUNG",
+        "muc": ""
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_007",
+      "path": "markdown_chunks/luat_kbcb/dieu_007.md",
+      "chars": 4233,
+      "extra": {
+        "dieu": 7,
+        "tieu_de": "Các hành vi bị nghiêm cấm trong hoạt động khám bệnh, chữa bệnh",
+        "chuong": "Chương I. NHỮNG QUY ĐỊNH CHUNG",
+        "muc": ""
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_008",
+      "path": "markdown_chunks/luat_kbcb/dieu_008.md",
+      "chars": 2601,
+      "extra": {
+        "dieu": 8,
+        "tieu_de": "Người đại diện của người bệnh",
+        "chuong": "Chương II. QUYỀN, NGHĨA VỤ CỦA NGƯỜI BỆNH",
+        "muc": "Mục 1. QUYỀN CỦA NGƯỜI BỆNH"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_009",
+      "path": "markdown_chunks/luat_kbcb/dieu_009.md",
+      "chars": 939,
+      "extra": {
+        "dieu": 9,
+        "tieu_de": "Quyền được khám bệnh, chữa bệnh",
+        "chuong": "Chương II. QUYỀN, NGHĨA VỤ CỦA NGƯỜI BỆNH",
+        "muc": "Mục 1. QUYỀN CỦA NGƯỜI BỆNH"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_010",
+      "path": "markdown_chunks/luat_kbcb/dieu_010.md",
+      "chars": 1409,
+      "extra": {
+        "dieu": 10,
+        "tieu_de": "Quyền được tôn trọng danh dự, bảo vệ sức khỏe và tôn trọng bí mật riêng tư trong khám bệnh, chữa bệnh",
+        "chuong": "Chương II. QUYỀN, NGHĨA VỤ CỦA NGƯỜI BỆNH",
+        "muc": "Mục 1. QUYỀN CỦA NGƯỜI BỆNH"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_011",
+      "path": "markdown_chunks/luat_kbcb/dieu_011.md",
+      "chars": 917,
+      "extra": {
+        "dieu": 11,
+        "tieu_de": "Quyền được lựa chọn trong khám bệnh, chữa bệnh",
+        "chuong": "Chương II. QUYỀN, NGHĨA VỤ CỦA NGƯỜI BỆNH",
+        "muc": "Mục 1. QUYỀN CỦA NGƯỜI BỆNH"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_012",
+      "path": "markdown_chunks/luat_kbcb/dieu_012.md",
+      "chars": 932,
+      "extra": {
+        "dieu": 12,
+        "tieu_de": "Quyền được cung cấp thông tin về hồ sơ bệnh án và chi phí khám bệnh, chữa bệnh",
+        "chuong": "Chương II. QUYỀN, NGHĨA VỤ CỦA NGƯỜI BỆNH",
+        "muc": "Mục 1. QUYỀN CỦA NGƯỜI BỆNH"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_013",
+      "path": "markdown_chunks/luat_kbcb/dieu_013.md",
+      "chars": 1201,
+      "extra": {
+        "dieu": 13,
+        "tieu_de": "Quyền được từ chối khám bệnh, chữa bệnh và rời khỏi cơ sở khám bệnh, chữa bệnh",
+        "chuong": "Chương II. QUYỀN, NGHĨA VỤ CỦA NGƯỜI BỆNH",
+        "muc": "Mục 1. QUYỀN CỦA NGƯỜI BỆNH"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_014",
+      "path": "markdown_chunks/luat_kbcb/dieu_014.md",
+      "chars": 760,
+      "extra": {
+        "dieu": 14,
+        "tieu_de": "Quyền kiến nghị và bồi thường",
+        "chuong": "Chương II. QUYỀN, NGHĨA VỤ CỦA NGƯỜI BỆNH",
+        "muc": "Mục 1. QUYỀN CỦA NGƯỜI BỆNH"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_015",
+      "path": "markdown_chunks/luat_kbcb/dieu_015.md",
+      "chars": 2348,
+      "extra": {
+        "dieu": 15,
+        "tieu_de": "Việc thực hiện quyền của người bệnh bị mất năng lực hành vi dân sự, có khó khăn trong nhận thức, làm chủ hành vi, hạn chế năng lực hành vi dân sự, người bệnh là người chưa thành niên và người bệnh không có thân nhân",
+        "chuong": "Chương II. QUYỀN, NGHĨA VỤ CỦA NGƯỜI BỆNH",
+        "muc": "Mục 2. NGHĨA VỤ CỦA NGƯỜI BỆNH"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_016",
+      "path": "markdown_chunks/luat_kbcb/dieu_016.md",
+      "chars": 891,
+      "extra": {
+        "dieu": 16,
+        "tieu_de": "Nghĩa vụ tôn trọng người hành nghề và người khác làm việc tại cơ sở khám bệnh, chữa bệnh",
+        "chuong": "Chương II. QUYỀN, NGHĨA VỤ CỦA NGƯỜI BỆNH",
+        "muc": "Mục 2. NGHĨA VỤ CỦA NGƯỜI BỆNH"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_017",
+      "path": "markdown_chunks/luat_kbcb/dieu_017.md",
+      "chars": 1085,
+      "extra": {
+        "dieu": 17,
+        "tieu_de": "Nghĩa vụ chấp hành các quy định trong khám bệnh, chữa bệnh",
+        "chuong": "Chương II. QUYỀN, NGHĨA VỤ CỦA NGƯỜI BỆNH",
+        "muc": "Mục 2. NGHĨA VỤ CỦA NGƯỜI BỆNH"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_018",
+      "path": "markdown_chunks/luat_kbcb/dieu_018.md",
+      "chars": 923,
+      "extra": {
+        "dieu": 18,
+        "tieu_de": "Nghĩa vụ chi trả chi phí khám bệnh, chữa bệnh",
+        "chuong": "Chương III. NGƯỜI HÀNH NGHỀ KHÁM BỆNH, CHỮA BỆNH",
+        "muc": "Mục 1. ĐIỀU KIỆN HÀNH NGHỀ"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_019",
+      "path": "markdown_chunks/luat_kbcb/dieu_019.md",
+      "chars": 2584,
+      "extra": {
+        "dieu": 19,
+        "tieu_de": "Điều kiện để cá nhân được phép khám bệnh, chữa bệnh",
+        "chuong": "Chương III. NGƯỜI HÀNH NGHỀ KHÁM BỆNH, CHỮA BỆNH",
+        "muc": "Mục 1. ĐIỀU KIỆN HÀNH NGHỀ"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_020",
+      "path": "markdown_chunks/luat_kbcb/dieu_020.md",
+      "chars": 1529,
+      "extra": {
+        "dieu": 20,
+        "tieu_de": "Các trường hợp bị cấm hành nghề khám bệnh, chữa bệnh",
+        "chuong": "Chương III. NGƯỜI HÀNH NGHỀ KHÁM BỆNH, CHỮA BỆNH",
+        "muc": "Mục 1. ĐIỀU KIỆN HÀNH NGHỀ"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_021",
+      "path": "markdown_chunks/luat_kbcb/dieu_021.md",
+      "chars": 2096,
+      "extra": {
+        "dieu": 21,
+        "tieu_de": "Sử dụng ngôn ngữ trong khám bệnh, chữa bệnh",
+        "chuong": "Chương III. NGƯỜI HÀNH NGHỀ KHÁM BỆNH, CHỮA BỆNH",
+        "muc": "Mục 1. ĐIỀU KIỆN HÀNH NGHỀ"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_022",
+      "path": "markdown_chunks/luat_kbcb/dieu_022.md",
+      "chars": 1514,
+      "extra": {
+        "dieu": 22,
+        "tieu_de": "Cập nhật kiến thức y khoa liên tục",
+        "chuong": "Chương III. NGƯỜI HÀNH NGHỀ KHÁM BỆNH, CHỮA BỆNH",
+        "muc": "Mục 2. TỔ CHỨC KIỂM TRA ĐÁNH GIÁ NĂNG LỰC HÀNH NGHỀ KHÁM BỆNH, CHỮA"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_023",
+      "path": "markdown_chunks/luat_kbcb/dieu_023.md",
+      "chars": 2157,
+      "extra": {
+        "dieu": 23,
+        "tieu_de": "Thực hành khám bệnh, chữa bệnh",
+        "chuong": "Chương III. NGƯỜI HÀNH NGHỀ KHÁM BỆNH, CHỮA BỆNH",
+        "muc": "Mục 2. TỔ CHỨC KIỂM TRA ĐÁNH GIÁ NĂNG LỰC HÀNH NGHỀ KHÁM BỆNH, CHỮA"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_024",
+      "path": "markdown_chunks/luat_kbcb/dieu_024.md",
+      "chars": 1553,
+      "extra": {
+        "dieu": 24,
+        "tieu_de": "Kiểm tra đánh giá năng lực hành nghề khám bệnh, chữa bệnh",
+        "chuong": "Chương III. NGƯỜI HÀNH NGHỀ KHÁM BỆNH, CHỮA BỆNH",
+        "muc": "Mục 2. TỔ CHỨC KIỂM TRA ĐÁNH GIÁ NĂNG LỰC HÀNH NGHỀ KHÁM BỆNH, CHỮA"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_025",
+      "path": "markdown_chunks/luat_kbcb/dieu_025.md",
+      "chars": 1514,
+      "extra": {
+        "dieu": 25,
+        "tieu_de": "Hội đồng Y khoa Quốc gia",
+        "chuong": "Chương III. NGƯỜI HÀNH NGHỀ KHÁM BỆNH, CHỮA BỆNH",
+        "muc": "Mục 3. GIẤY PHÉP HÀNH NGHỀ"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_026",
+      "path": "markdown_chunks/luat_kbcb/dieu_026.md",
+      "chars": 1363,
+      "extra": {
+        "dieu": 26,
+        "tieu_de": "Chức danh chuyên môn phải có giấy phép hành nghề",
+        "chuong": "Chương III. NGƯỜI HÀNH NGHỀ KHÁM BỆNH, CHỮA BỆNH",
+        "muc": "Mục 3. GIẤY PHÉP HÀNH NGHỀ"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_027",
+      "path": "markdown_chunks/luat_kbcb/dieu_027.md",
+      "chars": 1367,
+      "extra": {
+        "dieu": 27,
+        "tieu_de": "Giấy phép hành nghề",
+        "chuong": "Chương III. NGƯỜI HÀNH NGHỀ KHÁM BỆNH, CHỮA BỆNH",
+        "muc": "Mục 3. GIẤY PHÉP HÀNH NGHỀ"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_028",
+      "path": "markdown_chunks/luat_kbcb/dieu_028.md",
+      "chars": 2855,
+      "extra": {
+        "dieu": 28,
+        "tieu_de": "Thẩm quyền cấp mới, cấp lại, gia hạn, điều chỉnh giấy phép hành nghề, đình chỉ hành nghề, thu hồi giấy phép hành nghề",
+        "chuong": "Chương III. NGƯỜI HÀNH NGHỀ KHÁM BỆNH, CHỮA BỆNH",
+        "muc": "Mục 3. GIẤY PHÉP HÀNH NGHỀ"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_029",
+      "path": "markdown_chunks/luat_kbcb/dieu_029.md",
+      "chars": 2560,
+      "extra": {
+        "dieu": 29,
+        "tieu_de": "Thừa nhận giấy phép hành nghề do cơ quan, tổ chức có thẩm quyền của nước ngoài cấp",
+        "chuong": "Chương III. NGƯỜI HÀNH NGHỀ KHÁM BỆNH, CHỮA BỆNH",
+        "muc": "Mục 3. GIẤY PHÉP HÀNH NGHỀ"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_030",
+      "path": "markdown_chunks/luat_kbcb/dieu_030.md",
+      "chars": 2950,
+      "extra": {
+        "dieu": 30,
+        "tieu_de": "Cấp mới giấy phép hành nghề",
+        "chuong": "Chương III. NGƯỜI HÀNH NGHỀ KHÁM BỆNH, CHỮA BỆNH",
+        "muc": "Mục 3. GIẤY PHÉP HÀNH NGHỀ"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_031",
+      "path": "markdown_chunks/luat_kbcb/dieu_031.md",
+      "chars": 2078,
+      "extra": {
+        "dieu": 31,
+        "tieu_de": "Cấp lại giấy phép hành nghề",
+        "chuong": "Chương III. NGƯỜI HÀNH NGHỀ KHÁM BỆNH, CHỮA BỆNH",
+        "muc": "Mục 3. GIẤY PHÉP HÀNH NGHỀ"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_032",
+      "path": "markdown_chunks/luat_kbcb/dieu_032.md",
+      "chars": 2443,
+      "extra": {
+        "dieu": 32,
+        "tieu_de": "Gia hạn giấy phép hành nghề",
+        "chuong": "Chương III. NGƯỜI HÀNH NGHỀ KHÁM BỆNH, CHỮA BỆNH",
+        "muc": "Mục 3. GIẤY PHÉP HÀNH NGHỀ"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_033",
+      "path": "markdown_chunks/luat_kbcb/dieu_033.md",
+      "chars": 2024,
+      "extra": {
+        "dieu": 33,
+        "tieu_de": "Điều chỉnh giấy phép hành nghề",
+        "chuong": "Chương III. NGƯỜI HÀNH NGHỀ KHÁM BỆNH, CHỮA BỆNH",
+        "muc": "Mục 3. GIẤY PHÉP HÀNH NGHỀ"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_034",
+      "path": "markdown_chunks/luat_kbcb/dieu_034.md",
+      "chars": 1426,
+      "extra": {
+        "dieu": 34,
+        "tieu_de": "Đình chỉ hành nghề",
+        "chuong": "Chương III. NGƯỜI HÀNH NGHỀ KHÁM BỆNH, CHỮA BỆNH",
+        "muc": "Mục 3. GIẤY PHÉP HÀNH NGHỀ"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_035",
+      "path": "markdown_chunks/luat_kbcb/dieu_035.md",
+      "chars": 2162,
+      "extra": {
+        "dieu": 35,
+        "tieu_de": "Thu hồi giấy phép hành nghề",
+        "chuong": "Chương III. NGƯỜI HÀNH NGHỀ KHÁM BỆNH, CHỮA BỆNH",
+        "muc": "Mục 4. ĐĂNG KÝ HÀNH NGHỀ"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_036",
+      "path": "markdown_chunks/luat_kbcb/dieu_036.md",
+      "chars": 1767,
+      "extra": {
+        "dieu": 36,
+        "tieu_de": "Nguyên tắc đăng ký hành nghề",
+        "chuong": "Chương III. NGƯỜI HÀNH NGHỀ KHÁM BỆNH, CHỮA BỆNH",
+        "muc": "Mục 4. ĐĂNG KÝ HÀNH NGHỀ"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_037",
+      "path": "markdown_chunks/luat_kbcb/dieu_037.md",
+      "chars": 983,
+      "extra": {
+        "dieu": 37,
+        "tieu_de": "Nội dung đăng ký hành nghề",
+        "chuong": "Chương III. NGƯỜI HÀNH NGHỀ KHÁM BỆNH, CHỮA BỆNH",
+        "muc": "Mục 4. ĐĂNG KÝ HÀNH NGHỀ"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_038",
+      "path": "markdown_chunks/luat_kbcb/dieu_038.md",
+      "chars": 1791,
+      "extra": {
+        "dieu": 38,
+        "tieu_de": "Trách nhiệm trong đăng ký hành nghề",
+        "chuong": "Chương III. NGƯỜI HÀNH NGHỀ KHÁM BỆNH, CHỮA BỆNH",
+        "muc": "Mục 5. QUYỀN CỦA NGƯỜI HÀNH NGHỀ"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_039",
+      "path": "markdown_chunks/luat_kbcb/dieu_039.md",
+      "chars": 978,
+      "extra": {
+        "dieu": 39,
+        "tieu_de": "Quyền hành nghề",
+        "chuong": "Chương III. NGƯỜI HÀNH NGHỀ KHÁM BỆNH, CHỮA BỆNH",
+        "muc": "Mục 5. QUYỀN CỦA NGƯỜI HÀNH NGHỀ"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_040",
+      "path": "markdown_chunks/luat_kbcb/dieu_040.md",
+      "chars": 1880,
+      "extra": {
+        "dieu": 40,
+        "tieu_de": "Quyền từ chối khám bệnh, chữa bệnh",
+        "chuong": "Chương III. NGƯỜI HÀNH NGHỀ KHÁM BỆNH, CHỮA BỆNH",
+        "muc": "Mục 5. QUYỀN CỦA NGƯỜI HÀNH NGHỀ"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_041",
+      "path": "markdown_chunks/luat_kbcb/dieu_041.md",
+      "chars": 846,
+      "extra": {
+        "dieu": 41,
+        "tieu_de": "Quyền được nâng cao năng lực chuyên môn",
+        "chuong": "Chương III. NGƯỜI HÀNH NGHỀ KHÁM BỆNH, CHỮA BỆNH",
+        "muc": "Mục 5. QUYỀN CỦA NGƯỜI HÀNH NGHỀ"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_042",
+      "path": "markdown_chunks/luat_kbcb/dieu_042.md",
+      "chars": 903,
+      "extra": {
+        "dieu": 42,
+        "tieu_de": "Quyền được bảo vệ khi xảy ra sự cố y khoa",
+        "chuong": "Chương III. NGƯỜI HÀNH NGHỀ KHÁM BỆNH, CHỮA BỆNH",
+        "muc": "Mục 5. QUYỀN CỦA NGƯỜI HÀNH NGHỀ"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_043",
+      "path": "markdown_chunks/luat_kbcb/dieu_043.md",
+      "chars": 1137,
+      "extra": {
+        "dieu": 43,
+        "tieu_de": "Quyền được bảo đảm an toàn khi hành nghề khám bệnh, chữa bệnh",
+        "chuong": "Chương III. NGƯỜI HÀNH NGHỀ KHÁM BỆNH, CHỮA BỆNH",
+        "muc": "Mục 6. NGHĨA VỤ CỦA NGƯỜI HÀNH NGHỀ"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_044",
+      "path": "markdown_chunks/luat_kbcb/dieu_044.md",
+      "chars": 1144,
+      "extra": {
+        "dieu": 44,
+        "tieu_de": "Nghĩa vụ đối với người bệnh",
+        "chuong": "Chương III. NGƯỜI HÀNH NGHỀ KHÁM BỆNH, CHỮA BỆNH",
+        "muc": "Mục 6. NGHĨA VỤ CỦA NGƯỜI HÀNH NGHỀ"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_045",
+      "path": "markdown_chunks/luat_kbcb/dieu_045.md",
+      "chars": 1177,
+      "extra": {
+        "dieu": 45,
+        "tieu_de": "Nghĩa vụ đối với nghề nghiệp",
+        "chuong": "Chương III. NGƯỜI HÀNH NGHỀ KHÁM BỆNH, CHỮA BỆNH",
+        "muc": "Mục 6. NGHĨA VỤ CỦA NGƯỜI HÀNH NGHỀ"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_046",
+      "path": "markdown_chunks/luat_kbcb/dieu_046.md",
+      "chars": 719,
+      "extra": {
+        "dieu": 46,
+        "tieu_de": "Nghĩa vụ đối với đồng nghiệp",
+        "chuong": "Chương III. NGƯỜI HÀNH NGHỀ KHÁM BỆNH, CHỮA BỆNH",
+        "muc": "Mục 6. NGHĨA VỤ CỦA NGƯỜI HÀNH NGHỀ"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_047",
+      "path": "markdown_chunks/luat_kbcb/dieu_047.md",
+      "chars": 1310,
+      "extra": {
+        "dieu": 47,
+        "tieu_de": "Nghĩa vụ đối với xã hội",
+        "chuong": "Chương IV. CƠ SỞ KHÁM BỆNH, CHỮA BỆNH",
+        "muc": "Mục 1. GIẤY PHÉP HOAT ĐỘNG KHÁM BỆNH, CHỮA BỆNH"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_048",
+      "path": "markdown_chunks/luat_kbcb/dieu_048.md",
+      "chars": 1456,
+      "extra": {
+        "dieu": 48,
+        "tieu_de": "Hình thức tổ chức của cơ sở khám bệnh, chữa bệnh",
+        "chuong": "Chương IV. CƠ SỞ KHÁM BỆNH, CHỮA BỆNH",
+        "muc": "Mục 1. GIẤY PHÉP HOAT ĐỘNG KHÁM BỆNH, CHỮA BỆNH"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_049",
+      "path": "markdown_chunks/luat_kbcb/dieu_049.md",
+      "chars": 836,
+      "extra": {
+        "dieu": 49,
+        "tieu_de": "Điều kiện hoạt động của cơ sở khám bệnh, chữa bệnh",
+        "chuong": "Chương IV. CƠ SỞ KHÁM BỆNH, CHỮA BỆNH",
+        "muc": "Mục 1. GIẤY PHÉP HOAT ĐỘNG KHÁM BỆNH, CHỮA BỆNH"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_050",
+      "path": "markdown_chunks/luat_kbcb/dieu_050.md",
+      "chars": 2047,
+      "extra": {
+        "dieu": 50,
+        "tieu_de": "Giấy phép hoạt động của cơ sở khám bệnh, chữa bệnh",
+        "chuong": "Chương IV. CƠ SỞ KHÁM BỆNH, CHỮA BỆNH",
+        "muc": "Mục 1. GIẤY PHÉP HOAT ĐỘNG KHÁM BỆNH, CHỮA BỆNH"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_051",
+      "path": "markdown_chunks/luat_kbcb/dieu_051.md",
+      "chars": 1780,
+      "extra": {
+        "dieu": 51,
+        "tieu_de": "Thẩm quyền cấp mới, cấp lại, điều chỉnh giấy phép hoạt động, đình chỉ hoạt động và thu hồi giấy phép hoạt động đối với cơ sở khám bệnh, chữa bệnh",
+        "chuong": "Chương IV. CƠ SỞ KHÁM BỆNH, CHỮA BỆNH",
+        "muc": "Mục 1. GIẤY PHÉP HOAT ĐỘNG KHÁM BỆNH, CHỮA BỆNH"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_052",
+      "path": "markdown_chunks/luat_kbcb/dieu_052.md",
+      "chars": 3264,
+      "extra": {
+        "dieu": 52,
+        "tieu_de": "Cấp mới giấy phép hoạt động",
+        "chuong": "Chương IV. CƠ SỞ KHÁM BỆNH, CHỮA BỆNH",
+        "muc": "Mục 1. GIẤY PHÉP HOAT ĐỘNG KHÁM BỆNH, CHỮA BỆNH"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_053",
+      "path": "markdown_chunks/luat_kbcb/dieu_053.md",
+      "chars": 1638,
+      "extra": {
+        "dieu": 53,
+        "tieu_de": "Cấp lại giấy phép hoạt động",
+        "chuong": "Chương IV. CƠ SỞ KHÁM BỆNH, CHỮA BỆNH",
+        "muc": "Mục 1. GIẤY PHÉP HOAT ĐỘNG KHÁM BỆNH, CHỮA BỆNH"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_054",
+      "path": "markdown_chunks/luat_kbcb/dieu_054.md",
+      "chars": 2023,
+      "extra": {
+        "dieu": 54,
+        "tieu_de": "Điều chỉnh giấy phép hoạt động",
+        "chuong": "Chương IV. CƠ SỞ KHÁM BỆNH, CHỮA BỆNH",
+        "muc": "Mục 1. GIẤY PHÉP HOAT ĐỘNG KHÁM BỆNH, CHỮA BỆNH"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_055",
+      "path": "markdown_chunks/luat_kbcb/dieu_055.md",
+      "chars": 1625,
+      "extra": {
+        "dieu": 55,
+        "tieu_de": "Đình chỉ hoạt động đối với cơ sở khám bệnh, chữa bệnh",
+        "chuong": "Chương IV. CƠ SỞ KHÁM BỆNH, CHỮA BỆNH",
+        "muc": "Mục 1. GIẤY PHÉP HOAT ĐỘNG KHÁM BỆNH, CHỮA BỆNH"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_056",
+      "path": "markdown_chunks/luat_kbcb/dieu_056.md",
+      "chars": 1791,
+      "extra": {
+        "dieu": 56,
+        "tieu_de": "Thu hồi giấy phép hoạt động cơ sở khám bệnh, chữa bệnh",
+        "chuong": "Chương IV. CƠ SỞ KHÁM BỆNH, CHỮA BỆNH",
+        "muc": "Mục 2. ĐÁNH GIÁ CHẤT LƯỢNG CƠ SỞ KHÁM BỆNH, CHỮA BỆNH"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_057",
+      "path": "markdown_chunks/luat_kbcb/dieu_057.md",
+      "chars": 2065,
+      "extra": {
+        "dieu": 57,
+        "tieu_de": "Tiêu chuẩn chất lượng đối với cơ sở khám bệnh, chữa bệnh",
+        "chuong": "Chương IV. CƠ SỞ KHÁM BỆNH, CHỮA BỆNH",
+        "muc": "Mục 2. ĐÁNH GIÁ CHẤT LƯỢNG CƠ SỞ KHÁM BỆNH, CHỮA BỆNH"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_058",
+      "path": "markdown_chunks/luat_kbcb/dieu_058.md",
+      "chars": 2436,
+      "extra": {
+        "dieu": 58,
+        "tieu_de": "Đánh giá và chứng nhận chất lượng đối với cơ sở khám bệnh, chữa bệnh",
+        "chuong": "Chương IV. CƠ SỞ KHÁM BỆNH, CHỮA BỆNH",
+        "muc": "Mục 3. QUYỀN VÀ TRÁCH NHIỆM CỦA CƠ SỞ KHÁM BỆNH, CHỮA BỆNH"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_059",
+      "path": "markdown_chunks/luat_kbcb/dieu_059.md",
+      "chars": 1935,
+      "extra": {
+        "dieu": 59,
+        "tieu_de": "Quyền của cơ sở khám bệnh, chữa bệnh",
+        "chuong": "Chương IV. CƠ SỞ KHÁM BỆNH, CHỮA BỆNH",
+        "muc": "Mục 3. QUYỀN VÀ TRÁCH NHIỆM CỦA CƠ SỞ KHÁM BỆNH, CHỮA BỆNH"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_060",
+      "path": "markdown_chunks/luat_kbcb/dieu_060.md",
+      "chars": 2787,
+      "extra": {
+        "dieu": 60,
+        "tieu_de": "Trách nhiệm của cơ sở khám bệnh, chữa bệnh",
+        "chuong": "Chương V. CHUYÊN MÔN KỸ THUẬT",
+        "muc": ""
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_061",
+      "path": "markdown_chunks/luat_kbcb/dieu_061.md",
+      "chars": 3025,
+      "extra": {
+        "dieu": 61,
+        "tieu_de": "Cấp cứu",
+        "chuong": "Chương V. CHUYÊN MÔN KỸ THUẬT",
+        "muc": ""
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_062",
+      "path": "markdown_chunks/luat_kbcb/dieu_062.md",
+      "chars": 1220,
+      "extra": {
+        "dieu": 62,
+        "tieu_de": "Khám bệnh, chỉ định phương pháp chữa bệnh và kê đơn thuốc",
+        "chuong": "Chương V. CHUYÊN MÔN KỸ THUẬT",
+        "muc": ""
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_063",
+      "path": "markdown_chunks/luat_kbcb/dieu_063.md",
+      "chars": 1992,
+      "extra": {
+        "dieu": 63,
+        "tieu_de": "Sử dụng thuốc trong điều trị",
+        "chuong": "Chương V. CHUYÊN MÔN KỸ THUẬT",
+        "muc": ""
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_064",
+      "path": "markdown_chunks/luat_kbcb/dieu_064.md",
+      "chars": 1219,
+      "extra": {
+        "dieu": 64,
+        "tieu_de": "Hội chẩn",
+        "chuong": "Chương V. CHUYÊN MÔN KỸ THUẬT",
+        "muc": ""
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_065",
+      "path": "markdown_chunks/luat_kbcb/dieu_065.md",
+      "chars": 1081,
+      "extra": {
+        "dieu": 65,
+        "tieu_de": "Thực hiện phẫu thuật, can thiệp có xâm nhập cơ thể",
+        "chuong": "Chương V. CHUYÊN MÔN KỸ THUẬT",
+        "muc": ""
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_066",
+      "path": "markdown_chunks/luat_kbcb/dieu_066.md",
+      "chars": 1089,
+      "extra": {
+        "dieu": 66,
+        "tieu_de": "Chăm sóc người bệnh",
+        "chuong": "Chương V. CHUYÊN MÔN KỸ THUẬT",
+        "muc": ""
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_067",
+      "path": "markdown_chunks/luat_kbcb/dieu_067.md",
+      "chars": 930,
+      "extra": {
+        "dieu": 67,
+        "tieu_de": "Dinh dưỡng trong khám bệnh, chữa bệnh",
+        "chuong": "Chương V. CHUYÊN MÔN KỸ THUẬT",
+        "muc": ""
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_068",
+      "path": "markdown_chunks/luat_kbcb/dieu_068.md",
+      "chars": 1670,
+      "extra": {
+        "dieu": 68,
+        "tieu_de": "Phục hồi chức năng",
+        "chuong": "Chương V. CHUYÊN MÔN KỸ THUẬT",
+        "muc": ""
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_069",
+      "path": "markdown_chunks/luat_kbcb/dieu_069.md",
+      "chars": 3032,
+      "extra": {
+        "dieu": 69,
+        "tieu_de": "Hồ sơ bệnh án",
+        "chuong": "Chương V. CHUYÊN MÔN KỸ THUẬT",
+        "muc": ""
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_070",
+      "path": "markdown_chunks/luat_kbcb/dieu_070.md",
+      "chars": 1605,
+      "extra": {
+        "dieu": 70,
+        "tieu_de": "Trực khám bệnh, chữa bệnh",
+        "chuong": "Chương V. CHUYÊN MÔN KỸ THUẬT",
+        "muc": ""
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_071",
+      "path": "markdown_chunks/luat_kbcb/dieu_071.md",
+      "chars": 1103,
+      "extra": {
+        "dieu": 71,
+        "tieu_de": "Phòng ngừa sự cố y khoa tại cơ sở khám bệnh, chữa bệnh",
+        "chuong": "Chương V. CHUYÊN MÔN KỸ THUẬT",
+        "muc": ""
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_072",
+      "path": "markdown_chunks/luat_kbcb/dieu_072.md",
+      "chars": 2292,
+      "extra": {
+        "dieu": 72,
+        "tieu_de": "Tiếp nhận và xử lý đối với người bệnh không có thân nhân",
+        "chuong": "Chương V. CHUYÊN MÔN KỸ THUẬT",
+        "muc": ""
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_073",
+      "path": "markdown_chunks/luat_kbcb/dieu_073.md",
+      "chars": 2383,
+      "extra": {
+        "dieu": 73,
+        "tieu_de": "Xử lý trường hợp tử vong",
+        "chuong": "Chương V. CHUYÊN MÔN KỸ THUẬT",
+        "muc": ""
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_074",
+      "path": "markdown_chunks/luat_kbcb/dieu_074.md",
+      "chars": 1659,
+      "extra": {
+        "dieu": 74,
+        "tieu_de": "Kiểm soát nhiễm khuẩn tại cơ sở khám bệnh, chữa bệnh",
+        "chuong": "Chương V. CHUYÊN MÔN KỸ THUẬT",
+        "muc": ""
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_075",
+      "path": "markdown_chunks/luat_kbcb/dieu_075.md",
+      "chars": 776,
+      "extra": {
+        "dieu": 75,
+        "tieu_de": "Quản lý chất thải y tế và bảo vệ môi trường trong cơ sở khám bệnh, chữa bệnh",
+        "chuong": "Chương V. CHUYÊN MÔN KỸ THUẬT",
+        "muc": ""
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_076",
+      "path": "markdown_chunks/luat_kbcb/dieu_076.md",
+      "chars": 598,
+      "extra": {
+        "dieu": 76,
+        "tieu_de": "Điều trị ngoại trú",
+        "chuong": "Chương V. CHUYÊN MÔN KỸ THUẬT",
+        "muc": ""
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_077",
+      "path": "markdown_chunks/luat_kbcb/dieu_077.md",
+      "chars": 2723,
+      "extra": {
+        "dieu": 77,
+        "tieu_de": "Điều trị nội trú",
+        "chuong": "Chương V. CHUYÊN MÔN KỸ THUẬT",
+        "muc": ""
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_078",
+      "path": "markdown_chunks/luat_kbcb/dieu_078.md",
+      "chars": 754,
+      "extra": {
+        "dieu": 78,
+        "tieu_de": "Điều trị ban ngày",
+        "chuong": "Chương V. CHUYÊN MÔN KỸ THUẬT",
+        "muc": ""
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_079",
+      "path": "markdown_chunks/luat_kbcb/dieu_079.md",
+      "chars": 1833,
+      "extra": {
+        "dieu": 79,
+        "tieu_de": "Hoạt động khám bệnh, chữa bệnh lưu động",
+        "chuong": "Chương V. CHUYÊN MÔN KỸ THUẬT",
+        "muc": ""
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_080",
+      "path": "markdown_chunks/luat_kbcb/dieu_080.md",
+      "chars": 1551,
+      "extra": {
+        "dieu": 80,
+        "tieu_de": "Khám bệnh, chữa bệnh từ xa và hỗ trợ khám bệnh, chữa bệnh từ xa",
+        "chuong": "Chương V. CHUYÊN MÔN KỸ THUẬT",
+        "muc": ""
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_081",
+      "path": "markdown_chunks/luat_kbcb/dieu_081.md",
+      "chars": 1302,
+      "extra": {
+        "dieu": 81,
+        "tieu_de": "Khám bệnh, chữa bệnh y học gia đình",
+        "chuong": "Chương V. CHUYÊN MÔN KỸ THUẬT",
+        "muc": ""
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_082",
+      "path": "markdown_chunks/luat_kbcb/dieu_082.md",
+      "chars": 1016,
+      "extra": {
+        "dieu": 82,
+        "tieu_de": "Bắt buộc chữa bệnh",
+        "chuong": "Chương V. CHUYÊN MÔN KỸ THUẬT",
+        "muc": ""
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_083",
+      "path": "markdown_chunks/luat_kbcb/dieu_083.md",
+      "chars": 1094,
+      "extra": {
+        "dieu": 83,
+        "tieu_de": "Khám sức khỏe",
+        "chuong": "Chương V. CHUYÊN MÔN KỸ THUẬT",
+        "muc": ""
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_084",
+      "path": "markdown_chunks/luat_kbcb/dieu_084.md",
+      "chars": 901,
+      "extra": {
+        "dieu": 84,
+        "tieu_de": "Giám định y khoa",
+        "chuong": "Chương VI. KHÁM BỆNH, CHỮA BỆNH BẰNG Y HỌC CỔ TRUYỀN VÀ KẾT HỢP Y HỌC CỔ TRUYỀN",
+        "muc": ""
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_085",
+      "path": "markdown_chunks/luat_kbcb/dieu_085.md",
+      "chars": 2349,
+      "extra": {
+        "dieu": 85,
+        "tieu_de": "Phát triển khám bệnh, chữa bệnh bằng y học cổ truyền",
+        "chuong": "Chương VI. KHÁM BỆNH, CHỮA BỆNH BẰNG Y HỌC CỔ TRUYỀN VÀ KẾT HỢP Y HỌC CỔ TRUYỀN",
+        "muc": ""
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_086",
+      "path": "markdown_chunks/luat_kbcb/dieu_086.md",
+      "chars": 1584,
+      "extra": {
+        "dieu": 86,
+        "tieu_de": "Phát triển nguồn lực phục vụ khám bệnh, chữa bệnh bằng y học cổ truyền",
+        "chuong": "Chương VI. KHÁM BỆNH, CHỮA BỆNH BẰNG Y HỌC CỔ TRUYỀN VÀ KẾT HỢP Y HỌC CỔ TRUYỀN",
+        "muc": ""
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_087",
+      "path": "markdown_chunks/luat_kbcb/dieu_087.md",
+      "chars": 1422,
+      "extra": {
+        "dieu": 87,
+        "tieu_de": "Kết hợp y học cổ truyền với y học hiện đại tại cơ sở khám bệnh, chữa bệnh",
+        "chuong": "Chương VII. KHÁM BỆNH, CHỮA BỆNH NHÂN ĐAO, KHÁM BỆNH, CHỮA BỆNH KHÔNG VÌ MỤC",
+        "muc": "Mục 1. KHÁM BỆNH, CHỮA BỆNH NHÂN ĐAO, KHÁM BỆNH, CHỮA BỆNH KHÔNG VÌ"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_088",
+      "path": "markdown_chunks/luat_kbcb/dieu_088.md",
+      "chars": 2387,
+      "extra": {
+        "dieu": 88,
+        "tieu_de": "Hoạt động khám bệnh, chữa bệnh nhân đạo và khám bệnh, chữa bệnh không vì mục đích lợi nhuận",
+        "chuong": "Chương VII. KHÁM BỆNH, CHỮA BỆNH NHÂN ĐAO, KHÁM BỆNH, CHỮA BỆNH KHÔNG VÌ MỤC",
+        "muc": "Mục 1. KHÁM BỆNH, CHỮA BỆNH NHÂN ĐAO, KHÁM BỆNH, CHỮA BỆNH KHÔNG VÌ"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_089",
+      "path": "markdown_chunks/luat_kbcb/dieu_089.md",
+      "chars": 1377,
+      "extra": {
+        "dieu": 89,
+        "tieu_de": "Ưu đãi đối với cơ sở khám bệnh, chữa bệnh nhân đạo, cơ sở khám bệnh, chữa bệnh không vì mục đích lợi nhuận",
+        "chuong": "Chương VII. KHÁM BỆNH, CHỮA BỆNH NHÂN ĐAO, KHÁM BỆNH, CHỮA BỆNH KHÔNG VÌ MỤC",
+        "muc": "Mục 2. CHUYỂN GIAO KỸ THUẬT CHUYÊN MÔN VỀ KHÁM BỆNH, CHỮA BỆNH"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_090",
+      "path": "markdown_chunks/luat_kbcb/dieu_090.md",
+      "chars": 1130,
+      "extra": {
+        "dieu": 90,
+        "tieu_de": "Chuyển giao kỹ thuật chuyên môn về khám bệnh, chữa bệnh",
+        "chuong": "Chương VII. KHÁM BỆNH, CHỮA BỆNH NHÂN ĐAO, KHÁM BỆNH, CHỮA BỆNH KHÔNG VÌ MỤC",
+        "muc": "Mục 2. CHUYỂN GIAO KỸ THUẬT CHUYÊN MÔN VỀ KHÁM BỆNH, CHỮA BỆNH"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_091",
+      "path": "markdown_chunks/luat_kbcb/dieu_091.md",
+      "chars": 1082,
+      "extra": {
+        "dieu": 91,
+        "tieu_de": "Ưu đãi đối với hoạt động chuyển giao kỹ thuật chuyên môn về khám bệnh, chữa bệnh",
+        "chuong": "Chương VIII. ÁP DỤNG KỸ THUẬT MỚI, PHƯƠNG PHÁP MỚI TRONG KHÁM BỆNH, CHỮA BỆNH VÀ",
+        "muc": "Mục 1. ÁP DỤNG KỸ THUẬT MỚI, PHƯƠNG PHÁP MỚI TRONG KHÁM BỆNH, CHỮA"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_092",
+      "path": "markdown_chunks/luat_kbcb/dieu_092.md",
+      "chars": 1103,
+      "extra": {
+        "dieu": 92,
+        "tieu_de": "Kỹ thuật mới, phương pháp mới trong khám bệnh, chữa bệnh",
+        "chuong": "Chương VIII. ÁP DỤNG KỸ THUẬT MỚI, PHƯƠNG PHÁP MỚI TRONG KHÁM BỆNH, CHỮA BỆNH VÀ",
+        "muc": "Mục 1. ÁP DỤNG KỸ THUẬT MỚI, PHƯƠNG PHÁP MỚI TRONG KHÁM BỆNH, CHỮA"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_093",
+      "path": "markdown_chunks/luat_kbcb/dieu_093.md",
+      "chars": 1770,
+      "extra": {
+        "dieu": 93,
+        "tieu_de": "Điều kiện áp dụng kỹ thuật mới, phương pháp mới trong khám bệnh, chữa bệnh",
+        "chuong": "Chương VIII. ÁP DỤNG KỸ THUẬT MỚI, PHƯƠNG PHÁP MỚI TRONG KHÁM BỆNH, CHỮA BỆNH VÀ",
+        "muc": "Mục 2. THỬ NGHIỆM LÂM SÀNG TRONG KHÁM BỆNH, CHỮA BỆNH"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_094",
+      "path": "markdown_chunks/luat_kbcb/dieu_094.md",
+      "chars": 984,
+      "extra": {
+        "dieu": 94,
+        "tieu_de": "Các trường hợp thử nghiệm lâm sàng trong khám bệnh, chữa bệnh",
+        "chuong": "Chương VIII. ÁP DỤNG KỸ THUẬT MỚI, PHƯƠNG PHÁP MỚI TRONG KHÁM BỆNH, CHỮA BỆNH VÀ",
+        "muc": "Mục 2. THỬ NGHIỆM LÂM SÀNG TRONG KHÁM BỆNH, CHỮA BỆNH"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_095",
+      "path": "markdown_chunks/luat_kbcb/dieu_095.md",
+      "chars": 1669,
+      "extra": {
+        "dieu": 95,
+        "tieu_de": "Điều kiện của người tham gia thử nghiệm lâm sàng trong khám bệnh, chữa bệnh",
+        "chuong": "Chương VIII. ÁP DỤNG KỸ THUẬT MỚI, PHƯƠNG PHÁP MỚI TRONG KHÁM BỆNH, CHỮA BỆNH VÀ",
+        "muc": "Mục 2. THỬ NGHIỆM LÂM SÀNG TRONG KHÁM BỆNH, CHỮA BỆNH"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_096",
+      "path": "markdown_chunks/luat_kbcb/dieu_096.md",
+      "chars": 1475,
+      "extra": {
+        "dieu": 96,
+        "tieu_de": "Quyền và nghĩa vụ của người tham gia thử nghiệm lâm sàng",
+        "chuong": "Chương VIII. ÁP DỤNG KỸ THUẬT MỚI, PHƯƠNG PHÁP MỚI TRONG KHÁM BỆNH, CHỮA BỆNH VÀ",
+        "muc": "Mục 2. THỬ NGHIỆM LÂM SÀNG TRONG KHÁM BỆNH, CHỮA BỆNH"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_097",
+      "path": "markdown_chunks/luat_kbcb/dieu_097.md",
+      "chars": 1618,
+      "extra": {
+        "dieu": 97,
+        "tieu_de": "Quyền và trách nhiệm của tổ chức, cá nhân có kỹ thuật mới, phương pháp mới, thiết bị y tế phải thử nghiệm lâm sàng",
+        "chuong": "Chương VIII. ÁP DỤNG KỸ THUẬT MỚI, PHƯƠNG PHÁP MỚI TRONG KHÁM BỆNH, CHỮA BỆNH VÀ",
+        "muc": "Mục 2. THỬ NGHIỆM LÂM SÀNG TRONG KHÁM BỆNH, CHỮA BỆNH"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_098",
+      "path": "markdown_chunks/luat_kbcb/dieu_098.md",
+      "chars": 1578,
+      "extra": {
+        "dieu": 98,
+        "tieu_de": "Quyền và trách nhiệm của cơ sở nhận thử nghiệm lâm sàng",
+        "chuong": "Chương VIII. ÁP DỤNG KỸ THUẬT MỚI, PHƯƠNG PHÁP MỚI TRONG KHÁM BỆNH, CHỮA BỆNH VÀ",
+        "muc": "Mục 2. THỬ NGHIỆM LÂM SÀNG TRONG KHÁM BỆNH, CHỮA BỆNH"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_099",
+      "path": "markdown_chunks/luat_kbcb/dieu_099.md",
+      "chars": 2347,
+      "extra": {
+        "dieu": 99,
+        "tieu_de": "Nguyên tắc và thẩm quyền phê duyệt thử nghiệm lâm sàng",
+        "chuong": "Chương IX. SAI SÓT CHUYÊN MÔN KỸ THUẬT",
+        "muc": ""
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_100",
+      "path": "markdown_chunks/luat_kbcb/dieu_100.md",
+      "chars": 1651,
+      "extra": {
+        "dieu": 100,
+        "tieu_de": "Xác định người hành nghề có sai sót chuyên môn kỹ thuật",
+        "chuong": "Chương IX. SAI SÓT CHUYÊN MÔN KỸ THUẬT",
+        "muc": ""
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_101",
+      "path": "markdown_chunks/luat_kbcb/dieu_101.md",
+      "chars": 2860,
+      "extra": {
+        "dieu": 101,
+        "tieu_de": "Hội đồng chuyên môn",
+        "chuong": "Chương IX. SAI SÓT CHUYÊN MÔN KỸ THUẬT",
+        "muc": ""
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_102",
+      "path": "markdown_chunks/luat_kbcb/dieu_102.md",
+      "chars": 751,
+      "extra": {
+        "dieu": 102,
+        "tieu_de": "Bồi thường khi xảy ra tai biến y khoa",
+        "chuong": "Chương IX. SAI SÓT CHUYÊN MÔN KỸ THUẬT",
+        "muc": ""
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_103",
+      "path": "markdown_chunks/luat_kbcb/dieu_103.md",
+      "chars": 1424,
+      "extra": {
+        "dieu": 103,
+        "tieu_de": "Bảo hiểm trách nhiệm nghề nghiệp trong khám bệnh, chữa bệnh",
+        "chuong": "Chương X. ĐIỀU KIỆN BẢO ĐẢM HOAT ĐỘNG KHÁM BỆNH, CHỮA BỆNH",
+        "muc": "Mục 1. ĐIỀU KIỆN BẢO ĐẢM VỀ CHUYÊN MÔN KỸ THUẬT"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_104",
+      "path": "markdown_chunks/luat_kbcb/dieu_104.md",
+      "chars": 2652,
+      "extra": {
+        "dieu": 104,
+        "tieu_de": "Cấp chuyên môn kỹ thuật trong khám bệnh, chữa bệnh",
+        "chuong": "Chương X. ĐIỀU KIỆN BẢO ĐẢM HOAT ĐỘNG KHÁM BỆNH, CHỮA BỆNH",
+        "muc": "Mục 1. ĐIỀU KIỆN BẢO ĐẢM VỀ CHUYÊN MÔN KỸ THUẬT"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_105",
+      "path": "markdown_chunks/luat_kbcb/dieu_105.md",
+      "chars": 2057,
+      "extra": {
+        "dieu": 105,
+        "tieu_de": "Đào tạo, bồi dưỡng người hành nghề",
+        "chuong": "Chương X. ĐIỀU KIỆN BẢO ĐẢM HOAT ĐỘNG KHÁM BỆNH, CHỮA BỆNH",
+        "muc": "Mục 2. ĐIỀU KIỆN BẢO ĐẢM VỀ TÀI CHÍNH"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_106",
+      "path": "markdown_chunks/luat_kbcb/dieu_106.md",
+      "chars": 1123,
+      "extra": {
+        "dieu": 106,
+        "tieu_de": "Nguồn tài chính cho khám bệnh, chữa bệnh",
+        "chuong": "Chương X. ĐIỀU KIỆN BẢO ĐẢM HOAT ĐỘNG KHÁM BỆNH, CHỮA BỆNH",
+        "muc": "Mục 2. ĐIỀU KIỆN BẢO ĐẢM VỀ TÀI CHÍNH"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_107",
+      "path": "markdown_chunks/luat_kbcb/dieu_107.md",
+      "chars": 1478,
+      "extra": {
+        "dieu": 107,
+        "tieu_de": "Ngân sách nhà nước chi cho khám bệnh, chữa bệnh",
+        "chuong": "Chương X. ĐIỀU KIỆN BẢO ĐẢM HOAT ĐỘNG KHÁM BỆNH, CHỮA BỆNH",
+        "muc": "Mục 2. ĐIỀU KIỆN BẢO ĐẢM VỀ TÀI CHÍNH"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_108",
+      "path": "markdown_chunks/luat_kbcb/dieu_108.md",
+      "chars": 2843,
+      "extra": {
+        "dieu": 108,
+        "tieu_de": "Quy định về tự chủ đối với cơ sở khám bệnh, chữa bệnh của Nhà nước",
+        "chuong": "Chương X. ĐIỀU KIỆN BẢO ĐẢM HOAT ĐỘNG KHÁM BỆNH, CHỮA BỆNH",
+        "muc": "Mục 2. ĐIỀU KIỆN BẢO ĐẢM VỀ TÀI CHÍNH"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_109",
+      "path": "markdown_chunks/luat_kbcb/dieu_109.md",
+      "chars": 2423,
+      "extra": {
+        "dieu": 109,
+        "tieu_de": "Xã hội hóa trong hoạt động khám bệnh, chữa bệnh",
+        "chuong": "Chương X. ĐIỀU KIỆN BẢO ĐẢM HOAT ĐỘNG KHÁM BỆNH, CHỮA BỆNH",
+        "muc": "Mục 2. ĐIỀU KIỆN BẢO ĐẢM VỀ TÀI CHÍNH"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_110",
+      "path": "markdown_chunks/luat_kbcb/dieu_110.md",
+      "chars": 4527,
+      "extra": {
+        "dieu": 110,
+        "tieu_de": "Giá dịch vụ khám bệnh, chữa bệnh",
+        "chuong": "Chương X. ĐIỀU KIỆN BẢO ĐẢM HOAT ĐỘNG KHÁM BỆNH, CHỮA BỆNH",
+        "muc": "Mục 2. ĐIỀU KIỆN BẢO ĐẢM VỀ TÀI CHÍNH"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_111",
+      "path": "markdown_chunks/luat_kbcb/dieu_111.md",
+      "chars": 1561,
+      "extra": {
+        "dieu": 111,
+        "tieu_de": "Quỹ hỗ trợ khám bệnh, chữa bệnh",
+        "chuong": "Chương X. ĐIỀU KIỆN BẢO ĐẢM HOAT ĐỘNG KHÁM BỆNH, CHỮA BỆNH",
+        "muc": "Mục 3. CÁC ĐIỀU KIỆN BẢO ĐẢM KHÁC"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_112",
+      "path": "markdown_chunks/luat_kbcb/dieu_112.md",
+      "chars": 2042,
+      "extra": {
+        "dieu": 112,
+        "tieu_de": "Hệ thống thông tin về quản lý hoạt động khám bệnh, chữa bệnh",
+        "chuong": "Chương X. ĐIỀU KIỆN BẢO ĐẢM HOAT ĐỘNG KHÁM BỆNH, CHỮA BỆNH",
+        "muc": "Mục 3. CÁC ĐIỀU KIỆN BẢO ĐẢM KHÁC"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_113",
+      "path": "markdown_chunks/luat_kbcb/dieu_113.md",
+      "chars": 1075,
+      "extra": {
+        "dieu": 113,
+        "tieu_de": "Thiết bị y tế",
+        "chuong": "Chương X. ĐIỀU KIỆN BẢO ĐẢM HOAT ĐỘNG KHÁM BỆNH, CHỮA BỆNH",
+        "muc": "Mục 3. CÁC ĐIỀU KIỆN BẢO ĐẢM KHÁC"
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_114",
+      "path": "markdown_chunks/luat_kbcb/dieu_114.md",
+      "chars": 2905,
+      "extra": {
+        "dieu": 114,
+        "tieu_de": "Bảo đảm an ninh, trật tự tại cơ sở khám bệnh, chữa bệnh",
+        "chuong": "Chương XI. HUY ĐỘNG, ĐIỀU ĐỘNG NGUỒN LỰC PHỤC VỤ CÔNG TÁC KHÁM BỆNH, CHỮA BỆNH",
+        "muc": ""
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_115",
+      "path": "markdown_chunks/luat_kbcb/dieu_115.md",
+      "chars": 2162,
+      "extra": {
+        "dieu": 115,
+        "tieu_de": "Huy động, điều động người tham gia hoạt động khám bệnh, chữa bệnh trong trường hợp xảy ra thiên tai, thảm họa, dịch bệnh truyền nhiễm thuộc nhóm A hoặc tình trạng khẩn cấp",
+        "chuong": "Chương XI. HUY ĐỘNG, ĐIỀU ĐỘNG NGUỒN LỰC PHỤC VỤ CÔNG TÁC KHÁM BỆNH, CHỮA BỆNH",
+        "muc": ""
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_116",
+      "path": "markdown_chunks/luat_kbcb/dieu_116.md",
+      "chars": 1693,
+      "extra": {
+        "dieu": 116,
+        "tieu_de": "Huy động, điều động cơ sở khám bệnh, chữa bệnh tham gia hoạt động khám bệnh, chữa bệnh trong trường hợp xảy ra thiên tai, thảm họa, dịch bệnh truyền nhiễm thuộc nhóm A hoặc tình trạng khẩn cấp",
+        "chuong": "Chương XI. HUY ĐỘNG, ĐIỀU ĐỘNG NGUỒN LỰC PHỤC VỤ CÔNG TÁC KHÁM BỆNH, CHỮA BỆNH",
+        "muc": ""
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_117",
+      "path": "markdown_chunks/luat_kbcb/dieu_117.md",
+      "chars": 2826,
+      "extra": {
+        "dieu": 117,
+        "tieu_de": "Cơ chế tài chính đối với hoạt động khám bệnh, chữa bệnh trong trường hợp xảy ra thiên tai, thảm họa, dịch bệnh truyền nhiễm thuộc nhóm A hoặc tình trạng khẩn cấp",
+        "chuong": "Chương XI. HUY ĐỘNG, ĐIỀU ĐỘNG NGUỒN LỰC PHỤC VỤ CÔNG TÁC KHÁM BỆNH, CHỮA BỆNH",
+        "muc": ""
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_118",
+      "path": "markdown_chunks/luat_kbcb/dieu_118.md",
+      "chars": 1414,
+      "extra": {
+        "dieu": 118,
+        "tieu_de": "Thẩm quyền điều động tham gia hoạt động khám bệnh, chữa bệnh trong trường hợp xảy ra thiên tai, thảm họa, dịch bệnh truyền nhiễm thuộc nhóm A hoặc tình trạng khẩn cấp",
+        "chuong": "Chương XII. ĐIỀU KHOẢN THI HÀNH",
+        "muc": ""
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_119",
+      "path": "markdown_chunks/luat_kbcb/dieu_119.md",
+      "chars": 1662,
+      "extra": {
+        "dieu": 119,
+        "tieu_de": "Sửa đổi, bổ sung một số điều của một số luật liên quan đến khám bệnh, chữa bệnh",
+        "chuong": "Chương XII. ĐIỀU KHOẢN THI HÀNH",
+        "muc": ""
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_120",
+      "path": "markdown_chunks/luat_kbcb/dieu_120.md",
+      "chars": 2436,
+      "extra": {
+        "dieu": 120,
+        "tieu_de": "Hiệu lực thi hành",
+        "chuong": "Chương XII. ĐIỀU KHOẢN THI HÀNH",
+        "muc": ""
+      }
+    },
+    {
+      "doc_source": "luat_kbcb_2023",
+      "chunk_id": "luat_kbcb_dieu_121",
+      "path": "markdown_chunks/luat_kbcb/dieu_121.md",
+      "chars": 4312,
+      "extra": {
+        "dieu": 121,
+        "tieu_de": "Quy định chuyển tiếp",
+        "chuong": "Chương XII. ĐIỀU KHOẢN THI HÀNH",
+        "muc": ""
+      }
+    },
+    {
+      "doc_source": "huong_dan",
+      "chunk_id": "huong_dan_dat_lich_kham_001",
+      "path": "markdown_chunks/huong_dan/huong_dan_dat_lich_kham.md",
+      "chars": 3464,
+      "extra": {
+        "muc": "Liên hệ đặt lịch khám"
+      }
+    },
+    {
+      "doc_source": "huong_dan",
+      "chunk_id": "huong_dan_chi_phi_kham_mau_001",
+      "path": "markdown_chunks/huong_dan/huong_dan_002_chi_phi_kham_mau.md",
+      "chars": 1874,
+      "extra": {
+        "muc": "Chi phí khám, chữa bệnh (bảng giá mẫu minh họa)"
+      }
+    },
+    {
+      "doc_source": "youmed_gioi_thieu",
+      "chunk_id": "youmed_gioi_thieu_001",
+      "path": "markdown_chunks/youmed_gioi_thieu/youmed_001_gioi_thieu_co_so.md",
+      "chars": 3071,
+      "extra": {
+        "muc": "Giới thiệu, địa chỉ, cơ sở vật chất"
+      }
+    },
+    {
+      "doc_source": "youmed_gioi_thieu",
+      "chunk_id": "youmed_gioi_thieu_002",
+      "path": "markdown_chunks/youmed_gioi_thieu/youmed_002_doi_ngu_chuyen_khoa_dich_vu.md",
+      "chars": 2449,
+      "extra": {
+        "muc": "Đội ngũ bác sĩ, chuyên khoa, dịch vụ nổi bật"
+      }
+    },
+    {
+      "doc_source": "youmed_gioi_thieu",
+      "chunk_id": "youmed_gioi_thieu_003",
+      "path": "markdown_chunks/youmed_gioi_thieu/youmed_003_quy_trinh_kham.md",
+      "chars": 2506,
+      "extra": {
+        "muc": "Quy trình khám chữa bệnh"
+      }
+    },
+    {
+      "doc_source": "bhyt_2023",
+      "chunk_id": "bhyt_001",
+      "path": "markdown_chunks/bhyt_2023/bhyt_001.md",
+      "chars": 811,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ BẢO HIỂM Y TẾ KHÁM BỆNH VÀ NGÀY GIƯỜNG ĐIỀU TRỊ",
+        "nhom_con": "",
+        "stt_tu": "1",
+        "stt_den": "8",
+        "so_dong": 8
+      }
+    },
+    {
+      "doc_source": "bhyt_2023",
+      "chunk_id": "bhyt_002",
+      "path": "markdown_chunks/bhyt_2023/bhyt_002.md",
+      "chars": 3264,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "1",
+        "stt_den": "23",
+        "so_dong": 23
+      }
+    },
+    {
+      "doc_source": "bhyt_2023",
+      "chunk_id": "bhyt_003",
+      "path": "markdown_chunks/bhyt_2023/bhyt_003.md",
+      "chars": 3303,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "24",
+        "stt_den": "56",
+        "so_dong": 33
+      }
+    },
+    {
+      "doc_source": "bhyt_2023",
+      "chunk_id": "bhyt_004",
+      "path": "markdown_chunks/bhyt_2023/bhyt_004.md",
+      "chars": 2255,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "57",
+        "stt_den": "77",
+        "so_dong": 21
+      }
+    },
+    {
+      "doc_source": "bhyt_2023",
+      "chunk_id": "bhyt_005",
+      "path": "markdown_chunks/bhyt_2023/bhyt_005.md",
+      "chars": 3358,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH",
+        "nhom_con": "",
+        "stt_tu": "1",
+        "stt_den": "35",
+        "so_dong": 35
+      }
+    },
+    {
+      "doc_source": "bhyt_2023",
+      "chunk_id": "bhyt_006",
+      "path": "markdown_chunks/bhyt_2023/bhyt_006.md",
+      "chars": 3381,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH",
+        "nhom_con": "",
+        "stt_tu": "36",
+        "stt_den": "70",
+        "so_dong": 35
+      }
+    },
+    {
+      "doc_source": "bhyt_2023",
+      "chunk_id": "bhyt_007",
+      "path": "markdown_chunks/bhyt_2023/bhyt_007.md",
+      "chars": 3401,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH",
+        "nhom_con": "",
+        "stt_tu": "71",
+        "stt_den": "109",
+        "so_dong": 39
+      }
+    },
+    {
+      "doc_source": "bhyt_2023",
+      "chunk_id": "bhyt_008",
+      "path": "markdown_chunks/bhyt_2023/bhyt_008.md",
+      "chars": 3334,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH",
+        "nhom_con": "",
+        "stt_tu": "110",
+        "stt_den": "136",
+        "so_dong": 27
+      }
+    },
+    {
+      "doc_source": "bhyt_2023",
+      "chunk_id": "bhyt_009",
+      "path": "markdown_chunks/bhyt_2023/bhyt_009.md",
+      "chars": 3390,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH",
+        "nhom_con": "",
+        "stt_tu": "137",
+        "stt_den": "168",
+        "so_dong": 32
+      }
+    },
+    {
+      "doc_source": "bhyt_2023",
+      "chunk_id": "bhyt_010",
+      "path": "markdown_chunks/bhyt_2023/bhyt_010.md",
+      "chars": 3389,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH",
+        "nhom_con": "",
+        "stt_tu": "169",
+        "stt_den": "200",
+        "so_dong": 32
+      }
+    },
+    {
+      "doc_source": "bhyt_2023",
+      "chunk_id": "bhyt_011",
+      "path": "markdown_chunks/bhyt_2023/bhyt_011.md",
+      "chars": 3225,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH",
+        "nhom_con": "",
+        "stt_tu": "201",
+        "stt_den": "223",
+        "so_dong": 23
+      }
+    },
+    {
+      "doc_source": "bhyt_2023",
+      "chunk_id": "bhyt_012",
+      "path": "markdown_chunks/bhyt_2023/bhyt_012.md",
+      "chars": 3270,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH",
+        "nhom_con": "",
+        "stt_tu": "224",
+        "stt_den": "253",
+        "so_dong": 30
+      }
+    },
+    {
+      "doc_source": "bhyt_2023",
+      "chunk_id": "bhyt_013",
+      "path": "markdown_chunks/bhyt_2023/bhyt_013.md",
+      "chars": 3329,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH",
+        "nhom_con": "",
+        "stt_tu": "254",
+        "stt_den": "285",
+        "so_dong": 32
+      }
+    },
+    {
+      "doc_source": "bhyt_2023",
+      "chunk_id": "bhyt_014",
+      "path": "markdown_chunks/bhyt_2023/bhyt_014.md",
+      "chars": 3318,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH",
+        "nhom_con": "",
+        "stt_tu": "286",
+        "stt_den": "324",
+        "so_dong": 39
+      }
+    },
+    {
+      "doc_source": "bhyt_2023",
+      "chunk_id": "bhyt_015",
+      "path": "markdown_chunks/bhyt_2023/bhyt_015.md",
+      "chars": 2512,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH",
+        "nhom_con": "",
+        "stt_tu": "325",
+        "stt_den": "351",
+        "so_dong": 27
+      }
+    },
+    {
+      "doc_source": "bhyt_2023",
+      "chunk_id": "bhyt_016",
+      "path": "markdown_chunks/bhyt_2023/bhyt_016.md",
+      "chars": 3269,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ",
+        "nhom_con": "",
+        "stt_tu": "1",
+        "stt_den": "29",
+        "so_dong": 29
+      }
+    },
+    {
+      "doc_source": "bhyt_2023",
+      "chunk_id": "bhyt_017",
+      "path": "markdown_chunks/bhyt_2023/bhyt_017.md",
+      "chars": 3305,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ",
+        "nhom_con": "",
+        "stt_tu": "30",
+        "stt_den": "60",
+        "so_dong": 31
+      }
+    },
+    {
+      "doc_source": "bhyt_2023",
+      "chunk_id": "bhyt_018",
+      "path": "markdown_chunks/bhyt_2023/bhyt_018.md",
+      "chars": 1328,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ",
+        "nhom_con": "",
+        "stt_tu": "61",
+        "stt_den": "70",
+        "so_dong": 10
+      }
+    },
+    {
+      "doc_source": "bhyt_2023",
+      "chunk_id": "bhyt_019",
+      "path": "markdown_chunks/bhyt_2023/bhyt_019.md",
+      "chars": 3293,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH",
+        "nhom_con": "",
+        "stt_tu": "1",
+        "stt_den": "18",
+        "so_dong": 18
+      }
+    },
+    {
+      "doc_source": "bhyt_2023",
+      "chunk_id": "bhyt_020",
+      "path": "markdown_chunks/bhyt_2023/bhyt_020.md",
+      "chars": 3316,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH",
+        "nhom_con": "",
+        "stt_tu": "19",
+        "stt_den": "36",
+        "so_dong": 18
+      }
+    },
+    {
+      "doc_source": "bhyt_2023",
+      "chunk_id": "bhyt_021",
+      "path": "markdown_chunks/bhyt_2023/bhyt_021.md",
+      "chars": 3255,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH",
+        "nhom_con": "",
+        "stt_tu": "37",
+        "stt_den": "57",
+        "so_dong": 21
+      }
+    },
+    {
+      "doc_source": "bhyt_2023",
+      "chunk_id": "bhyt_022",
+      "path": "markdown_chunks/bhyt_2023/bhyt_022.md",
+      "chars": 3275,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH",
+        "nhom_con": "",
+        "stt_tu": "58",
+        "stt_den": "79",
+        "so_dong": 22
+      }
+    },
+    {
+      "doc_source": "bhyt_2023",
+      "chunk_id": "bhyt_023",
+      "path": "markdown_chunks/bhyt_2023/bhyt_023.md",
+      "chars": 3348,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH",
+        "nhom_con": "",
+        "stt_tu": "80",
+        "stt_den": "103",
+        "so_dong": 24
+      }
+    },
+    {
+      "doc_source": "bhyt_2023",
+      "chunk_id": "bhyt_024",
+      "path": "markdown_chunks/bhyt_2023/bhyt_024.md",
+      "chars": 3039,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH",
+        "nhom_con": "",
+        "stt_tu": "104",
+        "stt_den": "123",
+        "so_dong": 20
+      }
+    },
+    {
+      "doc_source": "bhyt_2023",
+      "chunk_id": "bhyt_025",
+      "path": "markdown_chunks/bhyt_2023/bhyt_025.md",
+      "chars": 3229,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH",
+        "nhom_con": "",
+        "stt_tu": "124",
+        "stt_den": "140",
+        "so_dong": 17
+      }
+    },
+    {
+      "doc_source": "bhyt_2023",
+      "chunk_id": "bhyt_026",
+      "path": "markdown_chunks/bhyt_2023/bhyt_026.md",
+      "chars": 2395,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH",
+        "nhom_con": "",
+        "stt_tu": "141",
+        "stt_den": "154",
+        "so_dong": 14
+      }
+    },
+    {
+      "doc_source": "bhyt_2023",
+      "chunk_id": "bhyt_027",
+      "path": "markdown_chunks/bhyt_2023/bhyt_027.md",
+      "chars": 3190,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ BẢO HIỂM Y TẾ TIM MẠCH CAN THIỆP",
+        "nhom_con": "",
+        "stt_tu": "1",
+        "stt_den": "16",
+        "so_dong": 16
+      }
+    },
+    {
+      "doc_source": "bhyt_2023",
+      "chunk_id": "bhyt_028",
+      "path": "markdown_chunks/bhyt_2023/bhyt_028.md",
+      "chars": 3191,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ BẢO HIỂM Y TẾ TIM MẠCH CAN THIỆP",
+        "nhom_con": "",
+        "stt_tu": "17",
+        "stt_den": "25",
+        "so_dong": 9
+      }
+    },
+    {
+      "doc_source": "bhyt_2023",
+      "chunk_id": "bhyt_029",
+      "path": "markdown_chunks/bhyt_2023/bhyt_029.md",
+      "chars": 3171,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ BẢO HIỂM Y TẾ TIM MẠCH CAN THIỆP",
+        "nhom_con": "",
+        "stt_tu": "26",
+        "stt_den": "36",
+        "so_dong": 11
+      }
+    },
+    {
+      "doc_source": "bhyt_2023",
+      "chunk_id": "bhyt_030",
+      "path": "markdown_chunks/bhyt_2023/bhyt_030.md",
+      "chars": 1638,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ BẢO HIỂM Y TẾ TIM MẠCH CAN THIỆP",
+        "nhom_con": "",
+        "stt_tu": "37",
+        "stt_den": "41",
+        "so_dong": 5
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_001",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_001.md",
+      "chars": 2635,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT KHÁM BỆNH VÀ NGÀY GIƯỜNG ĐIỀU TRỊ",
+        "nhom_con": "",
+        "stt_tu": "1",
+        "stt_den": "6,4",
+        "so_dong": 12
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_002",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_002.md",
+      "chars": 3468,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "1",
+        "stt_den": "37",
+        "so_dong": 37
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_003",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_003.md",
+      "chars": 3457,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "38",
+        "stt_den": "71",
+        "so_dong": 34
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_004",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_004.md",
+      "chars": 3413,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "72",
+        "stt_den": "94",
+        "so_dong": 23
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_005",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_005.md",
+      "chars": 3400,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "95",
+        "stt_den": "116",
+        "so_dong": 22
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_006",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_006.md",
+      "chars": 3366,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "117",
+        "stt_den": "137",
+        "so_dong": 21
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_007",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_007.md",
+      "chars": 3357,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "138",
+        "stt_den": "158",
+        "so_dong": 21
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_008",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_008.md",
+      "chars": 3369,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "159",
+        "stt_den": "182",
+        "so_dong": 24
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_009",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_009.md",
+      "chars": 3407,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "183",
+        "stt_den": "205",
+        "so_dong": 23
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_010",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_010.md",
+      "chars": 3426,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "206",
+        "stt_den": "229",
+        "so_dong": 24
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_011",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_011.md",
+      "chars": 3348,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "230",
+        "stt_den": "251",
+        "so_dong": 22
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_012",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_012.md",
+      "chars": 3326,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "252",
+        "stt_den": "274",
+        "so_dong": 23
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_013",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_013.md",
+      "chars": 3316,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "275",
+        "stt_den": "291",
+        "so_dong": 17
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_014",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_014.md",
+      "chars": 3320,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "292",
+        "stt_den": "308",
+        "so_dong": 17
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_015",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_015.md",
+      "chars": 3360,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "309",
+        "stt_den": "328",
+        "so_dong": 20
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_016",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_016.md",
+      "chars": 3363,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "329",
+        "stt_den": "347",
+        "so_dong": 19
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_017",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_017.md",
+      "chars": 3410,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "348",
+        "stt_den": "366",
+        "so_dong": 19
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_018",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_018.md",
+      "chars": 3405,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "367",
+        "stt_den": "388",
+        "so_dong": 22
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_019",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_019.md",
+      "chars": 3392,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "389",
+        "stt_den": "409",
+        "so_dong": 21
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_020",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_020.md",
+      "chars": 3037,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "410",
+        "stt_den": "413",
+        "so_dong": 4
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_021",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_021.md",
+      "chars": 2981,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "414",
+        "stt_den": "417",
+        "so_dong": 4
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_022",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_022.md",
+      "chars": 3275,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "418",
+        "stt_den": "422",
+        "so_dong": 5
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_023",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_023.md",
+      "chars": 3011,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "423",
+        "stt_den": "426",
+        "so_dong": 4
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_024",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_024.md",
+      "chars": 2944,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "427",
+        "stt_den": "430",
+        "so_dong": 4
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_025",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_025.md",
+      "chars": 3188,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "431",
+        "stt_den": "435",
+        "so_dong": 5
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_026",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_026.md",
+      "chars": 2943,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "436",
+        "stt_den": "439",
+        "so_dong": 4
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_027",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_027.md",
+      "chars": 2940,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "440",
+        "stt_den": "443",
+        "so_dong": 4
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_028",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_028.md",
+      "chars": 2940,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "444",
+        "stt_den": "447",
+        "so_dong": 4
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_029",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_029.md",
+      "chars": 2957,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "448",
+        "stt_den": "451",
+        "so_dong": 4
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_030",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_030.md",
+      "chars": 2909,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "452",
+        "stt_den": "455",
+        "so_dong": 4
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_031",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_031.md",
+      "chars": 2952,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "456",
+        "stt_den": "459",
+        "so_dong": 4
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_032",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_032.md",
+      "chars": 2971,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "460",
+        "stt_den": "463",
+        "so_dong": 4
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_033",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_033.md",
+      "chars": 2959,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "464",
+        "stt_den": "467",
+        "so_dong": 4
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_034",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_034.md",
+      "chars": 2960,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "468",
+        "stt_den": "471",
+        "so_dong": 4
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_035",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_035.md",
+      "chars": 2954,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "472",
+        "stt_den": "475",
+        "so_dong": 4
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_036",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_036.md",
+      "chars": 3006,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "476",
+        "stt_den": "479",
+        "so_dong": 4
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_037",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_037.md",
+      "chars": 3035,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "480",
+        "stt_den": "483",
+        "so_dong": 4
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_038",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_038.md",
+      "chars": 3076,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "484",
+        "stt_den": "487",
+        "so_dong": 4
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_039",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_039.md",
+      "chars": 2996,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "488",
+        "stt_den": "491",
+        "so_dong": 4
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_040",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_040.md",
+      "chars": 2976,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "492",
+        "stt_den": "495",
+        "so_dong": 4
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_041",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_041.md",
+      "chars": 2943,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "496",
+        "stt_den": "499",
+        "so_dong": 4
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_042",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_042.md",
+      "chars": 2972,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "500",
+        "stt_den": "503",
+        "so_dong": 4
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_043",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_043.md",
+      "chars": 2994,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "504",
+        "stt_den": "507",
+        "so_dong": 4
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_044",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_044.md",
+      "chars": 3044,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "508",
+        "stt_den": "511",
+        "so_dong": 4
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_045",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_045.md",
+      "chars": 3098,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "512",
+        "stt_den": "515",
+        "so_dong": 4
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_046",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_046.md",
+      "chars": 3066,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "516",
+        "stt_den": "519",
+        "so_dong": 4
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_047",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_047.md",
+      "chars": 3089,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "520",
+        "stt_den": "523",
+        "so_dong": 4
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_048",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_048.md",
+      "chars": 3073,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "524",
+        "stt_den": "527",
+        "so_dong": 4
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_049",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_049.md",
+      "chars": 3085,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "528",
+        "stt_den": "531",
+        "so_dong": 4
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_050",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_050.md",
+      "chars": 3025,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "532",
+        "stt_den": "535",
+        "so_dong": 4
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_051",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_051.md",
+      "chars": 3112,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "536",
+        "stt_den": "540",
+        "so_dong": 5
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_052",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_052.md",
+      "chars": 3135,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "541",
+        "stt_den": "545",
+        "so_dong": 5
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_053",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_053.md",
+      "chars": 3359,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "546",
+        "stt_den": "555",
+        "so_dong": 10
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_054",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_054.md",
+      "chars": 3431,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "556",
+        "stt_den": "572",
+        "so_dong": 17
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_055",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_055.md",
+      "chars": 3410,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "573",
+        "stt_den": "596",
+        "so_dong": 24
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_056",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_056.md",
+      "chars": 3324,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "597",
+        "stt_den": "618",
+        "so_dong": 22
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_057",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_057.md",
+      "chars": 3395,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "619",
+        "stt_den": "641",
+        "so_dong": 23
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_058",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_058.md",
+      "chars": 3407,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "642",
+        "stt_den": "673",
+        "so_dong": 32
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_059",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_059.md",
+      "chars": 3468,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "674",
+        "stt_den": "707",
+        "so_dong": 34
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_060",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_060.md",
+      "chars": 3453,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "708",
+        "stt_den": "737",
+        "so_dong": 30
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_061",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_061.md",
+      "chars": 3386,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "738",
+        "stt_den": "763",
+        "so_dong": 26
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_062",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_062.md",
+      "chars": 3410,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "764",
+        "stt_den": "790",
+        "so_dong": 27
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_063",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_063.md",
+      "chars": 3304,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "791",
+        "stt_den": "803",
+        "so_dong": 13
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_064",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_064.md",
+      "chars": 3453,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "804",
+        "stt_den": "833",
+        "so_dong": 30
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_065",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_065.md",
+      "chars": 3304,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "834",
+        "stt_den": "854",
+        "so_dong": 21
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_066",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_066.md",
+      "chars": 3427,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "855",
+        "stt_den": "873",
+        "so_dong": 19
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_067",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_067.md",
+      "chars": 3237,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "874",
+        "stt_den": "883",
+        "so_dong": 10
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_068",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_068.md",
+      "chars": 3373,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "884",
+        "stt_den": "895",
+        "so_dong": 12
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_069",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_069.md",
+      "chars": 3390,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "896",
+        "stt_den": "924",
+        "so_dong": 29
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_070",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_070.md",
+      "chars": 3416,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "925",
+        "stt_den": "955",
+        "so_dong": 31
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_071",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_071.md",
+      "chars": 3381,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "956",
+        "stt_den": "983",
+        "so_dong": 28
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_072",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_072.md",
+      "chars": 3446,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "984",
+        "stt_den": "1009",
+        "so_dong": 26
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_073",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_073.md",
+      "chars": 3344,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "1010",
+        "stt_den": "1031",
+        "so_dong": 22
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_074",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_074.md",
+      "chars": 3410,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "1032",
+        "stt_den": "1062",
+        "so_dong": 31
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_075",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_075.md",
+      "chars": 3419,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "1063",
+        "stt_den": "1090",
+        "so_dong": 28
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_076",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_076.md",
+      "chars": 3432,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "1091",
+        "stt_den": "1122",
+        "so_dong": 32
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_077",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_077.md",
+      "chars": 3298,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "1123",
+        "stt_den": "1141",
+        "so_dong": 19
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_078",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_078.md",
+      "chars": 3429,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "1142",
+        "stt_den": "1161",
+        "so_dong": 20
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_079",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_079.md",
+      "chars": 3409,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "1162",
+        "stt_den": "1184",
+        "so_dong": 23
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_080",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_080.md",
+      "chars": 3409,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "1185",
+        "stt_den": "1215",
+        "so_dong": 31
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_081",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_081.md",
+      "chars": 3394,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "1216",
+        "stt_den": "1241",
+        "so_dong": 26
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_082",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_082.md",
+      "chars": 3447,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "1242",
+        "stt_den": "1266",
+        "so_dong": 25
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_083",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_083.md",
+      "chars": 3391,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "1267",
+        "stt_den": "1296",
+        "so_dong": 30
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_084",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_084.md",
+      "chars": 3447,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "1297",
+        "stt_den": "1333",
+        "so_dong": 37
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_085",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_085.md",
+      "chars": 3439,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "1334",
+        "stt_den": "1369",
+        "so_dong": 36
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_086",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_086.md",
+      "chars": 3453,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "1370",
+        "stt_den": "1403",
+        "so_dong": 34
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_087",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_087.md",
+      "chars": 3415,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "1404",
+        "stt_den": "1435",
+        "so_dong": 32
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_088",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_088.md",
+      "chars": 3449,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "1436",
+        "stt_den": "1459",
+        "so_dong": 24
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_089",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_089.md",
+      "chars": 3395,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "1460",
+        "stt_den": "1484",
+        "so_dong": 25
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_090",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_090.md",
+      "chars": 3408,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "1485",
+        "stt_den": "1517",
+        "so_dong": 33
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_091",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_091.md",
+      "chars": 3437,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "1518",
+        "stt_den": "1543",
+        "so_dong": 26
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_092",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_092.md",
+      "chars": 3170,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "1544",
+        "stt_den": "1558",
+        "so_dong": 15
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_093",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_093.md",
+      "chars": 3216,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "1559",
+        "stt_den": "1566",
+        "so_dong": 8
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_094",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_094.md",
+      "chars": 3151,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "1567",
+        "stt_den": "1574",
+        "so_dong": 8
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_095",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_095.md",
+      "chars": 3117,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "1575",
+        "stt_den": "1582",
+        "so_dong": 8
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_096",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_096.md",
+      "chars": 3396,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "1583",
+        "stt_den": "1595",
+        "so_dong": 13
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_097",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_097.md",
+      "chars": 3419,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "1596",
+        "stt_den": "1616",
+        "so_dong": 21
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_098",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_098.md",
+      "chars": 3252,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "1617",
+        "stt_den": "1628",
+        "so_dong": 12
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_099",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_099.md",
+      "chars": 3195,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "1629",
+        "stt_den": "1635",
+        "so_dong": 7
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_100",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_100.md",
+      "chars": 3393,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "1636",
+        "stt_den": "1643",
+        "so_dong": 8
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_101",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_101.md",
+      "chars": 3190,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "1644",
+        "stt_den": "1650",
+        "so_dong": 7
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_102",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_102.md",
+      "chars": 3160,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "1651",
+        "stt_den": "1657",
+        "so_dong": 7
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_103",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_103.md",
+      "chars": 3219,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "1658",
+        "stt_den": "1664",
+        "so_dong": 7
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_104",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_104.md",
+      "chars": 3232,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "1665",
+        "stt_den": "1671",
+        "so_dong": 7
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_105",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_105.md",
+      "chars": 3261,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "1672",
+        "stt_den": "1678",
+        "so_dong": 7
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_106",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_106.md",
+      "chars": 2986,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "1679",
+        "stt_den": "1684",
+        "so_dong": 6
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_107",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_107.md",
+      "chars": 3294,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "1685",
+        "stt_den": "1691",
+        "so_dong": 7
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_108",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_108.md",
+      "chars": 3207,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "1692",
+        "stt_den": "1698",
+        "so_dong": 7
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_109",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_109.md",
+      "chars": 3194,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "1699",
+        "stt_den": "1705",
+        "so_dong": 7
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_110",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_110.md",
+      "chars": 3202,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "1706",
+        "stt_den": "1712",
+        "so_dong": 7
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_111",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_111.md",
+      "chars": 3173,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "1713",
+        "stt_den": "1719",
+        "so_dong": 7
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_112",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_112.md",
+      "chars": 3336,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "1720",
+        "stt_den": "1730",
+        "so_dong": 11
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_113",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_113.md",
+      "chars": 3333,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "1731",
+        "stt_den": "1740",
+        "so_dong": 10
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_114",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_114.md",
+      "chars": 3346,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "1741",
+        "stt_den": "1756",
+        "so_dong": 16
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_115",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_115.md",
+      "chars": 3412,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "1757",
+        "stt_den": "1771",
+        "so_dong": 15
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_116",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_116.md",
+      "chars": 3221,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "1772",
+        "stt_den": "1782",
+        "so_dong": 11
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_117",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_117.md",
+      "chars": 3348,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "1783",
+        "stt_den": "1797",
+        "so_dong": 15
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_118",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_118.md",
+      "chars": 3350,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "1798",
+        "stt_den": "1818",
+        "so_dong": 21
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_119",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_119.md",
+      "chars": 3360,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "1819",
+        "stt_den": "1848",
+        "so_dong": 30
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_120",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_120.md",
+      "chars": 3401,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "1849",
+        "stt_den": "1868",
+        "so_dong": 20
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_121",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_121.md",
+      "chars": 3465,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "1869",
+        "stt_den": "1903",
+        "so_dong": 35
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_122",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_122.md",
+      "chars": 3404,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "1904",
+        "stt_den": "1943",
+        "so_dong": 40
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_123",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_123.md",
+      "chars": 3451,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "1944",
+        "stt_den": "1977",
+        "so_dong": 34
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_124",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_124.md",
+      "chars": 3405,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "1978",
+        "stt_den": "2008",
+        "so_dong": 31
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_125",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_125.md",
+      "chars": 3382,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "2009",
+        "stt_den": "2032",
+        "so_dong": 24
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_126",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_126.md",
+      "chars": 3315,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "2033",
+        "stt_den": "2050",
+        "so_dong": 18
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_127",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_127.md",
+      "chars": 3429,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "2051",
+        "stt_den": "2084",
+        "so_dong": 34
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_128",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_128.md",
+      "chars": 3411,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "2085",
+        "stt_den": "2116",
+        "so_dong": 32
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_129",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_129.md",
+      "chars": 3391,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "2117",
+        "stt_den": "2146",
+        "so_dong": 30
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_130",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_130.md",
+      "chars": 3445,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "2147",
+        "stt_den": "2173",
+        "so_dong": 27
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_131",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_131.md",
+      "chars": 3451,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "2174",
+        "stt_den": "2200",
+        "so_dong": 27
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_132",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_132.md",
+      "chars": 3380,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "2201",
+        "stt_den": "2225",
+        "so_dong": 25
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_133",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_133.md",
+      "chars": 3408,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "2226",
+        "stt_den": "2249",
+        "so_dong": 24
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_134",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_134.md",
+      "chars": 3455,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "2250",
+        "stt_den": "2277",
+        "so_dong": 28
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_135",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_135.md",
+      "chars": 3353,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "2278",
+        "stt_den": "2302",
+        "so_dong": 25
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_136",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_136.md",
+      "chars": 3396,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "2303",
+        "stt_den": "2330",
+        "so_dong": 28
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_137",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_137.md",
+      "chars": 3469,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "2331",
+        "stt_den": "2364",
+        "so_dong": 34
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_138",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_138.md",
+      "chars": 3445,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "2365",
+        "stt_den": "2388",
+        "so_dong": 24
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_139",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_139.md",
+      "chars": 3435,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "2389",
+        "stt_den": "2423",
+        "so_dong": 35
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_140",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_140.md",
+      "chars": 3433,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "2424",
+        "stt_den": "2459",
+        "so_dong": 36
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_141",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_141.md",
+      "chars": 3359,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "2460",
+        "stt_den": "2493",
+        "so_dong": 34
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_142",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_142.md",
+      "chars": 3471,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "2494",
+        "stt_den": "2528",
+        "so_dong": 35
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_143",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_143.md",
+      "chars": 3460,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "2529",
+        "stt_den": "2562",
+        "so_dong": 34
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_144",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_144.md",
+      "chars": 3459,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "2563",
+        "stt_den": "2600",
+        "so_dong": 38
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_145",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_145.md",
+      "chars": 3469,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "2601",
+        "stt_den": "2637",
+        "so_dong": 37
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_146",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_146.md",
+      "chars": 3463,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "2638",
+        "stt_den": "2670",
+        "so_dong": 33
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_147",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_147.md",
+      "chars": 3470,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "2671",
+        "stt_den": "2705",
+        "so_dong": 35
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_148",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_148.md",
+      "chars": 3454,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "2706",
+        "stt_den": "2735",
+        "so_dong": 30
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_149",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_149.md",
+      "chars": 3421,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "2736",
+        "stt_den": "2771",
+        "so_dong": 36
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_150",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_150.md",
+      "chars": 3390,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "2772",
+        "stt_den": "2804",
+        "so_dong": 33
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_151",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_151.md",
+      "chars": 3455,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "2805",
+        "stt_den": "2837",
+        "so_dong": 33
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_152",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_152.md",
+      "chars": 3391,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "2838",
+        "stt_den": "2852",
+        "so_dong": 15
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_153",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_153.md",
+      "chars": 3251,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "2853",
+        "stt_den": "2865",
+        "so_dong": 13
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_154",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_154.md",
+      "chars": 3270,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "2866",
+        "stt_den": "2878",
+        "so_dong": 13
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_155",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_155.md",
+      "chars": 3349,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "2879",
+        "stt_den": "2892",
+        "so_dong": 14
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_156",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_156.md",
+      "chars": 1809,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT VÀ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "2893",
+        "stt_den": "2898",
+        "so_dong": 6
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_157",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_157.md",
+      "chars": 749,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ KHÁM SỨC KHỎE TOÀN DIỆN LAO ĐỘNG, LÁI XE, KHÁM SỨC KHỎE ĐỊNH KỲ",
+        "nhom_con": "",
+        "stt_tu": "1",
+        "stt_den": "1",
+        "so_dong": 1
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_158",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_158.md",
+      "chars": 3399,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT THỰC HIỆN BẰNG PHƯƠNG PHÁP VÔ CẢM GÂY TÊ",
+        "nhom_con": "",
+        "stt_tu": "1",
+        "stt_den": "23",
+        "so_dong": 23
+      }
+    },
+    {
+      "doc_source": "dvkt_2025",
+      "chunk_id": "dvkt2025_159",
+      "path": "markdown_chunks/dvkt_2025/dvkt2025_159.md",
+      "chars": 2312,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ KỸ THUẬT THỰC HIỆN BẰNG PHƯƠNG PHÁP VÔ CẢM GÂY TÊ",
+        "nhom_con": "",
+        "stt_tu": "24",
+        "stt_den": "35",
+        "so_dong": 12
+      }
+    },
+    {
+      "doc_source": "dvkt_thuong",
+      "chunk_id": "dvkt_001",
+      "path": "markdown_chunks/dvkt_thuong/dvkt_001.md",
+      "chars": 3225,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "1",
+        "stt_den": "22",
+        "so_dong": 22
+      }
+    },
+    {
+      "doc_source": "dvkt_thuong",
+      "chunk_id": "dvkt_002",
+      "path": "markdown_chunks/dvkt_thuong/dvkt_002.md",
+      "chars": 3349,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "23",
+        "stt_den": "56",
+        "so_dong": 34
+      }
+    },
+    {
+      "doc_source": "dvkt_thuong",
+      "chunk_id": "dvkt_003",
+      "path": "markdown_chunks/dvkt_thuong/dvkt_003.md",
+      "chars": 2673,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM",
+        "nhom_con": "",
+        "stt_tu": "57",
+        "stt_den": "86",
+        "so_dong": 30
+      }
+    },
+    {
+      "doc_source": "dvkt_thuong",
+      "chunk_id": "dvkt_004",
+      "path": "markdown_chunks/dvkt_thuong/dvkt_004.md",
+      "chars": 3328,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH",
+        "nhom_con": "",
+        "stt_tu": "1",
+        "stt_den": "42",
+        "so_dong": 42
+      }
+    },
+    {
+      "doc_source": "dvkt_thuong",
+      "chunk_id": "dvkt_005",
+      "path": "markdown_chunks/dvkt_thuong/dvkt_005.md",
+      "chars": 3347,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH",
+        "nhom_con": "",
+        "stt_tu": "43",
+        "stt_den": "87",
+        "so_dong": 45
+      }
+    },
+    {
+      "doc_source": "dvkt_thuong",
+      "chunk_id": "dvkt_006",
+      "path": "markdown_chunks/dvkt_thuong/dvkt_006.md",
+      "chars": 3384,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH",
+        "nhom_con": "",
+        "stt_tu": "88",
+        "stt_den": "131",
+        "so_dong": 44
+      }
+    },
+    {
+      "doc_source": "dvkt_thuong",
+      "chunk_id": "dvkt_007",
+      "path": "markdown_chunks/dvkt_thuong/dvkt_007.md",
+      "chars": 3346,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH",
+        "nhom_con": "",
+        "stt_tu": "132",
+        "stt_den": "171",
+        "so_dong": 40
+      }
+    },
+    {
+      "doc_source": "dvkt_thuong",
+      "chunk_id": "dvkt_008",
+      "path": "markdown_chunks/dvkt_thuong/dvkt_008.md",
+      "chars": 3374,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH",
+        "nhom_con": "",
+        "stt_tu": "172",
+        "stt_den": "208",
+        "so_dong": 37
+      }
+    },
+    {
+      "doc_source": "dvkt_thuong",
+      "chunk_id": "dvkt_009",
+      "path": "markdown_chunks/dvkt_thuong/dvkt_009.md",
+      "chars": 3384,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH",
+        "nhom_con": "",
+        "stt_tu": "209",
+        "stt_den": "249",
+        "so_dong": 41
+      }
+    },
+    {
+      "doc_source": "dvkt_thuong",
+      "chunk_id": "dvkt_010",
+      "path": "markdown_chunks/dvkt_thuong/dvkt_010.md",
+      "chars": 3349,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH",
+        "nhom_con": "",
+        "stt_tu": "250",
+        "stt_den": "281",
+        "so_dong": 32
+      }
+    },
+    {
+      "doc_source": "dvkt_thuong",
+      "chunk_id": "dvkt_011",
+      "path": "markdown_chunks/dvkt_thuong/dvkt_011.md",
+      "chars": 3363,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH",
+        "nhom_con": "",
+        "stt_tu": "282",
+        "stt_den": "320",
+        "so_dong": 39
+      }
+    },
+    {
+      "doc_source": "dvkt_thuong",
+      "chunk_id": "dvkt_012",
+      "path": "markdown_chunks/dvkt_thuong/dvkt_012.md",
+      "chars": 3371,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH",
+        "nhom_con": "",
+        "stt_tu": "321",
+        "stt_den": "365",
+        "so_dong": 45
+      }
+    },
+    {
+      "doc_source": "dvkt_thuong",
+      "chunk_id": "dvkt_013",
+      "path": "markdown_chunks/dvkt_thuong/dvkt_013.md",
+      "chars": 3370,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH",
+        "nhom_con": "",
+        "stt_tu": "366",
+        "stt_den": "411",
+        "so_dong": 46
+      }
+    },
+    {
+      "doc_source": "dvkt_thuong",
+      "chunk_id": "dvkt_014",
+      "path": "markdown_chunks/dvkt_thuong/dvkt_014.md",
+      "chars": 3352,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH",
+        "nhom_con": "",
+        "stt_tu": "412",
+        "stt_den": "458",
+        "so_dong": 47
+      }
+    },
+    {
+      "doc_source": "dvkt_thuong",
+      "chunk_id": "dvkt_015",
+      "path": "markdown_chunks/dvkt_thuong/dvkt_015.md",
+      "chars": 3387,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH",
+        "nhom_con": "",
+        "stt_tu": "459",
+        "stt_den": "500",
+        "so_dong": 42
+      }
+    },
+    {
+      "doc_source": "dvkt_thuong",
+      "chunk_id": "dvkt_016",
+      "path": "markdown_chunks/dvkt_thuong/dvkt_016.md",
+      "chars": 3386,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH",
+        "nhom_con": "",
+        "stt_tu": "501",
+        "stt_den": "545",
+        "so_dong": 45
+      }
+    },
+    {
+      "doc_source": "dvkt_thuong",
+      "chunk_id": "dvkt_017",
+      "path": "markdown_chunks/dvkt_thuong/dvkt_017.md",
+      "chars": 826,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH",
+        "nhom_con": "",
+        "stt_tu": "546",
+        "stt_den": "551",
+        "so_dong": 6
+      }
+    },
+    {
+      "doc_source": "dvkt_thuong",
+      "chunk_id": "dvkt_018",
+      "path": "markdown_chunks/dvkt_thuong/dvkt_018.md",
+      "chars": 3302,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ",
+        "nhom_con": "",
+        "stt_tu": "1",
+        "stt_den": "30",
+        "so_dong": 30
+      }
+    },
+    {
+      "doc_source": "dvkt_thuong",
+      "chunk_id": "dvkt_019",
+      "path": "markdown_chunks/dvkt_thuong/dvkt_019.md",
+      "chars": 3304,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ",
+        "nhom_con": "",
+        "stt_tu": "31",
+        "stt_den": "62",
+        "so_dong": 32
+      }
+    },
+    {
+      "doc_source": "dvkt_thuong",
+      "chunk_id": "dvkt_020",
+      "path": "markdown_chunks/dvkt_thuong/dvkt_020.md",
+      "chars": 1146,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ",
+        "nhom_con": "",
+        "stt_tu": "63",
+        "stt_den": "70",
+        "so_dong": 8
+      }
+    },
+    {
+      "doc_source": "dvkt_thuong",
+      "chunk_id": "dvkt_021",
+      "path": "markdown_chunks/dvkt_thuong/dvkt_021.md",
+      "chars": 3304,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ CHỤP CẮT LỚP VI TÍNH",
+        "nhom_con": "",
+        "stt_tu": "1",
+        "stt_den": "25",
+        "so_dong": 25
+      }
+    },
+    {
+      "doc_source": "dvkt_thuong",
+      "chunk_id": "dvkt_022",
+      "path": "markdown_chunks/dvkt_thuong/dvkt_022.md",
+      "chars": 3315,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ CHỤP CẮT LỚP VI TÍNH",
+        "nhom_con": "",
+        "stt_tu": "26",
+        "stt_den": "45",
+        "so_dong": 20
+      }
+    },
+    {
+      "doc_source": "dvkt_thuong",
+      "chunk_id": "dvkt_023",
+      "path": "markdown_chunks/dvkt_thuong/dvkt_023.md",
+      "chars": 1614,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DỊCH VỤ CHỤP CẮT LỚP VI TÍNH",
+        "nhom_con": "",
+        "stt_tu": "46",
+        "stt_den": "55",
+        "so_dong": 10
+      }
+    },
+    {
+      "doc_source": "dvkt_thuong",
+      "chunk_id": "dvkt_024",
+      "path": "markdown_chunks/dvkt_thuong/dvkt_024.md",
+      "chars": 3070,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH",
+        "nhom_con": "",
+        "stt_tu": "1",
+        "stt_den": "12",
+        "so_dong": 12
+      }
+    },
+    {
+      "doc_source": "dvkt_thuong",
+      "chunk_id": "dvkt_025",
+      "path": "markdown_chunks/dvkt_thuong/dvkt_025.md",
+      "chars": 3192,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH",
+        "nhom_con": "",
+        "stt_tu": "13",
+        "stt_den": "25",
+        "so_dong": 13
+      }
+    },
+    {
+      "doc_source": "dvkt_thuong",
+      "chunk_id": "dvkt_026",
+      "path": "markdown_chunks/dvkt_thuong/dvkt_026.md",
+      "chars": 3085,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH",
+        "nhom_con": "",
+        "stt_tu": "26",
+        "stt_den": "36",
+        "so_dong": 11
+      }
+    },
+    {
+      "doc_source": "dvkt_thuong",
+      "chunk_id": "dvkt_027",
+      "path": "markdown_chunks/dvkt_thuong/dvkt_027.md",
+      "chars": 3180,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH",
+        "nhom_con": "",
+        "stt_tu": "37",
+        "stt_den": "62",
+        "so_dong": 26
+      }
+    },
+    {
+      "doc_source": "dvkt_thuong",
+      "chunk_id": "dvkt_028",
+      "path": "markdown_chunks/dvkt_thuong/dvkt_028.md",
+      "chars": 1000,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH",
+        "nhom_con": "",
+        "stt_tu": "63",
+        "stt_den": "64",
+        "so_dong": 2
+      }
+    },
+    {
+      "doc_source": "dvkt_thuong",
+      "chunk_id": "dvkt_029",
+      "path": "markdown_chunks/dvkt_thuong/dvkt_029.md",
+      "chars": 3240,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ PHẪU THUẬT TRỌN GÓI",
+        "nhom_con": "Loại A: Đặc biệt",
+        "stt_tu": "1",
+        "stt_den": "24",
+        "so_dong": 24
+      }
+    },
+    {
+      "doc_source": "dvkt_thuong",
+      "chunk_id": "dvkt_030",
+      "path": "markdown_chunks/dvkt_thuong/dvkt_030.md",
+      "chars": 2691,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ PHẪU THUẬT TRỌN GÓI",
+        "nhom_con": "Loại B:",
+        "stt_tu": "25",
+        "stt_den": "44",
+        "so_dong": 20
+      }
+    },
+    {
+      "doc_source": "dvkt_thuong",
+      "chunk_id": "dvkt_031",
+      "path": "markdown_chunks/dvkt_thuong/dvkt_031.md",
+      "chars": 1559,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ PHẪU THUẬT TRỌN GÓI",
+        "nhom_con": "Loại C:",
+        "stt_tu": "45",
+        "stt_den": "53",
+        "so_dong": 9
+      }
+    },
+    {
+      "doc_source": "dvkt_thuong",
+      "chunk_id": "dvkt_032",
+      "path": "markdown_chunks/dvkt_thuong/dvkt_032.md",
+      "chars": 3277,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ PHẪU THUẬT TRỌN GÓI",
+        "nhom_con": "II. PHẪU THUẬT TIM ÍT XÂM LẤN",
+        "stt_tu": "64",
+        "stt_den": "78",
+        "so_dong": 15
+      }
+    },
+    {
+      "doc_source": "dvkt_thuong",
+      "chunk_id": "dvkt_033",
+      "path": "markdown_chunks/dvkt_thuong/dvkt_033.md",
+      "chars": 750,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ PHẪU THUẬT TRỌN GÓI",
+        "nhom_con": "II. PHẪU THUẬT TIM ÍT XÂM LẤN",
+        "stt_tu": "79",
+        "stt_den": "79",
+        "so_dong": 1
+      }
+    },
+    {
+      "doc_source": "dvkt_thuong",
+      "chunk_id": "dvkt_034",
+      "path": "markdown_chunks/dvkt_thuong/dvkt_034.md",
+      "chars": 1504,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ PHẪU THUẬT TRỌN GÓI",
+        "nhom_con": "III. PHẪU THUẬT TIM KÍN",
+        "stt_tu": "80",
+        "stt_den": "88",
+        "so_dong": 9
+      }
+    },
+    {
+      "doc_source": "dvkt_thuong",
+      "chunk_id": "dvkt_035",
+      "path": "markdown_chunks/dvkt_thuong/dvkt_035.md",
+      "chars": 2682,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ PHẪU THUẬT TRỌN GÓI",
+        "nhom_con": "IV. PHẪU THUẬT KHÁC",
+        "stt_tu": "89",
+        "stt_den": "105",
+        "so_dong": 17
+      }
+    },
+    {
+      "doc_source": "dvkt_thuong",
+      "chunk_id": "dvkt_036",
+      "path": "markdown_chunks/dvkt_thuong/dvkt_036.md",
+      "chars": 600,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DANH MỤC NGÀY GIƯỜNG ĐIỀU TRỊ",
+        "nhom_con": "",
+        "stt_tu": "1",
+        "stt_den": "4",
+        "so_dong": 4
+      }
+    },
+    {
+      "doc_source": "dvkt_yeu_cau",
+      "chunk_id": "dvktyc_001",
+      "path": "markdown_chunks/dvkt_yeu_cau/dvktyc_001.md",
+      "chars": 1318,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DANH MỤC KHÁM BỆNH THEO YÊU CẦU",
+        "nhom_con": "",
+        "stt_tu": "1",
+        "stt_den": "4",
+        "so_dong": 8
+      }
+    },
+    {
+      "doc_source": "dvkt_yeu_cau",
+      "chunk_id": "dvktyc_002",
+      "path": "markdown_chunks/dvkt_yeu_cau/dvktyc_002.md",
+      "chars": 3398,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+        "nhom_con": "",
+        "stt_tu": "1",
+        "stt_den": "29",
+        "so_dong": 29
+      }
+    },
+    {
+      "doc_source": "dvkt_yeu_cau",
+      "chunk_id": "dvktyc_003",
+      "path": "markdown_chunks/dvkt_yeu_cau/dvktyc_003.md",
+      "chars": 2630,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+        "nhom_con": "",
+        "stt_tu": "30",
+        "stt_den": "49",
+        "so_dong": 20
+      }
+    },
+    {
+      "doc_source": "dvkt_yeu_cau",
+      "chunk_id": "dvktyc_004",
+      "path": "markdown_chunks/dvkt_yeu_cau/dvktyc_004.md",
+      "chars": 3385,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+        "nhom_con": "",
+        "stt_tu": "1",
+        "stt_den": "23",
+        "so_dong": 23
+      }
+    },
+    {
+      "doc_source": "dvkt_yeu_cau",
+      "chunk_id": "dvktyc_005",
+      "path": "markdown_chunks/dvkt_yeu_cau/dvktyc_005.md",
+      "chars": 3192,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+        "nhom_con": "",
+        "stt_tu": "24",
+        "stt_den": "41",
+        "so_dong": 18
+      }
+    },
+    {
+      "doc_source": "dvkt_yeu_cau",
+      "chunk_id": "dvktyc_006",
+      "path": "markdown_chunks/dvkt_yeu_cau/dvktyc_006.md",
+      "chars": 707,
+      "extra": {
+        "danh_muc": "BẢNG GIÁ DANH MỤC NGÀY GIƯỜNG ĐIỀU TRỊ THEO YÊU CẦU",
+        "nhom_con": "",
+        "stt_tu": "1",
+        "stt_den": "4",
+        "so_dong": 4
+      }
+    }
+  ]
+}

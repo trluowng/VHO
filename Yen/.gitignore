@@ -5,7 +5,6 @@ backend/logs/
 # backend/data/ holds runtime user data (accounts, health profiles) and must stay ignored,
 # but the first-aid provenance registry and reviewed rules are content, not runtime data —
 # use the "*" form (not a trailing-slash directory match) so the exception below can apply.
-backend/data/*
 !backend/data/first_aid/
 !backend/data/first_aid/**
 backend/data/first_aid/corpus/

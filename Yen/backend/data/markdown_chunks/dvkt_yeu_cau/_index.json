@@ -1,0 +1,62 @@
+[
+  {
+    "doc_id": "dvktyc_001",
+    "path": "markdown_chunks/dvkt_yeu_cau/dvktyc_001.md",
+    "danh_muc": "BẢNG GIÁ DANH MỤC KHÁM BỆNH THEO YÊU CẦU",
+    "nhom_con": "",
+    "stt_tu": "1",
+    "stt_den": "4",
+    "so_dong": 8,
+    "chars": 1318
+  },
+  {
+    "doc_id": "dvktyc_002",
+    "path": "markdown_chunks/dvkt_yeu_cau/dvktyc_002.md",
+    "danh_muc": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+    "nhom_con": "",
+    "stt_tu": "1",
+    "stt_den": "29",
+    "so_dong": 29,
+    "chars": 3398
+  },
+  {
+    "doc_id": "dvktyc_003",
+    "path": "markdown_chunks/dvkt_yeu_cau/dvktyc_003.md",
+    "danh_muc": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+    "nhom_con": "",
+    "stt_tu": "30",
+    "stt_den": "49",
+    "so_dong": 20,
+    "chars": 2630
+  },
+  {
+    "doc_id": "dvktyc_004",
+    "path": "markdown_chunks/dvkt_yeu_cau/dvktyc_004.md",
+    "danh_muc": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+    "nhom_con": "",
+    "stt_tu": "1",
+    "stt_den": "23",
+    "so_dong": 23,
+    "chars": 3385
+  },
+  {
+    "doc_id": "dvktyc_005",
+    "path": "markdown_chunks/dvkt_yeu_cau/dvktyc_005.md",
+    "danh_muc": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+    "nhom_con": "",
+    "stt_tu": "24",
+    "stt_den": "41",
+    "so_dong": 18,
+    "chars": 3192
+  },
+  {
+    "doc_id": "dvktyc_006",
+    "path": "markdown_chunks/dvkt_yeu_cau/dvktyc_006.md",
+    "danh_muc": "BẢNG GIÁ DANH MỤC NGÀY GIƯỜNG ĐIỀU TRỊ THEO YÊU CẦU",
+    "nhom_con": "",
+    "stt_tu": "1",
+    "stt_den": "4",
+    "so_dong": 4,
+    "chars": 707
+  }
+]
