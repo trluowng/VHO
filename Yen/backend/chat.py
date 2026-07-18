@@ -90,13 +90,13 @@ def run_model_tool_loop(
     all_tool_events: list[dict[str, Any]] = []
 
     for round_index in range(1, max_tool_rounds + 1):
-        response = provider.complete(working_messages, tools, model=model, temperature=0.0)
+        response = provider.complete(working_messages, tools, model=model, temperature=0.1)
         if not response.text and not response.tool_calls:
-            # Gemini occasionally returns a genuinely empty candidate (no visible text,
-            # no tool call) -- usually transient, so retry once before giving the
+            # Gemini/qwen occasionally return a genuinely empty candidate (no visible
+            # text, no tool call) -- usually transient, so retry once before giving the
             # patient a blank chat bubble.
             print("⚠️  empty model response, retrying once")
-            response = provider.complete(working_messages, tools, model=model, temperature=0.0)
+            response = provider.complete(working_messages, tools, model=model, temperature=0.1)
         calls = response.tool_calls
         round_record: dict[str, Any] = {
             "round": round_index,
