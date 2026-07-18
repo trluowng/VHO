@@ -2,8 +2,8 @@ import { motion } from 'framer-motion'
 import { ArrowRight } from './icons.jsx'
 
 const EXAMPLES = [
-  { icon: '🤒', q: 'Tôi bị sốt 38.5 độ và đau họng 2 ngày nay', tag: 'Đường thuận' },
-  { icon: '😵‍💫', q: 'Tôi thấy mệt và hơi chóng mặt', tag: 'Khi chưa chắc' },
+  { icon: '📋', q: 'Bệnh viện có xét nghiệm siêu âm tim không, giá bao nhiêu?', tag: 'Tra cứu giá' },
+  { icon: '🪪', q: 'Khám BHYT tại viện cần chuẩn bị giấy tờ gì?', tag: 'Quy trình' },
   { icon: '🫀', q: 'Tôi đau ngực và khó thở', tag: 'Khẩn cấp' },
 ]
 
@@ -20,14 +20,14 @@ export default function WelcomeHero({ onPick }) {
   return (
     <motion.div className="hero" variants={container} initial="hidden" animate="show">
       <motion.div className="hero__eyebrow" variants={item}>
-        Trợ lý phân loại triệu chứng
+        Trợ lý Bệnh viện Tim Hà Nội
       </motion.div>
       <motion.h1 className="hero__title" variants={item}>
-        Kể mình nghe bạn đang thấy <em>không khỏe</em> ở đâu
+        Hỏi đáp dịch vụ, giá khám & <em>hỗ trợ</em> tại viện
       </motion.h1>
       <motion.p className="hero__lede" variants={item}>
-        Mô tả bằng ngôn ngữ tự nhiên — mình sẽ xác nhận lại điều đã hiểu, hỏi thêm vài câu khi cần,
-        rồi cho bạn biết <strong>mức độ khẩn cấp</strong> và <strong>bước tiếp theo nên làm</strong>.
+        Tra cứu giá dịch vụ, hướng dẫn quy trình khám BHYT, đặt lịch hay mô tả triệu chứng — mình
+        sẽ hướng dẫn bạn <strong>bước tiếp theo phù hợp</strong> tại Bệnh viện Tim Hà Nội.
       </motion.p>
       <motion.div className="hero__examples" variants={item}>
         {EXAMPLES.map((ex) => (

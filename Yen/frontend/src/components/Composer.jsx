@@ -214,7 +214,7 @@ export default function Composer({ onSend, onTranscribe, disabled, locked }) {
           ? (liveListening ? 'Đang nghe trực tiếp… chữ sẽ xuất hiện khi bạn nói' : 'Đang ghi âm tiếng Việt… bấm micro lần nữa để dừng')
           : transcribing
             ? 'Đang chuyển giọng nói thành văn bản…'
-            : speechError || (!voiceSupported ? voiceUnavailable : 'Yên là prototype hỗ trợ — không thay thế chẩn đoán y khoa · Bấm micro để nói')}
+            : speechError || (!voiceSupported ? voiceUnavailable : 'Yên là trợ lý Bệnh viện Tim Hà Nội — không thay thế chẩn đoán y khoa · Bấm micro để nói')}
       </div>
     </div>
   )

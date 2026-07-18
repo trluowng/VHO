@@ -1,0 +1,702 @@
+﻿So_thu_tu_chung,Trang,Danh_muc,STT,Ma_tuong_duong,Dich_vu_ky_thuat,Gia_BHYT,Ghi_chu
+1,3,BẢNG GIÁ BẢO HIỂM Y TẾ KHÁM BỆNH VÀ NGÀY GIƯỜNG ĐIỀU TRỊ,1,,Khám bệnh,42100,
+2,3,BẢNG GIÁ BẢO HIỂM Y TẾ KHÁM BỆNH VÀ NGÀY GIƯỜNG ĐIỀU TRỊ,2,,Giường Nội khoa,255300,
+3,3,BẢNG GIÁ BẢO HIỂM Y TẾ KHÁM BỆNH VÀ NGÀY GIƯỜNG ĐIỀU TRỊ,3,,Giường Hồi sức cấp cứu,474700,
+4,3,BẢNG GIÁ BẢO HIỂM Y TẾ KHÁM BỆNH VÀ NGÀY GIƯỜNG ĐIỀU TRỊ,4,,Giường Hồi sức tích cực,786300,
+5,3,BẢNG GIÁ BẢO HIỂM Y TẾ KHÁM BỆNH VÀ NGÀY GIƯỜNG ĐIỀU TRỊ,5,,Giường Ngoại khoa loại 1,339000,
+6,3,BẢNG GIÁ BẢO HIỂM Y TẾ KHÁM BỆNH VÀ NGÀY GIƯỜNG ĐIỀU TRỊ,6,,Giường Ngoại khoa loại 2,308500,
+7,3,BẢNG GIÁ BẢO HIỂM Y TẾ KHÁM BỆNH VÀ NGÀY GIƯỜNG ĐIỀU TRỊ,7,,Giường Ngoại khoa loại 3,270500,
+8,3,BẢNG GIÁ BẢO HIỂM Y TẾ KHÁM BỆNH VÀ NGÀY GIƯỜNG ĐIỀU TRỊ,8,,Giường Ngoại khoa loại 4,242100,
+9,4,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,1,23.0350.1544,"Định lượng CRP [KHÔNG CÓ TÌNH TRẠNG NHIỄM TRÙNG, BHYT THANH TOÁN BẰNG GIÁ PHẢN ỨNG CRP]",21800,
+10,4,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,2,22.0153.1610,"Xét nghiệm tế bào trong nước dịch chẩn đoán tế bào học (não tuỷ, màng tim, màng phổi, màng bụng, dịch khớp, rửa phế quản…) bằng máy phân tích huyết học tự động",92900,
+11,4,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,3,22.0013.1242,Định lượng Fibrinogen bằng phương pháp trực tiếp,105000,
+12,4,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,4,22.0279.1269,Định nhóm máu hệ ABO (Kỹ thuật ống nghiệm) [ĐỊNH NHÓM MÁU CHO BỆNH NHÂN TẠI KHOA XÉT NGHIỆM],40200,
+13,4,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,5,22.0292.1280,Định nhóm máu hệ Rh(D) (Kỹ thuật phiến đá),32000,
+14,4,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,6,22.0142.1304,Máu lắng (bằng phương pháp thủ công),23700,
+15,4,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,7,22.0005.1354,"Thời gian thromboplastin một phần hoạt hoá (APTT: Activated Partial Thromboplastin Time), (Tên khác: TCK) bằng máy tự động",41500,
+16,4,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,8,22.0121.1369,Tổng phân tích tế bào máu ngoại vi (bằng máy đếm laser),47500,
+17,4,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,9,22.0001.1352,"Thời gian prothrombin (PT: Prothrombin Time), (Các tên khác: TQ; Tỷ lệ Prothrombin) bằng máy tự động, bán tự động",65300,
+18,4,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,10,22.0268.1330,Phản ứng hòa hợp trong môi trường nước muối ở 22°C (Kỹ thuật ống nghiệm),29600,
+19,5,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,11,22.0279.1267,"Định nhóm máu hệ ABO (Kỹ thuật ống nghiệm) [ĐỊNH NHÓM MÁU CHO TÚI MÁU, CHẾ PHẨM MÁU TẠI KHOA XÉT NGHIỆM]",23700,
+20,5,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,12,22.0275.1327,Phản ứng hoà hợp có sử dụng kháng globulin người (Kỹ thuật Scangel/Gelcard trên máy tự động) [Nghiệm pháp Coombs gián tiếp],76900,
+21,5,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,13,22.0262.1408,"Xét nghiệm lựa chọn đơn vị máu phù hợp (10 đơn vị máu trong 3 điều kiện 22°C, 37°C, kháng globulin người) bằng phương pháp Scangel/Gelcard",475000,
+22,5,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,14,22.0502.1267,Định nhóm máu tại giường bệnh trước truyền máu [ĐỊNH NHÓM MÁU CHO TÚI MÁU TOÀN PHẦN/KHỐI HC/KHỐI BC THỨ HAI TRỞ ĐI TẠI GIƯỜNG],23700,
+23,5,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,15,22.0275.1327,Phản ứng hòa hợp có sử dụng kháng globulin người (Kỹ thuật Scangel/Gelcard trên máy bán tự động),76900,
+24,5,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,16,22.0269.1329,Phản ứng hòa hợp trong môi trường muối 22°C (kỹ thuật Scangel/Gelcard trên máy bán tự động),69900,
+25,5,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,17,22.0279.1268,"Định nhóm máu tại giường bệnh trước truyền máu [ĐỊNH NHÓM MÁU CỦA BN TRUYỀN KHỐI TC, HUYẾT TƯƠNG TẠI GIƯỜNG]",21200,
+26,5,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,18,22.0502.1267,Định nhóm máu tại giường bệnh trước truyền máu [ĐỊNH NHÓM MÁU BN + TÚI MÁU TOÀN PHẦN/KHỐI HC/KHỐI BC ĐẦU TIÊN TẠI GIƯỜNG],23700,
+27,6,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,19,22.0290.1275,"Định nhóm máu hệ ABO, Rh(D) (Kỹ thuật Scangel/Gelcard trên máy bán tự động)",89000,
+28,6,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,20,22.0117.1503,Định lượng sắt huyết thanh,32800,
+29,6,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,21,24.0119.1649,HBsAg miễn dịch bán tự động/tự động,77300,
+30,6,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,22,24.0146.1622,Anti-HCV miễn dịch bán tự động/ tự động,123000,
+31,6,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,23,23.0046.1480,Định lượng cortisol (máu),92900,
+32,6,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,24,23.0130.1483,Định lượng Pro-calcitonin [đủ điều kiện theo giá Định lượng CRP],54600,
+33,6,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,25,23.0228.1483,Định lượng CRP [ĐỦ ĐIỀU KIỆN THANH TOÁN THEO TT50 CỦA BYT],54600,
+34,6,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,26,23.0130.1549,Định lượng Pro-calcitonin [ĐỦ ĐIỀU KIỆN THANH TOÁN THEO TT50 CỦA BYT],404000,
+35,6,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,27,23.0138.1554,Định lượng PSA tự do (Free Prostate - Specific Antigen) [Máu],87500,
+36,6,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,28,24.0108.1720.SC2,Xét nghiệm SARS-CoV-2 Ag test nhanh,23200,
+37,6,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,29,23.0118.1503,Định lượng Mg [Máu],32800,
+38,6,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,30,23.0003.1494,Định lượng Acid Uric [Máu],21800,Mỗi chất
+39,6,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,31,23.0007.1494,Định lượng Albumin,21800,Mỗi chất
+40,6,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,32,23.0018.1457,Định lượng AFP (Alpha Fetoproteine) [Máu],92900,
+41,6,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,33,23.0027.1493,Định lượng Bilirubin toàn phần,21800,Không thanh toán đối với các xét nghiệm Bilirubin gián tiếp; Tỷ lệ A/G là những xét nghiệm có thể ngoại suy được.
+42,7,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,34,23.0025.1493,Định lượng Bilirubin trực tiếp,21800,Không thanh toán đối với các xét nghiệm Bilirubin gián tiếp; Tỷ lệ A/G là những xét nghiệm có thể ngoại suy được.
+43,7,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,35,23.0029.1473,Định lượng Calci toàn phần,13000,Chỉ thanh toán khi định lượng trực tiếp.
+44,7,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,36,23.0030.1472,Định lượng Calci ion hóa [Máu],16400,
+45,7,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,37,23.0042.1482,Đo hoạt độ CK (Creatine kinase),27300,
+46,7,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,38,23.0043.1478,Đo hoạt độ CK-MB (Isozym MB of Creatine kinase),38200,
+47,7,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,39,23.0051.1494,Định lượng Creatinin (máu),21800,Mỗi chất
+48,7,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,40,23.0050.1484,Định lượng CRP hs (C-Reactive Protein high sesitivity),54600,
+49,7,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,41,23.0058.1487,"Điện giải đồ (Na, K, Cl)",29500,Áp dụng cho cả trường hợp cho kết quả nhiều hơn 3 chỉ số
+50,7,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,42,23.0069.1561,Định lượng FT4 (Free Thyroxine),65600,
+51,7,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,43,23.0120.1541,Định lượng NSE (Neuron Specific Enolase) [Máu],195000,
+52,7,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,44,23.0077.1518,Đo hoạt độ GGT (Gama Glutamyl Transferase)[Máu],19500,
+53,8,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,45,23.0075.1494,Định lượng Glucose,21800,Mỗi chất
+54,8,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,46,23.0083.1523,Định lượng HbA1c,102000,
+55,8,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,47,01.0281.1510,Xét nghiệm đường máu mao mạch tại giường (một lần),15500,
+56,8,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,48,23.0206.1596,Tổng phân tích nước tiểu (Bằng máy tự động),27800,
+57,8,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,49,23.0090.1425,Đo hoạt độ ALP (Alkalin Phosphatase),21800,
+58,8,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,50,23.0121.1548,Định lượng proBNP (NT-proBNP),414000,
+59,8,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,51,23.0133.1494,Định lượng Protein toàn phần,21800,Mỗi chất
+60,8,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,52,23.0139.1553,Định lượng PSA toàn phần (Total prostate-Specific Antigen) [Máu],92900,
+61,8,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,53,23.0147.1561,Định lượng T3 (Tri iodothyronine),65600,
+62,8,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,54,23.0148.1561,Định lượng T4 (Thyroxine),65600,
+63,8,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,55,23.0162.1570,Định lượng TSH (Thyroid Stimulating hormone),60100,
+64,8,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,56,23.0166.1494,Định lượng Urê máu,21800,Mỗi chất
+65,8,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,57,23.0020.1493,Đo hoạt độ AST (GOT),21800,Không thanh toán đối với các xét nghiệm Bilirubin gián tiếp; Tỷ lệ A/G là những xét nghiệm có thể ngoại suy được.
+66,9,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,58,23.0019.1493,Đo hoạt độ ALT (GPT),21800,Không thanh toán đối với các xét nghiệm Bilirubin gián tiếp; Tỷ lệ A/G là những xét nghiệm có thể ngoại suy được.
+67,9,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,59,23.0112.1506,Định lượng LDL - C (Low density lipoprotein Cholesterol),27300,
+68,9,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,60,23.0084.1506,Định lượng HDL-C (High density lipoprotein Cholesterol),27300,
+69,9,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,61,23.0158.1506,Định lượng Triglycerid (máu),27300,
+70,9,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,62,23.0063.1514,Định lượng Ferritin,82000,
+71,9,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,63,23.0015.1461,Định lượng Anti - TPO (Anti-thyroid Peroxidase antibodies) [Máu],207000,
+72,9,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,64,23.0156.1566,Định lượng TRAb (TSH Receptor Antibodies) [Máu],414000,
+73,9,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,65,23.0220.1608,Phản ứng Rivalta [dịch],8600,
+74,9,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,66,23.0098.1529,Định lượng Insulin [Máu],82000,
+75,9,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,67,24.0017.1714,AFB trực tiếp nhuộm Ziehl-Neelsen,70300,
+76,9,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,68,24.0008.1722,Vi khuẩn kháng thuốc định lượng (MIC) (cho 1 loại kháng sinh),191000,
+77,9,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,69,24.0006.1723,Vi khuẩn kháng thuốc định tính,202000,
+78,9,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,70,24.0322.1724,Vi khuẩn nuôi cấy và định danh phương pháp thông thường,246000,
+79,9,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,71,24.0001.1714,Vi khuẩn nhuộm soi,70300,
+80,9,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,72,24.0322.1724,Vi nấm nuôi cấy và định danh phương pháp thông thường,246000,
+81,9,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,73,24.0317.1674,Trichomonas vaginalis soi tươi,43100,
+82,9,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,74,24.0323.1716,Vi nấm nuôi cấy và định danh hệ thống tự động,307000,
+83,9,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,75,24.0321.1674,Vi nấm nhuộm soi,43100,
+84,9,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,76,23.0103.1531,Xét nghiệm Khí máu [Máu],218000,
+85,9,BẢNG GIÁ BẢO HIỂM Y TẾ XÉT NGHIỆM,77,23.0104.1532,Định lượng Lactat (Acid Lactic) [Máu],98400,
+86,10,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,1,18.0073.0028,Chụp Xquang Hirtz [số hóa],68300,
+87,10,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,2,18.0097.0030,Chụp Xquang khớp cùng chậu thẳng chếch hai bên [số hóa],125000,
+88,10,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,3,18.0110.0028,Chụp Xquang khớp háng nghiêng [số hóa],68300,
+89,10,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,4,18.0097.0030,Chụp Xquang khớp cùng chậu thẳng chếch hai bên [số hóa 3 phim],125000,
+90,10,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,5,18.0100.0028,Chụp Xquang khớp vai thẳng [Chụp X-quang số hóa 1 phim],68300,
+91,10,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,6,18.0119.0028,Chụp Xquang ngực thẳng [số hóa],68300,
+92,10,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,7,18.0124.0034,Chụp Xquang thực quản cổ nghiêng [số hóa],239000,
+93,10,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,8,18.0125.0028,Chụp Xquang bụng không chuẩn bị thẳng hoặc nghiêng [số hóa],68300,
+94,10,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,9,18.0127.0028,Chụp Xquang tại giường [số hóa],68300,
+95,10,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,10,18.0128.0028,Chụp Xquang tại phòng mổ [số hóa],68300,
+96,10,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,11,18.0086.0029,Chụp Xquang cột sống cổ thẳng nghiêng [số hóa],100000,
+97,10,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,12,18.0072.0029,Chụp Xquang Blondeau [số hóa],100000,
+98,10,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,13,18.0073.0028,Chụp Xquang Hirtz [số hóa],68300,
+99,10,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,14,18.0067.0029,Chụp Xquang sọ thẳng nghiêng [số hóa],100000,
+100,11,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,15,18.0068.0029,Chụp Xquang mặt thẳng nghiêng [số hóa],100000,
+101,11,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,16,18.0086.0029,Chụp Xquang cột sống cổ thẳng nghiêng [số hóa],100000,
+102,11,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,17,18.0081.2002,Chụp Xquang răng cận chóp (Periapical),14200,
+103,11,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,18,18.0089.0029,Chụp Xquang cột sống cổ C1-C2 răng [số hóa],100000,
+104,11,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,19,18.0090.0029,Chụp Xquang cột sống ngực thẳng nghiêng [số hóa],100000,
+105,11,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,20,18.0082.0028,Chụp Xquang răng cánh cắn (Bite wing) [số hóa],68300,
+106,11,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,21,18.0083.0028,Chụp Xquang răng toàn cảnh [số hóa],68300,
+107,11,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,22,18.0084.0028,Chụp Xquang phim cắn (Occlusal) [số hóa],68300,
+108,11,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,23,18.0122.0029,Chụp Xquang khớp ức đòn thẳng chếch [số hóa],100000,
+109,11,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,24,18.0087.0029,Chụp Xquang cột sống cổ chếch hai bên [số hóa],100000,
+110,11,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,25,18.0088.0030,"Chụp Xquang cột sống cổ động, nghiêng 3 tư thế [số hóa]",125000,
+111,11,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,26,18.0097.0030,Chụp Xquang khớp cùng chậu thẳng chếch hai bên [số hóa],125000,
+112,11,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,27,18.0100.0028,Chụp Xquang khớp vai thẳng [số hóa],68300,
+113,11,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,28,18.0110.0028,Chụp Xquang khớp háng nghiêng [số hóa],68300,
+114,11,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,29,18.0119.0028,Chụp Xquang ngực thẳng [số hóa],68300,
+115,11,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,30,18.0127.0028,Chụp Xquang tại giường [Chụp Xquang bụng không chuẩn bị],68300,
+116,12,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,31,18.0127.0028,Chụp Xquang tại giường [Chụp Xquang cột sống thắt lưng],68300,
+117,12,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,32,18.0127.0028,Chụp Xquang tại giường [Chụp Xquang xương cánh tay],68300,
+118,12,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,33,18.0127.0028,Chụp Xquang tại giường [Chụp Xquang khớp háng],68300,
+119,12,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,34,18.0127.0028,Chụp Xquang tại giường [Chụp Xquang ngực nghiêng hoặc chếch mỗi bên],68300,
+120,12,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,35,18.0127.0028,Chụp Xquang tại giường [Chụp Xquang ngực thẳng],68300,
+121,12,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,36,18.0127.0028,Chụp Xquang tại giường [Chụp Xquang xương cổ chân],68300,
+122,12,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,37,18.0127.0028,Chụp Xquang tại giường [Chụp Xquang xương cổ tay],68300,
+123,12,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,38,01.0232.0140,Nội soi dạ dày thực quản cấp cứu chẩn đoán và cầm máu,753000,"Chưa bao gồm thuốc cầm máu, dụng cụ cầm máu (clip, bộ thắt tĩnh mạch thực quản...)"
+124,12,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,39,02.0253.0135,Nội soi thực quản - Dạ dày - Tá tràng cấp cứu,255000,
+125,12,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,40,20.0067.0140,Nội soi dạ dày thực quản cấp cứu chảy máu tiêu hoá cao để chẩn đoán và điều trị,753000,
+126,12,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,41,20.0079.0134,"Nội soi thực quản, dạ dày, tá tràng kết hợp sinh thiết",455000,Đã bao gồm chi phí Test HP
+127,12,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,42,20.0080.0135,Nội soi thực quản - dạ dày - tá tràng không sinh thiết,255000,
+128,12,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,43,02.0255.0319,Nội soi thực quản - Dạ dày - Tá tràng qua đường mũi,615000,
+129,12,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,44,02.0314.0001,Siêu âm ổ bụng,49300,
+130,13,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,45,01.0303.0001,Siêu âm cấp cứu tại giường bệnh,49300,
+131,13,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,46,02.0112.0004,Siêu âm Doppler mạch máu [SIÊU ÂM TĨNH MẠCH],233000,
+132,13,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,47,18.0045.0004,"Siêu âm Doppler động mạch, tĩnh mạch chi dưới",233000,
+133,13,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,48,02.0112.0004,Siêu âm Doppler mạch máu [CHI TRÊN],233000,
+134,13,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,49,02.0112.0004,Siêu âm Doppler mạch máu [CHI DƯỚI],233000,
+135,13,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,50,02.0114.0006,"Siêu âm tim gắng sức (thảm chạy, thuốc)",598000,
+136,13,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,51,18.0053.0007,Siêu âm 3D/4D tim,468000,
+137,13,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,52,02.0117.0008,Siêu âm tim qua thực quản,816000,
+138,13,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,53,18.0048.0004,"Doppler động mạch cảnh, Doppler xuyên sọ",233000,
+139,13,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,54,02.0113.0004,Siêu âm Doppler tim,233000,
+140,13,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,55,18.0044.0001,"Siêu âm phần mềm (da, tổ chức dưới da,",49300,
+141,13,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,56,03.4252.0004,Siêu âm tim thai qua thành bụng,233000,
+142,13,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,57,18.0011.0001,Siêu âm màng phổi,49300,
+143,13,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,58,18.0001.0001,Siêu âm tuyến giáp,49300,
+144,13,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,59,18.0043.0001,"Siêu âm khớp (gối, háng, khuỷu, cổ tay….)",49300,
+145,13,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,60,02.0112.0004,Siêu âm Doppler mạch máu,233000,
+146,13,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,61,18.0054.0001,Siêu âm tuyến vú hai bên,49300,
+147,13,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,62,18.0024.0004,Siêu âm Doppler động mạch thận,233000,
+148,13,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,63,02.0316.0004,Siêu âm Doppler mạch máu hệ tĩnh cửa hoặc mạch máu ổ bụng,233000,
+149,13,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,64,18.0031.0004,"Siêu âm Doppler tử cung, buồng trứng qua đường âm đạo",233000,
+150,14,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,65,02.0116.0007,Siêu âm tim 4D [Để thực hiện các phẫu thuật hoặc can thiệp tim mạch],468000,Chỉ áp dụng trong trường hợp chỉ định để thực hiện các phẫu thuật hoặc can thiệp tim mạch.
+151,14,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,66,18.0066.0003,Siêu âm 3D/4D trực tràng,186000,
+152,14,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,67,02.0113.0004,Siêu âm Doppler tim,233000,
+153,14,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,68,18.0048.0004,"Doppler động mạch cảnh, Doppler xuyên sọ",233000,
+154,14,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,69,18.0045.0004,"Siêu âm Doppler động mạch, tĩnh mạch chi",233000,
+155,14,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,70,18.0024.0004,Siêu âm Doppler động mạch thận,233000,
+156,14,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,71,02.0112.0004,Siêu âm Doppler mạch máu,233000,
+157,14,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,72,02.0115.0005,Siêu âm tim cản âm,268000,
+158,14,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,73,18.0043.0001,"Siêu âm khớp (gối, háng, khuỷu, cổ tay….)",49300,
+159,14,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,74,18.0044.0001,"Siêu âm phần mềm (da, tổ chức dưới da,",49300,
+160,14,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,75,18.0011.0001,Siêu âm màng phổi,49300,
+161,14,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,76,18.0001.0001,Siêu âm tuyến giáp,49300,
+162,14,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,77,18.0054.0001,Siêu âm tuyến vú hai bên,49300,
+163,14,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,78,18.0023.0004,"Siêu âm Doppler mạch máu ổ bụng (động mạch chủ, mạc treo tràng trên, thân tạng…)",233000,
+164,14,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,79,02.0114.0006,"Siêu âm tim gắng sức (thảm chạy, thuốc)",598000,
+165,14,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,80,02.0117.0008,Siêu âm tim qua thực quản,816000,
+166,14,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,81,18.0018.0001,Siêu âm tử cung phần phụ,49300,
+167,14,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,82,18.0020.0001,"Siêu âm thai (thai, nhau thai, nước ối)",49300,
+168,15,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,83,18.0026.0069,"Siêu âm Doppler thai nhi (thai, nhau thai, dây rốn, động mạch tử cung)",84800,
+169,15,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,84,18.0020.0001,"Siêu âm thai (thai, nhau thai, nước ối)",49300,
+170,15,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,85,18.0034.0001,Siêu âm thai nhi trong 3 tháng đầu,49300,
+171,15,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,86,18.0035.0001,Siêu âm thai nhi trong 3 tháng giữa,49300,
+172,15,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,87,18.0036.0001,Siêu âm thai nhi trong 3 tháng cuối,49300,
+173,15,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,88,03.4252.0004,Siêu âm tim thai qua thành bụng,233000,
+174,15,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,89,18.0054.0001,Siêu âm tuyến vú hai bên,49300,
+175,15,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,90,02.0150.0114,Hút đờm hầu họng,12200,
+176,15,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,91,03.0076.0114,"Hút đờm khí phế quản ở người bệnh sau đặt nội khí quản, mở khí quản, thở máy.",12200,
+177,15,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,92,02.0112.0004,Siêu âm Doppler mạch máu,233000,
+178,15,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,93,01.0008.0100,Đặt catheter tĩnh mạch trung tâm nhiều nòng,1137000,
+179,15,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,94,01.0009.0098,Đặt catheter động mạch,1379000,
+180,15,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,95,01.0034.0299,Hồi phục nhịp xoang cho người bệnh loạn nhịp bằng máy sốc điện,485000,
+181,15,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,96,01.0036.0192,Tạo nhịp tim cấp cứu tạm thời với điện cực ngoài lồng ngực,1008000,
+182,15,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,97,01.0041.0081,Chọc dò màng ngoài tim cấp cứu,259000,
+183,15,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,98,01.0071.0120,Mở khí quản cấp cứu,734000,
+184,15,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,99,01.0073.0120,Mở khí quản thường quy,734000,
+185,15,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,100,01.0080.0206,Thay canuyn mở khí quản,253000,
+186,15,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,101,01.0157.0508,Cố định lồng ngực do chấn thương gãy xương sườn,53000,
+187,15,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,102,01.0089.0206,Đặt canuyn mở khí quản 02 nòng,253000,
+188,16,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,103,01.0092.0001,Siêu âm màng phổi cấp cứu,49300,
+189,16,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,104,01.0093.0079,Chọc hút dịch – khí màng phổi bằng kim hay catheter,150000,
+190,16,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,105,01.0097.0111,Dẫn lưu màng phổi liên tục ≤ 8 giờ,188000,
+191,16,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,106,01.0132.0209,Thông khí nhân tạo xâm nhập [1 ngày],583000,
+192,16,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,107,01.0202.0083,Chọc dịch tuỷ sống,114000,
+193,16,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,108,01.0219.0160,Rửa dạ dày loại bỏ chất độc bằng hệ thống kín,601000,
+194,16,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,109,01.0232.0140,Nội soi dạ dày thực quản cấp cứu chẩn đoán và cầm máu,753000,
+195,16,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,110,01.0244.0165,Chọc dẫn lưu ổ áp xe dưới siêu âm,620000,Chưa bao gồm ống thông.
+196,16,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,111,02.0011.0079,Chọc hút khí màng phổi,150000,
+197,16,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,112,02.0012.0095,"Dẫn lưu màng phổi, ổ áp xe phổi dưới hướng dẫn của siêu âm",697000,
+198,16,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,113,02.0013.0096,"Dẫn lưu màng phổi, ổ áp xe phổi dưới hướng dẫn của chụp cắt lớp vi tính",1218000,
+199,16,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,114,02.0032.0898,Khí dung thuốc giãn phế quản,23000,
+200,16,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,115,02.0038.0125,"Nội soi màng phổi, sinh thiết màng phổi",5814000,
+201,16,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,116,02.0039.0124,"Nội soi màng phổi, gây dính bằng thuốc/ hóa chất",5036000,
+202,16,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,117,02.0058.0122,Nghiệm pháp hồi phục phế quản với thuốc giãn phế quản,101000,
+203,16,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,118,02.0061.0164,"Rút ống dẫn lưu màng phổi, ống dẫn lưu ổ áp xe",184000,
+204,16,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,119,02.0062.0161,Rửa phổi toàn bộ,8428000,
+205,16,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,120,02.0074.0081,Chọc dò và dẫn lưu màng ngoài tim,259000,
+206,16,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,121,01.0163.0121,Mở thông bàng quang trên xương mu,384000,
+207,16,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,122,01.0164.0210,Thông bàng quang,94300,
+208,17,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,123,01.0173.0195,Lọc máu cấp cứu (ở người chưa có mở thông động tĩnh mạch),1565000,"Quả lọc dây máu dùng 1 lần; đã bao gồm catheter 2 nòng được tính bình quân là 0,25 lần cho 1 lần chạy thận."
+209,17,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,124,01.0176.0118,Lọc máu liên tục cấp cứu (CVVH),2248000,"Chưa bao gồm quả lọc, bộ dây dẫn và dịch lọc."
+210,17,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,125,01.0177.0118,Lọc máu liên tục cấp cứu có thẩm tách (CVVHD),2248000,"Chưa bao gồm quả lọc, bộ dây dẫn và dịch lọc."
+211,17,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,126,01.0178.0118,Lọc máu liên tục cấp cứu (CVVH) cho người bệnh sốc nhiễm khuẩn,2248000,"Chưa bao gồm quả lọc, bộ dây dẫn và dịch lọc."
+212,17,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,127,01.0179.0118,Lọc máu liên tục cấp cứu (CVVH) cho người bệnh suy đa tạng,2248000,"Chưa bao gồm quả lọc, bộ dây dẫn và dịch lọc."
+213,17,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,128,01.0180.0118,Lọc máu liên tục cấp cứu (CVVH) cho người bệnh viêm tụy cấp,2248000,"Chưa bao gồm quả lọc, bộ dây dẫn và dịch lọc."
+214,17,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,129,01.0181.0118,Lọc máu thẩm tách liên tục cấp cứu (CVVHDF),2248000,"Chưa bao gồm quả lọc, bộ dây dẫn và dịch lọc."
+215,17,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,130,01.0182.0118,Lọc máu thẩm tách liên tục cấp cứu (CVVHDF) cho người bệnh sốc nhiễm khuẩn,2248000,"Chưa bao gồm quả lọc, bộ dây dẫn và dịch lọc."
+216,17,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,131,01.0183.0118,Lọc máu thẩm tách liên tục cấp cứu (CVVHDF) cho người bệnh suy đa tạng,2248000,"Chưa bao gồm quả lọc, bộ dây dẫn và dịch lọc."
+217,17,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,132,02.0204.0116,Lọc màng bụng cấp cứu liên tục [Lọc màng bụng chu kỳ (CAPD)],574000,
+218,18,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,133,01.0188.0117,Lọc màng bụng cấp cứu liên tục [bằng máy],988000,
+219,18,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,134,01.0199.0119,Lọc máu hấp phụ với than hoạt trong ngộ độc cấp,1672000,
+220,18,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,135,02.0382.0213,Tiêm khớp háng,96200,Chưa bao gồm thuốc tiêm.
+221,18,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,136,02.0378.0174,Sinh thiết màng hoạt dịch dưới hướng dẫn của siêu âm,1128000,
+222,18,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,137,02.0340.0086,Chọc hút tế bào bằng kim nhỏ,116000,
+223,18,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,138,02.0341.0086,Chọc hút tế bào xương bằng kim nhỏ,116000,
+224,18,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,139,02.0342.0086,Chọc hút tế bào phần mềm bằng kim nhỏ,116000,
+225,18,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,140,02.0381.0213,Tiêm khớp gối,96200,Chưa bao gồm thuốc tiêm.
+226,18,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,141,02.0383.0213,Tiêm khớp cổ chân,96200,Chưa bao gồm thuốc tiêm.
+227,18,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,142,02.0384.0213,Tiêm khớp bàn ngón chân,96200,Chưa bao gồm thuốc tiêm.
+228,18,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,143,02.0385.0213,Tiêm khớp cổ tay,96200,Chưa bao gồm thuốc tiêm.
+229,18,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,144,02.0386.0213,Tiêm khớp bàn ngón tay,96200,Chưa bao gồm thuốc tiêm.
+230,18,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,145,02.0387.0213,Tiêm khớp đốt ngón tay,96200,Chưa bao gồm thuốc tiêm.
+231,18,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,146,02.0388.0213,Tiêm khớp khuỷu tay,96200,Chưa bao gồm thuốc tiêm.
+232,18,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,147,02.0389.0213,Tiêm khớp vai,96200,Chưa bao gồm thuốc tiêm.
+233,18,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,148,02.0390.0213,Tiêm khớp ức - đòn,96200,Chưa bao gồm thuốc tiêm.
+234,18,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,149,02.0391.0213,Tiêm khớp ức - sườn,96200,Chưa bao gồm thuốc tiêm.
+235,18,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,150,02.0392.0213,Tiêm khớp đòn - cùng vai,96200,Chưa bao gồm thuốc tiêm.
+236,18,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,151,02.0394.0320,Tiêm ngoài màng cứng,336000,
+237,19,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,152,02.0396.0213,Tiêm điểm bám gân mỏm trâm quay (mỏm trâm trụ),96200,Chưa bao gồm thuốc tiêm.
+238,19,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,153,02.0396.0213,Tiêm điểm bám gân lồi cầu trong (lồi cầu ngoài) xương cánh tay,96200,Chưa bao gồm thuốc tiêm.
+239,19,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,154,02.0398.0213,Tiêm điểm bám gân quanh khớp gối,96200,Chưa bao gồm thuốc tiêm.
+240,19,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,155,02.0400.0213,Tiêm hội chứng đường hầm cổ tay,96200,Chưa bao gồm thuốc tiêm.
+241,19,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,156,02.0401.0213,Tiêm gân gấp ngón tay,96200,Chưa bao gồm thuốc tiêm.
+242,19,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,157,02.0402.0213,Tiêm gân nhị đầu khớp vai,96200,Chưa bao gồm thuốc tiêm.
+243,19,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,158,02.0403.0213,"Tiêm gân trên gai (dưới gai, gân bao xoay khớp vai)",96200,Chưa bao gồm thuốc tiêm.
+244,19,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,159,02.0404.0213,Tiêm điểm bám gân mỏm cùng vai,96200,Chưa bao gồm thuốc tiêm.
+245,19,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,160,02.0405.0213,Tiêm điểm bám gân mỏm trâm quay (trâm trụ),96200,Chưa bao gồm thuốc tiêm.
+246,19,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,161,02.0406.0213,Tiêm gân gót,96200,Chưa bao gồm thuốc tiêm.
+247,19,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,162,02.0407.0213,Tiêm cân gan chân,96200,Chưa bao gồm thuốc tiêm.
+248,19,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,163,02.0411.0213,Tiêm khớp gối dưới hướng dẫn của siêu âm,138000,Chưa bao gồm thuốc tiêm.
+249,19,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,164,02.0412.0213,Tiêm khớp háng dưới hướng dẫn của siêu âm,138000,Chưa bao gồm thuốc tiêm.
+250,19,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,165,02.0413.0213,Tiêm khớp cổ chân dưới hướng dẫn của siêu âm,138000,Chưa bao gồm thuốc tiêm.
+251,19,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,166,02.0414.0213,Tiêm khớp bàn ngón chân dưới hướng dẫn của siêu âm,138000,Chưa bao gồm thuốc tiêm.
+252,19,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,167,02.0415.0213,Tiêm khớp cổ tay dưới hướng dẫn của siêu âm,138000,Chưa bao gồm thuốc tiêm.
+253,19,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,168,02.0416.0213,Tiêm khớp bàn ngón tay dưới hướng dẫn của siêu âm,138000,Chưa bao gồm thuốc tiêm.
+254,20,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,169,02.0417.0213,Tiêm khớp đốt ngón tay dưới hướng dẫn của siêu âm,138000,Chưa bao gồm thuốc tiêm.
+255,20,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,170,02.0418.0214,Tiêm khớp khuỷu tay dưới hướng dẫn của siêu âm,138000,Chưa bao gồm thuốc tiêm.
+256,20,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,171,02.0429.0213,Tiêm điểm bám gân mỏm cùng vai dưới hướng dẫn của siêu âm,138000,Chưa bao gồm thuốc tiêm.
+257,20,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,172,02.0428.0214,"Tiêm gân trên gai (dưới gai, gân bao xoay khớp vai) dưới hướng dẫn của siêu âm",138000,Chưa bao gồm thuốc tiêm.
+258,20,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,173,02.0419.0213,Tiêm khớp vai dưới hướng dẫn của siêu âm,138000,Chưa bao gồm thuốc tiêm.
+259,20,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,174,02.0420.0213,Tiêm khớp ức đòn dưới hướng dẫn của siêu âm,138000,Chưa bao gồm thuốc tiêm.
+260,20,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,175,02.0421.0213,Tiêm khớp ức – sườn dưới hướng dẫn của siêu âm,138000,Chưa bao gồm thuốc tiêm.
+261,20,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,176,02.0422.0213,Tiêm khớp đòn- cùng vai dưới hướng dẫn của siêu âm,138000,Chưa bao gồm thuốc tiêm.
+262,20,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,177,02.0423.0214,Tiêm khớp thái dương hàm dưới hướng dẫn của siêu âm,138000,Chưa bao gồm thuốc tiêm.
+263,20,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,178,02.0424.0213,Tiêm hội chứng DeQuervain dưới hướng dẫn của siêu âm,138000,Chưa bao gồm thuốc tiêm.
+264,20,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,179,02.0425.0214,Tiêm hội chứng đường hầm cổ tay dưới hướng dẫn của siêu âm,138000,Chưa bao gồm thuốc tiêm.
+265,20,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,180,02.0426.0213,Tiêm gân gấp ngón tay dưới hướng dẫn của siêu âm,138000,Chưa bao gồm thuốc tiêm.
+266,20,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,181,02.0427.0213,Tiêm gân gấp ngón tay dưới hướng dẫn của siêu âm,138000,Chưa bao gồm thuốc tiêm.
+267,20,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,182,02.0349.0112,Hút dịch khớp gối,120000,
+268,20,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,183,02.0361.0112,Hút nang bao hoạt dịch,120000,
+269,20,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,184,13.0152.0589,Bóc nang tuyến Bartholin,1309000,
+270,20,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,185,13.0153.0603,Chích rạch màng trinh do ứ máu kinh,825000,
+271,20,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,186,13.0151.0601,Chích áp xe tuyến Bartholin,875000,
+272,20,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,187,13.0160.0606,Chọc dò túi cùng Douglas,291000,
+273,20,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,188,13.0053.0594,Cắt chỉ khâu vòng cổ tử cung,125000,
+274,21,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,189,13.0155.0334,"Cắt, đốt sùi mào gà âm hộ, âm đạo, tầng sinh môn",758000,
+275,21,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,190,13.0157.0619,"Hút buồng tử cung do rong kinh, rong huyết",215000,
+276,21,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,191,13.0149.0624,Khâu rách cùng đồ âm đạo,1979000,
+277,21,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,192,13.0052.0626,Khâu vòng cổ tử cung,561000,
+278,21,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,193,13.0040.0629,Làm thuốc vết khâu tầng sinh môn nhiễm khuẩn,88900,
+279,21,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,194,13.0144.0721,"Thủ thuật xoắn polip cổ tử cung, âm đạo",406000,
+280,21,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,195,13.0156.0639,Nong buồng tử cung đặt dụng cụ chống dính,597000,
+281,21,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,196,13.0148.0630,Lấy dị vật âm đạo,602000,
+282,21,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,197,13.0158.0634,Nạo hút thai trứng,824000,
+283,21,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,198,13.0049.0635,"Nạo sót thai, nạo sót rau sau sẩy, sau đẻ",355000,
+284,21,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,199,13.0239.0645,Phá thai bằng thuốc cho tuổi thai đến hết 7 tuần,189000,
+285,21,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,200,13.0238.0648,Phá thai từ tuần thứ 6 đến hết 12 tuần bằng phương pháp hút chân không,408000,
+286,21,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,201,13.0241.0644,Phá thai đến hết 7 tuần bằng phương pháp hút chân không,408000,
+287,21,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,202,13.0154.0712,"Sinh thiết cổ tử cung, âm hộ, âm đạo",393000,
+288,21,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,203,13.0166.0715,Soi cổ tử cung,63900,
+289,21,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,204,13.0145.0611,"Điều trị tổn thương cổ tử cung bằng đốt điện, đốt nhiệt, đốt laser, áp lạnh...",170000,
+290,21,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,205,02.0002.0071,Bơm rửa khoang màng phổi,227000,
+291,21,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,206,02.0003.0073,Bơm streptokinase vào khoang màng phổi,1027000,
+292,21,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,207,01.0223.0211,Đặt ống thông hậu môn,85900,
+293,21,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,208,02.0025.0109,Gây dính màng phổi bằng thuốc/hóa chất qua ống dẫn lưu màng phổi,207000,
+294,22,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,209,09.9000.1894,Gây mê khác,761000,
+295,22,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,210,02.0026.0111,Hút dẫn lưu khoang màng phổi bằng máy hút áp lực âm liên tục,188000,
+296,22,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,211,09.0123.0898,Khí dung đường thở ở bệnh nhân nặng,23000,
+297,22,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,212,01.0201.0849,Soi đáy mắt cấp cứu,55300,
+298,22,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,213,10.1113.0398,Phẫu thuật đặt catheter ổ bụng để lọc màng bụng,7476000,
+299,22,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,214,01.0008.0100,Đặt catheter tĩnh mạch trung tâm nhiều nòng,1137000,
+300,22,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,215,01.0032.0299,Sốc điện ngoài lồng ngực cấp cứu,485000,
+301,22,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,216,02.0081.0054,Đặt bóng đối xung động mạch chủ,6926000,
+302,22,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,217,01.0048.0290,Tim phổi nhân tạo (ECMO) cấp cứu tại giường trong hỗ trợ suy hô hấp cấp ≤ 8 giờ [Phẫu thuật đặt hệ thống tim phổi nhân tạo (ECMO)],5367000,"Chưa bao gồm bộ tim phổi, dây dẫn và canuyn chạy ECMO."
+303,22,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,218,01.0048.0291,"Tim phổi nhân tạo (ECMO) cấp cứu tại giường trong hỗ trợ suy hô hấp cấp ≤ 8 giờ [Thay dây, thay tim phổi (ECMO)]",1558000,"Chưa bao gồm bộ tim phổi, dây dẫn và canuyn chạy ECMO."
+304,22,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,219,01.0048.0292,"Tim phổi nhân tạo (ECMO) cấp cứu tại giường trong hỗ trợ suy hô hấp cấp ≤ 8 giờ [Theo dõi, chạy tim phổi nhân tạo (ECMO) mỗi 12 giờ]",1404000,Áp dụng thanh toán cho mỗi 8 giờ thực hiện.
+305,22,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,220,01.0048.0293,Tim phổi nhân tạo (ECMO) cấp cứu tại giường trong hỗ trợ suy hô hấp cấp ≤ 8 giờ [Kết thúc và rút hệ thống ECMO],2536000,
+306,23,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,221,01.0049.0290,Tim phổi nhân tạo (ECMO) cấp cứu tại giường trong hỗ trợ suy tuần hoàn cấp ≤ 8 giờ [Phẫu thuật đặt hệ thống tim phổi nhân tạo (ECMO)],5367000,"Chưa bao gồm bộ tim phổi, dây dẫn và canuyn chạy ECMO."
+307,23,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,222,01.0049.0291,"Tim phổi nhân tạo (ECMO) cấp cứu tại giường trong hỗ trợ suy tuần hoàn cấp ≤ 8 giờ [Thay dây, thay tim phổi (ECMO)]",1558000,"Chưa bao gồm bộ tim phổi, dây dẫn và canuyn chạy ECMO."
+308,23,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,223,01.0049.0292,"Tim phổi nhân tạo (ECMO) cấp cứu tại giường trong hỗ trợ suy tuần hoàn cấp ≤ 8 giờ [Theo dõi, chạy tim phổi nhân tạo (ECMO) mỗi 12 giờ]",1404000,Áp dụng thanh toán cho mỗi 12 giờ thực hiện.
+309,23,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,224,01.0049.0293,Tim phổi nhân tạo (ECMO) cấp cứu tại giường trong hỗ trợ suy tuần hoàn cấp ≤ 8 giờ [Kết thúc và rút hệ thống ECMO],2536000,
+310,23,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,225,21.0106.1800,Nghiệm pháp dung nạp Glucose đường uống 2 mẫu có định lượng Insulin kèm theo,132000,
+311,23,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,226,02.0075.0081,Chọc dò màng ngoài tim,259000,
+312,23,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,227,02.0076.0081,Dẫn lưu màng ngoài tim,259000,
+313,23,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,228,01.0087.0898,Khí dung thuốc qua thở máy (một lần),23000,Chưa bao gồm thuốc khí dung.
+314,23,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,229,02.0204.0116,Lọc màng bụng chu kỳ (CAPD),574000,
+315,23,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,230,01.0073.0120,Mở khí quản thường quy,734000,
+316,23,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,231,01.0218.0159,Rửa dạ dày cấp cứu,131000,
+317,23,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,232,02.0075.0081,Chọc dò màng ngoài tim,259000,
+318,23,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,233,02.0120.0192,Sốc điện điều trị rung nhĩ,1008000,
+319,23,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,234,02.0188.0210,Đặt sonde bàng quang,94300,
+320,23,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,235,01.0132.0209,Thông khí nhân tạo xâm nhập [1 ngày],583000,
+321,23,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,236,01.0216.0103,Đặt ống thông dạ dày,94300,
+322,24,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,237,01.0007.0099,Đặt catheter tĩnh mạch trung tâm 01 nòng,664000,
+323,24,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,238,02.0009.0077,Chọc dò dịch màng phổi,143000,
+324,24,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,239,01.0158.0074,Cấp cứu ngừng tuần hoàn hô hấp cơ bản,498000,Bao gồm cả bóng dùng nhiều lần.
+325,24,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,240,01.0066.1888,Đặt ống nội khí quản,579000,
+326,24,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,241,01.0202.0083,Chọc dịch tuỷ sống,114000,Chưa bao gồm kim chọc dò.
+327,24,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,242,03.3821.0216,Cắt lọc tổ chức hoại tử hoặc cắt lọc vết thương đơn giản,184000,
+328,24,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,243,03.3826.0200,"Thay băng, cắt chỉ vết mổ (≤ 15cm) [NHI KHOA]",60000,Chỉ áp dụng với BN ngoại trú
+329,24,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,244,10.9003.0200,Thay băng [Thay băng vết thương hoặc mổ chiều dài ≤ 15cm],60000,Chỉ áp dụng với BN ngoại trú
+330,24,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,245,10.9003.0201,Thay băng [Thay băng vết thương chiều dài trên 15cm đến 30 cm; sau phẫu thuật CÓ TỪ HAI ĐƯỜNG MỔ TRỞ LÊN; vết mổ nhiễm trùng],85000,
+331,24,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,246,10.9003.0202,Thay băng [Thay băng vết thương hoặc mổ chiều dài từ trên 30 cm đến 50 cm],115000,
+332,24,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,247,10.9003.0204,Thay băng [Thay băng vết thương hoặc mổ chiều dài từ 30 cm đến 50 cm nhiễm trùng],184000,
+333,24,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,248,03.3827.0216,Khâu vết thương phần mềm dài dưới 10cm (Khâu vết thương phần mềm tổn thương nông chiều dài < 10 cm),184000,
+334,24,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,249,02.0008.0078,Chọc tháo dịch màng phổi dưới hướng dẫn của siêu âm,183000,
+335,25,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,250,03.0080.0079,Chọc hút/dẫn lưu khí màng phổi áp lực thấp [NHI KHOA],150000,
+336,25,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,251,01.0158.0074,Cấp cứu ngừng tuần hoàn hô hấp cơ bản,498000,
+337,25,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,252,02.0163.0203,Thay băng các vết loét hoại tử rộng sau TBMMN,139000,
+338,25,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,253,01.0346.0097,Khai thông mạch não bằng điều trị thuốc tiêu sợi huyết trong nhồi máu não cấp,557000,Chưa bao gồm thuốc tiêu sợi huyết
+339,25,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,254,01.0322.0097,Khai thông động mạch vành bằng sử dụng thuốc tiêu sợi huyết trong điều trị nhồi máu cơ tim cấp,557000,Chưa bao gồm thuốc tiêu sợi huyết
+340,25,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,255,03.0080.0079,Chọc hút/dẫn lưu khí màng phổi áp lực thấp,150000,
+341,25,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,256,01.0094.0111,Dẫn lưu khí màng phổi áp lực thấp < 8 giờ,188000,
+342,25,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,257,02.0011.0079,Chọc hút khí màng phổi,150000,
+343,25,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,258,01.0132.0209,Thông khí nhân tạo xâm nhập [giờ theo thực tế],583000,
+344,25,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,259,02.0205.0119,Lọc huyết tương (Plasmapheresis),1672000,
+345,25,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,260,02.0150.0114,Hút đờm hầu họng,12200,
+346,25,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,261,01.0056.0300,Hút đờm qua ống nội khí quản/canuyn mở khí quản bằng ống thông kín (có thở máy) (một lần hút),337000,
+347,25,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,262,01.0055.0114,Hút đờm qua ống nội khí quản/canuyn mở khí quản bằng ống thông một lần ở người bệnh có thở máy (một lần hút),12200,
+348,25,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,263,01.0281.1510,Xét nghiệm đường máu mao mạch tại giường (một lần),15500,
+349,25,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,264,02.0188.0210,Đặt sonde bàng quang,94300,
+350,26,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,265,01.0173.0195,Lọc máu cấp cứu (ở người chưa có mở thông động tĩnh mạch) [TRƯỜNG HỢP PHẢI ĐẶT CATHETER],1565000,"Quả lọc dây máu dùng 1 lần; đã bao gồm catheter 2 nòng được tính bình quân là 0,25 lần cho 1 lần chạy thận."
+351,26,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,266,01.0173.0195,Lọc máu cấp cứu (ở người đã mở thông động tĩnh mạch) [TRƯỜNG HỢP KHÔNG PHẢI ĐẶT CATHETER],1565000,
+352,26,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,267,01.0173.0195,Thận nhân tạo cấp cứu [TRƯỜNG HỢP KHÔNG PHẢI ĐẶT CATHETER],1565000,
+353,26,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,268,01.0173.0195,Thận nhân tạo cấp cứu [TRƯỜNG HỢP PHẢI ĐẶT CATHETER],1565000,"Quả lọc dây máu dùng 1 lần; đã bao gồm catheter 2 nòng được tính bình quân là 0,25 lần cho 1 lần chạy thận."
+354,26,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,269,15.0222.0898,Khí dung mũi họng [TAI MŨI HỌNG],23000,
+355,26,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,270,08.0004.0224,Nhĩ châm,69400,
+356,26,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,271,08.0006.0271,Thủy châm,70100,
+357,26,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,272,08.0008.0224,Ôn châm,69400,
+358,26,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,273,08.0009.0228,Cứu,36100,
+359,26,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,274,08.0010.0224,Chích lể,69400,
+360,26,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,275,08.0011.0243,Laser châm,49100,
+361,26,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,276,08.0013.0238,Kéo nắn cột sống cổ,48700,
+362,26,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,277,08.0014.0238,Kéo nắn cột sống thắt lưng,48700,
+363,26,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,278,08.0166.0230,Điện nhĩ châm điều trị liệt dây VII ngoại biên,71400,
+364,27,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,279,08.0168.0230,Điện nhĩ châm điều trị thiểu năng tuần hoàn não mạn tính,71400,
+365,27,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,280,08.0169.0230,"Điện nhĩ châm điều trị đau đầu, đau nửa đầu",71400,
+366,27,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,281,08.0170.0230,Điện nhĩ châm điều trị mất ngủ,71400,
+367,27,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,282,08.0177.0230,Điện nhĩ châm điều trị liệt nửa người do tai biến mạch máu não,71400,
+368,27,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,283,08.0199.0230,Điện nhĩ châm điều trị liệt chi trên,71400,
+369,27,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,284,08.0200.0230,Điện nhĩ châm điều trị liệt chi dưới,71400,
+370,27,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,285,08.0279.0230,Điện châm điều trị huyết áp thấp,71400,
+371,27,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,286,08.0280.0230,Điện châm điều trị thiểu năng tuần hoàn não mạn tính,71400,
+372,27,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,287,08.0301.0230,Điện châm điều trị liệt chi trên,71400,
+373,27,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,288,08.0330.0271,Thuỷ châm điều trị liệt nửa người do tai biến mạch máu não,70100,
+374,27,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,289,08.0354.0271,Thuỷ châm điều trị huyết áp thấp,70100,
+375,27,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,290,08.0355.0271,Thuỷ châm điều trị thiểu năng tuần hoàn não mạn tính,70100,
+376,27,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,291,08.0389.0280,Xoa bóp bấm huyệt điều trị liệt chi trên,69300,
+377,27,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,292,08.0390.0280,Xoa bóp bấm huyệt điều trị liệt chi dưới,69300,
+378,27,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,293,08.0391.0280,Xoa bóp bấm huyệt điều trị liệt nửa người do tai biến mạch máu não,69300,
+379,27,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,294,08.0447.0280,Xoa bóp bấm huyệt điều trị giảm đau sau phẫu thuật,69300,
+380,27,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,295,08.0457.0228,Cứu điều trị liệt chi trên thể hàn,36100,
+381,27,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,296,08.0458.0228,Cứu điều trị liệt chi dưới thể hàn,36100,
+382,28,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,297,08.0459.0228,Cứu điều trị liệt nửa người thể hàn,36100,
+383,28,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,298,08.0479.0235,Giác hơi điều trị ngoại cảm phong hàn,34500,
+384,28,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,299,08.0480.0235,Giác hơi điều trị ngoại cảm phong nhiệt,34500,
+385,28,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,300,08.0481.0235,Giác hơi điều trị các chứng đau,34500,
+386,28,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,301,08.0005.0230,Điện châm,71400,
+387,28,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,302,17.0033.0266,Kỹ thuật tập tay và bàn tay cho người bệnh liệt nửa người,45700,
+388,28,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,303,17.0034.0267,Kỹ thuật tập đứng và đi cho người bệnh liệt nửa người,51400,
+389,28,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,304,17.0037.0267,Tập ngồi thăng bằng tĩnh và động,51400,
+390,28,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,305,17.0043.0268,"Tập đi với nạng (nạng nách, nạng khuỷu)",30600,
+391,28,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,306,17.0044.0268,Tập đi với gậy,30600,
+392,28,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,307,17.0047.0268,"Tập lên, xuống cầu thang",30600,
+393,28,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,308,17.0048.0268,"Tập đi trên các địa hình khác nhau (dốc, sỏi, gồ ghề...)",30600,
+394,28,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,309,17.0052.0267,Tập vận động thụ động,51400,
+395,28,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,310,17.0053.0267,Tập vận động có trợ giúp,51400,
+396,28,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,311,17.0056.0267,Tập vận động có kháng trở,51400,
+397,28,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,312,17.0071.0270,Tập với xe đạp tập,12500,
+398,28,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,313,17.0073.0277,Tập các kiểu thở,31100,
+399,28,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,314,17.0075.0277,Tập ho có trợ giúp,31100,
+400,28,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,315,17.0078.0238,Kỹ thuật kéo nắn trị liệu,48700,
+401,28,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,316,17.0085.0282,Kỹ thuật xoa bóp vùng,45200,
+402,28,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,317,17.0086.0283,Kỹ thuật xoa bóp toàn thân,55800,
+403,28,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,318,17.0104.0264,Tập nuốt,134000,
+404,28,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,319,14.0166.0778,"Lấy dị vật giác mạc sâu [Lấy dị vật giác mạc nông, một mắt (gây tê)]",88400,
+405,28,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,320,14.0193.0856,Tiêm dưới kết mạc [1 mắt],50300,
+406,28,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,321,14.0194.0857,Tiêm cạnh nhãn cầu [1 mắt],50300,
+407,28,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,322,14.0197.0855,Bơm thông lệ đạo [1 mắt],61500,
+408,29,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,323,14.0200.0782,Lấy dị vật kết mạc [1 mắt],67000,
+409,29,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,324,14.0202.0785,Lấy calci kết mạc,37300,
+410,29,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,325,14.0203.0075,Cắt chỉ khâu da mi đơn giản [CHỈ ÁP DỤNG BN NGOẠI TRÚ],35600,Chỉ áp dụng cho BN ngoại trú
+411,29,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,326,14.0204.0075,Cắt chỉ khâu kết mạc [CHỈ ÁP DỤNG BN NGOẠI TRÚ],35600,Chỉ áp dụng cho BN ngoại trú
+412,29,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,327,14.0205.0759,"Đốt lông xiêu, nhổ lông siêu",50000,
+413,29,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,328,14.0206.0730,Bơm rửa lệ đạo,38300,
+414,29,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,329,14.0207.0738,"Chích chắp, lẹo, nang lông mi, chích áp xe mi, kết mạc",81000,
+415,29,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,330,14.0210.0799,"Nặn tuyến bờ mi, đánh bờ mi",37300,
+416,29,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,331,14.0211.0842,Rửa cùng đồ,44000,
+417,29,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,332,14.0212.0864,Cấp cứu bỏng mắt ban đầu,340000,
+418,29,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,333,14.0214.0778,Bóc giả mạc [1 mắt],88400,
+419,29,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,334,14.0215.0505,Rạch áp xe mi,197000,
+420,29,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,335,14.0216.0505,Rạch áp xe túi lệ,197000,
+421,29,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,336,14.0218.0849,Soi đáy mắt trực tiếp,55300,
+422,29,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,337,16.0205.1024,Nhổ chân răng vĩnh viễn,200000,
+423,29,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,338,16.0197.1036,Phẫu thuật nhổ răng lạc chỗ,348000,
+424,29,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,339,16.0072.1018,Phục hồi cổ răng bằng Composite,348000,
+425,29,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,340,16.0072.1018,Phục hồi cổ răng bằng Composite,348000,
+426,29,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,341,16.0067.1031,Điều trị sâu ngà răng phục hồi bằng GlassIonomer Cement (GIC) kết hợp Composite,259000,
+427,29,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,342,16.0205.1024,Nhổ chân răng vĩnh viễn,200000,
+428,29,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,343,16.0203.1026,Nhổ răng vĩnh viễn,218000,
+429,29,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,344,16.0070.1031,Điều trị sâu ngà răng phục hồi bằng GlassIonomer Cement,259000,
+430,29,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,345,16.0068.1031,Điều trị sâu ngà răng phục hồi bằng Composite,259000,
+431,30,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,346,16.0067.1031,Điều trị sâu ngà răng phục hồi bằng GlassIonomer Cement (GIC) kết hợp Composite,259000,
+432,30,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,347,16.0069.1031,Điều trị sâu ngà răng phục hồi bằng Amalgam,259000,
+433,30,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,348,16.0074.1018,Phục hồi cổ răng bằng GlassIonomer Cement,348000,
+434,30,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,349,16.0225.1035,Trám bít hố rãnh bằng nhựa Sealant,224000,
+435,30,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,350,16.0238.1029,Nhổ răng sữa,40700,
+436,30,BẢNG GIÁ BẢO HIỂM Y TẾ THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,351,16.0043.1020,Lấy cao răng,143000,
+437,31,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,1,18.0296.0066,Chụp cộng hưởng từ sọ não (0.2-1.5T),1322000,
+438,31,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,2,18.0297.0065,Chụp cộng hưởng từ sọ não có tiêm chất tương phản (0.2-1.5T),2227000,
+439,31,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,3,18.0298.0066,Chụp cộng hưởng từ não- mạch não không tiêm chất tương phản,1322000,
+440,31,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,4,18.0300.0066,Chụp cộng hưởng từ hệ mạch cổ không tiêm chất tương phản,1322000,
+441,31,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,5,18.0301.0065,Chụp cộng hưởng từ hệ mạch cổ có tiêm chất tương phản,2227000,
+442,31,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,6,18.0302.0065,Chụp cộng hưởng từ tuyến yên có tiêm chất tương phản,2227000,
+443,31,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,7,18.0303.0066,Chụp cộng hưởng từ hốc mắt và thần kinh thị giác,1322000,
+444,31,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,8,18.0304.0065,Chụp cộng hưởng từ hốc mắt và thần kinh thị giác có tiêm chất tương phản,2227000,
+445,31,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,9,18.0305.0065,Chụp cộng hưởng từ tưới máu não (perfusion),2227000,
+446,31,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,10,18.0306.0068,Chụp cộng hưởng từ phổ não (spect tính rography) (0.2-1.5T),3191000,
+447,31,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,11,18.0308.0066,Chụp cộng hưởng từ khuếch tán (DWI - Diffusion-weighted Imaging) (0.2-1.5T),1322000,
+448,31,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,12,18.0309.0065,Chụp cộng hưởng từ đáy sọ và xương đá (0.2-1.5T),2227000,
+449,31,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,13,18.0310.0066,Chụp cộng hưởng từ vùng mặt - cổ (0.2-1.5T),1322000,
+450,32,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,14,18.0311.0065,Chụp cộng hưởng từ vùng mặt - cổ có tiêm tương phản (0.2-1.5T),2227000,
+451,32,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,15,18.0312.0068,Chụp cộng hưởng từ sọ não chức năng (0.2-1.5T),3191000,
+452,32,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,16,18.0313.0066,Chụp cộng hưởng từ lồng ngực (0.2-1.5T),1322000,
+453,32,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,17,18.0314.0065,Chụp cộng hưởng từ lồng ngực có tiêm thuốc cản quang,2227000,
+454,32,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,18,18.0315.0065,Chụp cộng hưởng từ thông khí phổi (Heli) (0.2-,2227000,
+455,32,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,19,18.0316.0066,Chụp cộng hưởng từ tuyến vú (0.2-1.5T),1322000,
+456,32,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,20,18.0317.0065,Chụp cộng hưởng từ tuyến vú động học có tiêm tương phản (0.2-1.5T),2227000,
+457,32,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,21,18.0318.0068,Chụp cộng hưởng từ phổ tuyến vú (0.2-1.5T),3191000,
+458,32,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,22,18.0319.0066,"Chụp cộng hưởng từ tầng bụng không tiêm chất tương phản (gồm: chụp cộng hưởng từ gan-mật, tụy, lách, thận, dạ dày-tá tràng...) (0.2-1.5T)",1322000,
+459,32,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,23,18.0321.0065,"Chụp cộng hưởng từ vùng chậu (gồm: chụp cộng hưởng từ tử cung-phần phụ, tiền liệt tuyến, đại tràng chậu hông, trực tràng, các khối u vùng chậu có ti[êm])",2227000,
+460,32,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,24,18.0322.0065,Chụp cộng hưởng từ vùng chậu dò hậu môn (0.2-1.5T),2227000,
+461,32,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,25,18.0323.0065,Chụp cộng hưởng từ vùng chậu có tiêm chất tương phản (0.2-1.5T),2227000,
+462,32,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,26,18.0324.0066,"Chụp cộng hưởng từ bìu, dương vật (0.2-1.5T)",1322000,
+463,32,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,27,18.0325.0065,"Chụp cộng hưởng từ bìu, dương vật có tiêm chất tương phản",2227000,
+464,33,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,28,18.0326.0066,"Chụp cộng hưởng từ động học sàn chậu, tống phân (defecography-MR) (0.2-1.5T)",1322000,
+465,33,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,29,18.0327.0065,Chụp cộng hưởng từ ruột non (enteroclysis),2227000,
+466,33,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,30,18.0328.0065,Chụp cộng hưởng từ nội soi ảo khung đại tràng (virtual colonoscopy),2227000,
+467,33,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,31,18.0329.0065,Chụp cộng hưởng từ tuyến tiền liệt có tiêm chất tương phản,2227000,
+468,33,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,32,18.0330.0068,Chụp cộng hưởng từ phổ tuyến tiền liệt (0.2-1.5T),3191000,
+469,33,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,33,18.0331.0065,Chụp cộng hưởng từ đánh giá bánh nhau (rau),2227000,
+470,33,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,34,18.0332.0066,Chụp cộng hưởng từ thai nhi (0.2-1.5T),1322000,
+471,33,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,35,18.0333.0067,Chụp cộng hưởng từ gan với chất tương phản đặc hiệu mô (0.2-1.5T) [chụp cộng hưởng từ gan bằng chất tương phản thông thường nhưng không xác định được bản chất mô bệnh học],8691000,
+472,33,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,36,18.0334.0066,Chụp cộng hưởng từ cột sống cổ (0.2-1.5T),1322000,
+473,33,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,37,18.0335.0065,Chụp cộng hưởng từ cột sống cổ có tiêm tương phản (0.2-1.5T),2227000,
+474,33,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,38,18.0336.0066,Chụp cộng hưởng từ cột sống ngực (0.2-1.5T),1322000,
+475,33,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,39,18.0337.0065,Chụp cộng hưởng từ cột sống ngực có tiêm chất tương phản,2227000,
+476,33,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,40,18.0338.0066,Chụp cộng hưởng từ cột sống thắt lưng - cùng (0.2-1.5T),1322000,
+477,33,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,41,18.0339.0065,Chụp cộng hưởng từ cột sống thắt lưng - cùng có tiêm thuốc tương phản,2227000,
+478,34,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,42,18.0340.0066,Chụp cộng hưởng từ khớp (0.2-1.5T),1322000,
+479,34,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,43,18.0341.0065,Chụp cộng hưởng từ khớp có tiêm tương phản,2227000,
+480,34,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,44,18.0342.0065,Chụp cộng hưởng từ khớp có tiêm tương phản,2227000,
+481,34,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,45,18.0343.0066,Chụp cộng hưởng từ xương và tủy xương (0.2-,1322000,
+482,34,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,46,18.0344.0065,Chụp cộng hưởng từ xương và tủy xương có tiêm chất tương phản,2227000,
+483,34,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,47,18.0345.0066,Chụp cộng hưởng từ phần mềm chi (0.2-1.5T),1322000,
+484,34,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,48,18.0346.0065,Chụp cộng hưởng từ phần mềm chi có tiêm tương phản,2227000,
+485,34,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,49,18.0347.0065,Chụp cộng hưởng từ động mạch chủ-chậu,2227000,
+486,34,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,50,18.0348.0065,Chụp cộng hưởng từ động mạch chủ-ngực,2227000,
+487,34,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,51,18.0349.0065,Chụp cộng hưởng từ động mạch vành (1.5T),2227000,
+488,34,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,52,18.0350.0065,Chụp cộng hưởng từ tim (1.5T),2227000,
+489,34,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,53,18.0351.0065,"Chụp cộng hưởng từ tầng trên ổ bụng có khảo sát mạch các tạng (bao gồm mạch: gan, tụy, lách và mạch khối u) (1.5T)",2227000,
+490,34,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,54,18.0352.0066,Chụp cộng hưởng từ động mạch chi trên,1322000,
+491,34,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,55,18.0353.0065,Chụp cộng hưởng từ động mạch chi trên có tiêm thuốc tương phản,2227000,
+492,34,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,56,18.0354.0066,Chụp cộng hưởng từ động mạch chi dưới,1322000,
+493,34,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,57,18.0355.0065,Chụp cộng hưởng từ động mạch chi dưới có tiêm chất tương phản,2227000,
+494,34,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,58,18.0358.0066,Chụp cộng hưởng từ tĩnh mạch (1.5T),1322000,
+495,35,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,59,18.0359.0065,Chụp cộng hưởng từ tĩnh mạch có tiêm tương phản (1.5T),2227000,
+496,35,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,60,18.0360.0065,Chụp cộng hưởng từ bạch mạch có tiêm tương phản không đặc hiệu,2227000,
+497,35,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,61,18.0361.0065,Chụp cộng hưởng từ bạch mạch có tiêm tương phản có đặc hiệu,2227000,
+498,35,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,62,18.0364.0066,Chụp cộng hưởng từ dây thần kinh ngoại biên,1322000,
+499,35,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,63,18.0365.0068,Chụp cộng hưởng từ tưới máu các tạng (1.5T),3191000,
+500,35,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,64,18.0297.0065,Chụp cộng hưởng từ sọ não có tiêm chất tương phản (0.2-1.5T),2227000,
+501,35,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,65,18.0338.0066,Chụp cộng hưởng từ cột sống thắt lưng - cùng (0.2-1.5T),1322000,
+502,35,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,66,18.0296.0066,Chụp cộng hưởng từ sọ não (0.2-1.5T),1322000,
+503,35,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,67,18.0313.0066,Chụp cộng hưởng từ lồng ngực (0.2-1.5T),1322000,
+504,35,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,68,18.0332.0066,Chụp cộng hưởng từ thai nhi (0.2-1.5T),1322000,
+505,35,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,69,18.0334.0066,Chụp cộng hưởng từ cột sống cổ (0.2-1.5T),1322000,
+506,35,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CỘNG HƯỞNG TỪ,70,18.0338.0066,Chụp cộng hưởng từ cột sống thắt lưng - cùng (0.2-1.5T),1322000,
+507,36,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,1,18.0207.0042,"Chụp cắt lớp vi tính động mạch vành, tim (từ 64- 128 dãy)",1712000,Chưa bao gồm thuốc cản quang.
+508,36,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,2,18.0206.0042,Chụp cắt lớp vi tính động mạch chủ ngực (từ 64- 128 dãy),1712000,Chưa bao gồm thuốc cản quang.
+509,36,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,3,18.0201.0042,Chụp cắt lớp vi tính lồng ngực có tiêm thuốc cản quang (từ 64- 128 dãy) [NGƯỜI BỆNH KHÔNG SUY HÔ HẤP],643000,Chưa bao gồm thuốc cản quang.
+510,36,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,4,18.0201.0042,"Chụp cắt lớp vi tính lồng ngực có tiêm thuốc cản quang (từ 64- 128 dãy) [NGƯỜI BỆNH SUY HÔ HẤP, thời gian nhịn thở < 10 giây]",1712000,Chưa bao gồm thuốc cản quang.
+511,36,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,5,18.0200.0043,"Chụp cắt lớp vi tính lồng ngực không tiêm thuốc cản quang (từ 64- 128 dãy) [NGƯỜI BỆNH SUY HÔ HẤP, thời gian nhịn thở < 10 giây]",1461000,
+512,36,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,6,18.0200.0043,Chụp cắt lớp vi tính lồng ngực không tiêm thuốc cản quang (từ 64- 128 dãy) [NGƯỜI BỆNH KHÔNG SUY HÔ HẤP],532000,
+513,36,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,7,18.0232.0042,Chụp cắt lớp vi tính cột sống ngực có tiêm thuốc cản quang (từ 64- 128 dãy),643000,Chưa bao gồm thuốc cản quang.
+514,36,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,8,18.0270.0043,Chụp cắt lớp vi tính cột sống ngực không tiêm thuốc cản quang (từ 64- 128 dãy),532000,
+515,36,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,9,18.0205.0042,Chụp cắt lớp vi tính động mạch phổi (từ 64- 128 dãy),1712000,Chưa bao gồm thuốc cản quang.
+516,37,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,10,18.0231.0042,"Chụp cắt lớp vi tính tầng trên ổ bụng thường quy (gồm: chụp Cắt lớp vi tính gan-mật, tụy, lách, dạ dày-tá tràng.v.v.) (từ 64-128 dãy)",643000,Chưa bao gồm thuốc cản quang.
+517,37,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,11,18.0233.0042,"Chụp cắt lớp vi tính tiểu khung thường quy (gồm: chụp cắt lớp vi tính tử cung-buồng trứng, tiền liệt tuyến, các khối u vùng tiểu khung.v.v.)",643000,Chưa bao gồm thuốc cản quang.
+518,37,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,12,18.0235.0042,"Chụp cắt lớp vi tính tầng trên ổ bụng có khảo sát mạch các tạng có tiêm thuốc cản quang(bao gồm mạch: gan, tụy, lách và mạch khối u) (từ 64-128 dãy)",1712000,Chưa bao gồm thuốc cản quang.
+519,37,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,13,18.0236.0042,Chụp cắt lớp vi tính hệ tiết niệu có khảo sát mạch thận và/hoặc dựng hình đường bài xuất (từ 64-128 dãy),1712000,Chưa bao gồm thuốc cản quang.
+520,37,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,14,18.0274.0043,Chụp cắt lớp vi tính khớp thường quy không tiêm thuốc cản quang (từ 64- 128 dãy),532000,
+521,37,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,15,18.0232.0042,Chụp cắt lớp vi tính bụng-tiểu khung thường quy (từ 64-128 dãy) [có tiêm thuốc cản quang],643000,Chưa bao gồm thuốc cản quang.
+522,37,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,16,18.0234.0042,Chụp cắt lớp vi tính hệ tiết niệu thường quy (từ 64-128 dãy) [có tiêm thuốc cản quang],643000,Chưa bao gồm thuốc cản quang.
+523,37,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,17,18.0237.0042,Chụp cắt lớp vi tính gan có dựng hình đường mật (từ 64-128 dãy),643000,Chưa bao gồm thuốc cản quang.
+524,37,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,18,18.0269.0042,Chụp cắt lớp vi tính cột sống cổ có tiêm thuốc cản quang (từ 64- 128 dãy),643000,Chưa bao gồm thuốc cản quang.
+525,37,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,19,18.0273.0042,Chụp cắt lớp vi tính cột sống thắt lưng có tiêm thuốc cản quang (từ 64- 128 dãy),643000,Chưa bao gồm thuốc cản quang.
+526,38,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,20,18.0276.0042,Chụp cắt lớp vi tính khớp có tiêm thuốc cản quang vào ổ khớp (từ 64- 128 dãy),643000,Chưa bao gồm thuốc cản quang.
+527,38,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,21,18.0278.0042,Chụp cắt lớp vi tính xương chi có tiêm thuốc cản quang (từ 64- 128 dãy),643000,Chưa bao gồm thuốc cản quang.
+528,38,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,22,18.0280.0042,Chụp cắt lớp vi tính mạch máu chi trên (từ 64- 128 dãy),1712000,Chưa bao gồm thuốc cản quang.
+529,38,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,23,18.0281.0042,Chụp cắt lớp vi tính mạch máu chi dưới (từ 64- 128 dãy),1712000,Chưa bao gồm thuốc cản quang.
+530,38,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,24,18.0202.0042,Chụp cắt lớp vi tính phổi độ phân giải cao (từ 64- 128 dãy) có tiêm thuốc cản quang [BỆNH NHÂN KHÔNG SUY HÔ HẤP],643000,Chưa bao gồm thuốc cản quang.
+531,38,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,25,18.0204.0043,Chụp cắt lớp vi tính nội soi ảo cây phế quản (từ 64- 128 dãy),532000,
+532,38,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,26,18.0208.0043,Chụp cắt lớp vi tính tính điểm vôi hóa mạch vành (từ 64- 128 dãy),1461000,
+533,38,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,27,18.0232.0043,Chụp cắt lớp vi tính bụng - tiểu khung thường quy (từ 64-128 dãy) [không tiêm thuốc cản quang],532000,
+534,38,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,28,18.0268.0043,Chụp cắt lớp vi tính cột sống cổ không tiêm thuốc cản quang (từ 64- 128 dãy),532000,
+535,38,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,29,18.0272.0043,Chụp cắt lớp vi tính cột sống thắt lưng không tiêm thuốc cản quang (từ 64- 128 dãy),532000,
+536,38,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,30,18.0277.0043,Chụp cắt lớp vi tính xương chi không tiêm thuốc cản quang (từ 64- 128 dãy),532000,
+537,39,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,31,18.0279.0044,Chụp cắt lớp vi tính tầm soát toàn thân (từ 64- 128 dãy) [có tiêm thuốc cản quang] [Chụp đánh giá các giai đoạn của u hoặc đa chấn thương],3467000,Chưa bao gồm thuốc cản quang.
+538,39,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,32,18.0279.0044,Chụp cắt lớp vi tính tầm soát toàn thân (từ 64- 128 dãy) [có tiêm thuốc cản quang] [TRƯỜNG HỢP KHÔNG ĐÁNH GIÁ các giai đoạn của u hoặc đa chấn thương],643000,Chưa bao gồm thuốc cản quang.
+539,39,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,33,18.0231.0042,"Chụp cắt lớp vi tính tầng trên ổ bụng thường quy (gồm: chụp Cắt lớp vi tính gan-mật, tụy, lách, dạ dày-tá tràng.v.v.) (từ 64-128 dãy) [có tiêm thuốc cản quang]",643000,Chưa bao gồm thuốc cản quang.
+540,39,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,34,18.0233.0042,"Chụp cắt lớp vi tính tiểu khung thường quy (gồm: chụp cắt lớp vi tính tử cung-buồng trứng, tiền liệt tuyến, các khối u vùng tiểu khung.v.v.) có tiêm thuốc cản quang",643000,Chưa bao gồm thuốc cản quang.
+541,39,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,35,18.0231.0042,"Chụp cắt lớp vi tính tầng trên ổ bụng thường quy (gồm: chụp Cắt lớp vi tính gan-mật, tụy, lách, dạ dày-tá tràng.v.v.) (từ 64-128 dãy) [giá 1-32 dãy]",643000,Chưa bao gồm thuốc cản quang.
+542,39,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,36,18.0236.0042,Chụp cắt lớp vi tính hệ tiết niệu có khảo sát mạch thận và/hoặc dựng hình đường bài xuất (từ 64- 128 dãy),1712000,Chưa bao gồm thuốc cản quang.
+543,39,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,37,18.0201.0042,Chụp cắt lớp vi tính lồng ngực có tiêm thuốc cản quang (từ 64- 128 dãy),643000,Chưa bao gồm thuốc cản quang.
+544,39,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,38,18.0205.0042,Chụp cắt lớp vi tính động mạch phổi (từ 64- 128 dãy),1712000,Chưa bao gồm thuốc cản quang.
+545,40,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,39,18.0206.0042,Chụp cắt lớp vi tính động mạch chủ ngực (từ 64- 128 dãy),1712000,Chưa bao gồm thuốc cản quang.
+546,40,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,40,18.0207.0042,"Chụp cắt lớp vi tính động mạch vành, tim (từ 64- 128 dãy)",1712000,Chưa bao gồm thuốc cản quang.
+547,40,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,41,18.0232.0042,Chụp cắt lớp vi tính bụng-tiểu khung thường quy (từ 64-128 dãy) có tiêm thuốc cản quang,643000,Chưa bao gồm thuốc cản quang.
+548,40,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,42,18.0237.0042,Chụp cắt lớp vi tính gan có dựng hình đường mật (từ 64-128 dãy),643000,Chưa bao gồm thuốc cản quang.
+549,40,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,43,18.0269.0042,Chụp cắt lớp vi tính cột sống cổ có tiêm thuốc cản quang (từ 64- 128 dãy),643000,Chưa bao gồm thuốc cản quang.
+550,40,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,44,18.0232.0042,Chụp cắt lớp vi tính cột sống ngực có tiêm thuốc cản quang (từ 64- 128 dãy),643000,Chưa bao gồm thuốc cản quang.
+551,40,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,45,18.0273.0042,Chụp cắt lớp vi tính cột sống thắt lưng có tiêm thuốc cản quang (từ 64- 128 dãy),643000,Chưa bao gồm thuốc cản quang.
+552,40,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,46,18.0201.0042,Chụp cắt lớp vi tính khớp thường quy có tiêm thuốc cản quang (từ 64- 128 dãy),643000,Chưa bao gồm thuốc cản quang.
+553,40,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,47,18.0276.0042,Chụp cắt lớp vi tính khớp có tiêm thuốc cản quang vào ổ khớp (từ 64- 128 dãy),643000,Chưa bao gồm thuốc cản quang.
+554,40,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,48,18.0278.0042,Chụp cắt lớp vi tính xương chi có tiêm thuốc cản quang (từ 64- 128 dãy),643000,Chưa bao gồm thuốc cản quang.
+555,40,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,49,18.0280.0042,Chụp cắt lớp vi tính mạch máu chi trên (từ 64- 128 dãy),1712000,Chưa bao gồm thuốc cản quang.
+556,40,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,50,18.0281.0042,Chụp cắt lớp vi tính mạch máu chi dưới (từ 64- 128 dãy),1712000,Chưa bao gồm thuốc cản quang.
+557,41,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,51,18.0202.0043,Chụp cắt lớp vi tính phổi độ phân giải cao (từ 64- 128 dãy) không tiêm thuốc cản quang [BỆNH NHÂN KHÔNG SUY HÔ HẤP],532000,
+558,41,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,52,18.0204.0043,Chụp cắt lớp vi tính nội soi ảo cây phế quản (từ 64- 128 dãy),532000,
+559,41,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,53,18.0232.0042,Chụp cắt lớp vi tính bụng-tiểu khung thường quy (từ 64-128 dãy),643000,Chưa bao gồm thuốc cản quang.
+560,41,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,54,18.0268.0043,Chụp cắt lớp vi tính cột sống cổ không tiêm thuốc cản quang (từ 64- 128 dãy),532000,
+561,41,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,55,18.0270.0043,Chụp cắt lớp vi tính cột sống ngực không tiêm thuốc cản quang (từ 64- 128 dãy),532000,
+562,41,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,56,18.0272.0043,Chụp cắt lớp vi tính cột sống thắt lưng không tiêm thuốc cản quang (từ 64- 128 dãy),532000,
+563,41,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,57,18.0274.0043,Chụp cắt lớp vi tính khớp thường quy không tiêm thuốc cản quang (từ 64- 128 dãy),532000,
+564,41,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,58,18.0277.0043,Chụp cắt lớp vi tính xương chi không tiêm thuốc cản quang (từ 64- 128 dãy),532000,
+565,41,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,59,18.0279.0044,Chụp cắt lớp vi tính tầm soát toàn thân (từ 64- 128 dãy) (có tiêm thuốc cản quang) [đánh giá giai đoạn u hoặc đa chấn thương],3467000,Chưa bao gồm thuốc cản quang.
+566,41,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,60,18.0204.0043,Chụp cắt lớp vi tính nội soi ảo cây phế quản (từ 64- 128 dãy),532000,
+567,41,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,61,18.0206.0042,Chụp cắt lớp vi tính động mạch chủ ngực (từ 64- 128 dãy),1712000,Chưa bao gồm thuốc cản quang.
+568,41,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,62,18.0206.0042,Chụp cắt lớp vi tính động mạch chủ ngực (từ 64- 128 dãy),1712000,Chưa bao gồm thuốc cản quang.
+569,42,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,63,18.0277.0043,Chụp cắt lớp vi tính xương chi có tiêm thuốc cản quang,532000,Chưa bao gồm thuốc cản quang.
+570,42,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,64,18.0207.0042,"Chụp cắt lớp vi tính động mạch vành, tim (từ 64- 128 dãy)",1712000,Chưa bao gồm thuốc cản quang.
+571,42,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,65,18.0278.0042,Chụp cắt lớp vi tính xương chi có tiêm thuốc cản quang (từ 64- 128 dãy),643000,Chưa bao gồm thuốc cản quang.
+572,42,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,66,18.0275.0043,Chụp cắt lớp vi tính khớp thường quy không tiêm thuốc cản quang (từ 64- 128 dãy),532000,
+573,42,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,67,18.0242.0042,Chụp CLVT động mạch chủ-chậu có tiêm thuốc cản quang,1712000,Chưa bao gồm thuốc cản quang.
+574,42,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,68,18.0176.0042,Chụp CLVT hốc mắt (từ 64-128 dãy) có tiêm thuốc cản quang,643000,Chưa bao gồm thuốc cản quang.
+575,42,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,69,18.0167.0042,Chụp CLVT hệ động mạch cảnh có tiêm thuốc cản quang (từ 64- 128 dãy),1712000,Chưa bao gồm thuốc cản quang.
+576,42,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,70,18.0168.0042,Chụp CLVT tưới máu não (CT perfusion) (từ 64-128 dãy),1712000,Chưa bao gồm thuốc cản quang.
+577,42,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,71,18.0166.0042,Chụp CLVT sọ não có tiêm thuốc cản quang (từ 64-128 dãy),643000,Chưa bao gồm thuốc cản quang.
+578,42,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,72,18.0172.0042,Chụp CLVT hàm-mặt có tiêm thuốc cản quang (từ 64-128 dãy),643000,Chưa bao gồm thuốc cản quang.
+579,42,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,73,18.0175.0042,Chụp CLVT tai-xương đá có tiêm thuốc cản quang (từ 64-128 dãy),643000,Chưa bao gồm thuốc cản quang.
+580,42,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,74,18.0170.0042,Chụp CLVT sọ não có dựng hình 3D (từ 64-128 dãy),643000,Chưa bao gồm thuốc cản quang.
+581,43,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,75,18.0241.0043,Chụp CLVT đại tràng (colo-scan) dùng dịch hoặc hơi có nội soi ảo không tiêm thuốc cản quang (từ 64-128 dãy),532000,
+582,43,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,76,18.0241.0042,Chụp CLVT đại tràng (colo-scan) dùng dịch hoặc hơi có nội soi ảo có tiêm thuốc cản quang (từ 64-128 dãy),643000,Chưa bao gồm thuốc cản quang.
+583,43,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,77,18.0165.0043,Chụp CLVT sọ não có dựng hình 3D (từ 64-128 dãy) (Không thuốc),532000,
+584,43,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,78,18.0171.0043,Chụp CLVT hàm-mặt không tiêm thuốc cản quang (từ 64-128 dãy),532000,
+585,43,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,79,18.0173.0043,Chụp CLVT hàm mặt có ứng dụng phần mềm nha khoa (từ 64-128 dãy),532000,
+586,43,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,80,18.0174.0043,Chụp CLVT tai-xương đá không tiêm thuốc (từ 64-128 dãy),532000,
+587,43,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,81,18.0176.0043,Chụp CLVT hốc mắt (Không thuốc) (từ 64-128 dãy),532000,
+588,43,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,82,18.0177.0042,Chụp CLVT hàm mặt có dựng hình 3D (từ 64- 128 dãy) (Có thuốc),643000,Chưa bao gồm thuốc cản quang.
+589,43,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,83,18.0167.0042,Chụp CLVT hệ động mạch cảnh có tiêm thuốc cản quang (từ 64-128 dãy),1712000,Chưa bao gồm thuốc cản quang.
+590,43,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,84,18.0168.0042,Chụp CLVT tưới máu não (CT perfusion) (từ 64-128 dãy),1712000,Chưa bao gồm thuốc cản quang.
+591,43,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,85,18.0169.0042,Chụp CLVT mạch máu não (từ 64-128 dãy),1712000,Chưa bao gồm thuốc cản quang.
+592,43,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,86,18.0166.0042,Chụp CLVT sọ não có tiêm thuốc cản quang (từ 64-128 dãy),643000,Chưa bao gồm thuốc cản quang.
+593,44,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,87,18.0172.0042,Chụp CLVT hàm-mặt có tiêm thuốc cản quang (từ 64-128 dãy),643000,Chưa bao gồm thuốc cản quang.
+594,44,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,88,18.0175.0042,Chụp CLVT tai-xương đá có tiêm thuốc cản quang (từ 64-128 dãy),643000,Chưa bao gồm thuốc cản quang.
+595,44,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,89,18.0176.0042,Chụp CLVT hốc mắt (từ 64-128 dãy) có tiêm thuốc cản quang,643000,Chưa bao gồm thuốc cản quang.
+596,44,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,90,18.0241.0042,Chụp CLVT đại tràng (colo-scan) dùng dịch hoặc hơi có nội soi ảo có tiêm thuốc cản quang (từ 64-128 dãy),643000,Chưa bao gồm thuốc cản quang.
+597,44,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,91,18.0242.0042,Chụp CLVT động mạch chủ-chậu có tiêm thuốc cản quang,1712000,Chưa bao gồm thuốc cản quang.
+598,44,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,92,18.0165.0043,Chụp CLVT sọ não có dựng hình 3D (từ 64-128 dãy) (Không thuốc),532000,
+599,44,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,93,18.0171.0043,Chụp CLVT hàm-mặt không tiêm thuốc cản quang (từ 64-128 dãy),532000,
+600,44,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,94,18.0173.0043,Chụp CLVT hàm mặt có ứng dụng phần mềm nha khoa (từ 64-128 dãy),532000,
+601,44,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,95,18.0174.0043,Chụp CLVT tai-xương đá không tiêm thuốc (từ 64-128 dãy),532000,
+602,44,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,96,18.0160.0043,Chụp CLVT hốc mắt (Không thuốc) (từ 64-128 dãy),532000,
+603,44,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,97,18.0177.0042,Chụp CLVT hàm mặt có dựng hình 3D (từ 64- 128 dãy) có tiêm thuốc cản quang,643000,Chưa bao gồm thuốc cản quang.
+604,44,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,98,18.0170.0042,Chụp CLVT sọ não có dựng hình 3D (từ 64-128 dãy) có tiêm thuốc cản quang,643000,Chưa bao gồm thuốc cản quang.
+605,45,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,99,18.0241.0043,Chụp CLVT đại tràng (colo-scan) dùng dịch hoặc hơi có nội soi ảo không tiêm thuốc cản quang (từ 64-128 dãy),532000,
+606,45,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,100,18.0242.0042,Chụp CLVT động mạch chủ-chậu có tiêm thuốc cản quang,1712000,Chưa bao gồm thuốc cản quang.
+607,45,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,101,18.0177.0042,Chụp CLVT hàm mặt có dựng hình 3D (từ 64- 128 dãy) có tiêm thuốc cản quang,643000,Chưa bao gồm thuốc cản quang.
+608,45,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,102,18.0165.0043,Chụp CLVT sọ não có dựng hình 3D (từ 64-128 dãy) không tiêm thuốc cản quang,532000,
+609,45,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,103,18.0178.0047,Chụp CLVT sọ não không tiêm thuốc cản quang (từ ≥ 256 dãy),532000,
+610,45,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,104,18.0179.0046,Chụp CLVT sọ não có tiêm thuốc cản quang (từ ≥ 256 dãy),643000,Chưa bao gồm thuốc cản quang.
+611,45,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,105,18.0180.0046,Chụp CLVT hệ động mạch cảnh có tiêm thuốc cản quang (từ ≥ 256 dãy),1712000,Chưa bao gồm thuốc cản quang.
+612,45,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,106,18.0181.0046,Chụp CLVT tưới máu não (CT perfusion) (từ ≥ 256 dãy),1712000,Chưa bao gồm thuốc cản quang.
+613,45,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,107,18.0182.0046,Chụp CLVT mạch máu não (từ ≥ 256 dãy),1712000,Chưa bao gồm thuốc cản quang.
+614,45,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,108,18.0183.0047,Chụp CLVT sọ não có dựng hình 3D (từ ≥ 256 dãy),532000,
+615,45,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,109,18.0184.0047,Chụp CLVT hàm-mặt không tiêm thuốc cản quang (từ ≥ 256 dãy),532000,
+616,45,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,110,18.0185.0046,Chụp CLVT hàm-mặt có tiêm thuốc cản quang (từ ≥ 256 dãy),643000,Chưa bao gồm thuốc cản quang.
+617,45,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,111,18.0186.0047,Chụp CLVT hàm mặt có ứng dụng phần mềm nha khoa (từ ≥ 256 dãy),532000,
+618,46,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,112,18.0187.0047,Chụp CLVT tai-xương đá không tiêm thuốc (từ ≥ 256 dãy),532000,
+619,46,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,113,18.0188.0046,Chụp CLVT tai-xương đá có tiêm thuốc cản quang (từ ≥ 256 dãy),643000,Chưa bao gồm thuốc cản quang.
+620,46,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,114,18.0189.0047,Chụp CLVT hốc mắt (từ ≥ 256 dãy),532000,
+621,46,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,115,18.0190.0047,Chụp CLVT hàm mặt có dựng hình 3D (từ ≥ 256 dãy),532000,
+622,46,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,116,18.0209.0047,Chụp cắt lớp vi tính lồng ngực không tiêm thuốc cản quang (từ ≥ 256 dãy) [BỆNH NHÂN KHÔNG SUY HÔ HẤP],532000,
+623,46,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,117,18.0210.0046,Chụp cắt lớp vi tính lồng ngực có tiêm thuốc cản quang (từ ≥ 256 dãy) [BỆNH NHÂN KHÔNG SUY HÔ HẤP],643000,Chưa bao gồm thuốc cản quang.
+624,46,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,118,18.0211.0047,Chụp cắt lớp vi tính phổi độ phân giải cao (từ ≥ 256 dãy),532000,
+625,46,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,119,18.0212.0047,Chụp cắt lớp vi tính phổi liều thấp tầm soát u (từ ≥ 256 dãy),532000,
+626,46,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,120,18.0213.0047,Chụp cắt lớp vi tính nội soi ảo cây phế quản (từ ≥ 256 dãy),532000,
+627,46,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,121,18.0214.0046,Chụp cắt lớp vi tính động mạch phổi (từ ≥ 256 dãy),1712000,Chưa bao gồm thuốc cản quang.
+628,46,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,122,18.0215.0046,Chụp cắt lớp vi tính động mạch chủ ngực (từ ≥ 256 dãy),1712000,Chưa bao gồm thuốc cản quang.
+629,46,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,123,18.0216.0046,"Chụp cắt lớp vi tính động mạch vành, tim có dùng thuốc beta block (từ ≥ 256 dãy) [nhịp tim trên 70 chu kỳ/phút (sau khi đã dùng thuốc giảm nhịp tim, hoặc trên người bệnh có chống chỉ định dùng thuốc làm giảm nhịp tim) hoặc có bất thường nhịp; bệnh lý tim mạch bẩm sinh ở trẻ em dưới 06 tuổi; bệnh lý tim mạch ở người từ đủ 70 tuổi trở lên]",3004000,Chưa bao gồm thuốc cản quang.
+630,47,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,124,18.0217.0046,"Chụp cắt lớp vi tính động mạch vành, tim không dùng thuốc beta block (từ ≥ 256 dãy) [nhịp tim trên 70 chu kỳ/phút (sau khi đã dùng thuốc giảm nhịp tim, hoặc trên người bệnh có chống chỉ định dùng thuốc làm giảm nhịp tim) hoặc có bất thường nhịp; bệnh lý tim mạch bẩm sinh ở trẻ em dưới 06 tuổi; bệnh lý tim mạch ở người từ đủ 70 tuổi trở lên]",3004000,Chưa bao gồm thuốc cản quang.
+631,47,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,125,18.0218.0047,Chụp cắt lớp vi tính tính điểm vôi hóa mạch vành (từ ≥ 256 dãy),1461000,
+632,47,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,126,18.0243.0046,"Chụp cắt lớp vi tính tầng trên ổ bụng thường quy (gồm: chụp Cắt lớp vi tính gan-mật, tụy, lách, dạ dày-tá tràng.v.v.) (từ ≥ 256 dãy)",643000,Chưa bao gồm thuốc cản quang.
+633,47,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,127,18.0243.0047,"Chụp cắt lớp vi tính tầng trên ổ bụng thường quy (gồm: chụp Cắt lớp vi tính gan-mật, tụy, lách, dạ dày-tá tràng.v.v.) (từ ≥ 256 dãy)",532000,
+634,47,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,128,18.0244.0046,Chụp cắt lớp vi tính bụng-tiểu khung thường quy (từ ≥ 256 dãy) [có thuốc cản quang],643000,Chưa bao gồm thuốc cản quang.
+635,47,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,129,18.0244.0047,Chụp cắt lớp vi tính bụng-tiểu khung thường quy (từ ≥ 256 dãy),532000,
+636,47,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,130,18.0246.0046,Chụp cắt lớp vi tính hệ tiết niệu thường quy (từ ≥ 256 dãy) [có thuốc cản quang],643000,Chưa bao gồm thuốc cản quang.
+637,47,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,131,18.0246.0047,Chụp cắt lớp vi tính hệ tiết niệu thường quy (từ ≥ 256 dãy),532000,
+638,48,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,132,18.0247.0046,"Chụp cắt lớp vi tính tầng trên ổ bụng có khảo sát mạch các tạng (bao gồm mạch: gan, tụy, lách và mạch khối u) (từ ≥ 256 dãy)",1712000,Chưa bao gồm thuốc cản quang.
+639,48,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,133,18.0248.0046,Chụp cắt lớp vi tính hệ tiết niệu có khảo sát mạch thận và/hoặc dựng hình đường bài xuất (từ ≥ 256 dãy),1712000,Chưa bao gồm thuốc cản quang.
+640,48,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,134,18.0249.0046,Chụp cắt lớp vi tính gan có dựng hình đường mật (từ ≥ 256 dãy) [có thuốc cản quang],643000,Chưa bao gồm thuốc cản quang.
+641,48,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,135,18.0250.0046,Chụp cắt lớp vi tính tạng khảo sát huyết động học khối u (CT perfusion) (từ ≥ 256 dãy),1712000,Chưa bao gồm thuốc cản quang.
+642,48,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,136,18.0251.0047,Chụp cắt lớp vi tính ruột non (entero-scan) không dùng sonde (từ ≥ 256 dãy),532000,
+643,48,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,137,18.0252.0046,Chụp cắt lớp vi tính ruột non (entero-scan) có dùng sonde (từ ≥ 256 dãy) [có thuốc cản quang],643000,Chưa bao gồm thuốc cản quang.
+644,48,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,138,18.0253.0046,Chụp cắt lớp vi tính đại tràng (colo-scan) dùng dịch hoặc hơi có nội soi ảo (từ ≥ 256 dãy) [có thuốc cản quang],643000,
+645,48,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,139,18.0254.0046,Chụp cắt lớp vi tính động mạch chủ-chậu (từ ≥ 256 dãy),1712000,Chưa bao gồm thuốc cản quang.
+646,48,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,140,18.0282.0047,Chụp cắt lớp vi tính cột sống cổ không tiêm thuốc cản quang (từ ≥256 dãy),532000,
+647,48,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,141,18.0283.0046,Chụp cắt lớp vi tính cột sống cổ có tiêm thuốc cản quang (từ ≥256 dãy),643000,Chưa bao gồm thuốc cản quang.
+648,48,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,142,18.0284.0047,Chụp cắt lớp vi tính cột sống ngực không tiêm thuốc cản quang (từ ≥256 dãy),532000,
+649,49,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,143,18.0285.0046,Chụp cắt lớp vi tính cột sống ngực có tiêm thuốc cản quang (từ ≥256 dãy),643000,Chưa bao gồm thuốc cản quang.
+650,49,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,144,18.0286.0047,Chụp cắt lớp vi tính cột sống thắt lưng không tiêm thuốc cản quang (từ ≥256 dãy),532000,
+651,49,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,145,18.0287.0046,Chụp cắt lớp vi tính cột sống thắt lưng có tiêm thuốc cản quang (từ ≥256 dãy),643000,Chưa bao gồm thuốc cản quang.
+652,49,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,146,18.0288.0047,Chụp cắt lớp vi tính khớp thường quy không tiêm thuốc cản quang (từ ≥256 dãy),532000,
+653,49,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,147,18.0289.0046,Chụp cắt lớp vi tính khớp thường quy có tiêm thuốc cản quang (từ ≥256 dãy),643000,Chưa bao gồm thuốc cản quang.
+654,49,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,148,18.0290.0046,Chụp cắt lớp vi tính khớp có tiêm thuốc cản quang vào ổ khớp (từ ≥256 dãy),643000,Chưa bao gồm thuốc cản quang.
+655,49,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,149,18.0291.0047,Chụp cắt lớp vi tính xương chi không tiêm thuốc cản quang (từ ≥256 dãy),532000,
+656,49,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,150,18.0292.0046,Chụp cắt lớp vi tính xương chi có tiêm thuốc cản quang (từ ≥256 dãy),643000,Chưa bao gồm thuốc cản quang.
+657,49,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,151,18.0293.0048,Chụp cắt lớp vi tính tầm soát toàn thân (từ ≥256 dãy) [có thuốc cản quang] [đánh giá các giai đoạn của u hoặc đa chấn thương],3467000,Chưa bao gồm thuốc cản quang.
+658,49,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,152,18.0293.0049,Chụp cắt lớp vi tính tầm soát toàn thân (từ ≥256 dãy) [đánh giá các giai đoạn của u hoặc đa chấn thương],3154000,
+659,49,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,153,18.0294.0046,Chụp cắt lớp vi tính mạch máu chi trên (từ ≥256 dãy),1712000,Chưa bao gồm thuốc cản quang.
+660,49,BẢNG GIÁ BẢO HIỂM Y TẾ CHỤP CẮT LỚP VI TÍNH,154,18.0295.0046,Chụp cắt lớp vi tính mạch máu chi dưới (từ ≥256 dãy),1712000,Chưa bao gồm thuốc cản quang.
+661,50,BẢNG GIÁ BẢO HIỂM Y TẾ TIM MẠCH CAN THIỆP,1,18.0501.0052,Chụp động mạch não số hóa xóa nền (DSA),5686000,
+662,50,BẢNG GIÁ BẢO HIỂM Y TẾ TIM MẠCH CAN THIỆP,2,18.0503.0052,Chụp động mạch chủ số hóa xóa nền (DSA),5686000,
+663,50,BẢNG GIÁ BẢO HIỂM Y TẾ TIM MẠCH CAN THIỆP,3,18.0504.0052,Chụp động mạch chậu số hóa xóa nền (DSA),5686000,
+664,50,BẢNG GIÁ BẢO HIỂM Y TẾ TIM MẠCH CAN THIỆP,4,18.0505.0052,"Chụp động mạch chi (trên, dưới) số hóa xóa nền (DSA)",5686000,
+665,50,BẢNG GIÁ BẢO HIỂM Y TẾ TIM MẠCH CAN THIỆP,5,18.0506.0052,Chụp động mạch phổi số hóa xóa nền (DSA),5686000,
+666,50,BẢNG GIÁ BẢO HIỂM Y TẾ TIM MẠCH CAN THIỆP,6,18.0509.0052,"Chụp động mạch tạng (gan, lách, thận, tử cung, sinh dục..) số hóa xóa nền (DSA)",5686000,
+667,50,BẢNG GIÁ BẢO HIỂM Y TẾ TIM MẠCH CAN THIỆP,7,18.0511.0052,Chụp tĩnh mạch số hóa xóa nền (DSA),5686000,
+668,50,BẢNG GIÁ BẢO HIỂM Y TẾ TIM MẠCH CAN THIỆP,8,18.0514.0052,Chụp tĩnh mạch chi số hóa xóa nền (DSA),5686000,
+669,50,BẢNG GIÁ BẢO HIỂM Y TẾ TIM MẠCH CAN THIỆP,9,18.0515.0052,Chụp động mạch các loại chọc kim trực tiếp số hóa xóa nền (DSA),5686000,
+670,50,BẢNG GIÁ BẢO HIỂM Y TẾ TIM MẠCH CAN THIỆP,10,18.0516.0055,Chụp và can thiệp mạch chủ ngực số hóa xóa nền,9176000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, bộ bơm áp lực, stent, keo nút mạch, các vật liệu nút mạch, các vi ống thông, vi dây dẫn, các vòng xoắn kim loại."
+671,50,BẢNG GIÁ BẢO HIỂM Y TẾ TIM MẠCH CAN THIỆP,11,18.0517.0055,Chụp và can thiệp mạch chủ bụng số hóa xóa nền,9176000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, bộ bơm áp lực, stent, keo nút mạch, các vật liệu nút mạch, các vi ống thông, vi dây dẫn, các vòng xoắn kim loại."
+672,50,BẢNG GIÁ BẢO HIỂM Y TẾ TIM MẠCH CAN THIỆP,12,18.0518.0055,"Chụp và nong động mạch chi (trên, dưới) số hóa xóa nền",9176000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, bộ bơm áp lực, stent, keo nút mạch, các vật liệu nút mạch, các vi ống thông, vi dây dẫn, các vòng xoắn kim loại."
+673,50,BẢNG GIÁ BẢO HIỂM Y TẾ TIM MẠCH CAN THIỆP,13,18.0519.0055,"Chụp, nong và đặt Stent động mạch chi (trên, dưới) số hóa xóa nền",9176000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, bộ bơm áp lực, stent, keo nút mạch, các vật liệu nút mạch, các vi ống thông, vi dây dẫn, các vòng xoắn kim loại."
+674,50,BẢNG GIÁ BẢO HIỂM Y TẾ TIM MẠCH CAN THIỆP,14,18.0520.0055,"Chụp và nút mạch dị dạng mạch chi (trên, dưới) số hóa xóa nền",9176000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, bộ bơm áp lực, stent, keo nút mạch, các vật liệu nút mạch, các vi ống thông, vi dây dẫn, các vòng xoắn kim loại."
+675,50,BẢNG GIÁ BẢO HIỂM Y TẾ TIM MẠCH CAN THIỆP,15,18.0522.0055,"Chụp và can thiệp tĩnh mạch chi (trên, dưới) số hóa xóa nền",9176000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, bộ bơm áp lực, stent, keo nút mạch, các vật liệu nút mạch, các vi ống thông, vi dây dẫn, các vòng xoắn kim loại."
+676,50,BẢNG GIÁ BẢO HIỂM Y TẾ TIM MẠCH CAN THIỆP,16,18.0525.0055,Chụp và điều trị lấy huyết khối qua ống thông điều trị tắc mạch chi số hóa xóa nền,9176000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, bộ bơm áp lực, stent, keo nút mạch, các vật liệu nút mạch, các vi ống thông, vi dây dẫn, các vòng xoắn kim loại."
+677,51,BẢNG GIÁ BẢO HIỂM Y TẾ TIM MẠCH CAN THIỆP,17,18.0543.0058,"Chụp, nong và đặt Stent động mạch thận số hóa xóa nền",9226000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, bộ bơm áp lực, stent, keo nút mạch, các vật liệu nút mạch, các vi ống thông, vi dây dẫn, các vòng xoắn kim loại."
+678,51,BẢNG GIÁ BẢO HIỂM Y TẾ TIM MẠCH CAN THIỆP,18,18.0562.0057,"Chụp, nong và đặt stent điều trị hẹp động mạch ngoài sọ (mạch cảnh, đốt sống) số hóa xóa nền",9776000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, bộ bơm áp lực, stent, keo nút mạch, các vật liệu nút mạch, các vi ống thông, vi dây dẫn, các vòng xoắn kim loại, dụng cụ lấy dị vật, hút huyết khối."
+679,51,BẢNG GIÁ BẢO HIỂM Y TẾ TIM MẠCH CAN THIỆP,19,18.0564.0057,"Chụp, nong và đặt Stent điều trị hẹp động mạch nội sọ số hóa xóa nền",9776000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, bộ bơm áp lực, stent, keo nút mạch, các vật liệu nút mạch, các vi ống thông, vi dây dẫn, các vòng xoắn kim loại, dụng cụ lấy dị vật, hút huyết khối."
+680,51,BẢNG GIÁ BẢO HIỂM Y TẾ TIM MẠCH CAN THIỆP,20,18.0566.0057,Chụp và can thiệp lấy huyết khối động mạch não số hóa xóa nền,9776000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, bộ bơm áp lực, stent, keo nút mạch, các vật liệu nút mạch, các vi ống thông, vi dây dẫn, các vòng xoắn kim loại, dụng cụ lấy dị vật, hút huyết khối."
+681,51,BẢNG GIÁ BẢO HIỂM Y TẾ TIM MẠCH CAN THIỆP,21,18.0657.0053,Chụp động mạch vành,6026000,
+682,51,BẢNG GIÁ BẢO HIỂM Y TẾ TIM MẠCH CAN THIỆP,22,18.0658.0054,"Chụp, nong động mạch vành bằng bóng",6926000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, stent, các vật liệu nút mạch, các loại ống thông hoặc vi ống thông, các loại dây dẫn hoặc vi dây dẫn, các vòng xoắn kim loại, dụng cụ lấy dị vật, bộ dụng cụ lấy huyết khối, bộ dụng cụ bít (bộ thả dù, dù các loại)."
+683,51,BẢNG GIÁ BẢO HIỂM Y TẾ TIM MẠCH CAN THIỆP,23,18.0659.0054,"Chụp, nong và đặt stent động mạch vành",6926000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, stent, các vật liệu nút mạch, các loại ống thông hoặc vi ống thông, các loại dây dẫn hoặc vi dây dẫn, các vòng xoắn kim loại, dụng cụ lấy dị vật, bộ dụng cụ lấy huyết khối, bộ dụng cụ bít (bộ thả dù, dù các loại)."
+684,51,BẢNG GIÁ BẢO HIỂM Y TẾ TIM MẠCH CAN THIỆP,24,18.0662.0054,Nong van hai lá [dưới DSA],6926000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, stent, các vật liệu nút mạch, các loại ống thông hoặc vi ống thông, các loại dây dẫn hoặc vi dây dẫn, các vòng xoắn kim loại, dụng cụ lấy dị vật, bộ dụng cụ lấy huyết khối, bộ dụng cụ bít (bộ thả dù, dù các loại)."
+685,51,BẢNG GIÁ BẢO HIỂM Y TẾ TIM MẠCH CAN THIỆP,25,18.0663.0054,Nong van động mạch chủ [dưới DSA],6926000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, stent, các vật liệu nút mạch, các loại ống thông hoặc vi ống thông, các loại dây dẫn hoặc vi dây dẫn, các vòng xoắn kim loại, dụng cụ lấy dị vật, bộ dụng cụ lấy huyết khối, bộ dụng cụ bít (bộ thả dù, dù các loại)."
+686,51,BẢNG GIÁ BẢO HIỂM Y TẾ TIM MẠCH CAN THIỆP,26,18.0664.0054,Nong van động mạch phổi [dưới DSA],6926000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, stent, các vật liệu nút mạch, các loại ống thông hoặc vi ống thông, các loại dây dẫn hoặc vi dây dẫn, các vòng xoắn kim loại, dụng cụ lấy dị vật, bộ dụng cụ lấy huyết khối, bộ dụng cụ bít (bộ thả dù, dù các loại)."
+687,51,BẢNG GIÁ BẢO HIỂM Y TẾ TIM MẠCH CAN THIỆP,27,18.0665.0054,Bít thông liên nhĩ [dưới DSA],6926000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, stent, các vật liệu nút mạch, các loại ống thông hoặc vi ống thông, các loại dây dẫn hoặc vi dây dẫn, các vòng xoắn kim loại, dụng cụ lấy dị vật, bộ dụng cụ lấy huyết khối, bộ dụng cụ bít (bộ thả dù, dù các loại)."
+688,51,BẢNG GIÁ BẢO HIỂM Y TẾ TIM MẠCH CAN THIỆP,28,18.0666.0054,Bít thông liên thất [dưới DSA],6926000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, stent, các vật liệu nút mạch, các loại ống thông hoặc vi ống thông, các loại dây dẫn hoặc vi dây dẫn, các vòng xoắn kim loại, dụng cụ lấy dị vật, bộ dụng cụ lấy huyết khối, bộ dụng cụ bít (bộ thả dù, dù các loại)."
+689,52,BẢNG GIÁ BẢO HIỂM Y TẾ TIM MẠCH CAN THIỆP,29,18.0667.0054,Bít ống động mạch [dưới DSA],6926000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, stent, các vật liệu nút mạch, các loại ống thông hoặc vi ống thông, các loại dây dẫn hoặc vi dây dẫn, các vòng xoắn kim loại, dụng cụ lấy dị vật, bộ dụng cụ lấy huyết khối, bộ dụng cụ bít (bộ thả dù, dù các loại)."
+690,52,BẢNG GIÁ BẢO HIỂM Y TẾ TIM MẠCH CAN THIỆP,30,18.0669.0391,Đặt máy tạo nhịp,1718000,"Chưa bao gồm máy tạo nhịp, máy phá rung."
+691,52,BẢNG GIÁ BẢO HIỂM Y TẾ TIM MẠCH CAN THIỆP,31,18.0670.0391,Đặt máy tạo nhịp phá rung,1718000,"Chưa bao gồm máy tạo nhịp, máy phá rung."
+692,52,BẢNG GIÁ BẢO HIỂM Y TẾ TIM MẠCH CAN THIỆP,32,18.0671.1816,Thăm dò điện sinh lý trong buồng tim,1997000,Chưa bao gồm bộ dụng cụ thăm dò điện sinh lý tim.
+693,52,BẢNG GIÁ BẢO HIỂM Y TẾ TIM MẠCH CAN THIỆP,33,18.0672.0055,Chụp nong động mạch ngoại biên bằng bóng [dưới DSA],9176000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, bộ bơm áp lực, stent, keo nút mạch, các vật liệu nút mạch, các vi ống thông, vi dây dẫn, các vòng xoắn kim loại."
+694,52,BẢNG GIÁ BẢO HIỂM Y TẾ TIM MẠCH CAN THIỆP,34,18.0675.0055,Đặt stent động mạch chủ [dưới DSA],9176000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, bộ bơm áp lực, stent, keo nút mạch, các vật liệu nút mạch, các vi ống thông, vi dây dẫn, các vòng xoắn kim loại."
+695,53,BẢNG GIÁ BẢO HIỂM Y TẾ TIM MẠCH CAN THIỆP,35,18.0681.0058,Chụp và nút mạch điều trị phì đại lành tính tuyến tiền liệt,9226000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, bộ bơm áp lực, stent, các vật liệu nút mạch, các vi ống thông, vi dây dẫn, các vòng xoắn kim loại."
+696,53,BẢNG GIÁ BẢO HIỂM Y TẾ TIM MẠCH CAN THIỆP,36,02.0118.0009,Siêu âm trong lòng mạch vành (iVUS),2023000,"Chưa bao gồm bộ đầu dò siêu âm, bộ dụng cụ đo dự trữ lưu lượng động mạch vành và các dụng cụ để đưa vào lòng mạch."
+697,53,BẢNG GIÁ BẢO HIỂM Y TẾ TIM MẠCH CAN THIỆP,37,03.2310.0054,Khoan các tổn thương vôi hóa ở động mạch,6926000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, stent, các vật liệu nút mạch, các loại ống thông hoặc vi ống thông, các loại dây dẫn hoặc vi dây dẫn, các vòng xoắn kim loại, dụng cụ lấy dị vật, bộ dụng cụ lấy huyết khối, bộ dụng cụ bít (bộ thả dù, dù các loại)."
+698,54,BẢNG GIÁ BẢO HIỂM Y TẾ TIM MẠCH CAN THIỆP,38,02.0088.0107,Điều trị suy tĩnh mạch bằng Laser nội mạch,2073000,Chưa bao gồm bộ dụng cụ mở mạch máu và ống thông điều trị laser.
+699,54,BẢNG GIÁ BẢO HIỂM Y TẾ TIM MẠCH CAN THIỆP,39,02.0089.0108,Điều trị suy tĩnh mạch bằng năng lượng sóng tần số radio,1973000,Chưa bao gồm bộ dụng cụ mở mạch máu và ống thông điều trị RF.
+700,54,BẢNG GIÁ BẢO HIỂM Y TẾ TIM MẠCH CAN THIỆP,40,02.0092.0054,"Đóng các lỗ rò động mạch, tĩnh mạch",6926000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, stent, các vật liệu nút mạch, các loại ống thông hoặc vi ống thông, các loại dây dẫn hoặc vi dây dẫn, các vòng xoắn kim loại, dụng cụ lấy dị vật, bộ dụng cụ lấy huyết khối, bộ dụng cụ bít (bộ thả dù, dù các loại)."
+701,54,BẢNG GIÁ BẢO HIỂM Y TẾ TIM MẠCH CAN THIỆP,41,02.0464.0391,"Thay máy tạo nhịp tim, cập nhật máy tạo nhịp tim",1718000,"Chưa bao gồm máy tạo nhịp, máy phá rung."

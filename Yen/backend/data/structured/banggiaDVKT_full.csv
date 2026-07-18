@@ -1,0 +1,926 @@
+﻿So_thu_tu_chung,Trang,Danh_muc,Nhom_con,STT,Ma_tuong_duong,Dich_vu_ky_thuat,Gia_dich_vu,Ghi_chu
+1,3,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,1,01.0289.1764,Định tính độc chất bằng sắc ký lớp mỏng - một lần,141000,
+2,3,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,2,01.0288.1764,Định tính chất độc bằng test nhanh - một lần,113000,
+3,3,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,3,23.0350.1544,Định lượng CRP [KHÔNG CÓ TÌNH TRẠNG NHIỄM TRÙNG],21500,
+4,3,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,4,22.0153.1610,"Xét nghiệm tế bào trong nước dịch chẩn đoán tế bào học (não tuỷ, màng tim, màng phổi, màng bụng, dịch khớp, rửa phế quản…) bằng máy phân tích huyết học tự động",91600,
+5,3,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,5,22.0013.1242,Định lượng Fibrinogen bằng phương pháp trực tiếp,102000,
+6,3,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,6,22.0279.1269,Định nhóm máu hệ ABO (Kỹ thuật ống nghiệm) [ĐỊNH NHÓM MÁU CHO BỆNH NHÂN TẠI KHOA XÉT NGHIỆM],39100,
+7,3,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,7,22.0292.1280,Định nhóm máu hệ Rh(D) (Kỹ thuật phiến đá),31100,
+8,3,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,8,22.0142.1304,Máu lắng (bằng phương pháp thủ công),23100,
+9,3,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,9,22.0005.1354,"Thời gian thromboplastin một phần hoạt hoá (APTT: Activated Partial Thromboplastin Time), (Tên khác: TCK) bằng máy tự động",40400,
+10,3,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,10,22.0121.1369,Tổng phân tích tế bào máu ngoại vi (bằng máy đếm laser),46200,
+11,3,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,11,22.0001.1352,"Thời gian prothrombin (PT: Prothrombin Time), (Các tên khác: TQ; Tỷ lệ Prothrombin) bằng máy tự động, bán tự động",63500,
+12,3,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,12,22.0268.1330,Phản ứng hòa hợp trong môi trường nước muối ở 22°C (Kỹ thuật ống nghiệm),28800,
+13,4,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,13,22.0279.1267,"Định nhóm máu hệ ABO (Kỹ thuật ống nghiệm) [ĐỊNH NHÓM MÁU CHO TÚI MÁU, CHẾ PHẨM MÁU TẠI KHOA XÉT NGHIỆM]",23100,
+14,4,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,14,22.0275.1327,Phản ứng hoà hợp có sử dụng kháng globulin người (Kỹ thuật Scangel/Gelcard trên máy tự động) [Nghiệm pháp Coombs gián tiếp],80800,
+15,4,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,15,22.0262.1408,"Xét nghiệm lựa chọn đơn vị máu phù hợp (10 đơn vị máu trong 3 điều kiện 22°C, 37°C, kháng globulin người) bằng phương pháp Scangel/Gelcard",464000,
+16,4,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,16,22.0502.1267,Định nhóm máu tại giường bệnh trước truyền máu [ĐỊNH NHÓM MÁU CHO TÚI MÁU TOÀN PHẦN/KHỐI HC/KHỐI BC THỨ HAI TRỞ ĐI TẠI GIƯỜNG],20700,
+17,4,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,17,22.0275.1327,Phản ứng hòa hợp có sử dụng kháng globulin người (Kỹ thuật Scangel/Gelcard trên máy bán tự động,74800,
+18,4,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,18,22.0269.1329,Phản ứng hòa hợp trong môi trường muối 22°C (kỹ thuật Scangel/Gelcard trên máy bán tự động),68000,
+19,4,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,19,22.0279.1268,"Định nhóm máu tại giường bệnh trước truyền máu [ĐỊNH NHÓM MÁU CỦA BN TRUYỀN KHỐI TC, HUYẾT TƯƠNG TẠI GIƯỜNG]",20700,
+20,4,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,20,22.0502.1267,Định nhóm máu tại giường bệnh trước truyền máu [ĐỊNH NHÓM MÁU BN + TÚI MÁU TOÀN PHẦN/KHỐI HC/KHỐI BC ĐẦU TIÊN TẠI GIƯỜNG],23100,
+21,4,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,21,22.0290.1275,"Định nhóm máu hệ ABO, Rh(D) (Kỹ thuật Scangel/Gelcard trên máy bán tự động)",86600,
+22,5,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,22,23.0034.1469,Định lượng CA15-3 [THANH TOÁN BHYT THEO CÁC ĐIỀU KIỆN TRONG TT50 CỦA BYT],150000,
+23,5,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,23,23.0035.1471,Định lượng CA 72 - 4 (Cancer Antigen 72- 4) [Máu] [THANH TOÁN BHYT THEO CÁC ĐIỀU KIỆN TRONG TT50 CỦA BYT],134000,
+24,5,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,24,22.0117.1503,Định lượng sắt huyết thanh,32300,
+25,5,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,25,24.0119.1649,Định lượng HBsAg miễn dịch bán tự động/tự động,74700,
+26,5,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,26,24.0146.1622,Anti-HCV miễn dịch bán tự động/ tự động,119000,
+27,5,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,27,23.0046.1480,Định lượng cortisol (máu),91600,
+28,5,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,28,23.0228.1483,Định lượng CRP [KHÔNG CÓ TÌNH TRẠNG NHIỄM TRÙNG],21500,
+29,5,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,29,23.0130.1483,Định lượng Pro-calcitonin,53800,
+30,5,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,30,23.0228.1483,Định lượng CRP [ĐỦ ĐIỀU KIỆN THANH TOÁN THEO TT50 CỦA BYT],53800,
+31,5,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,31,23.0130.1549,Định lượng Pro-calcitonin [ĐỦ ĐIỀU KIỆN THANH TOÁN THEO TT50 CỦA BYT],398000,
+32,5,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,32,23.0052.1486,Định lượng Cyfra 21-1 [Máu] [THANH TOÁN BHYT THEO CÁC ĐIỀU KIỆN TRONG TT50 CỦA BYT],96900,"UNCERTAIN: closing bracket text ""BYT]"" not fully visible in scan (cut at page edge) - inferred from pattern of similar rows"
+33,5,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,33,23.0138.1554,Định lượng PSA tự do (Free Prostate - Specific Antigen) [Máu],86200,
+34,5,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,34,23.0219.1494,Định lượng Protein (dịch chọc dò),21500,
+35,5,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,35,23.0118.1503,Định lượng Mg [Máu],32300,
+36,5,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,36,23.0003.1494,Định lượng Acid Uric [Máu],21500,
+37,5,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,37,23.0007.1494,Định lượng Albumin,21500,
+38,5,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,38,23.0033.1470,Định lượng CA 19 - 9 (Carbohydrate Antigen 19-9) [Máu] [THANH TOÁN BHYT THEO CÁC ĐIỀU KIỆN TRONG TT50 CỦA BYT],139000,
+39,5,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,39,23.0018.1457,Định lượng AFP (Alpha Fetoproteine) [Máu],91600,
+40,6,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,40,23.0027.1493,Định lượng Bilirubin toàn phần,21500,
+41,6,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,41,23.0025.1493,Định lượng Bilirubin trực tiếp,21500,
+42,6,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,42,23.0032.1468,Định lượng CA125 (cancer antigen 125) [Máu] [THANH TOÁN BHYT THEO CÁC ĐIỀU KIỆN TRONG TT50 CỦA BYT],139000,
+43,6,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,43,23.0029.1473,Định lượng Calci toàn phần,12900,
+44,6,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,44,23.0030.1472,Định lượng Calci ion hóa [Máu],16100,
+45,6,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,45,23.0039.1476,Định lượng CEA (Carcino Embryonic Antigen),86200,
+46,6,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,46,23.0042.1482,Đo hoạt độ CK (Creatine kinase),26900,
+47,6,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,47,23.0043.1478,Đo hoạt độ CK-MB (Isozym MB of Creatine kinase),37700,
+48,6,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,48,23.0051.1494,Định lượng Creatinin (máu),21500,
+49,6,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,49,23.0050.1484,Định lượng CRP hs (C-Reactive Protein high sesitivity),53800,
+50,6,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,50,23.0058.1487,"Điện giải đồ (Na, K, Cl)",29000,
+51,6,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,51,23.0069.1561,Định lượng FT4 (Free Thyroxine),64600,
+52,6,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,52,23.0120.1541,Định lượng NSE (Neuron Specific Enolase) [Máu],192000,
+53,6,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,53,23.0077.1518,Đo hoạt độ GGT (Gama Glutamyl Transferase)[Máu],19200,
+54,6,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,54,23.0075.1494,Định lượng Glucose,21500,
+55,6,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,55,23.0083.1523,Định lượng HbA1c,101000,
+56,6,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,56,01.0281.1510,Xét nghiệm đường máu mao mạch tại giường (một lần),15200,
+57,6,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,57,23.0206.1596,Tổng phân tích nước tiểu (Bằng máy tự động),27400,
+58,6,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,58,23.0090.1425,Đo hoạt độ ALP (Alkalin Phosphatase),21500,
+59,6,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,59,23.0121.1548,Định lượng proBNP (NT-proBNP),408000,
+60,6,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,60,23.0133.1494,Định lượng Protein toàn phần,21500,
+61,6,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,61,23.0139.1553,Định lượng PSA toàn phần (Total prostate-Specific Antigen) [Máu],91600,
+62,6,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,62,23.0147.1561,Định lượng T3 (Tri iodothyronine),64600,
+63,6,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,63,23.0148.1561,Định lượng T4 (Thyroxine),64600,
+64,7,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,64,23.0162.1570,Định lượng TSH (Thyroid Stimulating hormone),59200,
+65,7,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,65,23.0166.1494,Định lượng Urê máu,21500,
+66,7,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,66,23.0020.1493,Đo hoạt độ AST (GOT),21500,
+67,7,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,67,23.0019.1493,Đo hoạt độ ALT (GPT),21500,
+68,7,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,68,23.0112.1506,Định lượng LDL - C (Low density lipoprotein Cholesterol),26900,
+69,7,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,69,23.0084.1506,Định lượng HDL-C (High density lipoprotein Cholesterol),26900,
+70,7,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,70,23.0158.1506,Định lượng Triglycerid (máu),26900,
+71,7,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,71,23.0063.1514,Định lượng Ferritin,80800,
+72,7,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,72,23.0015.1461,Định lượng Anti - TPO (Anti- thyroid Peroxidase antibodies) [Máu],204000,
+73,7,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,73,23.0156.1566,Định lượng TRAb (TSH Receptor Antibodies) [Máu],408000,
+74,7,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,74,23.0220.1608,Phản ứng Rivalta [dịch],8500,
+75,7,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,75,23.0098.1529,Định lượng Insulin [Máu],80800,
+76,7,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,76,24.0017.1714,AFB trực tiếp nhuộm Ziehl-Neelsen,68000,
+77,7,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,77,24.0008.1722,Vi khuẩn kháng thuốc định lượng (MIC) (cho 1 loại kháng sinh),184000,
+78,7,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,78,24.0006.1723,Vi khuẩn kháng thuốc định tính,196000,
+79,7,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,79,24.0322.1724,Vi khuẩn nuôi cấy và định danh phương pháp thông thường,238000,
+80,7,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,80,24.0001.1714,Vi khuẩn nhuộm soi,68000,
+81,7,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,81,24.0322.1724,Vi nấm nuôi cấy và định danh phương pháp thông thường,238000,
+82,7,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,82,24.0317.1674,Trichomonas vaginalis soi tươi,41700,
+83,7,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,83,24.0323.1716,Vi nấm nuôi cấy và định danh hệ thống tự động,297000,
+84,7,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,84,24.0321.1674,Vi nấm nhuộm soi,41700,
+85,7,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,85,23.0103.1531,Xét nghiệm Khí máu [Máu],215000,
+86,7,BẢNG GIÁ DỊCH VỤ XÉT NGHIỆM,,86,23.0104.1532,Định lượng Lactat (Acid Lactic),96900,
+87,8,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,1,,Holter huyết áp,198000,
+88,8,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,2,,Holter điện tâm đồ,198000,
+89,8,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,3,,Nghiệm pháp gắng sức điện tâm đồ,201000,
+90,8,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,4,,Điện tim,32800,
+91,8,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,5,,Chụp Xquang Hirtz [số hóa],65400,
+92,8,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,6,,Chụp Xquang khớp cùng chậu thẳng chếch hai bên [số hóa],122000,
+93,8,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,7,,Chụp Xquang khớp háng nghiêng [số hóa],65400,
+94,8,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,8,,Chụp Xquang thực quản cổ nghiêng [số hóa],224000,
+95,8,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,9,,Chụp Xquang khớp cùng chậu thẳng chếch hai bên [số hóa 3 phim],122000,
+96,8,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,10,,Chụp Xquang khớp vai thẳng [Chụp X-quang số hóa 1 phim],65400,
+97,8,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,11,,Chụp Xquang ngực thẳng [số hóa],65400,
+98,8,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,12,,Chụp Xquang đỉnh phổi ưỡn [số hóa],65400,
+99,8,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,13,,Chụp Xquang bụng không chuẩn bị thẳng hoặc nghiêng [số hóa],65400,
+100,8,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,14,,Chụp Xquang tại giường [số hóa],65400,
+101,9,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,15,,Chụp Xquang tại phòng mổ [số hóa],65400,
+102,9,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,16,,Chụp Xquang ruột non [số hóa],224000,
+103,9,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,17,,Chụp Xquang đại tràng [số hóa],264000,
+104,9,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,18,,Chụp Xquang tử cung vòi trứng số hóa [số hóa],411000,
+105,9,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,19,,Chụp Xquang niệu đồ tĩnh mạch (UIV) [số hóa],609000,
+106,9,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,20,,Chụp Xquang bể thận-niệu quản xuôi dòng [số hóa],609000,
+107,9,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,21,,Chụp Xquang niệu quản-bể thận ngược dòng [số hóa],564000,
+108,9,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,22,,Chụp Xquang niệu đạo bàng quang ngược dòng [số hóa],564000,
+109,9,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,23,,SPECT tưới máu cơ tim gắng sức với 99mTc – MIBI,1353000,Giá chưa bao gồm dược chất phóng xạ và Invivo kit
+110,9,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,24,,SPECT tưới máu cơ tim không gắng sức với 99mTc – MIBI,1353000,Giá chưa bao gồm dược chất phóng xạ và Invivo kit
+111,9,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,25,,SPECT tưới máu cơ tim gắng sức với 99mTc – MIBI,1906000,Giá chưa bao gồm dược chất phóng xạ và Invivo kit
+112,9,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,26,,SPECT tưới máu cơ tim không gắng sức với 99mTc – MIBI,1906000,Giá chưa bao gồm dược chất phóng xạ và Invivo kit
+113,9,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,27,,Chụp Xquang cột sống cổ thẳng nghiêng [số hóa],97200,
+114,9,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,28,,Chụp Xquang Blondeau [số hóa],97200,
+115,9,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,29,,Chụp Xquang mặt thấp hoặc mặt cao [số hóa],65400,
+116,9,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,30,,Chụp Xquang sọ tiếp tuyến [số hóa],65400,
+117,9,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,31,,Chụp Xquang hố yên thẳng hoặc nghiêng [số hóa],65400,
+118,10,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,32,,Chụp Xquang sọ thẳng nghiêng [số hóa],97200,
+119,10,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,33,,Chụp Xquang mặt thẳng nghiêng [số hóa],97200,
+120,10,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,34,,Chụp Xquang hốc mắt thẳng nghiêng [số hóa],97200,
+121,10,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,35,,Chụp Xquang răng cận chóp (Periapical),13100,
+122,10,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,36,,Chụp Xquang cột sống cổ C1-C2 răng [số hóa],97200,
+123,10,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,37,,Chụp Xquang cột sống ngực thẳng nghiêng [số hóa],97200,
+124,10,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,38,,Chụp Xquang răng cánh cắn (Bite wing) [số hóa],65400,
+125,10,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,39,,Chụp Xquang răng toàn cảnh [số hóa],65400,
+126,10,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,40,,Chụp Xquang phim cắn (Occlusal) [số hóa],65400,
+127,10,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,41,,Chụp Xquang khớp ức đòn thẳng chếch [số hóa],97200,
+128,10,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,42,,Chụp Xquang cột sống cổ chếch hai bên [số hóa],97200,
+129,10,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,43,,"Chụp Xquang cột sống cổ động, nghiêng 3 tư thế [số hóa]",122000,
+130,10,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,44,,Chụp Xquang khớp vai thẳng [số hóa],65400,
+131,10,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,45,,"Chụp Xquang phim đo sọ thẳng, nghiêng (Cephalometric)",97200,
+132,10,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,46,,Chụp Xquang thực quản dạ dày [số hóa],224000,
+133,10,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,47,,Chụp Xquang đường mật qua Kehr,240000,
+134,10,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,48,,Chụp Xquang đường dò,406000,
+135,11,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,49,,Chụp Xquang tuyến nước bọt,386000,
+136,11,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,50,,Chụp Xquang tử cung vòi trứng,371000,
+137,11,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,51,,Chụp Xquang ống tuyến sữa,386000,
+138,11,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,52,,Chụp Xquang bàng quang trên xương mu,206000,
+139,11,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,53,,Chụp Xquang tại giường [Chụp Xquang bụng không chuẩn bị],65400,
+140,11,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,54,,Chụp Xquang tại giường [Chụp Xquang cột sống thắt lưng],65400,
+141,11,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,55,,Chụp Xquang tại giường [Chụp Xquang xương cánh tay],65400,
+142,11,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,56,,Chụp Xquang tại giường [Chụp Xquang khớp háng],65400,
+143,11,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,57,,Chụp Xquang tại giường [Chụp Xquang ngực nghiêng hoặc chếch mỗi bên],65400,
+144,11,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,58,,Chụp Xquang tại giường [Chụp Xquang ngực thẳng],65400,
+145,11,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,59,,Chụp Xquang tại giường [Chụp Xquang xương cổ chân],65400,
+146,11,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,60,,Chụp Xquang tại giường [Chụp Xquang xương cổ tay],65400,
+147,11,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,61,,Nội soi dạ dày thực quản cấp cứu chẩn đoán và cầm máu,728000,"Chưa bao gồm thuốc cầm máu, dụng cụ cầm máu"
+148,11,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,62,,Nội soi thực quản - Dạ dày - Tá tràng cấp cứu,244000,
+149,11,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,63,,Nội soi dạ dày thực quản cấp cứu chảy máu tiêu hoá cao để chẩn đoán và điều trị,728000,
+150,11,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,64,,"Nội soi thực quản, dạ dày, tá tràng kết hợp sinh thiết",433000,
+151,11,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,65,,Nội soi thực quản - dạ dày - tá tràng không sinh thiết,244000,
+152,12,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,66,,Nội soi thực quản - Dạ dày - Tá tràng qua đường mũi,580000,
+153,12,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,67,,Siêu âm ổ bụng,43900,
+154,12,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,68,,Siêu âm cấp cứu tại giường bệnh,43900,
+155,12,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,69,,Siêu âm Doppler mạch máu [SIÊU ÂM TĨNH MẠCH],222000,
+156,12,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,70,,"Siêu âm Doppler động mạch, tĩnh mạch chi dưới",222000,
+157,12,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,71,,Siêu âm Doppler mạch máu [CHI TRÊN],222000,
+158,12,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,72,,Siêu âm Doppler mạch máu [CHI DƯỚI],222000,
+159,12,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,73,,"Siêu âm tim gắng sức (thảm chạy, thuốc)",587000,
+160,12,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,74,,Siêu âm 3D/4D tim,800000,
+161,12,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,75,,Siêu âm tim qua thực quản,805000,
+162,12,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,76,,"Doppler động mạch cảnh, Doppler xuyên sọ",222000,
+163,12,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,77,,Siêu âm Doppler tim,222000,
+164,12,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,78,,"Siêu âm phần mềm (da, tổ chức dưới da)",43900,
+165,12,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,79,,Siêu âm tim thai qua thành bụng,800000,
+166,12,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,80,,Siêu âm màng phổi,43900,
+167,12,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,81,,Siêu âm tuyến giáp,43900,
+168,12,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,82,,"Siêu âm khớp (gối, háng, khuỷu, cổ tay….)",43900,
+169,13,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,83,,Siêu âm Doppler mạch máu,222000,
+170,13,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,84,,Siêu âm tuyến vú hai bên,43900,
+171,13,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,85,,Siêu âm Doppler động mạch thận,222000,
+172,13,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,86,,Siêu âm Doppler mạch máu hệ tĩnh cửa hoặc mạch máu ổ bụng,222000,
+173,13,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,87,,"Siêu âm Doppler tử cung, buồng trứng qua đường âm đạo",222000,
+174,13,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,88,,Siêu âm tim 4D [Để thực hiện các phẫu thuật hoặc can thiệp tim mạch],457000,Chỉ áp dụng trong trường hợp chỉ định để thực hiện
+175,13,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,89,,Siêu âm Doppler tim,222000,
+176,13,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,90,,"Doppler động mạch cảnh, Doppler xuyên sọ",222000,
+177,13,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,91,,"Siêu âm Doppler động mạch, tĩnh mạch chi",222000,
+178,13,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,92,,Siêu âm Doppler động mạch thận,222000,
+179,13,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,93,,Siêu âm Doppler mạch máu,222000,
+180,13,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,94,,Siêu âm tim cản âm,257000,
+181,13,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,95,,"Siêu âm khớp (gối, háng, khuỷu, cổ tay….)",43900,
+182,13,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,96,,"Siêu âm phần mềm (da, tổ chức dưới da)",43900,
+183,13,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,97,,Siêu âm tuyến vú hai bên,43900,
+184,13,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,98,,"Siêu âm Doppler mạch máu ổ bụng (động mạch chủ, mạc treo tràng trên, thận tạng…)",222000,
+185,13,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,99,,Siêu âm tim qua thực quản,805000,
+186,14,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,100,,Chụp nút mạch điều trị ung thư gan (TACE),9116000,
+187,14,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,101,,Siêu âm tử cung phần phụ,43900,
+188,14,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,102,,"Siêu âm thai (thai, nhau thai, nước ối)",43900,
+189,14,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,103,,"Siêu âm Doppler thai nhi (thai, nhau thai, dây rốn, động mạch tử cung)",82300,
+190,14,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,104,,"Siêu âm thai (thai, nhau thai, nước ối)",43900,
+191,14,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,105,,Siêu âm thai nhi trong 3 tháng đầu,43900,
+192,14,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,106,,Siêu âm thai nhi trong 3 tháng giữa,43900,
+193,14,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,107,,Siêu âm thai nhi trong 3 tháng cuối,43900,
+194,14,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,108,,Siêu âm tuyến vú hai bên,43900,
+195,14,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,109,,Hút đờm hầu họng,11100,
+196,14,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,110,,"Hút đờm khí phế quản ở người bệnh sau đặt nội khí quản, mở khí quản, thở máy.",11100,
+197,14,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,111,,Đặt catheter tĩnh mạch trung tâm 01 nòng,653000,
+198,14,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,112,,Đặt catheter tĩnh mạch trung tâm nhiều nòng,1126000,
+199,14,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,113,,Đặt catheter động mạch,1367000,
+200,14,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,114,,Hồi phục nhịp xoang cho người bệnh loạn nhịp bằng máy sốc điện,459000,
+201,14,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,115,,Tạo nhịp tim cấp cứu tạm thời với điện cực ngoài lồng ngực,989000,
+202,14,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,116,,Chọc dò màng ngoài tim cấp cứu,247000,
+203,15,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,117,,Mở khí quản cấp cứu,719000,
+204,15,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,118,,Mở khí quản thường quy,719000,
+205,15,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,119,,Thay canuyn mở khí quản,247000,
+206,15,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,120,,Cố định lồng ngực do chấn thương gãy xương sườn,49900,
+207,15,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,121,,Đặt canuyn mở khí quản 02 nòng,247000,
+208,15,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,122,,Chọc hút dịch – khí màng phổi bằng kim hay catheter,143000,
+209,15,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,123,,Dẫn lưu màng phổi liên tục ≤ 8 giờ,185000,
+210,15,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,124,,Thông khí nhân tạo không xâm nhập ≤ 8 giờ [giờ theo thực tế],23292,
+211,15,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,125,,Thông khí nhân tạo không xâm nhập ≤ 8 giờ [ngày theo thực tế],559000,
+212,15,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,126,,Thông khí nhân tạo CPAP qua van Boussignac [giờ theo thực tế (1 giờ)],23292,
+213,15,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,127,,Thông khí nhân tạo CPAP qua van Boussignac [1 ngày],559000,
+214,15,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,128,,Thông khí nhân tạo xâm nhập phương thức CPAP [giờ theo thực tế],23292,
+215,15,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,129,,Thông khí nhân tạo không xâm nhập phương thức CPAP [1 ngày],559000,
+216,15,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,130,,Thông khí nhân tạo xâm nhập [1 giờ],23292,
+217,15,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,131,,Thông khí nhân tạo xâm nhập [1 ngày],559000,
+218,15,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,132,,Thông khí nhân tạo xâm nhập phương thức CPAP [giờ theo thực tế],23292,
+219,15,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,133,,Thông khí nhân tạo xâm nhập phương thức CPAP [giờ theo thực tế],23292,
+220,16,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,134,,Chọc dịch tuỷ sống,107000,
+221,16,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,135,,Mở thông dạ dày bằng nội soi,2697000,
+222,16,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,136,,Rửa dạ dày loại bỏ chất độc bằng hệ thống kín,589000,
+223,16,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,137,,Nội soi dạ dày thực quản cấp cứu chẩn đoán và cầm máu,728000,
+224,16,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,138,,Chọc dẫn lưu ổ áp xe dưới siêu âm,597000,Chưa bao gồm ống thông.
+225,16,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,139,,Chọc hút khí màng phổi,143000,
+226,16,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,140,,"Dẫn lưu màng phổi, ổ áp xe phổi dưới hướng dẫn của siêu âm",678000,
+227,16,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,141,,"Dẫn lưu màng phổi, ổ áp xe phổi dưới hướng dẫn của chụp cắt lớp vi tính",1199000,
+228,16,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,142,,Điều trị bằng oxy cao áp,233000,
+229,16,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,143,,Đo đa ký giấc ngủ,2311000,
+230,16,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,144,,Khí dung thuốc giãn phế quản,20400,
+231,16,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,145,,"Nội soi màng phổi, sinh thiết màng phổi",5788000,
+232,16,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,146,,"Nội soi màng phổi, gây dính bằng thuốc/ hóa chất",5010000,
+233,16,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,147,,Nội soi phế quản sinh thiết xuyên vách phế quản,1133000,
+234,16,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,148,,"Nội soi phế quản ống mềm: cắt đốt u, sẹo nội phế quản bằng điện đông cao tần",2844000,
+235,16,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,149,,Nội soi phế quản ống mềm sinh thiết niêm mạc phế quản,1133000,
+236,16,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,150,,Nội soi phế quản ống mềm sinh thiết niêm mạc phế quản,1133000,
+237,17,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,151,,Nội soi phế quản chải phế quản chẩn đoán,1133000,
+238,17,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,152,,Nội soi rửa phế quản phế nang chọn lọc,753000,
+239,17,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,153,,Nội soi rửa phế quản phế nang chọn lọc,753000,
+240,17,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,154,,Nghiệm pháp hồi phục phế quản với thuốc giãn phế quản,94900,
+241,17,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,155,,"Rút ống dẫn lưu màng phổi, ống dẫn lưu ổ áp xe",178000,
+242,17,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,156,,Rửa phổi toàn bộ,8181000,
+243,17,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,157,,Chọc dò và dẫn lưu màng ngoài tim,247000,
+244,17,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,158,,Mở thông bàng quang trên xương mu,373000,
+245,17,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,159,,Thông bàng quang,90100,
+246,17,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,160,,Rửa bàng quang lấy máu cục,198000,
+247,17,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,161,,Lọc máu cấp cứu (ở người chưa có mở thông động tĩnh mạch),1541000,Quả lọc dây máu dùng 1 lần ; đã bao gồm catheter 2
+248,17,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,162,,Lọc máu liên tục cấp cứu (CVVH),2212000,"Chưa bao gồm quả lọc, bộ dây dẫn và dịch lọc."
+249,17,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,163,,Lọc máu liên tục cấp cứu có thẩm tách (CVVHD),2212000,"Chưa bao gồm quả lọc, bộ dây dẫn và dịch lọc."
+250,17,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,164,,Lọc máu thẩm tách liên tục cấp cứu (CVVHDF),2212000,"Chưa bao gồm quả lọc, bộ dây dẫn và dịch lọc."
+251,17,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,165,,Lọc màng bụng cấp cứu liên tục [Lọc màng bụng chu kỳ (CAPD)],562000,
+252,17,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,166,,Lọc màng bụng cấp cứu liên tục,964000,
+253,17,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,167,,Lọc máu hấp phụ với than hoạt trong ngộ độc cấp,1636000,
+254,18,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,168,,Sinh thiết màng hoạt dịch dưới hướng dẫn của siêu âm,1104000,
+255,18,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,169,,Chọc hút tế bào bằng kim nhỏ,110000,
+256,18,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,170,,Chọc hút tế bào xương bằng kim nhỏ,110000,
+257,18,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,171,,Chọc hút tế bào phần mềm bằng kim nhỏ,110000,
+258,18,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,172,,Tiêm khớp gối,91500,Chưa bao gồm thuốc tiêm.
+259,18,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,173,,Tiêm khớp cổ chân,91500,Chưa bao gồm thuốc tiêm.
+260,18,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,174,,Tiêm khớp bàn ngón chân,91500,Chưa bao gồm thuốc tiêm.
+261,18,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,175,,Tiêm khớp cổ tay,91500,Chưa bao gồm thuốc tiêm.
+262,18,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,176,,Tiêm khớp bàn ngón tay,91500,Chưa bao gồm thuốc tiêm.
+263,18,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,177,,Tiêm khớp đốt ngón tay,91500,Chưa bao gồm thuốc tiêm.
+264,18,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,178,,Tiêm khớp khuỷu tay,91500,Chưa bao gồm thuốc tiêm.
+265,18,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,179,,Tiêm khớp vai,91500,Chưa bao gồm thuốc tiêm.
+266,18,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,180,,Tiêm khớp ức - đòn,91500,Chưa bao gồm thuốc tiêm.
+267,18,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,181,,Tiêm khớp ức - sườn,91500,Chưa bao gồm thuốc tiêm.
+268,18,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,182,,Tiêm khớp đòn - cùng vai,91500,Chưa bao gồm thuốc tiêm.
+269,18,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,183,,Tiêm khớp thái dương hàm,91500,Chưa bao gồm thuốc tiêm.
+270,18,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,184,,Tiêm khớp cùng chậu,91500,Chưa bao gồm thuốc tiêm.
+271,19,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,185,,Tiêm cạnh cột sống cổ,91500,Chưa bao gồm thuốc tiêm.
+272,19,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,186,,Tiêm cạnh cột sống thắt lưng,91500,Chưa bao gồm thuốc tiêm.
+273,19,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,187,,Tiêm cạnh cột sống ngực,91500,Chưa bao gồm thuốc tiêm.
+274,19,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,188,,Tiêm ngoài màng cứng,319000,
+275,19,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,189,,Tiêm điểm bám gân mỏm trâm quay (mỏm trâm trụ),91500,Chưa bao gồm thuốc tiêm.
+276,19,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,190,,Tiêm điểm bám gân lồi cầu trong (lồi cầu ngoài) xương cánh tay,91500,Chưa bao gồm thuốc tiêm.
+277,19,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,191,,Tiêm điểm bám gân quanh khớp gối,91500,Chưa bao gồm thuốc tiêm.
+278,19,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,192,,Tiêm hội chứng DeQuervain,91500,Chưa bao gồm thuốc tiêm.
+279,19,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,193,,Tiêm hội chứng đường hầm cổ tay,91500,Chưa bao gồm thuốc tiêm.
+280,19,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,194,,Tiêm gân gấp ngón tay,91500,Chưa bao gồm thuốc tiêm.
+281,19,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,195,,Tiêm gân nhị đầu khớp vai,91500,Chưa bao gồm thuốc tiêm.
+282,19,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,196,,"Tiêm gân trên gai (dưới gai, gân bao xoay khớp vai)",91500,Chưa bao gồm thuốc tiêm.
+283,19,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,197,,Tiêm điểm bám gân mỏm cùng vai,91500,Chưa bao gồm thuốc tiêm.
+284,19,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,198,,Tiêm điểm bám gân mỏm trâm quay (trâm trụ),91500,Chưa bao gồm thuốc tiêm.
+285,19,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,199,,Tiêm cân gan chân,91500,Chưa bao gồm thuốc tiêm.
+286,19,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,200,,Tiêm khớp gối dưới hướng dẫn của siêu âm,132000,Chưa bao gồm thuốc tiêm.
+287,19,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,201,,Tiêm khớp háng dưới hướng dẫn của siêu âm,132000,Chưa bao gồm thuốc tiêm.
+288,20,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,202,,Tiêm khớp cổ chân dưới hướng dẫn của siêu âm,132000,Chưa bao gồm thuốc tiêm.
+289,20,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,203,,Tiêm khớp bàn ngón chân dưới hướng dẫn của siêu âm,132000,Chưa bao gồm thuốc tiêm.
+290,20,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,204,,Tiêm khớp cổ tay dưới hướng dẫn của siêu âm,132000,Chưa bao gồm thuốc tiêm.
+291,20,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,205,,Tiêm khớp bàn ngón tay dưới hướng dẫn của siêu âm,132000,Chưa bao gồm thuốc tiêm.
+292,20,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,206,,Tiêm khớp đốt ngón tay dưới hướng dẫn của siêu âm,132000,Chưa bao gồm thuốc tiêm.
+293,20,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,207,,Tiêm khớp khuỷu tay dưới hướng dẫn của siêu âm,132000,Chưa bao gồm thuốc tiêm.
+294,20,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,208,,Tiêm điểm bám gân mỏm cùng vai dưới hướng dẫn của siêu âm,132000,Chưa bao gồm thuốc tiêm.
+295,20,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,209,,"Tiêm gân trên gai (dưới gai, gân bao xoay khớp vai) dưới hướng dẫn của siêu âm",132000,Chưa bao gồm thuốc tiêm.
+296,20,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,210,,Tiêm khớp vai dưới hướng dẫn của siêu âm,132000,Chưa bao gồm thuốc tiêm.
+297,20,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,211,,Tiêm khớp ức đòn dưới hướng dẫn của siêu âm,132000,Chưa bao gồm thuốc tiêm.
+298,20,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,212,,Tiêm khớp ức – sườn dưới hướng dẫn của siêu âm,132000,Chưa bao gồm thuốc tiêm.
+299,20,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,213,,Tiêm khớp đòn- cùng vai dưới hướng dẫn của siêu âm,132000,Chưa bao gồm thuốc tiêm.
+300,20,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,214,,Tiêm khớp thái dương hàm dưới hướng dẫn của siêu âm,132000,Chưa bao gồm thuốc tiêm.
+301,20,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,215,,Tiêm hội chứng DeQuervain dưới hướng dẫn của siêu âm,132000,Chưa bao gồm thuốc tiêm.
+302,20,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,216,,Tiêm hội chứng đường hầm cổ tay dưới hướng dẫn của siêu âm,132000,Chưa bao gồm thuốc tiêm.
+303,20,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,217,,Tiêm gân gấp ngón tay dưới hướng dẫn của siêu âm,132000,Chưa bao gồm thuốc tiêm.
+304,20,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,218,,Tiêm gân gấp ngón tay dưới hướng dẫn của siêu âm,132000,Chưa bao gồm thuốc tiêm.
+305,21,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,219,,Hút dịch khớp gối,114000,
+306,21,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,220,,Hút nang bao hoạt dịch,114000,
+307,21,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,221,,Bóc nang tuyến Bartholin,1274000,
+308,21,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,222,,Chích rạch màng trinh do ứ máu kinh,790000,
+309,21,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,223,,Chích áp xe tuyến Bartholin,831000,
+310,21,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,224,,Chọc dò túi cùng Douglas,280000,
+311,21,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,225,,Cắt chỉ khâu vòng cổ tử cung,117000,
+312,21,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,226,,"Cắt, đốt sùi mào gà âm hộ, âm đạo, tầng sinh môn",682000,
+313,21,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,227,,"Hút buồng tử cung do rong kinh, rong huyết",204000,
+314,21,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,228,,Khâu rách cùng đồ âm đạo,1898000,
+315,21,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,229,,Khâu vòng cổ tử cung,549000,
+316,21,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,230,,Làm thuốc vết khâu tầng sinh môn nhiễm khuẩn,85600,
+317,21,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,231,,"Thủ thuật xoắn polip cổ tử cung, âm đạo",388000,
+318,21,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,232,,Nong buồng tử cung đặt dụng cụ chống dính,580000,
+319,21,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,233,,Lấy dị vật âm đạo,573000,
+320,21,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,234,,Nạo hút thai trứng,772000,
+321,21,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,235,,"Nạo sót thai, nạo sót rau sau sẩy, sau đẻ",344000,
+322,22,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,236,,Phá thai bằng thuốc cho tuổi thai đến hết 7 tuần,183000,
+323,22,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,237,,Phá thai từ tuần thứ 6 đến hết 12 tuần bằng phương pháp hút chân không,396000,
+324,22,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,238,,Phá thai đến hết 7 tuần bằng phương pháp hút chân không,384000,
+325,22,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,239,,"Sinh thiết cổ tử cung, âm hộ, âm đạo",382000,
+326,22,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,240,,Soi cổ tử cung,61500,
+327,22,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,241,,"Điều trị tổn thương cổ tử cung bằng đốt điện, đốt nhiệt, đốt laser, áp lạnh...",159000,
+328,22,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,242,,Bơm rửa khoang màng phổi,216000,
+329,22,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,243,,Bơm streptokinase vào khoang màng phổi,1016000,
+330,22,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,244,,Đặt ống thông hậu môn,82100,
+331,22,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,245,,Gây dính màng phổi bằng thuốc/ hóa chất qua ống dẫn lưu màng phổi,196000,
+332,22,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,246,,Gây mê khác,800000,
+333,22,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,247,,Gây mê phẫu thuật điều trị bệnh suy giãn tĩnh mạch chi dưới,1200000,TB số 2635
+334,22,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,248,,Hút dẫn lưu khoang màng phổi bằng máy hút áp lực âm liên tục,185000,
+335,22,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,249,,Khí dung đường thở ở bệnh nhân nặng,20400,
+336,22,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,250,,Soi đáy mắt cấp cứu,52500,
+337,22,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,251,,Phẫu thuật đặt catheter ổ bụng để lọc màng bụng,7275000,
+338,22,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,252,,Đặt catheter tĩnh mạch trung tâm nhiều nòng,1126000,
+339,23,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,253,,Sốc điện ngoài lồng ngực cấp cứu,459000,
+340,23,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,254,,Đặt bóng đối xung động mạch chủ,6816000,
+341,23,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,255,,Tim phổi nhân tạo (ECMO) cấp cứu tại giường trong hỗ trợ suy hô hấp cấp ≤ 8 giờ [Phẫu thuật đặt hệ thống tim phổi,5202000,"Chưa bao gồm bộ tim phổi, dây dẫn và canuyn chạy"
+342,23,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,256,,"Tim phổi nhân tạo (ECMO) cấp cứu tại giường trong hỗ trợ suy hô hấp cấp ≤ 8 giờ [Thay dây, thay tim phổi (ECMO)]",1496000,"Chưa bao gồm bộ tim phổi, dây dẫn và canuyn chạy"
+343,23,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,257,,"Tim phổi nhân tạo (ECMO) cấp cứu tại giường trong hỗ trợ suy hô hấp cấp ≤ 8 giờ [Theo dõi, chạy tim phổi nhân tạo",1293000,Áp dụng thanh toán cho mỗi 8 giờ thực hiện.
+344,23,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,258,,Tim phổi nhân tạo (ECMO) cấp cứu tại giường trong hỗ trợ suy hô hấp cấp ≤ 8 giờ [Kết thúc và rút hệ thống ECMO],2444000,
+345,23,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,259,,Tim phổi nhân tạo (ECMO) cấp cứu tại giường trong hỗ trợ suy tuần hoàn cấp ≤ 8 giờ [Phẫu thuật đặt hệ thống tim phổi,5202000,"Chưa bao gồm bộ tim phổi, dây dẫn và canuyn chạy"
+346,23,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,260,,"Tim phổi nhân tạo (ECMO) cấp cứu tại giường trong hỗ trợ suy tuần hoàn cấp ≤ 8 giờ [Thay dây, thay tim phổi (ECMO)]",1496000,"Chưa bao gồm bộ tim phổi, dây dẫn và canuyn chạy"
+347,23,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,261,,"Tim phổi nhân tạo (ECMO) cấp cứu tại giường trong hỗ trợ suy tuần hoàn cấp ≤ 8 giờ [Theo dõi, chạy tim phổi nhân tạo",1293000,Áp dụng thanh toán cho mỗi 8 giờ thực hiện.
+348,23,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,262,,Tim phổi nhân tạo (ECMO) cấp cứu tại giường trong hỗ trợ suy tuần hoàn cấp ≤ 8 giờ [Kết thúc và rút hệ thống ECMO],2444000,
+349,23,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,263,,Nghiệm pháp dung nạp Glucose đường uống 2 mẫu có định lượng Insulin kèm theo,130000,
+350,23,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,264,,Chọc dò màng ngoài tim,247000,
+351,23,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,265,,Dẫn lưu màng ngoài tim,247000,
+352,23,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,266,,Khí dung thuốc qua thở máy (một lần),20400,Chưa bao gồm thuốc khí dung.
+353,23,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,267,,Lọc màng bụng chu kỳ (CAPD),562000,
+354,23,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,268,,Mở khí quản thường quy,719000,
+355,23,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,269,,Rửa dạ dày cấp cứu,119000,
+356,24,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,270,,Chọc dò màng ngoài tim,247000,
+357,24,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,271,,Sốc điện điều trị rung nhĩ,989000,
+358,24,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,272,,Đặt sonde bàng quang,90100,
+359,24,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,273,,Thông khí nhân tạo xâm nhập [1 ngày],559000,
+360,24,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,274,,Đặt ống thông dạ dày,90100,
+361,24,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,275,,Đặt catheter tĩnh mạch trung tâm 01 nòng,653000,
+362,24,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,276,,Chọc dò dịch màng phổi,137000,
+363,24,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,277,,Cấp cứu ngừng tuần hoàn hô hấp cơ bản,479000,Bao gồm cả bóng dùng nhiều lần.
+364,24,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,278,,Đặt ống nội khí quản,568000,
+365,24,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,279,,Chọc dịch tuỷ sống,107000,Chưa bao gồm kim chọc dò.
+366,24,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,280,,Cắt lọc tổ chức hoại tử hoặc cắt lọc vết thương đơn giản,178000,
+367,24,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,281,,"Thay băng, cắt chỉ vết mổ (≤ 15cm) [NHI KHOA]",57600,Chỉ áp dụng với BN ngoại trú
+368,24,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,282,,Thay băng [Thay băng vết thương hoặc mổ chiều dài ≤ 15cm],57600,Chỉ áp dụng với BN ngoại trú
+369,24,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,283,,Khâu vết thương phần mềm dài dưới 10cm (Khâu vết thương phần mềm tổn thương nông chiều dài < 10 cm),178000,
+370,24,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,284,,Chọc tháo dịch màng phổi dưới hướng dẫn của siêu âm,176000,
+371,24,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,285,,Chọc hút/dẫn lưu khí màng phổi áp lực thấp [NHI KHOA],143000,
+372,24,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,286,,Cấp cứu ngừng tuần hoàn hô hấp cơ bản,479000,
+373,25,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,287,,Thay băng các vết loét hoại tử rộng sau TBMMN,134000,
+374,25,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,288,,Khai thông mạch não bằng điều trị thuốc tiêu sợi huyết trong nhồi máu não cấp,546000,Chưa bao gồm thuốc tiêu sợi huyết
+375,25,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,289,,Khai thông động mạch vành bằng sử dụng thuốc tiêu sợi huyết trong điều trị nhồi máu cơ tim cấp,546000,Chưa bao gồm thuốc tiêu sợi huyết
+376,25,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,290,,Dẫn lưu khí màng phổi áp lực thấp < 8 giờ,185000,
+377,25,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,291,,Chọc hút khí màng phổi,143000,
+378,25,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,292,,Thông khí nhân tạo xâm nhập [giờ theo thực tế],23292,
+379,25,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,293,,Lọc huyết tương (Plasmapheresis),1636000,
+380,25,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,294,,Hút đờm hầu họng,11100,
+381,25,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,295,,Hút đờm qua ống nội khí quản/canuyn mở khí quản bằng ống thông kín (có thở máy) (một lần hút),317000,
+382,25,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,296,,Hút đờm qua ống nội khí quản/canuyn mở khí quản bằng ống thông một lần ở người bệnh có thở máy (một lần hút),11100,
+383,25,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,297,,Xét nghiệm đường máu mao mạch tại giường (một lần),15200,
+384,25,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,298,,Đặt sonde bàng quang,90100,
+385,25,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,299,,Lọc máu cấp cứu (ở người chưa có mở thông động tĩnh mạch) [TRƯỜNG HỢP PHẢI ĐẶT CATHERTER],1541000,Quả lọc dây máu dùng 1 lần; đã bao gồm catheter 2
+386,25,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,300,,Lọc máu cấp cứu (ở người đã mở thông động tĩnh mạch) [TRƯỜNG HỢP KHÔNG PHẢI ĐẶT CATHERTER],1411000,
+387,25,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,301,,Thận nhân tạo cấp cứu [TRƯỜNG HỢP KHÔNG PHẢI ĐẶT CATHERTER],1411000,
+388,25,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,302,,Thận nhân tạo cấp cứu [TRƯỜNG HỢP PHẢI ĐẶT CATHERTER],1541000,Quả lọc dây máu dùng 1 lần; đã bao gồm catheter 2
+389,25,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,303,,Khí dung mũi họng [TAI MŨI HỌNG],20400,
+390,26,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,304,,Nhĩ châm,65300,
+391,26,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,305,,Thủy châm,66100,
+392,26,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,306,,Ôn châm,65300,
+393,26,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,307,,Cứu,35500,
+394,26,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,308,,Chích lể,65300,
+395,26,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,309,,Laser châm,47400,
+396,26,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,310,,Kéo nắn cột sống cổ,45300,
+397,26,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,311,,Kéo nắn cột sống thắt lưng,45300,
+398,26,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,312,,Điện nhĩ châm điều trị liệt dây VII ngoại biên,67300,
+399,26,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,313,,Điện nhĩ châm điều trị tắc tia sữa,67300,
+400,26,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,314,,Điện nhĩ châm điều trị thiểu năng tuần hoàn não mạn tính,67300,
+401,26,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,315,,"Điện nhĩ châm điều trị đau đau đầu, đau nửa đầu",67300,
+402,26,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,316,,Điện nhĩ châm điều trị mất ngủ,67300,
+403,26,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,317,,Điện nhĩ châm điều trị hội chứng stress,67300,
+404,26,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,318,,Điện nhĩ châm điều trị nấc,67300,
+405,26,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,319,,Điện nhĩ châm điều trị liệt nửa người do tai biến mạch máu não,67300,
+406,26,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,320,,Điện nhĩ châm điều trị hội chứng dạ dày-tá tràng,67300,
+407,27,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,321,,Điện nhĩ châm phục hồi chức năng cho trẻ bại liệt,67300,
+408,27,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,322,,Điện nhĩ châm điều trị hội chứng tự kỷ ở trẻ em,67300,
+409,27,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,323,,Điện nhĩ châm điều trị chậm phát triển trí tuệ ở trẻ bại não,67300,
+410,27,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,324,,Điện nhĩ châm điều trị phục hồi chức năng ở trẻ bại não,67300,
+411,27,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,325,,Điện nhĩ châm điều di tinh,67300,
+412,27,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,326,,Điện nhĩ châm điều trị liệt dương,67300,
+413,27,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,327,,Điện nhĩ châm điều trị rối loạn tiểu tiện,67300,
+414,27,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,328,,Điện nhĩ châm điều trị bí đái cơ năng,67300,
+415,27,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,329,,Điện nhĩ châm điều trị cơn động kinh cục bộ,67300,
+416,27,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,330,,Điện nhĩ châm điều trị thất vận ngôn,67300,
+417,27,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,331,,Điện nhĩ châm điều trị đau dây thần kinh V,67300,
+418,27,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,332,,Điện nhĩ châm điều trị rối loạn thần kinh chức năng sau chấn thương sọ não,67300,
+419,27,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,333,,Điện nhĩ châm điều trị khàn tiếng,67300,
+420,27,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,334,,Điện nhĩ châm điều trị rối loạn cảm giác đầu chi,67300,
+421,27,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,335,,Điện nhĩ châm điều trị liệt chi trên,67300,
+422,27,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,336,,Điện nhĩ châm điều trị liệt chi dưới,67300,
+423,27,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,337,,Điện nhĩ châm điều trị thống kinh,67300,
+424,28,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,338,,Điện nhĩ châm điều trị rối loạn kinh nguyệt,67300,
+425,28,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,339,,Điện nhĩ châm điều trị đau hố mắt,67300,
+426,28,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,340,,Điện nhĩ châm điều trị viêm kết mạc,67300,
+427,28,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,341,,Điện nhĩ châm điều trị viêm thần kinh thị giác sau giai đoạn cấp,67300,
+428,28,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,342,,Điện nhĩ châm điều trị giảm thị lực,67300,
+429,28,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,343,,Điện nhĩ châm điều trị táo bón kéo dài,67300,
+430,28,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,344,,Điện nhĩ châm điều trị viêm mũi xoang,67300,
+431,28,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,345,,Điện nhĩ châm điều trị đái dầm,67300,
+432,28,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,346,,Điện nhĩ châm điều trị rối loạn tiêu hóa,67300,
+433,28,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,347,,Điện nhĩ châm điều trị đau răng,67300,
+434,28,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,348,,Điện nhĩ châm điều trị viêm khớp dạng thấp,67300,
+435,28,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,349,,Điện nhĩ châm điều trị viêm quanh khớp vai,67300,
+436,28,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,350,,Điện nhĩ châm điều trị đau do thoái hóa khớp,67300,
+437,28,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,351,,Điện nhĩ châm điều trị đau lưng,67300,
+438,28,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,352,,Điện nhĩ châm điều trị ù tai,67300,
+439,28,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,353,,Điện nhĩ châm điều trị giảm khứu giác,67300,
+440,28,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,354,,"Điện nhĩ châm điều trị liệt rễ, đám rối dây thần kinh",67300,
+441,29,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,355,,Điện nhĩ châm điều trị rối loạn cảm giác nông,67300,
+442,29,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,356,,Điện nhĩ châm điều trị rối loạn thần kinh thực vật,67300,
+443,29,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,357,,Điện nhĩ châm điều trị giảm đau do Zona,67300,
+444,29,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,358,,"Điện nhĩ châm điều trị viêm đa rễ, đa dây thần kinh",67300,
+445,29,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,359,,Điện nhĩ châm điều trị chứng tíc cơ mặt,67300,
+446,29,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,360,,Điện châm điều trị hội chứng tiền đình,67300,
+447,29,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,361,,Điện châm điều trị huyết áp thấp,67300,
+448,29,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,362,,Điện châm điều trị thiểu năng tuần hoàn não mạn tính,67300,
+449,29,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,363,,Điện châm điều trị hội chứng stress,67300,
+450,29,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,364,,Điện châm điều trị cảm mạo,67300,
+451,29,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,365,,Điện châm điều trị viêm amidan,67300,
+452,29,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,366,,Điện châm điều trị trĩ,67300,
+453,29,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,367,,Điện châm điều trị phục hồi chức năng cho trẻ bại liệt,67300,
+454,29,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,368,,Điện châm điều trị liệt tay do tổn thương đám rối cánh tay ở trẻ em,67300,
+455,29,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,369,,Điện châm điều trị chậm phát triển trí tuệ ở trẻ bại não,67300,
+456,29,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,370,,Điện châm điều trị phục hồi chức năng vận động ở trẻ bại não,67300,
+457,29,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,371,,Điện châm điều trị cơn đau quặn thận,67300,
+458,30,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,372,,Điện châm điều trị viêm bàng quang,67300,
+459,30,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,373,,Điện châm điều trị rối loạn tiểu tiện,67300,
+460,30,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,374,,Điện châm điều trị bí đái cơ năng,67300,
+461,30,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,375,,Điện châm điều trị sa tử cung,67300,
+462,30,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,376,,Điện châm điều trị hội chứng tiền mãn kinh,67300,
+463,30,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,377,,Điện châm điều trị liệt tứ chi do chấn thương cột sống,67300,
+464,30,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,378,,Điện châm điều trị rối loạn thần kinh chức năng sau chấn thương sọ não,67300,
+465,30,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,379,,Điện châm điều trị hội chứng ngoại tháp,67300,
+466,30,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,380,,Điện châm điều trị khàn tiếng,67300,
+467,30,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,381,,Điện châm điều trị rối loạn cảm giác đầu chi,67300,
+468,30,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,382,,Điện châm điều trị liệt chi trên,67300,
+469,30,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,383,,Điện châm điều trị chắp lẹo,67300,
+470,30,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,384,,Điện châm điều trị đau hố mắt,67300,
+471,30,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,385,,Điện châm điều trị viêm kết mạc,67300,
+472,30,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,386,,Điện châm điều trị viêm thần kinh thị giác sau giai đoạn cấp,67300,
+473,30,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,387,,Điện châm điều trị lác cơ năng,67300,
+474,30,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,388,,Điện châm điều trị rối loạn cảm giác nông,67300,
+475,31,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,389,,Điện châm điều trị viêm mũi xoang,67300,
+476,31,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,390,,Điện châm điều trị rối loạn tiêu hóa,67300,
+477,31,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,391,,Điện châm điều trị đau răng,67300,
+478,31,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,392,,Điện châm điều trị đau do thoái hóa khớp,67300,
+479,31,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,393,,Điện châm điều trị ù tai,67300,
+480,31,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,394,,Điện châm điều trị giảm khứu giác,67300,
+481,31,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,395,,Điện châm điều trị liệt do tổn thương đám rối dây thần kinh,67300,
+482,31,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,396,,Điện châm điều trị rối loạn thần kinh thực vật,67300,
+483,31,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,397,,Điện châm điều trị giảm đau do ung thư,67300,
+484,31,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,398,,Điện châm điều trị giảm đau do zona,67300,
+485,31,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,399,,"Điện châm điều trị liệt do viêm đa rễ, đa dây thần kinh",67300,
+486,31,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,400,,Điện châm điều trị chứng tic cơ mặt,67300,
+487,31,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,401,,Thuỷ châm điều trị hội chứng thắt lưng-hông,66100,
+488,31,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,402,,"Thuỷ châm điều trị đau đầu, đau nửa đầu",66100,
+489,31,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,403,,Thuỷ châm điều trị mất ngủ,66100,
+490,31,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,404,,Thuỷ châm điều trị hội chứng stress,66100,
+491,31,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,405,,Thuỷ châm điều trị nấc,66100,
+492,32,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,406,,"Thuỷ châm điều trị cảm mạo, cúm",66100,
+493,32,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,407,,Thuỷ châm điều trị viêm amydan,66100,
+494,32,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,408,,Thuỷ châm điều trị liệt nửa người do tai biến mạch máu não,66100,
+495,32,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,409,,Thuỷ châm điều trị hội chứng dạ dày tá tràng,66100,
+496,32,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,410,,Thuỷ châm điều trị trĩ,66100,
+497,32,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,411,,Thuỷ châm hỗ trợ điều trị bệnh vẩy nến,66100,
+498,32,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,412,,Thuỷ châm điều trị mày đay,66100,
+499,32,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,413,,Thuỷ châm điều trị bệnh viêm mũi dị ứng,66100,
+500,32,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,414,,Thuỷ châm điều trị tâm căn suy nhược,66100,
+501,32,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,415,,Thuỷ châm điều trị bại liệt trẻ em,66100,
+502,32,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,416,,Thuỷ châm điều trị giảm thính lực,66100,
+503,32,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,417,,Thuỷ châm điều trị liệt trẻ em,66100,
+504,32,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,418,,Thuỷ châm điều trị bệnh tự kỷ ở trẻ em,66100,
+505,32,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,419,,Thuỷ châm điều trị liệt do tổn thương đám rối cánh tay ở trẻ em,66100,
+506,32,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,420,,Thuỷ châm điều trị chậm phát triển trí tuệ ở trẻ bại não,66100,
+507,32,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,421,,Thuỷ châm điều trị phục hồi chức năng vận động ở trẻ bại não,66100,
+508,32,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,422,,Thuỷ châm điều trị cơn động kinh cục bộ,66100,
+509,33,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,423,,Thuỷ châm điều trị hội chứng tiền mãn kinh,66100,
+510,33,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,424,,Thuỷ châm điều trị thống kinh,66100,
+511,33,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,425,,Thuỷ châm điều trị rối loạn kinh nguyệt,66100,
+512,33,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,426,,Thuỷ châm điều trị đái dầm,66100,
+513,33,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,427,,Thuỷ châm điều trị hội chứng tiền đình,66100,
+514,33,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,428,,Thuỷ châm điều trị đau vai gáy,66100,
+515,33,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,429,,Thuỷ châm điều trị hen phế quản,66100,
+516,33,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,430,,Thuỷ châm điều trị huyết áp thấp,66100,
+517,33,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,431,,Thuỷ châm điều trị thiểu năng tuần hoàn não mạn tính,66100,
+518,33,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,432,,Thuỷ châm điều trị liệt dây thần kinh VII ngoại biên,66100,
+519,33,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,433,,Thuỷ châm điều trị đau dây thần kinh liên sườn,66100,
+520,33,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,434,,Thuỷ châm điều trị thất vận ngôn,66100,
+521,33,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,435,,Thuỷ châm điều trị đau dây V,66100,
+522,33,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,436,,Thuỷ châm điều trị đau liệt tứ chi do chấn thương cột sống,66100,
+523,33,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,437,,Thuỷ châm điều trị loạn chức năng do chấn thương sọ não,66100,
+524,33,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,438,,Thuỷ châm điều trị hội chứng ngoại tháp,66100,
+525,33,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,439,,Thuỷ châm điều trị khàn tiếng,66100,
+526,34,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,440,,Thuỷ châm điều trị rối loạn cảm giác đầu chi,66100,
+527,34,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,441,,Thuỷ châm điều trị liệt chi trên,66100,
+528,34,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,442,,Thuỷ châm điều trị liệt hai chi dưới,66100,
+529,34,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,443,,Thuỷ châm điều trị sụp mi,66100,
+530,34,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,444,,Thuỷ châm điều trị viêm mũi xoang,66100,
+531,34,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,445,,Thuỷ châm điều trị rối loạn tiêu hóa,66100,
+532,34,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,446,,Thuỷ châm điều trị đau răng,66100,
+533,34,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,447,,Thuỷ châm điều trị táo bón kéo dài,66100,
+534,34,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,448,,Thuỷ châm hỗ trợ điều trị viêm khớp dạng thấp,66100,
+535,34,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,449,,Thuỷ châm điều trị đau do thoái hóa khớp,66100,
+536,34,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,450,,Thuỷ châm điều trị viêm quanh khớp vai,66100,
+537,34,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,451,,Thuỷ châm điều trị đau lưng,66100,
+538,34,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,452,,Thuỷ châm điều trị sụp mi,66100,
+539,34,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,453,,Thuỷ châm điều trị đau hố mắt,66100,
+540,34,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,454,,Thuỷ châm điều trị viêm thần kinh thị giác sau giai đoạn cấp,66100,
+541,34,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,455,,Thuỷ châm điều trị lác cơ năng,66100,
+542,34,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,456,,Thuỷ châm điều trị giảm thị lực,66100,
+543,35,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,457,,Thuỷ châm điều trị viêm bàng quang,66100,
+544,35,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,458,,Thuỷ châm điều trị di tinh,66100,
+545,35,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,459,,Thuỷ châm điều trị liệt dương,66100,
+546,35,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,460,,Thuỷ châm điều trị rối loạn tiểu tiện,66100,
+547,35,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,461,,Thuỷ châm điều trị bí đái cơ năng,66100,
+548,35,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,462,,Xoa bóp bấm huyệt điều trị liệt chi trên,65500,
+549,35,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,463,,Xoa bóp bấm huyệt điều trị liệt chi dưới,65500,
+550,35,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,464,,Xoa bóp bấm huyệt điều trị liệt nửa người do tai biến mạch máu não,65500,
+551,35,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,465,,Xoa bóp bấm huyệt điều trị hội chứng thắt lưng- hông,65500,
+552,35,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,466,,Xoa bóp bấm huyệt điều trị liệt do viêm não,65500,
+553,35,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,467,,Xoa bóp bấm huyệt điều trị chậm phát triển trí tuệ ở trẻ bại não,65500,
+554,35,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,468,,Xoa bóp bấm huyệt phục hồi chức năng vận động ở trẻ bại não,65500,
+555,35,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,469,,Xoa bóp bấm huyệt điều trị cứng khớp chi trên,65500,
+556,35,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,470,,Xoa bóp bấm huyệt điều trị cứng khớp chi dưới,65500,
+557,35,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,471,,"Xoa bóp bấm huyệt điều trị choáng, ngất",65500,
+558,35,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,472,,Xoa bóp bấm huyệt điều trị bệnh tự kỷ ở trẻ em,65500,
+559,35,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,473,,Xoa bóp bấm huyệt điều trị chứng ù tai,65500,
+560,36,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,474,,Xoa bóp bấm huyệt điều trị giảm khứu giác,65500,
+561,36,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,475,,Xoa bóp bấm huyệt điều trị liệt do bệnh của cơ,65500,
+562,36,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,476,,Xoa bóp bấm huyệt điều trị tâm căn suy nhược,65500,
+563,36,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,477,,Xoa bóp bấm huyệt điều trị hội chứng ngoại tháp,65500,
+564,36,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,478,,"Xoa bóp bấm huyệt điều trị đau đầu, đau nửa đầu",65500,
+565,36,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,479,,Xoa bóp bấm huyệt điều trị mất ngủ,65500,
+566,36,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,480,,Xoa bóp bấm huyệt điều trị hội chứng stress,65500,
+567,36,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,481,,Xoa bóp bấm huyệt điều trị thiểu năng tuần hoàn não mạn tính,65500,
+568,36,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,482,,"Xoa bóp bấm huyệt điều trị tổn thương rễ, đám rối và dây thần kinh",65500,
+569,36,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,483,,Xoa bóp bấm huyệt điều trị tổn thương dây thần kinh V,65500,
+570,36,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,484,,Xoa bóp bấm huyệt điều trị liệt dây thần kinh số VII ngoại biên,65500,
+571,36,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,485,,Xoa bóp bấm huyệt điều trị sụp mi,65500,
+572,36,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,486,,Xoa bóp bấm huyệt điều trị viêm thần kinh thị giác sau giai đoạn cấp,65500,
+573,36,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,487,,Xoa bóp bấm huyệt điều trị lác cơ năng,65500,
+574,36,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,488,,Xoa bóp bấm huyệt điều trị giảm thị lực,65500,
+575,36,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,489,,Xoa bóp bấm huyệt điều trị hội chứng tiền đình,65500,
+576,36,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,490,,Xoa bóp bấm huyệt điều trị giảm thính lực,65500,
+577,37,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,491,,Xoa bóp bấm huyệt điều trị viêm mũi xoang,65500,
+578,37,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,492,,Xoa bóp bấm huyệt điều trị hen phế quản,65500,
+579,37,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,493,,Xoa bóp bấm huyệt hỗ trợ điều trị tăng huyết áp,65500,
+580,37,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,494,,Xoa bóp bấm huyệt điều trị huyết áp thấp,65500,
+581,37,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,495,,Xoa bóp bấm huyệt điều trị đau thần kinh liên sườn,65500,
+582,37,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,496,,Xoa bóp bấm huyệt điều trị hội chứng dạ dày- tá tràng,65500,
+583,37,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,497,,Xoa búp bấm huyệt điều trị nắc,65500,
+584,37,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,498,,Xoa bóp bấm huyệt điều trị viêm khớp dạng thấp,65500,
+585,37,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,499,,Xoa bóp bấm huyệt điều trị đau do thoái hoá khớp,65500,
+586,37,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,500,,Xoa bóp bấm huyệt điều trị đau lưng,65500,
+587,37,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,501,,Xoa bóp bấm huyệt điều trị viêm quanh khớp vai,65500,
+588,37,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,502,,Xoa bóp bấm huyệt điều trị hội chứng vai gáy,65500,
+589,37,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,503,,Xoa bóp bấm huyệt điều trị chứng tic cơ mặt,65500,
+590,37,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,504,,Xoa bóp bấm huyệt điều trị rối loạn cảm giác đầu chi,65500,
+591,37,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,505,,Xoa bóp bấm huyệt điều trị tắc tia sữa,65500,
+592,37,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,506,,Xoa bóp bấm huyệt điều trị rối loạn kinh nguyệt,65500,
+593,37,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,507,,Xoa bóp bấm huyệt điều trị đau bụng kinh,65500,
+594,38,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,508,,Xoa bóp bấm huyệt điều trị hội chứng tiền mãn kinh,65500,
+595,38,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,509,,Xoa bóp bấm huyệt điều trị táo bón,65500,
+596,38,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,510,,Xoa bóp bấm huyệt điều trị rối loạn tiêu hoá,65500,
+597,38,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,511,,Xoa bóp bấm huyệt điều trị rối loạn cảm giác nông,65500,
+598,38,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,512,,Xoa bóp bấm huyệt điều trị bí đái cơ năng,65500,
+599,38,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,513,,Xoa bóp bấm huyệt điều trị rối loạn thần kinh thực vật,65500,
+600,38,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,514,,Xoa bóp bấm huyệt điều trị béo phì,65500,
+601,38,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,515,,Xoa bóp bấm huyệt điều trị rối loạn chức năng vận động do chấn thương sọ não,65500,
+602,38,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,516,,Xoa bóp bấm huyệt điều trị liệt tứ chi do chấn thương cột sống,65500,
+603,38,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,517,,Xoa bóp bấm huyệt điều trị giảm đau sau phẫu thuật,65500,
+604,38,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,518,,Xoa bóp bấm huyệt điều trị giảm đau do ung thư,65500,
+605,38,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,519,,Xoa bóp bấm huyệt điều trị đái dầm,65500,
+606,38,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,520,,Xoa bóp bấm huyệt điều trị hội chứng phân ly,65500,
+607,38,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,521,,Cứu điều trị hội chứng thắt lưng- hông thể phong hàn,35500,
+608,38,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,522,,"Cứu điều trị đau đầu, đau nửa đầu thể hàn",35500,
+609,38,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,523,,Cứu điều trị nấc thể hàn,35500,
+610,38,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,524,,Cứu điều trị ngoại cảm phong hàn,35500,
+611,39,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,525,,Cứu điều trị khàn tiếng thể hàn,35500,
+612,39,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,526,,Cứu điều trị rối loạn cảm giác đầu chi thể hàn,35500,
+613,39,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,527,,Cứu điều trị liệt chi trên thể hàn,35500,
+614,39,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,528,,Cứu điều trị liệt chi dưới thể hàn,35500,
+615,39,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,529,,Cứu điều trị liệt nửa người thể hàn,35500,
+616,39,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,530,,Cứu điều trị liệt dây thần kinh số VII ngoại biên thể hàn,35500,
+617,39,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,531,,Cứu điều trị đau vai gáy cấp thể hàn,35500,
+618,39,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,532,,Cứu điều trị giảm thính lực thể hàn,35500,
+619,39,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,533,,Cứu hỗ trợ điều trị bệnh tự kỷ thể hàn,35500,
+620,39,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,534,,Cứu điều trị chậm phát triển trí tuệ ở trẻ bại não,35500,
+621,39,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,535,,Cứu điều trị di tinh thể hàn,35500,
+622,39,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,536,,Cứu điều trị liệt dương thể hàn,35500,
+623,39,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,537,,Cứu điều trị rối loạn tiểu tiện thể hàn,35500,
+624,39,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,538,,Cứu điều trị bí đái thể hàn,35500,
+625,39,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,539,,Cứu điều trị sa tử cung thể hàn,35500,
+626,39,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,540,,Cứu điều trị đau bụng kinh thể hàn,35500,
+627,39,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,541,,Cứu điều trị rối loạn kinh nguyệt thể hàn,35500,
+628,40,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,542,,Cứu điều trị đái dầm thể hàn,35500,
+629,40,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,543,,Cứu điều trị đau lưng thể hàn,35500,
+630,40,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,544,,Cứu điều trị giảm khứu giác thể hàn,35500,
+631,40,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,545,,Cứu điều trị rối loạn thần kinh thực vật thể hàn,35500,
+632,40,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,546,,Cứu điều trị cảm cúm thể hàn,35500,
+633,40,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,547,,Cứu điều trị rối loạn tiêu hóa thể hàn,35500,
+634,40,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,548,,Giác hơi điều trị ngoại cảm phong hàn,33200,
+635,40,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,549,,Giác hơi điều trị ngoại cảm phong nhiệt,33200,
+636,40,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,550,,Giác hơi điều trị các chứng đau,33200,
+637,40,BẢNG GIÁ DANH MỤC THỦ THUẬT VÀ CHẨN ĐOÁN HÌNH ẢNH,,551,,Điện châm,67300,
+638,41,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,1,18.0296.0066,Chụp cộng hưởng từ sọ não (0.2-1.5T),1311000,
+639,41,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,2,18.0297.0065,Chụp cộng hưởng từ sọ não có tiêm chất tương phản (0.2-1.5T),2214000,
+640,41,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,3,18.0298.0066,Chụp cộng hưởng từ não- mạch não không tiêm chất tương phản,1311000,
+641,41,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,4,18.0300.0066,Chụp cộng hưởng từ hệ mạch cổ không tiêm chất tương phản,1311000,
+642,41,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,5,18.0301.0065,Chụp cộng hưởng từ hệ mạch cổ có tiêm chất tương phản,2214000,
+643,41,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,6,18.0302.0065,Chụp cộng hưởng từ tuyến yên có tiêm chất tương phản,2214000,
+644,41,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,7,18.0303.0066,Chụp cộng hưởng từ hốc mắt và thần kinh thị giác,1311000,
+645,41,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,8,18.0304.0065,Chụp cộng hưởng từ hốc mắt và thần kinh thị giác có tiêm chất tương phản,2214000,
+646,41,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,9,18.0305.0065,Chụp cộng hưởng từ tưới máu não (perfusion),2214000,
+647,41,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,10,18.0306.0068,Chụp cộng hưởng từ phổ não (spect tính rography) (0.2-1.5T),3165000,
+648,41,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,11,18.0308.0066,Chụp cộng hưởng từ khuếch tán (DWI - Diffusion-weighted Imaging) (0.2-1.5T),1311000,
+649,42,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,12,18.0309.0065,Chụp cộng hưởng từ đáy sọ và xương đá (0.2-1.5T),2214000,
+650,42,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,13,18.0310.0066,Chụp cộng hưởng từ vùng mặt - cổ (0.2-1.5T),1311000,
+651,42,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,14,18.0311.0065,Chụp cộng hưởng từ vùng mặt - cổ có tiêm tương phản (0.2-1.5T),2214000,
+652,42,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,15,18.0312.0068,Chụp cộng hưởng từ sọ não chức năng (0.2-1.5T),3165000,
+653,42,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,16,18.0313.0066,Chụp cộng hưởng từ lồng ngực (0.2-1.5T),1311000,
+654,42,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,17,18.0314.0065,Chụp cộng hưởng từ lồng ngực có tiêm thuốc cản quang,2214000,
+655,42,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,18,18.0315.0065,Chụp cộng hưởng từ thông khí phổi (Heli) (0.2-,2214000,
+656,42,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,19,18.0316.0066,Chụp cộng hưởng từ tuyến vú (0.2-1.5T),1311000,
+657,42,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,20,18.0317.0065,Chụp cộng hưởng từ tuyến vú động học có tiêm tương phản (0.2-1.5T),2214000,
+658,42,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,21,18.0318.0068,Chụp cộng hưởng từ phổ tuyến vú (0.2-1.5T),3165000,
+659,42,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,22,18.0319.0066,"Chụp cộng hưởng từ tầng bụng không tiêm chất tương phản (gồm: chụp cộng hưởng từ gan-mật, tụy, lách, thận, dạ",1311000,
+660,42,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,23,18.0321.0065,"Chụp cộng hưởng từ vùng chậu (gồm: chụp cộng hưởng từ tử cung-phần phụ, tiền liệt tuyến, đại tràng chậu hông, trực",2214000,
+661,42,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,24,18.0322.0065,Chụp cộng hưởng từ  vùng chậu dò hậu môn (0.2-1.5T),2214000,
+662,42,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,25,18.0323.0065,Chụp cộng hưởng từ vùng chậu có tiêm chất tương phản (0.2-1.5T),2214000,
+663,43,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,26,18.0324.0066,"Chụp cộng hưởng từ bìu, dương vật (0.2-1.5T)",1311000,
+664,43,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,27,18.0325.0065,"Chụp cộng hưởng từ bìu, dương vật có tiêm chất tương phản",2214000,
+665,43,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,28,18.0326.0066,"Chụp cộng hưởng từ động học sàn chậu, tống phân (defecography-MR) (0.2-1.5T)",1311000,
+666,43,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,29,18.0327.0065,Chụp cộng hưởng từ ruột non (enteroclysis),2214000,
+667,43,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,30,18.0328.0065,Chụp cộng hưởng từ nội soi ảo khung đại tràng (virtual colonoscopy),2214000,
+668,43,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,31,18.0329.0065,Chụp cộng hưởng từ tuyến tiền liệt có tiêm chất tương phản,2214000,
+669,43,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,32,18.0330.0068,Chụp cộng hưởng từ phổ tuyến tiền liệt (0.2-1.5T),3165000,
+670,43,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,33,18.0331.0065,Chụp cộng hưởng từ đánh giá bánh nhau (rau),2214000,
+671,43,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,34,18.0332.0066,Chụp cộng hưởng từ thai nhi (0.2-1.5T),1311000,
+672,43,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,35,18.0333.0067,Chụp cộng hưởng từ gan với chất tương phản đặc hiệu mô (0.2-1.5T) [chụp cộng hưởng từ gan bằng chất tương phản,8665000,
+673,43,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,36,18.0334.0066,Chụp cộng hưởng từ cột sống cổ (0.2-1.5T),1311000,
+674,43,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,37,18.0335.0065,Chụp cộng hưởng từ cột sống cổ có tiêm tương phản (0.2-1.5T),2214000,
+675,43,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,38,18.0336.0066,Chụp cộng hưởng từ cột sống ngực (0.2-1.5T),1311000,
+676,43,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,39,18.0337.0065,Chụp cộng hưởng từ cột sống ngực có tiêm chất tương phản,2214000,
+677,44,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,40,18.0338.0066,Chụp cộng hưởng từ cột sống thắt lưng - cùng (0.2-1.5T),1311000,
+678,44,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,41,18.0339.0065,Chụp cộng hưởng từ cột sống thắt lưng - cùng có tiêm thuốc tương phản,2214000,
+679,44,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,42,18.0340.0066,Chụp cộng hưởng từ khớp (0.2-1.5T),1311000,
+680,44,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,43,18.0341.0065,Chụp cộng hưởng từ khớp có tiêm tương phản,2214000,
+681,44,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,44,18.0342.0065,Chụp cộng hưởng từ khớp có tiêm tương phản,2214000,
+682,44,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,45,18.0343.0066,Chụp cộng hưởng từ xương và tủy xương (0.2-,1311000,
+683,44,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,46,18.0344.0065,Chụp cộng hưởng từ xương và tủy xương có tiêm chất tương phản,2214000,
+684,44,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,47,18.0345.0066,Chụp cộng hưởng từ phần mềm chi (0.2-1.5T),1311000,
+685,44,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,48,18.0346.0065,Chụp cộng hưởng từ phần mềm chi có tiêm tương phản,2214000,
+686,44,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,49,18.0347.0065,Chụp cộng hưởng từ động mạch chủ-chậu,2214000,
+687,44,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,50,18.0348.0065,Chụp cộng hưởng từ động mạch chủ-ngực,2214000,
+688,44,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,51,18.0349.0065,Chụp cộng hưởng từ động mạch vành (1.5T),2214000,
+689,44,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,52,18.0350.0065,Chụp cộng hưởng từ tim (1.5T),2214000,
+690,44,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,53,18.0351.0065,"Chụp cộng hưởng từ tầng trên ổ bụng có khảo sát mạch các tạng (bao gồm mạch: gan, tụy, lách và mạch khối u)",2214000,
+691,45,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,54,18.0352.0066,Chụp cộng hưởng từ động mạch chi trên,1311000,
+692,45,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,55,18.0353.0065,Chụp cộng hưởng từ động mạch chi trên có tiêm thuốc tương phản,2214000,
+693,45,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,56,18.0354.0066,Chụp cộng hưởng từ động mạch chi dưới,1311000,
+694,45,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,57,18.0355.0065,Chụp cộng hưởng từ động mạch chi dưới có tiêm chất tương phản,2214000,
+695,45,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,58,18.0358.0066,Chụp cộng hưởng từ tĩnh mạch (1.5T),1311000,
+696,45,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,59,18.0359.0065,Chụp cộng hưởng từ tĩnh mạch có tiêm tương phản (1.5T),2214000,
+697,45,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,60,18.0360.0065,Chụp cộng hưởng từ bạch mạch có tiêm tương phản không đặc hiệu,2214000,
+698,45,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,61,18.0361.0065,Chụp cộng hưởng từ bạch mạch có tiêm tương phản có đặc hiệu,2214000,
+699,45,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,62,18.0364.0066,Chụp cộng hưởng từ dây thần kinh ngoại biên,1311000,
+700,45,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,63,18.0365.0068,Chụp cộng hưởng từ tưới máu các tạng (1.5T),3165000,
+701,45,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,64,18.0297.0065,Chụp cộng hưởng từ sọ não có tiêm chất tương phản (0.2-1.5T),2214000,
+702,45,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,65,18.0338.0066,Chụp cộng hưởng từ cột sống thắt lưng - cùng (0.2-1.5T),1311000,
+703,45,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,66,18.0296.0066,Chụp cộng hưởng từ sọ não (0.2-1.5T),1311000,
+704,45,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,67,18.0313.0066,Chụp cộng hưởng từ lồng ngực (0.2-1.5T),1311000,
+705,46,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,68,18.0332.0066,Chụp cộng hưởng từ thai nhi (0.2-1.5T),1311000,
+706,46,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,69,18.0334.0066,Chụp cộng hưởng từ cột sống cổ (0.2-1.5T),1311000,
+707,46,BẢNG GIÁ DỊCH VỤ CHỤP CỘNG HƯỞNG TỪ,,70,18.0338.0066,Chụp cộng hưởng từ cột sống thắt lưng - cùng (0.2-1.5T),1311000,
+708,47,BẢNG GIÁ DỊCH VỤ CHỤP CẮT LỚP VI TÍNH,,1,,Chụp CLVT sọ não không tiêm thuốc cản quang (từ 64-128 dãy),1446000,
+709,47,BẢNG GIÁ DỊCH VỤ CHỤP CẮT LỚP VI TÍNH,,2,,Chụp CLVT sọ não có tiêm thuốc cản quang (từ 64-128 dãy),1701000,Chưa bao gồm thuốc
+710,47,BẢNG GIÁ DỊCH VỤ CHỤP CẮT LỚP VI TÍNH,,3,,Chụp CLVT hệ động mạch cảnh có tiêm thuốc cản quang (từ 64-128 dãy),1701000,Chưa bao gồm thuốc
+711,47,BẢNG GIÁ DỊCH VỤ CHỤP CẮT LỚP VI TÍNH,,4,,Chụp CLVT tưới máu não (CT perfusion) có tiêm thuốc cản quang (từ 64-128 dãy),1701000,Chưa bao gồm thuốc
+712,47,BẢNG GIÁ DỊCH VỤ CHỤP CẮT LỚP VI TÍNH,,5,,Chụp CLVT mạch máu não có tiêm thuốc cản quang (từ 64-128 dãy),1701000,Chưa bao gồm thuốc
+713,47,BẢNG GIÁ DỊCH VỤ CHỤP CẮT LỚP VI TÍNH,,6,,Chụp CLVT sọ não có dựng hình 3D không tiêm thuốc cản quang (từ 64-128 dãy),1446000,
+714,47,BẢNG GIÁ DỊCH VỤ CHỤP CẮT LỚP VI TÍNH,,7,,Chụp CLVT sọ não có dựng hình 3D có tiêm thuốc cản quang (từ 64-128 dãy),1701000,Chưa bao gồm thuốc
+715,47,BẢNG GIÁ DỊCH VỤ CHỤP CẮT LỚP VI TÍNH,,8,,Chụp CLVT hàm-mặt không tiêm thuốc cản quang (từ 64-128 dãy),1446000,
+716,47,BẢNG GIÁ DỊCH VỤ CHỤP CẮT LỚP VI TÍNH,,9,,Chụp CLVT hàm-mặt có tiêm thuốc cản quang (từ 64-128 dãy),1701000,Chưa bao gồm thuốc
+717,47,BẢNG GIÁ DỊCH VỤ CHỤP CẮT LỚP VI TÍNH,,10,,Chụp CLVT tai-xương đá không tiêm thuốc cản quang (từ 64-128 dãy),1446000,
+718,47,BẢNG GIÁ DỊCH VỤ CHỤP CẮT LỚP VI TÍNH,,11,,Chụp CLVT tai-xương đá có tiêm thuốc cản quang (từ 64-128 dãy),1701000,Chưa bao gồm thuốc
+719,47,BẢNG GIÁ DỊCH VỤ CHỤP CẮT LỚP VI TÍNH,,12,,Chụp CLVT hốc mắt không tiêm thuốc cản quang (từ 64-128 dãy),1446000,
+720,47,BẢNG GIÁ DỊCH VỤ CHỤP CẮT LỚP VI TÍNH,,13,,Chụp CLVT hốc mắt có tiêm thuốc cản quang (từ 64-128 dãy),1701000,Chưa bao gồm thuốc
+721,47,BẢNG GIÁ DỊCH VỤ CHỤP CẮT LỚP VI TÍNH,,14,,Chụp CLVT hàm mặt có dựng hình 3D không tiêm thuốc cản quang (từ 64-128 dãy),1446000,
+722,47,BẢNG GIÁ DỊCH VỤ CHỤP CẮT LỚP VI TÍNH,,15,,Chụp CLVT hàm mặt có dựng hình 3D có tiêm thuốc cản quang (từ 64-128 dãy),1701000,Chưa bao gồm thuốc
+723,47,BẢNG GIÁ DỊCH VỤ CHỤP CẮT LỚP VI TÍNH,,16,,Chụp cắt lớp vi tính lồng ngực không tiêm thuốc cản quang (từ 64- 128 dãy),1446000,
+724,47,BẢNG GIÁ DỊCH VỤ CHỤP CẮT LỚP VI TÍNH,,17,,Chụp cắt lớp vi tính lồng ngực có tiêm thuốc cản quang (từ 64- 128 dãy),1701000,Chưa bao gồm thuốc
+725,47,BẢNG GIÁ DỊCH VỤ CHỤP CẮT LỚP VI TÍNH,,18,,Chụp cắt lớp vi tính phổi độ phân giải cao không tiêm thuốc cản quang (từ 64- 128 dãy),1446000,
+726,47,BẢNG GIÁ DỊCH VỤ CHỤP CẮT LỚP VI TÍNH,,19,,Chụp cắt lớp vi tính phổi độ phân giải cao có tiêm thuốc cản quang (từ 64- 128 dãy),1701000,Chưa bao gồm thuốc
+727,48,BẢNG GIÁ DỊCH VỤ CHỤP CẮT LỚP VI TÍNH,,20,,Chụp cắt lớp vi tính động mạch phổi có tiêm thuốc cản quang (từ 64- 128 dãy),1701000,Chưa bao gồm thuốc
+728,48,BẢNG GIÁ DỊCH VỤ CHỤP CẮT LỚP VI TÍNH,,21,,Chụp cắt lớp vi tính động mạch chủ ngực có tiêm thuốc cản quang (từ 64- 128 dãy),1701000,Chưa bao gồm thuốc
+729,48,BẢNG GIÁ DỊCH VỤ CHỤP CẮT LỚP VI TÍNH,,22,,"Chụp cắt lớp vi tính động mạch vành, tim có tiêm thuốc cản quang (từ 64- 128 dãy)",1701000,Chưa bao gồm thuốc
+730,48,BẢNG GIÁ DỊCH VỤ CHỤP CẮT LỚP VI TÍNH,,23,,Chụp cắt lớp vi tính tính điểm vôi hóa mạch vành không tiêm thuốc cản quang (từ 64- 128 dãy),1446000,
+731,48,BẢNG GIÁ DỊCH VỤ CHỤP CẮT LỚP VI TÍNH,,24,,"Chụp cắt lớp vi tính tầng trên ổ bụng thường quy (gồm: chụp Cắt lớp vi tính gan-mật, tụy, lách, dạ dày-tá tràng.v.v.) không tiêm thuốc cản quang (từ 64-128 dãy)",1446000,
+732,48,BẢNG GIÁ DỊCH VỤ CHỤP CẮT LỚP VI TÍNH,,25,,"Chụp cắt lớp vi tính tầng trên ổ bụng thường quy (gồm: chụp Cắt lớp vi tính gan-mật, tụy, lách, dạ dày-tá tràng.v.v.) có tiêm thuốc cản quang (từ 64-128 dãy)",1701000,Chưa bao gồm thuốc
+733,48,BẢNG GIÁ DỊCH VỤ CHỤP CẮT LỚP VI TÍNH,,26,,Chụp cắt lớp vi tính bụng-tiểu khung thường quy không tiêm thuốc cản quang (từ 64-128 dãy),1446000,
+734,48,BẢNG GIÁ DỊCH VỤ CHỤP CẮT LỚP VI TÍNH,,27,,Chụp cắt lớp vi tính bụng-tiểu khung thường quy có tiêm thuốc cản quang (từ 64-128 dãy),1701000,Chưa bao gồm thuốc
+735,48,BẢNG GIÁ DỊCH VỤ CHỤP CẮT LỚP VI TÍNH,,28,,"Chụp cắt lớp vi tính tiểu khung thường quy (gồm: chụp cắt lớp vi tính tử cung-buồng trứng, tiền liệt tuyến, các khối u vùng tiểu khung.v.v.) không tiêm thuốc cản quang (từ 64-128 dãy)",1446000,
+736,48,BẢNG GIÁ DỊCH VỤ CHỤP CẮT LỚP VI TÍNH,,29,,"Chụp cắt lớp vi tính tiểu khung thường quy (gồm: chụp cắt lớp vi tính tử cung-buồng trứng, tiền liệt tuyến, các khối u vùng tiểu khung.v.v.) có tiêm thuốc cản quang (từ 64-128 dãy)",1701000,Chưa bao gồm thuốc
+737,48,BẢNG GIÁ DỊCH VỤ CHỤP CẮT LỚP VI TÍNH,,30,,Chụp cắt lớp vi tính hệ tiết niệu thường quy không tiêm thuốc cản quang (từ 64-128 dãy),1446000,
+738,48,BẢNG GIÁ DỊCH VỤ CHỤP CẮT LỚP VI TÍNH,,31,,Chụp cắt lớp vi tính hệ tiết niệu thường quy có tiêm thuốc cản quang (từ 64-128 dãy),1701000,Chưa bao gồm thuốc
+739,48,BẢNG GIÁ DỊCH VỤ CHỤP CẮT LỚP VI TÍNH,,32,,"Chụp cắt lớp vi tính tầng trên ổ bụng có khảo sát mạch các tạng (bao gồm mạch: gan, tụy, lách và mạch khối u) có tiêm thuốc cản quang (từ 64-128 dãy)",1701000,Chưa bao gồm thuốc
+740,49,BẢNG GIÁ DỊCH VỤ CHỤP CẮT LỚP VI TÍNH,,33,,Chụp cắt lớp vi tính hệ tiết niệu có khảo sát mạch thận và/hoặc dựng hình đường bài xuất có tiêm thuốc cản quang (từ 64-128 dãy),1701000,Chưa bao gồm thuốc
+741,49,BẢNG GIÁ DỊCH VỤ CHỤP CẮT LỚP VI TÍNH,,34,,Chụp cắt lớp vi tính gan có dựng hình đường mật không tiêm thuốc cản quang (từ 64-128 dãy),1446000,
+742,49,BẢNG GIÁ DỊCH VỤ CHỤP CẮT LỚP VI TÍNH,,35,,Chụp cắt lớp vi tính gan có dựng hình đường mật có tiêm thuốc cản quang (từ 64-128 dãy),1701000,Chưa bao gồm thuốc
+743,49,BẢNG GIÁ DỊCH VỤ CHỤP CẮT LỚP VI TÍNH,,36,,Chụp cắt lớp vi tính tạng khảo sát huyết động học khối u (CT perfusion) có tiêm thuốc cản quang (từ 64-128 dãy),1701000,Chưa bao gồm thuốc
+744,49,BẢNG GIÁ DỊCH VỤ CHỤP CẮT LỚP VI TÍNH,,37,,"Chụp cắt lớp vi tính ruột non (entero-scan) không dùng sonde, không tiêm thuốc cản quang (từ 64-128 dãy)",1446000,
+745,49,BẢNG GIÁ DỊCH VỤ CHỤP CẮT LỚP VI TÍNH,,38,,"Chụp cắt lớp vi tính ruột non (entero-scan) không dùng sonde, có tiêm thuốc cản quang (từ 64-128 dãy)",1701000,Chưa bao gồm thuốc
+746,49,BẢNG GIÁ DỊCH VỤ CHỤP CẮT LỚP VI TÍNH,,39,,Chụp cắt lớp vi tính đại tràng (colo-scan) dùng dịch hoặc hơi có nội soi ảo không tiêm thuốc cản quang (từ 64-128 dãy),1446000,
+747,49,BẢNG GIÁ DỊCH VỤ CHỤP CẮT LỚP VI TÍNH,,40,,Chụp cắt lớp vi tính đại tràng (colo-scan) dùng dịch hoặc hơi có nội soi ảo có tiêm thuốc cản quang (từ 64-128 dãy),1701000,Chưa bao gồm thuốc
+748,49,BẢNG GIÁ DỊCH VỤ CHỤP CẮT LỚP VI TÍNH,,41,,Chụp cắt lớp vi tính động mạch chủ-chậu có tiêm thuốc cản quang (từ 64-128 dãy),1701000,Chưa bao gồm thuốc
+749,49,BẢNG GIÁ DỊCH VỤ CHỤP CẮT LỚP VI TÍNH,,42,,Chụp cắt lớp vi tính mạch máu chi trên có tiêm thuốc cản quang (từ 64- 128 dãy),1701000,Chưa bao gồm thuốc
+750,49,BẢNG GIÁ DỊCH VỤ CHỤP CẮT LỚP VI TÍNH,,43,,Chụp cắt lớp vi tính mạch máu chi dưới có tiêm thuốc cản quang (từ 64- 128 dãy),1701000,Chưa bao gồm thuốc
+751,49,BẢNG GIÁ DỊCH VỤ CHỤP CẮT LỚP VI TÍNH,,44,,Chụp cắt lớp vi tính cột sống cổ không tiêm thuốc cản quang (từ 64- 128 dãy),1446000,
+752,49,BẢNG GIÁ DỊCH VỤ CHỤP CẮT LỚP VI TÍNH,,45,,Chụp cắt lớp vi tính cột sống cổ có tiêm thuốc cản quang (từ 64- 128 dãy),1701000,Chưa bao gồm thuốc
+753,49,BẢNG GIÁ DỊCH VỤ CHỤP CẮT LỚP VI TÍNH,,46,,Chụp cắt lớp vi tính cột sống ngực không tiêm thuốc cản quang (từ 64- 128 dãy),1446000,
+754,49,BẢNG GIÁ DỊCH VỤ CHỤP CẮT LỚP VI TÍNH,,47,,Chụp cắt lớp vi tính cột sống ngực có tiêm thuốc cản quang (từ 64- 128 dãy),1701000,Chưa bao gồm thuốc
+755,49,BẢNG GIÁ DỊCH VỤ CHỤP CẮT LỚP VI TÍNH,,48,,Chụp cắt lớp vi tính cột sống thắt lưng không tiêm thuốc cản quang (từ 64- 128 dãy),1446000,
+756,49,BẢNG GIÁ DỊCH VỤ CHỤP CẮT LỚP VI TÍNH,,49,,Chụp cắt lớp vi tính cột sống thắt lưng có tiêm thuốc cản quang (từ 64- 128 dãy),1701000,Chưa bao gồm thuốc
+757,50,BẢNG GIÁ DỊCH VỤ CHỤP CẮT LỚP VI TÍNH,,50,,Chụp cắt lớp vi tính khớp thường quy không tiêm thuốc cản quang (từ 64- 128 dãy),1446000,
+758,50,BẢNG GIÁ DỊCH VỤ CHỤP CẮT LỚP VI TÍNH,,51,,Chụp cắt lớp vi tính khớp thường quy có tiêm thuốc cản quang (từ 64- 128 dãy),1701000,Chưa bao gồm thuốc
+759,50,BẢNG GIÁ DỊCH VỤ CHỤP CẮT LỚP VI TÍNH,,52,,Chụp cắt lớp vi tính khớp có tiêm thuốc cản quang vào ổ khớp (từ 64- 128 dãy),1701000,Chưa bao gồm thuốc
+760,50,BẢNG GIÁ DỊCH VỤ CHỤP CẮT LỚP VI TÍNH,,53,,Chụp cắt lớp vi tính xương chi không tiêm thuốc cản quang (từ 64- 128 dãy),1446000,
+761,50,BẢNG GIÁ DỊCH VỤ CHỤP CẮT LỚP VI TÍNH,,54,,Chụp cắt lớp vi tính xương chi có tiêm thuốc cản quang (từ 64- 128 dãy),1701000,Chưa bao gồm thuốc
+762,50,BẢNG GIÁ DỊCH VỤ CHỤP CẮT LỚP VI TÍNH,,55,,Chụp cắt lớp vi tính tầm soát toàn thân có tiêm thuốc cản quang (từ 64- 128 dãy),3451000,Chưa bao gồm thuốc
+763,51,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,1,,Đặt máy tạo nhịp,3000000,"Chưa bao gồm máy tạo nhịp, máy phá rung."
+764,51,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,2,,Đốt vách liên thất bằng cồn,15000000,
+765,51,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,3,,Bít thông liên thất/liên nhĩ bằng dụng cụ qua da,52000000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, stent, các vật liệu nút mạch, các vi ống thông, vi dây dẫn, các vòng xoắn kim loại, dụng cụ lấy dị vật, bộ dụng cụ lấy huyết khối."
+766,51,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,4,,Bít ống động mạch bằng dụng cụ qua da,40000000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, stent, các vật liệu nút mạch, các vi ống thông, vi dây dẫn, các vòng xoắn kim loại, dụng cụ lấy dị vật, bộ dụng cụ lấy huyết khối."
+767,51,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,5,,Bít tiểu nhĩ trái bằng dụng cụ nhằm ngăn ngừa biến cố tắc mạch ở bệnh nhân rung nhĩ,52000000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, stent, các vật liệu nút mạch, các vi ống thông, vi dây dẫn, các vòng xoắn kim loại, dụng cụ lấy dị vật, bộ dụng cụ lấy huyết khối."
+768,51,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,6,,Đặt filter lọc máu tĩnh mạch chủ,40000000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, stent, các vật liệu nút mạch, các vi ống thông, vi dây dẫn, các vòng xoắn kim loại, dụng cụ lấy dị vật, bộ dụng cụ lấy huyết khối."
+769,51,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,7,,Đóng lỗ rò động mạch vành,52000000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, stent, các vật liệu nút mạch, các vi ống thông, vi dây dẫn, các vòng xoắn kim loại, dụng cụ lấy dị vật, bộ dụng cụ lấy huyết khối."
+770,51,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,8,,Hút huyết khối trong động mạch vành,25000000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, stent, các vật liệu nút mạch, các vi ống thông, vi dây dẫn, các vòng xoắn kim loại, dụng cụ lấy dị vật, bộ dụng cụ lấy huyết khối."
+771,51,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,9,,Nong động mạch cảnh,22000000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, bộ bơm áp lực, stent, các vật liệu nút mạch, các vi ống thông, vi dây dẫn, các vòng xoắn kim loại."
+772,51,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,10,,Nong động mạch ngoại biên,22000000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, bộ bơm áp lực, stent, các vật liệu nút mạch, các vi ống thông, vi dây dẫn, các vòng xoắn kim loại."
+773,51,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,11,,Nong van động mạch chủ,22000000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, stent, các vật liệu nút mạch, các vi ống thông, vi dây dẫn, các vòng xoắn kim loại, dụng cụ lấy dị vật, bộ dụng cụ lấy huyết khối."
+774,51,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,12,,Nong hẹp eo động mạch chủ,22000000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, stent, các vật liệu nút mạch, các vi ống thông, vi dây dẫn, các vòng xoắn kim loại, dụng cụ lấy dị vật, bộ dụng cụ lấy huyết khối."
+775,51,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,13,,Nong van động mạch phổi,22000000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, stent, các vật liệu nút mạch, các vi ống thông, vi dây dẫn, các vòng xoắn kim loại, dụng cụ lấy dị vật, bộ dụng cụ lấy huyết khối."
+776,51,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,14,,Nong và đặt stent các động mạch khác,25000000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, stent, các vật liệu nút mạch, các vi ống thông, vi dây dẫn, các vòng xoắn kim loại, dụng cụ lấy dị vật, bộ dụng cụ lấy huyết khối."
+777,51,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,15,,Đặt stent động mạch vành,25000000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, stent, các vật liệu nút mạch, các vi ống thông, vi dây dẫn, các vòng xoắn kim loại, dụng cụ lấy dị vật, bộ dụng cụ lấy huyết khối."
+778,51,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,16,,Đặt stent động mạch cảnh,25000000,
+779,51,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,17,,Đặt stent động mạch ngoại biên,25000000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, bộ bơm áp lực, stent, các vật liệu nút mạch, các vi ống thông, vi dây dẫn, các vòng xoắn kim loại."
+780,51,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,18,,Đặt stent động mạch thận,25000000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, stent, các vật liệu nút mạch,"
+781,51,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,19,,Đặt stent ống động mạch,25000000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, stent, các vật liệu nút mạch,"
+782,51,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,20,,Đặt stent Graft điều trị bệnh lý động mạch chủ,25000000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, bộ bơm áp lực, stent, các vật liệu nút mạch, các vi ống thông, vi dây dẫn, các vòng xoắn kim loại."
+783,51,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,21,,Đặt stent hẹp động mạch chủ,25000000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, bộ bơm áp lực, stent, các vật liệu nút mạch, các vi ống thông, vi dây dẫn, các vòng xoắn kim loại."
+784,52,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,22,,Đặt stent tĩnh mạch phổi,25000000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, stent, các vật liệu nút mạch, các vi ống thông, vi dây dẫn, các vòng xoắn kim loại, dụng cụ lấy dị vật, bộ dụng cụ lấy huyết khối."
+785,52,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,23,,Đặt stent phình động mạch chủ,25000000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, stent, các vật liệu nút mạch, các vi ống thông, vi dây dẫn, các vòng xoắn kim loại, dụng cụ lấy dị vật, bộ dụng cụ lấy huyết khối."
+786,52,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,24,,Nong mạch/đặt stent mạch các loại,25000000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, stent, các vật liệu nút mạch, các vi ống thông, vi dây dẫn, các vòng xoắn kim loại, dụng cụ lấy dị vật, bộ dụng cụ lấy huyết khối."
+787,52,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,25,,Nong van hai lá [dưới DSA],22000000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, stent, các vật liệu nút mạch, các vi ống thông, vi dây dẫn, các vòng xoắn kim loại, dụng cụ lấy dị vật, bộ dụng cụ lấy huyết khối."
+788,52,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,26,,Nong hẹp eo động mạch chủ + đặt stent,25000000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, bộ bơm áp lực, stent, các vật liệu nút mạch, các vi ống thông, vi dây dẫn, các vòng xoắn kim loại."
+789,52,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,27,,Nong hẹp nhánh động mạch phổi,22000000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, stent, các vật liệu nút mạch, các vi ống thông, vi dây dẫn, các vòng xoắn kim loại."
+790,52,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,28,,Nong hẹp tĩnh mạch phổi,22000000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, stent, các vật liệu nút mạch, các vi ống thông, vi dây dẫn, các vòng xoắn kim loại."
+791,52,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,29,,"Chụp và nong động mạch chi (trên, dưới) số hóa xóa nền",25000000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, bộ bơm áp lực, stent, các vật liệu nút mạch, các vi ống thông, vi dây dẫn, các vòng xoắn kim loại."
+792,52,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,30,,"Chụp và nút mạch dị dạng mạch chi (trên, dưới) số hóa xóa nền",52000000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, bộ bơm áp lực, stent, các vật liệu nút mạch, các vi ống thông, vi dây dẫn, các vòng xoắn kim loại."
+793,52,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,31,,"Chụp, nong và đặt Stent động mạch chi (trên, dưới) số hóa xóa nền",25000000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, bộ bơm áp lực, stent, các vật liệu nút mạch, các vi ống thông, vi dây dẫn, các vòng xoắn kim loại."
+794,52,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,32,,"Chụp, nong động mạch vành bằng bóng",25000000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, stent, các vật liệu nút mạch, các vi ống thông, vi dây dẫn, các vòng xoắn kim loại, dụng cụ lấy dị vật, bộ dụng cụ lấy huyết khối."
+795,52,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,33,,Chụp và can thiệp mạch chủ ngực số hóa xóa nền,25000000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, bộ bơm áp lực, stent, các vật liệu nút mạch, các vi ống thông, vi dây dẫn, các vòng xoắn kim loại."
+796,52,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,34,,Chụp và can thiệp mạch chủ bụng số hóa xóa nền,25000000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, bộ bơm áp lực, stent, các vật liệu nút mạch, các vi ống thông, vi dây dẫn, các vòng xoắn kim loại."
+797,52,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,35,,"Chụp và can thiệp tĩnh mạch chi (trên, dưới) số hóa xóa nền",25000000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, bộ bơm áp lực, stent, các vật liệu nút mạch, các vi ống thông, vi dây dẫn, các vòng xoắn kim loại."
+798,52,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,36,,Chụp nong và đặt Stent điều trị hẹp động mạch nội sọ số hóa xóa nền,25000000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, bộ bơm áp lực, stent, các vật liệu nút mạch, các vi ống thông, vi dây dẫn, các vòng xoắn kim loại, dụng cụ lấy dị vật, hút huyết khối."
+799,52,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,37,,Chụp nong động mạch ngoại biên bằng bóng [dưới DSA],25000000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, bộ bơm áp lực, stent, các vật liệu nút mạch, các vi ống thông, vi dây dẫn, các vòng xoắn kim loại."
+800,52,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,38,,Chụp động mạch não số hóa xóa nền (DSA),6000000,
+801,52,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,39,,Chụp mạch vùng đầu mặt cổ số hóa xóa nền (DSA),6000000,
+802,52,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,40,,Chụp động mạch phế quản số hóa xóa nền (DSA),6000000,
+803,52,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,41,,Chụp các động mạch tủy [dưới DSA],6000000,
+804,53,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,42,,Chụp tĩnh mạch số hóa xóa nền (DSA),6000000,
+805,53,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,43,,Chụp tĩnh mạch lách - cửa số hóa xóa nền (DSA),6000000,
+806,53,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,44,,Chụp tĩnh mạch lách - cửa đo áp lực số hóa xóa nền (DSA),6000000,
+807,53,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,45,,Chụp tĩnh mạch chi số hóa xóa nền (DSA),6000000,
+808,53,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,46,,Chụp động mạch các loại chọc kim trực tiếp số hóa xóa nền (DSA),6000000,
+809,53,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,47,,Chụp động mạch chủ số hóa xóa nền (DSA),6000000,
+810,53,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,48,,Chụp động mạch chậu số hóa xóa nền (DSA),6000000,
+811,53,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,49,,"Chụp động mạch tạng (gan, lách, thận, tử cung, sinh dục..)/mạch mạc treo số hóa xóa nền (DSA)",6000000,
+812,53,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,50,,"Chụp động mạch chi (trên, dưới) số hóa xóa nền (DSA)",6000000,
+813,53,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,51,,Chụp động mạch phổi số hóa xóa nền (DSA),6000000,
+814,53,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,52,,Chụp động mạch vành,6000000,
+815,53,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,53,,Thông tim và chụp buồng tim cản quang,6000000,
+816,53,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,54,,Phá vách liên nhĩ,22000000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, stent, các vật liệu nút mạch, các vi ống thông, vi dây dẫn, các vòng xoắn kim loại, dụng cụ lấy dị vật, bộ dụng cụ lấy huyết khối."
+817,53,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,55,,Điều trị rối loạn nhịp tim bằng sóng tần số radio,20000000,Chưa bao gồm bộ dụng cụ điều trị rối loạn nhịp tim có sử dụng hệ thống lập bản đồ ba chiều giải phẫu - điện học các buồng tim.
+818,53,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,56,,Thăm dò điện sinh lý tim,12000000,Chưa bao gồm bộ dụng cụ thăm dò điện sinh lý tim.
+819,53,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,57,,"Điều trị rối loạn nhịp sử dụng mapping 3D bằng năng lượng có tần số radio (RF) (rung nhĩ, đốt tim nhanh nhĩ, cuồng nhĩ, nhịp nhanh thất)",30000000,Chưa bao gồm bộ dụng cụ điều trị rối loạn nhịp tim có sử dụng hệ thống lập bản đồ ba chiều giải phẫu - điện học các buồng tim.
+820,53,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,58,,Điều trị suy tĩnh mạch bằng Laser nội mạch,19800000,
+821,53,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,59,,Điều trị suy tĩnh mạch bằng Laser nội mạch,22800000,
+822,53,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,60,,Điều trị suy tĩnh mạch bằng năng lượng sóng tần số radio,22500000,
+823,54,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,61,,Điều trị suy tĩnh mạch bằng năng lượng sóng tần số radio,19500000,
+824,54,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,62,,Siêu âm trong lòng mạch vành (iVUS),1998000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, bộ bơm áp lực, stent, các vật liệu nút mạch, các vi ống thông, vi dây dẫn, các vòng xoắn kim loại."
+825,54,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,63,,Chụp và nút mạch điều trị phì đại lành tính tuyến tiền liệt,8996000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, bộ bơm áp lực, stent, các vật liệu nút mạch, các vi ống thông, vi dây dẫn, các vòng xoắn kim loại."
+826,54,BẢNG GIÁ DANH MỤC CAN THIỆP TIM MẠCH,,64,,Chụp và can thiệp lấy huyết khối động mạch não số hóa xóa nền,9546000,"Chưa bao gồm vật tư chuyên dụng dùng để can thiệp: bóng nong, stent, các vật liệu nút mạch, các vi ống thông, vi dây dẫn, các vòng xoắn kim loại, dụng cụ lấy dị vật, bộ dụng cụ lấy huyết khối."
+827,55,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,Loại A: Đặc biệt,1,,Thông liên thất+hở van ĐMC(Có sửa/thay van chủ) (Có thể kèm theo xoang Valsalva),57960000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+828,55,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,Loại A: Đặc biệt,2,,APSO sửa toàn bộ,68310000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+829,55,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,Loại A: Đặc biệt,3,,Thất phải hai đường thoát (VDDI) + thông liên thất (sửa toàn bộ),62100000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+830,55,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,Loại A: Đặc biệt,4,,APSI (sửa toàn bộ),68310000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+831,55,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,Loại A: Đặc biệt,5,,Chuyển vị đại động mạch (TGV) (sửa toàn bộ),72450000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+832,55,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,Loại A: Đặc biệt,6,,Thân chung động mạch (sửa toàn bộ),62100000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+833,55,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,Loại A: Đặc biệt,7,,Bệnh EBSTEIN (có sửa 3 lá),62100000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+834,55,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,Loại A: Đặc biệt,8,,Phẫu thuật Ross,57960000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+835,55,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,Loại A: Đặc biệt,9,,Phẫu thuật Bental,62100000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+836,55,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,Loại A: Đặc biệt,10,,Ba van: Hai lá-ĐMC-Ba lá(Thay 02 van+01 sửa),62100000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+837,55,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,Loại A: Đặc biệt,11,,"Giả phình thất trái, túi phình thất trái",62100000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+838,55,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,Loại A: Đặc biệt,12,,Phẫu thuật phồng động mạch chủ ngực với tim phổi máy,62100000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+839,55,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,Loại A: Đặc biệt,13,,Thay van 2 lá ± 3 lá/có thai,51750000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+840,55,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,Loại A: Đặc biệt,14,,Thay van hai lá ± 3 lá/phù phổi cấp,51750000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+841,55,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,Loại A: Đặc biệt,15,,Thay lại 1 van,47610000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+842,55,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,Loại A: Đặc biệt,16,,Thay lại 2 van,62100000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+843,55,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,Loại A: Đặc biệt,17,,Cầu nối mạch vành,68310000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+844,55,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,Loại A: Đặc biệt,18,,Thay van + cầu nối vành,68310000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+845,55,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,Loại A: Đặc biệt,19,,Mổ lại theo kế hoạch những trường hợp đã phẫu thuật tim hở trước đó,57960000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+846,55,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,Loại A: Đặc biệt,20,,Tạo hình van 2 lá,45540000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+847,55,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,Loại A: Đặc biệt,21,,Tạo hình van 2 lá và 3 lá(có vòng van),47610000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+848,55,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,Loại A: Đặc biệt,22,,Thay 1 van,44510000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+849,55,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,Loại A: Đặc biệt,23,,Thay 2 van,51750000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+850,55,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,Loại A: Đặc biệt,24,,Thay 1 van+tạo hình 3 lá (có vòng van),46580000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+851,55,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,Loại B:,25,,Thông liên thất,49680000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+852,56,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,Loại B:,26,,Thông liên thất+tạo hình 3 lá,51750000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+853,56,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,Loại B:,27,,Thông liên thất + hẹp phổi,53820000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+854,56,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,Loại B:,28,,Thông liên nhĩ + tạo hình 3 lá,47610000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+855,56,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,Loại B:,29,,Thông liên nhĩ + hở 2 lá (có sửa 2 lá),51750000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+856,56,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,Loại B:,30,,Thông liên nhĩ + hẹp 2 lá (có sửa 2 lá),51750000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+857,56,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,Loại B:,31,,Thông liên thất+hở 2 lá(có sửa 2 lá),55890000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+858,56,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,Loại B:,32,,Thông liên thất + hẹp 2 lá (có sửa 2 lá),55890000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+859,56,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,Loại B:,33,,Sửa toàn bộ bệnh Fallot,62100000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+860,56,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,Loại B:,34,,"Hở 2 lá bẩm sinh, hẹp 2 lá bẩm sinh",51750000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+861,56,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,Loại B:,35,,Ống nhĩ thất bán phần,51750000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+862,56,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,Loại B:,36,,Ống nhĩ thất thể trung gian,57960000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+863,56,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,Loại B:,37,,Tĩnh mạch phổi đổ bất thường toàn bộ,51750000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+864,56,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,Loại B:,38,,Hở 3 lá bẩm sinh,51750000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+865,56,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,Loại B:,39,,Một nhĩ,47610000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+866,56,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,Loại B:,40,,Cửa sổ chủ phế,51750000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+867,56,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,Loại B:,41,,Túi thừa thất trái; nhĩ trái,51750000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+868,56,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,Loại B:,42,,Bệnh lý 2 lá + hở 3 lá (có sửa 3 lá),51750000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+869,56,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,Loại B:,43,,Hở chủ – Hẹp chủ (sửa van chủ),51750000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+870,56,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,Loại B:,44,,Phẫu thuật u tim (u nhầy),47610000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+871,56,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,Loại C:,45,,Thông liên nhĩ,45540000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+872,56,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,Loại C:,46,,Tim 3 buồng nhĩ,51750000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+873,56,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,Loại C:,47,,Hẹp phổi ± thông liên nhĩ/lỗ bầu dục,51750000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+874,56,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,Loại C:,48,,Dò động mạch vành (vào buồng tim),49680000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+875,56,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,Loại C:,49,,Cầu nối tĩnh mạch chủ-Động mạch phổi hoặc Blalock có tuần hoàn ngoài cơ thể,49680000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+876,56,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,Loại C:,50,,Phẫu thuật phồng động mạch chủ ngực kín có CEC,62100000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+877,56,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,Loại C:,51,,Dò xoang Valsalva,49680000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+878,56,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,Loại C:,52,,Ống động mạch + Hẹp dưới van động mạch chủ bẩm sinh,51750000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+879,56,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,Loại C:,53,,"Hẹp dưới van ĐMC bẩm sinh,hẹp van ĐMC bẩm sinh",51750000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+880,57,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,II. PHẪU THUẬT TIM ÍT XÂM LẤN,64,,Phẫu thuật vá thông liên thất [PHẪU THUẬT ÍT XÂM LẤN VÁ THÔNG LIÊN THẤT],72300000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+881,57,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,II. PHẪU THUẬT TIM ÍT XÂM LẤN,65,,Phẫu thuật bệnh tim bẩm sinh thông liên nhĩ [NHI] [PHẪU THUẬT ÍT XÂM LẤN ĐÓNG LỖ THÔNG LIÊN NHĨ + SỬA VAN BA LÁ],70314000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+882,57,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,II. PHẪU THUẬT TIM ÍT XÂM LẤN,66,,Phẫu thuật đóng thông liên nhĩ [PHẪU THUẬT ÍT XÂM LẤN ĐÓNG LỖ THÔNG LIÊN NHĨ + SỬA VAN BA LÁ],70314000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+883,57,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,II. PHẪU THUẬT TIM ÍT XÂM LẤN,67,,Phẫu thuật điều trị kênh nhĩ thất bán phần [NHI] [PHẪU THUẬT ÍT XÂM LẤN BỆNH THÔNG SÀN NHĨ THẤT BÁN PHẦN],74370000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+884,57,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,II. PHẪU THUẬT TIM ÍT XÂM LẤN,68,,Phẫu thuật sửa toàn bộ kênh sàn nhĩ – thất bán phần [PHẪU THUẬT ÍT XÂM LẤN BỆNH THÔNG SÀN NHĨ THẤT BÁN PHẦN],74370000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+885,57,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,II. PHẪU THUẬT TIM ÍT XÂM LẤN,69,,Phẫu thuật sửa toàn bộ bệnh tĩnh mạch phổi đổ lạc chỗ bán phần [PHẪU THUẬT ÍT XÂM LẤN SỬA TĨNH MẠCH PHỔI LẠC CHỖ BÁN PHẦN],70670000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+886,57,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,II. PHẪU THUẬT TIM ÍT XÂM LẤN,70,,Phẫu thuật tạo hình hoặc thay van ba lá đơn thuần [PHẪU THUẬT ÍT XÂM LẤN SỬA VAN BA LÁ KHÔNG/CÓ ĐẶT VÒNG VAN] (Hở 3 lá bẩm sinh),67650000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+887,57,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,II. PHẪU THUẬT TIM ÍT XÂM LẤN,71,,Phẫu thuật cắt u nhày nhĩ trái [PHẪU THUẬT ÍT XÂM LẤN CẮT U NHẢY NHĨ],70230000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+888,57,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,II. PHẪU THUẬT TIM ÍT XÂM LẤN,72,,Phẫu thuật bệnh tim bẩm sinh thông liên nhĩ [NHI] [PHẪU THUẬT ÍT XÂM LẤN VÁ THÔNG LIÊN NHĨ],64460000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+889,57,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,II. PHẪU THUẬT TIM ÍT XÂM LẤN,73,,Phẫu thuật đóng thông liên nhĩ [PHẪU THUẬT ÍT XÂM LẤN VÁ THÔNG LIÊN NHĨ],64460000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+890,58,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,II. PHẪU THUẬT TIM ÍT XÂM LẤN,74,,Phẫu thuật bệnh tim bẩm sinh thông liên nhĩ [NHI] [PHẪU THUẬT ÍT XÂM LẤN ĐÓNG LỖ THÔNG LIÊN NHĨ + SỬA TĨNH MẠCH PHỔI LẠC CHỖ BÁN PHẦN],68244000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+891,58,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,II. PHẪU THUẬT TIM ÍT XÂM LẤN,75,,Phẫu thuật đóng thông liên nhĩ [PHẪU THUẬT ÍT XÂM LẤN ĐÓNG LỖ THÔNG LIÊN NHĨ + SỬA TĨNH MẠCH PHỔI LẠC CHỖ BÁN PHẦN],68244000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+892,58,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,II. PHẪU THUẬT TIM ÍT XÂM LẤN,76,,Phẫu thuật bệnh tim bẩm sinh ba buồng nhĩ [NHI] [PHẪU THUẬT ÍT XÂM LẤN SỬA MÀNG NGĂN NHĨ TRÁI],74080000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+893,58,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,II. PHẪU THUẬT TIM ÍT XÂM LẤN,77,,Phẫu thuật sửa toàn bộ bệnh nhĩ 3 buồng [PHẪU THUẬT ÍT XÂM LẤN SỬA MÀNG NGĂN NHĨ TRÁI],74080000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+894,58,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,II. PHẪU THUẬT TIM ÍT XÂM LẤN,78,,Phẫu thuật sửa chữa hẹp đường ra thất phải đơn thuần [NHI] [PHẪU THUẬT ÍT XÂM LẤN SỬA HẸP ĐƯỜNG RA THẤT PHẢI],70670000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+895,58,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,II. PHẪU THUẬT TIM ÍT XÂM LẤN,79,,"Phẫu thuật điều trị hẹp đường ra thất phải đơn thuần (hẹp phễu thất phải, van động mạch phổi …) [PHẪU THUẬT ÍT XÂM LẤN SỬA HẸP ĐƯỜNG RA THẤT PHẢI]",70670000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+896,58,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,III. PHẪU THUẬT TIM KÍN,80,,Phẫu thuật động mạch chủ ngực không dùng CEC,12420000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+897,58,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,III. PHẪU THUẬT TIM KÍN,81,,Cắt ống động mạch,12550000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+898,58,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,III. PHẪU THUẬT TIM KÍN,82,,Cắt khâu eo động mạch chủ,13931000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+899,58,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,III. PHẪU THUẬT TIM KÍN,83,,Phẫu thuật Blalock,13931000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+900,58,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,III. PHẪU THUẬT TIM KÍN,84,,Tách van hai lá tim kín,13460000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+901,58,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,III. PHẪU THUẬT TIM KÍN,85,,Phẫu thuật tim thăm dò,13931000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+902,58,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,III. PHẪU THUẬT TIM KÍN,86,,"Các loại phẫu thuật tim kín khác, cắt màng ngoài tim",13931000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+903,58,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,III. PHẪU THUẬT TIM KÍN,87,,U màng tim,12420000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+904,58,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,III. PHẪU THUẬT TIM KÍN,88,,Phẫu thuật đặt máy tạo nhịp vĩnh viễn,12420000,Giá dịch vụ trọn gói không bao gồm máu và vật tư thay thế
+905,58,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,IV. PHẪU THUẬT KHÁC,89,,"Tạo dò động, tĩnh mạch quay",7227000,Giá dịch vụ trọn gói không bao gồm máu đoạn mạch nhân tạo và vật tư thay thế
+906,58,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,IV. PHẪU THUẬT KHÁC,90,,Phẫu thuật mạch cảnh,14042000,Giá dịch vụ trọn gói không bao gồm máu đoạn mạch nhân tạo và vật tư thay thế
+907,58,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,IV. PHẪU THUẬT KHÁC,91,,Giãn tĩnh mạch chi (varice),6210000,Giá dịch vụ trọn gói không bao gồm máu đoạn mạch nhân tạo và vật tư thay thế
+908,58,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,IV. PHẪU THUẬT KHÁC,92,,Phẫu thuật động mạch chủ bụng dưới động mạch thận,12420000,Giá dịch vụ trọn gói không bao gồm máu đoạn mạch nhân tạo và vật tư thay thế
+909,59,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,IV. PHẪU THUẬT KHÁC,93,,Phẫu thuật động mạch chủ trên động mạch thận,14490000,Giá dịch vụ trọn gói không bao gồm máu đoạn mạch nhân tạo và vật tư thay thế
+910,59,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,IV. PHẪU THUẬT KHÁC,94,,Phẫu thuật động mạch ngoại vi,10350000,Giá dịch vụ trọn gói không bao gồm máu đoạn mạch nhân tạo và vật tư thay thế
+911,59,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,IV. PHẪU THUẬT KHÁC,95,,Phẫu thuật động tĩnh mạch ngoại vi,8280000,Giá dịch vụ trọn gói không bao gồm máu đoạn mạch nhân tạo và vật tư thay thế
+912,59,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,IV. PHẪU THUẬT KHÁC,96,,Phẫu thuật động mạch chậu,10350000,Giá dịch vụ trọn gói không bao gồm máu đoạn mạch nhân tạo và vật tư thay thế
+913,59,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,IV. PHẪU THUẬT KHÁC,97,,Phẫu thuật hẹp động mạch thận điều trị cao huyết áp,14490000,Giá dịch vụ trọn gói không bao gồm máu đoạn mạch nhân tạo và vật tư thay thế
+914,59,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,IV. PHẪU THUẬT KHÁC,98,,Cắt thuỳ phổi,10350000,Giá dịch vụ trọn gói không bao gồm máu đoạn mạch nhân tạo và vật tư thay thế
+915,59,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,IV. PHẪU THUẬT KHÁC,99,,U trung thất chèn ép,10350000,Giá dịch vụ trọn gói không bao gồm máu đoạn mạch nhân tạo và vật tư thay thế
+916,59,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,IV. PHẪU THUẬT KHÁC,100,,Cắt tuyến ức,10350000,Giá dịch vụ trọn gói không bao gồm máu đoạn mạch nhân tạo và vật tư thay thế
+917,59,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,IV. PHẪU THUẬT KHÁC,101,,Cắt u xương sườn,6404000,Giá dịch vụ trọn gói không bao gồm máu đoạn mạch nhân tạo và vật tư thay thế
+918,59,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,IV. PHẪU THUẬT KHÁC,102,,Lõm xương ức,14490000,Giá dịch vụ trọn gói không bao gồm máu đoạn mạch nhân tạo và vật tư thay thế
+919,59,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,IV. PHẪU THUẬT KHÁC,103,,Rút định xương ức sau tạo hình,2070000,Giá dịch vụ trọn gói không bao gồm máu đoạn mạch nhân tạo và vật tư thay thế
+920,59,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,IV. PHẪU THUẬT KHÁC,104,,Bướu giáp thường,6210000,Giá dịch vụ trọn gói không bao gồm máu đoạn mạch nhân tạo và vật tư thay thế
+921,59,BẢNG GIÁ PHẪU THUẬT TRỌN GÓI,IV. PHẪU THUẬT KHÁC,105,,Ung thư K giáp trạng.,8280000,Giá dịch vụ trọn gói không bao gồm máu đoạn mạch nhân tạo và vật tư thay thế
+922,60,BẢNG GIÁ DANH MỤC NGÀY GIƯỜNG ĐIỀU TRỊ,,1,,Giường loại I,1000000,
+923,60,BẢNG GIÁ DANH MỤC NGÀY GIƯỜNG ĐIỀU TRỊ,,2,,Giường loại II,750000,
+924,60,BẢNG GIÁ DANH MỤC NGÀY GIƯỜNG ĐIỀU TRỊ,,3,,Giường loại III,500000,
+925,60,BẢNG GIÁ DANH MỤC NGÀY GIƯỜNG ĐIỀU TRỊ,,4,,Giường loại IV,400000,

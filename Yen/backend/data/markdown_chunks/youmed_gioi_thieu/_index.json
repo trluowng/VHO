@@ -1,0 +1,20 @@
+[
+  {
+    "doc_id": "youmed_gioi_thieu_001",
+    "path": "markdown_chunks/youmed_gioi_thieu/youmed_001_gioi_thieu_co_so.md",
+    "muc": "Giới thiệu, địa chỉ, cơ sở vật chất",
+    "chars": 3071
+  },
+  {
+    "doc_id": "youmed_gioi_thieu_002",
+    "path": "markdown_chunks/youmed_gioi_thieu/youmed_002_doi_ngu_chuyen_khoa_dich_vu.md",
+    "muc": "Đội ngũ bác sĩ, chuyên khoa, dịch vụ nổi bật",
+    "chars": 2449
+  },
+  {
+    "doc_id": "youmed_gioi_thieu_003",
+    "path": "markdown_chunks/youmed_gioi_thieu/youmed_003_quy_trinh_kham.md",
+    "muc": "Quy trình khám chữa bệnh",
+    "chars": 2506
+  }
+]

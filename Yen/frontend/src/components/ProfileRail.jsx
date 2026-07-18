@@ -203,8 +203,8 @@ export default function ProfileRail({ session, onEditSymptoms }) {
         <div className="disclaimer">
           <Shield />
           <span>
-            <strong>Yên không đưa ra chẩn đoán y khoa.</strong> Đây là công cụ phân loại mức độ khẩn cấp để giúp bạn
-            quyết định bước tiếp theo. Khi nghi ngờ, hãy liên hệ nhân viên y tế.
+            <strong>Yên không đưa ra chẩn đoán y khoa.</strong> Đây là trợ lý hỗ trợ khách hàng của Bệnh viện Tim Hà Nội
+            để giúp bạn tra cứu dịch vụ, giá và quy trình khám. Khi nghi ngờ, hãy liên hệ nhân viên y tế.
           </span>
         </div>
       </section>

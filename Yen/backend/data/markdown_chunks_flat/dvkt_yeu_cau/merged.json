@@ -1,0 +1,1614 @@
+{
+  "source_id": "dvkt_yeu_cau",
+  "document_count": 102,
+  "documents": [
+    {
+      "doc_id": "dvktyc_000001",
+      "source": "BẢNG GIÁ DANH MỤC KHÁM BỆNH THEO YÊU CẦU",
+      "id": "",
+      "context": "Khám theo yêu cầu (mức 1)",
+      "price": "500.000",
+      "price_khambenh": "200.000",
+      "price_yeucau": "300.000",
+      "note": "Cơ sở 1",
+      "stt": "1",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ DANH MỤC KHÁM BỆNH THEO YÊU CẦU",
+        "STT": "1",
+        "Dịch vụ kỹ thuật": "Khám theo yêu cầu (mức 1)",
+        "Giá dịch vụ (VNĐ)": "500.000",
+        "Giá khám bệnh (VNĐ)": "200.000",
+        "Giá dịch vụ theo yêu cầu (VNĐ)": "300.000",
+        "Ghi chú": "Cơ sở 1"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000002",
+      "source": "BẢNG GIÁ DANH MỤC KHÁM BỆNH THEO YÊU CẦU",
+      "id": "",
+      "context": "Khám theo yêu cầu (mức 2)",
+      "price": "300.000",
+      "price_khambenh": "100.000",
+      "price_yeucau": "200.000",
+      "note": "Cơ sở 1",
+      "stt": "1",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ DANH MỤC KHÁM BỆNH THEO YÊU CẦU",
+        "STT": "1",
+        "Dịch vụ kỹ thuật": "Khám theo yêu cầu (mức 2)",
+        "Giá dịch vụ (VNĐ)": "300.000",
+        "Giá khám bệnh (VNĐ)": "100.000",
+        "Giá dịch vụ theo yêu cầu (VNĐ)": "200.000",
+        "Ghi chú": "Cơ sở 1"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000003",
+      "source": "BẢNG GIÁ DANH MỤC KHÁM BỆNH THEO YÊU CẦU",
+      "id": "",
+      "context": "Khám theo yêu cầu (mức 1)",
+      "price": "500.000",
+      "price_khambenh": "200.000",
+      "price_yeucau": "300.000",
+      "note": "Cơ sở 2",
+      "stt": "2",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ DANH MỤC KHÁM BỆNH THEO YÊU CẦU",
+        "STT": "2",
+        "Dịch vụ kỹ thuật": "Khám theo yêu cầu (mức 1)",
+        "Giá dịch vụ (VNĐ)": "500.000",
+        "Giá khám bệnh (VNĐ)": "200.000",
+        "Giá dịch vụ theo yêu cầu (VNĐ)": "300.000",
+        "Ghi chú": "Cơ sở 2"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000004",
+      "source": "BẢNG GIÁ DANH MỤC KHÁM BỆNH THEO YÊU CẦU",
+      "id": "",
+      "context": "Khám theo yêu cầu (mức 2)",
+      "price": "300.000",
+      "price_khambenh": "100.000",
+      "price_yeucau": "200.000",
+      "note": "Cơ sở 2",
+      "stt": "2",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ DANH MỤC KHÁM BỆNH THEO YÊU CẦU",
+        "STT": "2",
+        "Dịch vụ kỹ thuật": "Khám theo yêu cầu (mức 2)",
+        "Giá dịch vụ (VNĐ)": "300.000",
+        "Giá khám bệnh (VNĐ)": "100.000",
+        "Giá dịch vụ theo yêu cầu (VNĐ)": "200.000",
+        "Ghi chú": "Cơ sở 2"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000005",
+      "source": "BẢNG GIÁ DANH MỤC KHÁM BỆNH THEO YÊU CẦU",
+      "id": "",
+      "context": "Dịch vụ chăm sóc y tế dưới 4 giờ/ngày (Phòng 3 giường)",
+      "price": "300.000",
+      "price_yeucau": "300.000",
+      "note": "Khoa ĐTBN",
+      "stt": "4",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ DANH MỤC KHÁM BỆNH THEO YÊU CẦU",
+        "STT": "4",
+        "Dịch vụ kỹ thuật": "Dịch vụ chăm sóc y tế dưới 4 giờ/ngày (Phòng 3 giường)",
+        "Giá dịch vụ (VNĐ)": "300.000",
+        "Giá dịch vụ theo yêu cầu (VNĐ)": "300.000",
+        "Ghi chú": "Khoa ĐTBN"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000006",
+      "source": "BẢNG GIÁ DANH MỤC KHÁM BỆNH THEO YÊU CẦU",
+      "id": "",
+      "context": "Dịch vụ chăm sóc y tế trên 4 giờ/ngày (Phòng 3 giường)",
+      "price": "500.000",
+      "price_yeucau": "500.000",
+      "note": "Khoa ĐTBN",
+      "stt": "4",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ DANH MỤC KHÁM BỆNH THEO YÊU CẦU",
+        "STT": "4",
+        "Dịch vụ kỹ thuật": "Dịch vụ chăm sóc y tế trên 4 giờ/ngày (Phòng 3 giường)",
+        "Giá dịch vụ (VNĐ)": "500.000",
+        "Giá dịch vụ theo yêu cầu (VNĐ)": "500.000",
+        "Ghi chú": "Khoa ĐTBN"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000007",
+      "source": "BẢNG GIÁ DANH MỤC KHÁM BỆNH THEO YÊU CẦU",
+      "id": "",
+      "context": "Dịch vụ chăm sóc y tế dưới 4 giờ/ngày (Phòng 13 giường)",
+      "price": "150.000",
+      "price_yeucau": "150.000",
+      "note": "Khoa ĐTBN",
+      "stt": "4",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ DANH MỤC KHÁM BỆNH THEO YÊU CẦU",
+        "STT": "4",
+        "Dịch vụ kỹ thuật": "Dịch vụ chăm sóc y tế dưới 4 giờ/ngày (Phòng 13 giường)",
+        "Giá dịch vụ (VNĐ)": "150.000",
+        "Giá dịch vụ theo yêu cầu (VNĐ)": "150.000",
+        "Ghi chú": "Khoa ĐTBN"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000008",
+      "source": "BẢNG GIÁ DANH MỤC KHÁM BỆNH THEO YÊU CẦU",
+      "id": "",
+      "context": "Dịch vụ chăm sóc y tế trên 4 giờ/ngày (Phòng 13 giường)",
+      "price": "200.000",
+      "price_yeucau": "200.000",
+      "note": "Khoa ĐTBN",
+      "stt": "4",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ DANH MỤC KHÁM BỆNH THEO YÊU CẦU",
+        "STT": "4",
+        "Dịch vụ kỹ thuật": "Dịch vụ chăm sóc y tế trên 4 giờ/ngày (Phòng 13 giường)",
+        "Giá dịch vụ (VNĐ)": "200.000",
+        "Giá dịch vụ theo yêu cầu (VNĐ)": "200.000",
+        "Ghi chú": "Khoa ĐTBN"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000009",
+      "source": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0700.0066",
+      "context": "Chụp cộng hưởng từ tim đánh giá quá tải sắt",
+      "price": "2.300.000",
+      "stt": "1",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "1",
+        "Mã tương đương": "18.0700.0066",
+        "Dịch vụ kỹ thuật": "Chụp cộng hưởng từ tim đánh giá quá tải sắt",
+        "Giá dịch vụ (VNĐ)": "2.300.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000010",
+      "source": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0337.0065",
+      "context": "Chụp cộng hưởng từ cột sống ngực có tiêm tương phản (0.2-1.5T)",
+      "price": "3.700.000",
+      "stt": "2",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "2",
+        "Mã tương đương": "18.0337.0065",
+        "Dịch vụ kỹ thuật": "Chụp cộng hưởng từ cột sống ngực có tiêm tương phản (0.2-1.5T)",
+        "Giá dịch vụ (VNĐ)": "3.700.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000011",
+      "source": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0297.0065",
+      "context": "Chụp cộng hưởng từ sọ não có tiêm chất tương phản (0.2-1.5T)",
+      "price": "3.700.000",
+      "stt": "3",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "3",
+        "Mã tương đương": "18.0297.0065",
+        "Dịch vụ kỹ thuật": "Chụp cộng hưởng từ sọ não có tiêm chất tương phản (0.2-1.5T)",
+        "Giá dịch vụ (VNĐ)": "3.700.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000012",
+      "source": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0336.0066",
+      "context": "Chụp cộng hưởng từ cột sống ngực (0.2-1.5T)",
+      "price": "2.300.000",
+      "stt": "4",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "4",
+        "Mã tương đương": "18.0336.0066",
+        "Dịch vụ kỹ thuật": "Chụp cộng hưởng từ cột sống ngực (0.2-1.5T)",
+        "Giá dịch vụ (VNĐ)": "2.300.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000013",
+      "source": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0339.0065",
+      "context": "Chụp cộng hưởng từ cột sống thắt lưng - cùng có tiêm tương phản (0.2-1.5T)",
+      "price": "3.700.000",
+      "stt": "5",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "5",
+        "Mã tương đương": "18.0339.0065",
+        "Dịch vụ kỹ thuật": "Chụp cộng hưởng từ cột sống thắt lưng - cùng có tiêm tương phản (0.2-1.5T)",
+        "Giá dịch vụ (VNĐ)": "3.700.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000014",
+      "source": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0353.0065",
+      "context": "Chụp cộng hưởng từ động mạch chi trên có tiêm tương phản (1.5T)",
+      "price": "3.700.000",
+      "stt": "6",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "6",
+        "Mã tương đương": "18.0353.0065",
+        "Dịch vụ kỹ thuật": "Chụp cộng hưởng từ động mạch chi trên có tiêm tương phản (1.5T)",
+        "Giá dịch vụ (VNĐ)": "3.700.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000015",
+      "source": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0301.0065",
+      "context": "Chụp cộng hưởng từ hệ mạch cổ có tiêm chất tương phản (0.2-1.5T)",
+      "price": "3.700.000",
+      "stt": "7",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "7",
+        "Mã tương đương": "18.0301.0065",
+        "Dịch vụ kỹ thuật": "Chụp cộng hưởng từ hệ mạch cổ có tiêm chất tương phản (0.2-1.5T)",
+        "Giá dịch vụ (VNĐ)": "3.700.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000016",
+      "source": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0298.0066",
+      "context": "Chụp cộng hưởng từ não- mạch não không tiêm chất tương phản (0.2-1.5T)",
+      "price": "2.300.000",
+      "stt": "8",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "8",
+        "Mã tương đương": "18.0298.0066",
+        "Dịch vụ kỹ thuật": "Chụp cộng hưởng từ não- mạch não không tiêm chất tương phản (0.2-1.5T)",
+        "Giá dịch vụ (VNĐ)": "2.300.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000017",
+      "source": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0338.0066",
+      "context": "Chụp cộng hưởng từ cột sống thắt lưng - cùng (0.2-1.5T)",
+      "price": "2.300.000",
+      "stt": "9",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "9",
+        "Mã tương đương": "18.0338.0066",
+        "Dịch vụ kỹ thuật": "Chụp cộng hưởng từ cột sống thắt lưng - cùng (0.2-1.5T)",
+        "Giá dịch vụ (VNĐ)": "2.300.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000018",
+      "source": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0303.0066",
+      "context": "Chụp cộng hưởng từ hốc mắt và thần kinh thị giác (0.2-1.5T)",
+      "price": "2.300.000",
+      "stt": "10",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "10",
+        "Mã tương đương": "18.0303.0066",
+        "Dịch vụ kỹ thuật": "Chụp cộng hưởng từ hốc mắt và thần kinh thị giác (0.2-1.5T)",
+        "Giá dịch vụ (VNĐ)": "2.300.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000019",
+      "source": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0334.0066",
+      "context": "Chụp cộng hưởng từ cột sống cổ (0.2-1.5T)",
+      "price": "2.300.000",
+      "stt": "11",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "11",
+        "Mã tương đương": "18.0334.0066",
+        "Dịch vụ kỹ thuật": "Chụp cộng hưởng từ cột sống cổ (0.2-1.5T)",
+        "Giá dịch vụ (VNĐ)": "2.300.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000020",
+      "source": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0344.0065",
+      "context": "Chụp cộng hưởng từ xương và tủy xương có tiêm tương phản (0.2-1.5T)",
+      "price": "3.700.000",
+      "stt": "12",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "12",
+        "Mã tương đương": "18.0344.0065",
+        "Dịch vụ kỹ thuật": "Chụp cộng hưởng từ xương và tủy xương có tiêm tương phản (0.2-1.5T)",
+        "Giá dịch vụ (VNĐ)": "3.700.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000021",
+      "source": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0351.0065",
+      "context": "Chụp cộng hưởng từ tầng trên ổ bụng có khảo sát mạch các tạng (bao gồm mạch: gan, tụy, lách và mạch khối u) (1.5T)",
+      "price": "3.700.000",
+      "stt": "13",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "13",
+        "Mã tương đương": "18.0351.0065",
+        "Dịch vụ kỹ thuật": "Chụp cộng hưởng từ tầng trên ổ bụng có khảo sát mạch các tạng (bao gồm mạch: gan, tụy, lách và mạch khối u) (1.5T)",
+        "Giá dịch vụ (VNĐ)": "3.700.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000022",
+      "source": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0699.0065",
+      "context": "Chụp cộng hưởng từ tim đánh giá các bệnh lý tim bẩm sinh",
+      "price": "3.700.000",
+      "stt": "14",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "14",
+        "Mã tương đương": "18.0699.0065",
+        "Dịch vụ kỹ thuật": "Chụp cộng hưởng từ tim đánh giá các bệnh lý tim bẩm sinh",
+        "Giá dịch vụ (VNĐ)": "3.700.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000023",
+      "source": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0308.0066",
+      "context": "Chụp cộng hưởng từ khuếch tán (DWI - Diffusion-weighted Imaging) (0.2-1.5T)",
+      "price": "2.300.000",
+      "stt": "15",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "15",
+        "Mã tương đương": "18.0308.0066",
+        "Dịch vụ kỹ thuật": "Chụp cộng hưởng từ khuếch tán (DWI - Diffusion-weighted Imaging) (0.2-1.5T)",
+        "Giá dịch vụ (VNĐ)": "2.300.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000024",
+      "source": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0697.0065",
+      "context": "Chụp cộng hưởng từ tim đánh giá các khối u tim có tiêm thuốc tương phản",
+      "price": "3.700.000",
+      "stt": "16",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "16",
+        "Mã tương đương": "18.0697.0065",
+        "Dịch vụ kỹ thuật": "Chụp cộng hưởng từ tim đánh giá các khối u tim có tiêm thuốc tương phản",
+        "Giá dịch vụ (VNĐ)": "3.700.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000025",
+      "source": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0701.0065",
+      "context": "Chụp cộng hưởng từ tim đánh giá khuếch tán sức căng (DTI - Diffusion Tensor Imaging)",
+      "price": "3.700.000",
+      "stt": "17",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "17",
+        "Mã tương đương": "18.0701.0065",
+        "Dịch vụ kỹ thuật": "Chụp cộng hưởng từ tim đánh giá khuếch tán sức căng (DTI - Diffusion Tensor Imaging)",
+        "Giá dịch vụ (VNĐ)": "3.700.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000026",
+      "source": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0325.0065",
+      "context": "Chụp cộng hưởng từ bìu, dương vật có tiêm chất tương phản (0.2-1.5T)",
+      "price": "3.700.000",
+      "stt": "18",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "18",
+        "Mã tương đương": "18.0325.0065",
+        "Dịch vụ kỹ thuật": "Chụp cộng hưởng từ bìu, dương vật có tiêm chất tương phản (0.2-1.5T)",
+        "Giá dịch vụ (VNĐ)": "3.700.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000027",
+      "source": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0300.0066",
+      "context": "Chụp cộng hưởng từ hệ mạch cổ không tiêm chất tương phản (0.2-1.5T)",
+      "price": "2.300.000",
+      "stt": "19",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "19",
+        "Mã tương đương": "18.0300.0066",
+        "Dịch vụ kỹ thuật": "Chụp cộng hưởng từ hệ mạch cổ không tiêm chất tương phản (0.2-1.5T)",
+        "Giá dịch vụ (VNĐ)": "2.300.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000028",
+      "source": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0359.0065",
+      "context": "Chụp cộng hưởng từ tĩnh mạch có tiêm tương phản (1.5T)",
+      "price": "3.700.000",
+      "stt": "20",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "20",
+        "Mã tương đương": "18.0359.0065",
+        "Dịch vụ kỹ thuật": "Chụp cộng hưởng từ tĩnh mạch có tiêm tương phản (1.5T)",
+        "Giá dịch vụ (VNĐ)": "3.700.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000029",
+      "source": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0352.0066",
+      "context": "Chụp cộng hưởng từ động mạch chi trên (1.5T)",
+      "price": "2.300.000",
+      "stt": "21",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "21",
+        "Mã tương đương": "18.0352.0066",
+        "Dịch vụ kỹ thuật": "Chụp cộng hưởng từ động mạch chi trên (1.5T)",
+        "Giá dịch vụ (VNĐ)": "2.300.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000030",
+      "source": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0324.0066",
+      "context": "Chụp cộng hưởng từ bìu, dương vật (0.2-1.5T)",
+      "price": "2.300.000",
+      "stt": "22",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "22",
+        "Mã tương đương": "18.0324.0066",
+        "Dịch vụ kỹ thuật": "Chụp cộng hưởng từ bìu, dương vật (0.2-1.5T)",
+        "Giá dịch vụ (VNĐ)": "2.300.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000031",
+      "source": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0358.0066",
+      "context": "Chụp cộng hưởng từ tĩnh mạch (1.5T)",
+      "price": "2.300.000",
+      "stt": "23",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "23",
+        "Mã tương đương": "18.0358.0066",
+        "Dịch vụ kỹ thuật": "Chụp cộng hưởng từ tĩnh mạch (1.5T)",
+        "Giá dịch vụ (VNĐ)": "2.300.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000032",
+      "source": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0310.0066",
+      "context": "Chụp cộng hưởng từ vùng mặt – cổ (0.2-1.5T)",
+      "price": "2.300.000",
+      "stt": "24",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "24",
+        "Mã tương đương": "18.0310.0066",
+        "Dịch vụ kỹ thuật": "Chụp cộng hưởng từ vùng mặt – cổ (0.2-1.5T)",
+        "Giá dịch vụ (VNĐ)": "2.300.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000033",
+      "source": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0341.0065",
+      "context": "Chụp cộng hưởng từ khớp có tiêm tương phản tĩnh mạch (0.2-1.5T)",
+      "price": "3.700.000",
+      "stt": "25",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "25",
+        "Mã tương đương": "18.0341.0065",
+        "Dịch vụ kỹ thuật": "Chụp cộng hưởng từ khớp có tiêm tương phản tĩnh mạch (0.2-1.5T)",
+        "Giá dịch vụ (VNĐ)": "3.700.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000034",
+      "source": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0304.0065",
+      "context": "Chụp cộng hưởng từ hốc mắt và thần kinh thị giác có tiêm chất tương phản (0.2-1.5T)",
+      "price": "3.700.000",
+      "stt": "26",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "26",
+        "Mã tương đương": "18.0304.0065",
+        "Dịch vụ kỹ thuật": "Chụp cộng hưởng từ hốc mắt và thần kinh thị giác có tiêm chất tương phản (0.2-1.5T)",
+        "Giá dịch vụ (VNĐ)": "3.700.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000035",
+      "source": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0309.0065",
+      "context": "Chụp cộng hưởng từ đáy sọ và xương đá (0.2-1.5T)",
+      "price": "3.700.000",
+      "stt": "27",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "27",
+        "Mã tương đương": "18.0309.0065",
+        "Dịch vụ kỹ thuật": "Chụp cộng hưởng từ đáy sọ và xương đá (0.2-1.5T)",
+        "Giá dịch vụ (VNĐ)": "3.700.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000036",
+      "source": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0296.0066",
+      "context": "Chụp cộng hưởng từ sọ não (0.2-1.5T)",
+      "price": "2.300.000",
+      "stt": "28",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "28",
+        "Mã tương đương": "18.0296.0066",
+        "Dịch vụ kỹ thuật": "Chụp cộng hưởng từ sọ não (0.2-1.5T)",
+        "Giá dịch vụ (VNĐ)": "2.300.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000037",
+      "source": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0305.0065",
+      "context": "Chụp cộng hưởng từ tưới máu não (perfusion) (0.2-1.5T)",
+      "price": "3.700.000",
+      "stt": "29",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "29",
+        "Mã tương đương": "18.0305.0065",
+        "Dịch vụ kỹ thuật": "Chụp cộng hưởng từ tưới máu não (perfusion) (0.2-1.5T)",
+        "Giá dịch vụ (VNĐ)": "3.700.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000038",
+      "source": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0350.0065",
+      "context": "Chụp cộng hưởng từ tim (1.5T)",
+      "price": "3.700.000",
+      "stt": "30",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "30",
+        "Mã tương đương": "18.0350.0065",
+        "Dịch vụ kỹ thuật": "Chụp cộng hưởng từ tim (1.5T)",
+        "Giá dịch vụ (VNĐ)": "3.700.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000039",
+      "source": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0319.0066",
+      "context": "Chụp cộng hưởng từ tầng bụng không tiêm chất tương phản (gồm: chụp cộng hưởng từ gan-mật, tụy, lách, thận, dạ dày-tá tràng...) (0.2-1.5T)",
+      "price": "2.300.000",
+      "stt": "31",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "31",
+        "Mã tương đương": "18.0319.0066",
+        "Dịch vụ kỹ thuật": "Chụp cộng hưởng từ tầng bụng không tiêm chất tương phản (gồm: chụp cộng hưởng từ gan-mật, tụy, lách, thận, dạ dày-tá tràng...) (0.2-1.5T)",
+        "Giá dịch vụ (VNĐ)": "2.300.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000040",
+      "source": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0348.0065",
+      "context": "Chụp cộng hưởng từ động mạch chủ-ngực (1.5T)",
+      "price": "3.700.000",
+      "stt": "32",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "32",
+        "Mã tương đương": "18.0348.0065",
+        "Dịch vụ kỹ thuật": "Chụp cộng hưởng từ động mạch chủ-ngực (1.5T)",
+        "Giá dịch vụ (VNĐ)": "3.700.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000041",
+      "source": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0311.0065",
+      "context": "Chụp cộng hưởng từ vùng mặt – cổ có tiêm tương phản (0.2-1.5T)",
+      "price": "3.700.000",
+      "stt": "33",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "33",
+        "Mã tương đương": "18.0311.0065",
+        "Dịch vụ kỹ thuật": "Chụp cộng hưởng từ vùng mặt – cổ có tiêm tương phản (0.2-1.5T)",
+        "Giá dịch vụ (VNĐ)": "3.700.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000042",
+      "source": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0361.0065",
+      "context": "Chụp cộng hưởng từ bạch mạch có tiêm tương phản đặc hiệu (1.5T)",
+      "price": "3.700.000",
+      "stt": "34",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "34",
+        "Mã tương đương": "18.0361.0065",
+        "Dịch vụ kỹ thuật": "Chụp cộng hưởng từ bạch mạch có tiêm tương phản đặc hiệu (1.5T)",
+        "Giá dịch vụ (VNĐ)": "3.700.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000043",
+      "source": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0302.0065",
+      "context": "Chụp cộng hưởng từ tuyến yên có tiêm chất tương phản (khảo sát động học) (0.2-1.5T)",
+      "price": "3.700.000",
+      "stt": "35",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "35",
+        "Mã tương đương": "18.0302.0065",
+        "Dịch vụ kỹ thuật": "Chụp cộng hưởng từ tuyến yên có tiêm chất tương phản (khảo sát động học) (0.2-1.5T)",
+        "Giá dịch vụ (VNĐ)": "3.700.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000044",
+      "source": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0345.0066",
+      "context": "Chụp cộng hưởng từ phần mềm chi (0.2-1.5T)",
+      "price": "2.300.000",
+      "stt": "36",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "36",
+        "Mã tương đương": "18.0345.0066",
+        "Dịch vụ kỹ thuật": "Chụp cộng hưởng từ phần mềm chi (0.2-1.5T)",
+        "Giá dịch vụ (VNĐ)": "2.300.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000045",
+      "source": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0355.0065",
+      "context": "Chụp cộng hưởng từ động mạch chi dưới có tiêm tương phản (1.5T)",
+      "price": "3.700.000",
+      "stt": "37",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "37",
+        "Mã tương đương": "18.0355.0065",
+        "Dịch vụ kỹ thuật": "Chụp cộng hưởng từ động mạch chi dưới có tiêm tương phản (1.5T)",
+        "Giá dịch vụ (VNĐ)": "3.700.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000046",
+      "source": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0349.0065",
+      "context": "Chụp cộng hưởng từ động mạch vành (1.5T)",
+      "price": "3.700.000",
+      "stt": "38",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "38",
+        "Mã tương đương": "18.0349.0065",
+        "Dịch vụ kỹ thuật": "Chụp cộng hưởng từ động mạch vành (1.5T)",
+        "Giá dịch vụ (VNĐ)": "3.700.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000047",
+      "source": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0329.0065",
+      "context": "Chụp cộng hưởng từ tuyến tiền liệt có tiêm tương phản (0.2-1.5T)",
+      "price": "3.700.000",
+      "stt": "39",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "39",
+        "Mã tương đương": "18.0329.0065",
+        "Dịch vụ kỹ thuật": "Chụp cộng hưởng từ tuyến tiền liệt có tiêm tương phản (0.2-1.5T)",
+        "Giá dịch vụ (VNĐ)": "3.700.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000048",
+      "source": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0335.0065",
+      "context": "Chụp cộng hưởng từ cột sống cổ có tiêm tương phản (0.2-1.5T)",
+      "price": "3.700.000",
+      "stt": "40",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "40",
+        "Mã tương đương": "18.0335.0065",
+        "Dịch vụ kỹ thuật": "Chụp cộng hưởng từ cột sống cổ có tiêm tương phản (0.2-1.5T)",
+        "Giá dịch vụ (VNĐ)": "3.700.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000049",
+      "source": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0698.0065",
+      "context": "Chụp cộng hưởng từ tim đánh giá các bệnh lý tim bẩm sinh có tiêm thuốc tương phản",
+      "price": "3.700.000",
+      "stt": "41",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "41",
+        "Mã tương đương": "18.0698.0065",
+        "Dịch vụ kỹ thuật": "Chụp cộng hưởng từ tim đánh giá các bệnh lý tim bẩm sinh có tiêm thuốc tương phản",
+        "Giá dịch vụ (VNĐ)": "3.700.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000050",
+      "source": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0354.0066",
+      "context": "Chụp cộng hưởng từ động mạch chi dưới (1.5T)",
+      "price": "2.300.000",
+      "stt": "42",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "42",
+        "Mã tương đương": "18.0354.0066",
+        "Dịch vụ kỹ thuật": "Chụp cộng hưởng từ động mạch chi dưới (1.5T)",
+        "Giá dịch vụ (VNĐ)": "2.300.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000051",
+      "source": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0322.0065",
+      "context": "Chụp cộng hưởng từ vùng chậu dò hậu môn (0.2-1.5T)",
+      "price": "3.700.000",
+      "stt": "43",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "43",
+        "Mã tương đương": "18.0322.0065",
+        "Dịch vụ kỹ thuật": "Chụp cộng hưởng từ vùng chậu dò hậu môn (0.2-1.5T)",
+        "Giá dịch vụ (VNĐ)": "3.700.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000052",
+      "source": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0340.0066",
+      "context": "Chụp cộng hưởng từ khớp (0.2-1.5T)",
+      "price": "2.300.000",
+      "stt": "44",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "44",
+        "Mã tương đương": "18.0340.0066",
+        "Dịch vụ kỹ thuật": "Chụp cộng hưởng từ khớp (0.2-1.5T)",
+        "Giá dịch vụ (VNĐ)": "2.300.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000053",
+      "source": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0323.0065",
+      "context": "Chụp cộng hưởng từ vùng chậu có tiêm chất tương phản (gồm: chụp cộng hưởng từ tử cung-phần phụ, tiền liệt tuyến, đại tràng chậu hông, trực tràng, các khối u vùng chậu…) (0.2-1.5T)",
+      "price": "3.700.000",
+      "stt": "45",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "45",
+        "Mã tương đương": "18.0323.0065",
+        "Dịch vụ kỹ thuật": "Chụp cộng hưởng từ vùng chậu có tiêm chất tương phản (gồm: chụp cộng hưởng từ tử cung-phần phụ, tiền liệt tuyến, đại tràng chậu hông, trực tràng, các khối u vùng chậu…) (0.2-1.5T)",
+        "Giá dịch vụ (VNĐ)": "3.700.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000054",
+      "source": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0346.0065",
+      "context": "Chụp cộng hưởng từ phần mềm chi có tiêm tương phản (0.2-1.5T)",
+      "price": "3.700.000",
+      "stt": "46",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "46",
+        "Mã tương đương": "18.0346.0065",
+        "Dịch vụ kỹ thuật": "Chụp cộng hưởng từ phần mềm chi có tiêm tương phản (0.2-1.5T)",
+        "Giá dịch vụ (VNĐ)": "3.700.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000055",
+      "source": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0343.0066",
+      "context": "Chụp cộng hưởng từ xương và tủy xương (0.2-1.5T)",
+      "price": "2.300.000",
+      "stt": "47",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "47",
+        "Mã tương đương": "18.0343.0066",
+        "Dịch vụ kỹ thuật": "Chụp cộng hưởng từ xương và tủy xương (0.2-1.5T)",
+        "Giá dịch vụ (VNĐ)": "2.300.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000056",
+      "source": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0299.0065",
+      "context": "Chụp cộng hưởng từ não- mạch não có tiêm chất tương phản (0.2-1.5T)",
+      "price": "3.700.000",
+      "stt": "48",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "48",
+        "Mã tương đương": "18.0299.0065",
+        "Dịch vụ kỹ thuật": "Chụp cộng hưởng từ não- mạch não có tiêm chất tương phản (0.2-1.5T)",
+        "Giá dịch vụ (VNĐ)": "3.700.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000057",
+      "source": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0347.0065",
+      "context": "Chụp cộng hưởng từ động mạch chủ-chậu (1.5T)",
+      "price": "3.700.000",
+      "stt": "49",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "49",
+        "Mã tương đương": "18.0347.0065",
+        "Dịch vụ kỹ thuật": "Chụp cộng hưởng từ động mạch chủ-chậu (1.5T)",
+        "Giá dịch vụ (VNĐ)": "3.700.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000058",
+      "source": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0178.0047",
+      "context": "Chụp CLVT sọ não không tiêm thuốc cản quang (từ ≥ 256 dãy)",
+      "price": "3.500.000",
+      "stt": "1",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "1",
+        "Mã tương đương": "18.0178.0047",
+        "Dịch vụ kỹ thuật": "Chụp CLVT sọ não không tiêm thuốc cản quang (từ ≥ 256 dãy)",
+        "Giá dịch vụ (VNĐ)": "3.500.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000059",
+      "source": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0179.0046",
+      "context": "Chụp CLVT sọ não có tiêm thuốc cản quang (từ ≥ 256 dãy)",
+      "price": "5.000.000",
+      "note": "Chưa bao gồm thuốc cản quang",
+      "stt": "2",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "2",
+        "Mã tương đương": "18.0179.0046",
+        "Dịch vụ kỹ thuật": "Chụp CLVT sọ não có tiêm thuốc cản quang (từ ≥ 256 dãy)",
+        "Giá dịch vụ (VNĐ)": "5.000.000",
+        "Ghi chú": "Chưa bao gồm thuốc cản quang"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000060",
+      "source": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0180.0046",
+      "context": "Chụp CLVT hệ động mạch cảnh có tiêm thuốc cản quang (từ ≥ 256 dãy)",
+      "price": "5.000.000",
+      "note": "Chưa bao gồm thuốc cản quang",
+      "stt": "3",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "3",
+        "Mã tương đương": "18.0180.0046",
+        "Dịch vụ kỹ thuật": "Chụp CLVT hệ động mạch cảnh có tiêm thuốc cản quang (từ ≥ 256 dãy)",
+        "Giá dịch vụ (VNĐ)": "5.000.000",
+        "Ghi chú": "Chưa bao gồm thuốc cản quang"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000061",
+      "source": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0181.0046",
+      "context": "Chụp CLVT tưới máu não (CT perfusion)",
+      "price": "5.000.000",
+      "note": "Chưa bao gồm thuốc cản quang",
+      "stt": "4",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "4",
+        "Mã tương đương": "18.0181.0046",
+        "Dịch vụ kỹ thuật": "Chụp CLVT tưới máu não (CT perfusion)",
+        "Giá dịch vụ (VNĐ)": "5.000.000",
+        "Ghi chú": "Chưa bao gồm thuốc cản quang"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000062",
+      "source": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0182.0046",
+      "context": "Chụp CLVT mạch máu não (từ ≥ 256 dãy)",
+      "price": "5.000.000",
+      "note": "Chưa bao gồm thuốc cản quang",
+      "stt": "5",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "5",
+        "Mã tương đương": "18.0182.0046",
+        "Dịch vụ kỹ thuật": "Chụp CLVT mạch máu não (từ ≥ 256 dãy)",
+        "Giá dịch vụ (VNĐ)": "5.000.000",
+        "Ghi chú": "Chưa bao gồm thuốc cản quang"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000063",
+      "source": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0183.0047",
+      "context": "Chụp CLVT sọ não có dựng hình 3D (từ ≥ 256 dãy)",
+      "price": "3.500.000",
+      "stt": "6",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "6",
+        "Mã tương đương": "18.0183.0047",
+        "Dịch vụ kỹ thuật": "Chụp CLVT sọ não có dựng hình 3D (từ ≥ 256 dãy)",
+        "Giá dịch vụ (VNĐ)": "3.500.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000064",
+      "source": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0184.0047",
+      "context": "Chụp CLVT hàm-mặt không tiêm thuốc cản quang (từ ≥ 256 dãy)",
+      "price": "3.500.000",
+      "stt": "7",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "7",
+        "Mã tương đương": "18.0184.0047",
+        "Dịch vụ kỹ thuật": "Chụp CLVT hàm-mặt không tiêm thuốc cản quang (từ ≥ 256 dãy)",
+        "Giá dịch vụ (VNĐ)": "3.500.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000065",
+      "source": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0185.0046",
+      "context": "Chụp CLVT hàm-mặt có tiêm thuốc cản quang (từ ≥ 256 dãy)",
+      "price": "5.000.000",
+      "note": "Chưa bao gồm thuốc cản quang",
+      "stt": "8",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "8",
+        "Mã tương đương": "18.0185.0046",
+        "Dịch vụ kỹ thuật": "Chụp CLVT hàm-mặt có tiêm thuốc cản quang (từ ≥ 256 dãy)",
+        "Giá dịch vụ (VNĐ)": "5.000.000",
+        "Ghi chú": "Chưa bao gồm thuốc cản quang"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000066",
+      "source": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0187.0047",
+      "context": "Chụp CLVT tai-xương đá không tiêm thuốc cản quang (từ ≥ 256 dãy)",
+      "price": "3.500.000",
+      "stt": "9",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "9",
+        "Mã tương đương": "18.0187.0047",
+        "Dịch vụ kỹ thuật": "Chụp CLVT tai-xương đá không tiêm thuốc cản quang (từ ≥ 256 dãy)",
+        "Giá dịch vụ (VNĐ)": "3.500.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000067",
+      "source": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0188.0046",
+      "context": "Chụp CLVT tai-xương đá có tiêm thuốc cản quang (từ ≥ 256 dãy)",
+      "price": "5.000.000",
+      "note": "Chưa bao gồm thuốc cản quang",
+      "stt": "10",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "10",
+        "Mã tương đương": "18.0188.0046",
+        "Dịch vụ kỹ thuật": "Chụp CLVT tai-xương đá có tiêm thuốc cản quang (từ ≥ 256 dãy)",
+        "Giá dịch vụ (VNĐ)": "5.000.000",
+        "Ghi chú": "Chưa bao gồm thuốc cản quang"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000068",
+      "source": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0189.0047",
+      "context": "Chụp CLVT hốc mắt (từ ≥ 256 dãy)",
+      "price": "3.500.000",
+      "stt": "11",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "11",
+        "Mã tương đương": "18.0189.0047",
+        "Dịch vụ kỹ thuật": "Chụp CLVT hốc mắt (từ ≥ 256 dãy)",
+        "Giá dịch vụ (VNĐ)": "3.500.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000069",
+      "source": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0190.0047",
+      "context": "Chụp CLVT hàm mặt có dựng hình 3D (từ ≥ 256 dãy)",
+      "price": "3.500.000",
+      "stt": "12",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "12",
+        "Mã tương đương": "18.0190.0047",
+        "Dịch vụ kỹ thuật": "Chụp CLVT hàm mặt có dựng hình 3D (từ ≥ 256 dãy)",
+        "Giá dịch vụ (VNĐ)": "3.500.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000070",
+      "source": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0209.0047",
+      "context": "Chụp cắt lớp vi tính lồng ngực không tiêm thuốc cản quang (từ ≥ 256 dãy)",
+      "price": "3.500.000",
+      "stt": "13",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "13",
+        "Mã tương đương": "18.0209.0047",
+        "Dịch vụ kỹ thuật": "Chụp cắt lớp vi tính lồng ngực không tiêm thuốc cản quang (từ ≥ 256 dãy)",
+        "Giá dịch vụ (VNĐ)": "3.500.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000071",
+      "source": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0210.0046",
+      "context": "Chụp cắt lớp vi tính lồng ngực có tiêm thuốc cản quang (từ ≥ 256 dãy)",
+      "price": "5.000.000",
+      "note": "Chưa bao gồm thuốc cản quang",
+      "stt": "14",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "14",
+        "Mã tương đương": "18.0210.0046",
+        "Dịch vụ kỹ thuật": "Chụp cắt lớp vi tính lồng ngực có tiêm thuốc cản quang (từ ≥ 256 dãy)",
+        "Giá dịch vụ (VNĐ)": "5.000.000",
+        "Ghi chú": "Chưa bao gồm thuốc cản quang"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000072",
+      "source": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0211.0047",
+      "context": "Chụp cắt lớp vi tính phổi độ phân giải cao (từ ≥ 256 dãy)",
+      "price": "3.500.000",
+      "stt": "15",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "15",
+        "Mã tương đương": "18.0211.0047",
+        "Dịch vụ kỹ thuật": "Chụp cắt lớp vi tính phổi độ phân giải cao (từ ≥ 256 dãy)",
+        "Giá dịch vụ (VNĐ)": "3.500.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000073",
+      "source": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0214.0046",
+      "context": "Chụp cắt lớp vi tính động mạch phổi (từ ≥ 256 dãy)",
+      "price": "5.000.000",
+      "note": "Chưa bao gồm thuốc cản quang",
+      "stt": "16",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "16",
+        "Mã tương đương": "18.0214.0046",
+        "Dịch vụ kỹ thuật": "Chụp cắt lớp vi tính động mạch phổi (từ ≥ 256 dãy)",
+        "Giá dịch vụ (VNĐ)": "5.000.000",
+        "Ghi chú": "Chưa bao gồm thuốc cản quang"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000074",
+      "source": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0215.0046",
+      "context": "Chụp cắt lớp vi tính động mạch chủ ngực (từ ≥ 256 dãy)",
+      "price": "5.000.000",
+      "note": "Chưa bao gồm thuốc cản quang",
+      "stt": "17",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "17",
+        "Mã tương đương": "18.0215.0046",
+        "Dịch vụ kỹ thuật": "Chụp cắt lớp vi tính động mạch chủ ngực (từ ≥ 256 dãy)",
+        "Giá dịch vụ (VNĐ)": "5.000.000",
+        "Ghi chú": "Chưa bao gồm thuốc cản quang"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000075",
+      "source": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0216.0046",
+      "context": "Chụp cắt lớp vi tính động mạch vành, tim có dùng thuốc beta block (từ ≥ 256 dãy)",
+      "price": "5.000.000",
+      "note": "Chưa bao gồm thuốc cản quang",
+      "stt": "18",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "18",
+        "Mã tương đương": "18.0216.0046",
+        "Dịch vụ kỹ thuật": "Chụp cắt lớp vi tính động mạch vành, tim có dùng thuốc beta block (từ ≥ 256 dãy)",
+        "Giá dịch vụ (VNĐ)": "5.000.000",
+        "Ghi chú": "Chưa bao gồm thuốc cản quang"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000076",
+      "source": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0217.0046",
+      "context": "Chụp cắt lớp vi tính động mạch vành, tim không dùng thuốc beta block (từ ≥ 256 dãy)",
+      "price": "5.000.000",
+      "note": "Chưa bao gồm thuốc cản quang",
+      "stt": "19",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "19",
+        "Mã tương đương": "18.0217.0046",
+        "Dịch vụ kỹ thuật": "Chụp cắt lớp vi tính động mạch vành, tim không dùng thuốc beta block (từ ≥ 256 dãy)",
+        "Giá dịch vụ (VNĐ)": "5.000.000",
+        "Ghi chú": "Chưa bao gồm thuốc cản quang"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000077",
+      "source": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0218.0047",
+      "context": "Chụp cắt lớp vi tính tính điểm vôi hóa mạch vành (từ ≥ 256 dãy)",
+      "price": "3.500.000",
+      "stt": "20",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "20",
+        "Mã tương đương": "18.0218.0047",
+        "Dịch vụ kỹ thuật": "Chụp cắt lớp vi tính tính điểm vôi hóa mạch vành (từ ≥ 256 dãy)",
+        "Giá dịch vụ (VNĐ)": "3.500.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000078",
+      "source": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0243.0047",
+      "context": "Chụp cắt lớp vi tính tầng trên ổ bụng thường quy (gồm: chụp Cắt lớp vi tính gan-mật, tụy, lách, dạ dày-tá tràng.v.v.) (từ ≥ 256 dãy)",
+      "price": "3.500.000",
+      "stt": "21",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "21",
+        "Mã tương đương": "18.0243.0047",
+        "Dịch vụ kỹ thuật": "Chụp cắt lớp vi tính tầng trên ổ bụng thường quy (gồm: chụp Cắt lớp vi tính gan-mật, tụy, lách, dạ dày-tá tràng.v.v.) (từ ≥ 256 dãy)",
+        "Giá dịch vụ (VNĐ)": "3.500.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000079",
+      "source": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0243.0046",
+      "context": "Chụp cắt lớp vi tính tầng trên ổ bụng thường quy (gồm: chụp Cắt lớp vi tính gan-mật, tụy, lách, dạ dày-tá tràng.v.v.) (từ ≥ 256 dãy)",
+      "price": "5.000.000",
+      "note": "Chưa bao gồm thuốc cản quang",
+      "stt": "22",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "22",
+        "Mã tương đương": "18.0243.0046",
+        "Dịch vụ kỹ thuật": "Chụp cắt lớp vi tính tầng trên ổ bụng thường quy (gồm: chụp Cắt lớp vi tính gan-mật, tụy, lách, dạ dày-tá tràng.v.v.) (từ ≥ 256 dãy)",
+        "Giá dịch vụ (VNĐ)": "5.000.000",
+        "Ghi chú": "Chưa bao gồm thuốc cản quang"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000080",
+      "source": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0244.0047",
+      "context": "Chụp cắt lớp vi tính bụng-tiểu khung thường quy (từ ≥ 256 dãy) (không thuốc)",
+      "price": "3.500.000",
+      "stt": "23",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "23",
+        "Mã tương đương": "18.0244.0047",
+        "Dịch vụ kỹ thuật": "Chụp cắt lớp vi tính bụng-tiểu khung thường quy (từ ≥ 256 dãy) (không thuốc)",
+        "Giá dịch vụ (VNĐ)": "3.500.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000081",
+      "source": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0244.0046",
+      "context": "Chụp cắt lớp vi tính bụng-tiểu khung thường quy (từ ≥ 256 dãy) (có thuốc)",
+      "price": "5.000.000",
+      "note": "Chưa bao gồm thuốc cản quang",
+      "stt": "24",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "24",
+        "Mã tương đương": "18.0244.0046",
+        "Dịch vụ kỹ thuật": "Chụp cắt lớp vi tính bụng-tiểu khung thường quy (từ ≥ 256 dãy) (có thuốc)",
+        "Giá dịch vụ (VNĐ)": "5.000.000",
+        "Ghi chú": "Chưa bao gồm thuốc cản quang"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000082",
+      "source": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0245.0047",
+      "context": "Chụp cắt lớp vi tính tiểu khung thường quy (gồm: chụp cắt lớp vi tính tử cung-buồng trứng, tiền liệt tuyến, các khối u vùng tiểu khung.v.v.)",
+      "price": "3.500.000",
+      "stt": "25",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "25",
+        "Mã tương đương": "18.0245.0047",
+        "Dịch vụ kỹ thuật": "Chụp cắt lớp vi tính tiểu khung thường quy (gồm: chụp cắt lớp vi tính tử cung-buồng trứng, tiền liệt tuyến, các khối u vùng tiểu khung.v.v.)",
+        "Giá dịch vụ (VNĐ)": "3.500.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000083",
+      "source": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0245.0046",
+      "context": "Chụp cắt lớp vi tính tiểu khung thường quy (gồm: chụp cắt lớp vi tính tử cung-buồng trứng, tiền liệt tuyến, các khối u vùng tiểu khung.v.v.)",
+      "price": "5.000.000",
+      "note": "Chưa bao gồm thuốc cản quang",
+      "stt": "26",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "26",
+        "Mã tương đương": "18.0245.0046",
+        "Dịch vụ kỹ thuật": "Chụp cắt lớp vi tính tiểu khung thường quy (gồm: chụp cắt lớp vi tính tử cung-buồng trứng, tiền liệt tuyến, các khối u vùng tiểu khung.v.v.)",
+        "Giá dịch vụ (VNĐ)": "5.000.000",
+        "Ghi chú": "Chưa bao gồm thuốc cản quang"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000084",
+      "source": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0246.0047",
+      "context": "Chụp cắt lớp vi tính hệ tiết niệu thường quy (từ ≥ 256 dãy)",
+      "price": "3.500.000",
+      "stt": "27",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "27",
+        "Mã tương đương": "18.0246.0047",
+        "Dịch vụ kỹ thuật": "Chụp cắt lớp vi tính hệ tiết niệu thường quy (từ ≥ 256 dãy)",
+        "Giá dịch vụ (VNĐ)": "3.500.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000085",
+      "source": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0246.0046",
+      "context": "Chụp cắt lớp vi tính hệ tiết niệu thường quy (từ ≥ 256 dãy)",
+      "price": "5.000.000",
+      "note": "Chưa bao gồm thuốc cản quang",
+      "stt": "28",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "28",
+        "Mã tương đương": "18.0246.0046",
+        "Dịch vụ kỹ thuật": "Chụp cắt lớp vi tính hệ tiết niệu thường quy (từ ≥ 256 dãy)",
+        "Giá dịch vụ (VNĐ)": "5.000.000",
+        "Ghi chú": "Chưa bao gồm thuốc cản quang"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000086",
+      "source": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0247.0046",
+      "context": "Chụp cắt lớp vi tính tầng trên ổ bụng có khảo sát mạch các tạng (bao gồm mạch: gan, tụy, lách và mạch khối u) (từ ≥ 256 dãy)",
+      "price": "5.000.000",
+      "note": "Chưa bao gồm thuốc cản quang",
+      "stt": "29",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "29",
+        "Mã tương đương": "18.0247.0046",
+        "Dịch vụ kỹ thuật": "Chụp cắt lớp vi tính tầng trên ổ bụng có khảo sát mạch các tạng (bao gồm mạch: gan, tụy, lách và mạch khối u) (từ ≥ 256 dãy)",
+        "Giá dịch vụ (VNĐ)": "5.000.000",
+        "Ghi chú": "Chưa bao gồm thuốc cản quang"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000087",
+      "source": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0248.0046",
+      "context": "Chụp cắt lớp vi tính hệ tiết niệu có khảo sát mạch thận và/hoặc dựng hình đường bài xuất (từ ≥ 256 dãy)",
+      "price": "5.000.000",
+      "note": "Chưa bao gồm thuốc cản quang",
+      "stt": "30",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "30",
+        "Mã tương đương": "18.0248.0046",
+        "Dịch vụ kỹ thuật": "Chụp cắt lớp vi tính hệ tiết niệu có khảo sát mạch thận và/hoặc dựng hình đường bài xuất (từ ≥ 256 dãy)",
+        "Giá dịch vụ (VNĐ)": "5.000.000",
+        "Ghi chú": "Chưa bao gồm thuốc cản quang"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000088",
+      "source": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0249.0046",
+      "context": "Chụp cắt lớp vi tính gan có dựng hình đường mật (từ ≥ 256 dãy)",
+      "price": "5.000.000",
+      "note": "Chưa bao gồm thuốc cản quang",
+      "stt": "31",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "31",
+        "Mã tương đương": "18.0249.0046",
+        "Dịch vụ kỹ thuật": "Chụp cắt lớp vi tính gan có dựng hình đường mật (từ ≥ 256 dãy)",
+        "Giá dịch vụ (VNĐ)": "5.000.000",
+        "Ghi chú": "Chưa bao gồm thuốc cản quang"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000089",
+      "source": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0250.0046",
+      "context": "Chụp cắt lớp vi tính tạng khảo sát huyết động học khối u (CT perfusion) (từ ≥ 256 dãy)",
+      "price": "5.000.000",
+      "note": "Chưa bao gồm thuốc cản quang",
+      "stt": "32",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "32",
+        "Mã tương đương": "18.0250.0046",
+        "Dịch vụ kỹ thuật": "Chụp cắt lớp vi tính tạng khảo sát huyết động học khối u (CT perfusion) (từ ≥ 256 dãy)",
+        "Giá dịch vụ (VNĐ)": "5.000.000",
+        "Ghi chú": "Chưa bao gồm thuốc cản quang"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000090",
+      "source": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0254.0046",
+      "context": "Chụp cắt lớp vi tính động mạch chủ-chậu (từ ≥ 256 dãy)",
+      "price": "5.000.000",
+      "note": "Chưa bao gồm thuốc cản quang",
+      "stt": "33",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "33",
+        "Mã tương đương": "18.0254.0046",
+        "Dịch vụ kỹ thuật": "Chụp cắt lớp vi tính động mạch chủ-chậu (từ ≥ 256 dãy)",
+        "Giá dịch vụ (VNĐ)": "5.000.000",
+        "Ghi chú": "Chưa bao gồm thuốc cản quang"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000091",
+      "source": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0294.0046",
+      "context": "Chụp cắt lớp vi tính mạch máu chi trên (từ ≥256 dãy)",
+      "price": "5.000.000",
+      "note": "Chưa bao gồm thuốc cản quang",
+      "stt": "34",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "34",
+        "Mã tương đương": "18.0294.0046",
+        "Dịch vụ kỹ thuật": "Chụp cắt lớp vi tính mạch máu chi trên (từ ≥256 dãy)",
+        "Giá dịch vụ (VNĐ)": "5.000.000",
+        "Ghi chú": "Chưa bao gồm thuốc cản quang"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000092",
+      "source": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0295.0046",
+      "context": "Chụp cắt lớp vi tính mạch máu chi dưới (từ ≥256 dãy)",
+      "price": "5.000.000",
+      "note": "Chưa bao gồm thuốc cản quang",
+      "stt": "35",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "35",
+        "Mã tương đương": "18.0295.0046",
+        "Dịch vụ kỹ thuật": "Chụp cắt lớp vi tính mạch máu chi dưới (từ ≥256 dãy)",
+        "Giá dịch vụ (VNĐ)": "5.000.000",
+        "Ghi chú": "Chưa bao gồm thuốc cản quang"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000093",
+      "source": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0282.0047",
+      "context": "Chụp cắt lớp vi tính cột sống cổ không tiêm thuốc cản quang (từ ≥ 256 dãy)",
+      "price": "3.500.000",
+      "stt": "36",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "36",
+        "Mã tương đương": "18.0282.0047",
+        "Dịch vụ kỹ thuật": "Chụp cắt lớp vi tính cột sống cổ không tiêm thuốc cản quang (từ ≥ 256 dãy)",
+        "Giá dịch vụ (VNĐ)": "3.500.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000094",
+      "source": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0283.0046",
+      "context": "Chụp cắt lớp vi tính cột sống cổ có tiêm thuốc cản quang (từ ≥ 256 dãy)",
+      "price": "5.000.000",
+      "note": "Chưa bao gồm thuốc cản quang",
+      "stt": "37",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "37",
+        "Mã tương đương": "18.0283.0046",
+        "Dịch vụ kỹ thuật": "Chụp cắt lớp vi tính cột sống cổ có tiêm thuốc cản quang (từ ≥ 256 dãy)",
+        "Giá dịch vụ (VNĐ)": "5.000.000",
+        "Ghi chú": "Chưa bao gồm thuốc cản quang"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000095",
+      "source": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0284.0047",
+      "context": "Chụp cắt lớp vi tính cột sống ngực không tiêm thuốc cản quang (từ ≥ 256 dãy)",
+      "price": "3.500.000",
+      "stt": "38",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "38",
+        "Mã tương đương": "18.0284.0047",
+        "Dịch vụ kỹ thuật": "Chụp cắt lớp vi tính cột sống ngực không tiêm thuốc cản quang (từ ≥ 256 dãy)",
+        "Giá dịch vụ (VNĐ)": "3.500.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000096",
+      "source": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0285.0046",
+      "context": "Chụp cắt lớp vi tính cột sống ngực có tiêm thuốc cản quang (từ ≥ 256 dãy)",
+      "price": "5.000.000",
+      "note": "Chưa bao gồm thuốc cản quang",
+      "stt": "39",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "39",
+        "Mã tương đương": "18.0285.0046",
+        "Dịch vụ kỹ thuật": "Chụp cắt lớp vi tính cột sống ngực có tiêm thuốc cản quang (từ ≥ 256 dãy)",
+        "Giá dịch vụ (VNĐ)": "5.000.000",
+        "Ghi chú": "Chưa bao gồm thuốc cản quang"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000097",
+      "source": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0286.0047",
+      "context": "Chụp cắt lớp vi tính cột sống thắt lưng không tiêm thuốc cản quang (từ ≥ 256 dãy)",
+      "price": "3.500.000",
+      "stt": "40",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "40",
+        "Mã tương đương": "18.0286.0047",
+        "Dịch vụ kỹ thuật": "Chụp cắt lớp vi tính cột sống thắt lưng không tiêm thuốc cản quang (từ ≥ 256 dãy)",
+        "Giá dịch vụ (VNĐ)": "3.500.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000098",
+      "source": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+      "id": "18.0287.0046",
+      "context": "Chụp cắt lớp vi tính cột sống thắt lưng có tiêm thuốc cản quang (từ ≥ 256 dãy)",
+      "price": "5.000.000",
+      "note": "Chưa bao gồm thuốc cản quang",
+      "stt": "41",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU",
+        "STT": "41",
+        "Mã tương đương": "18.0287.0046",
+        "Dịch vụ kỹ thuật": "Chụp cắt lớp vi tính cột sống thắt lưng có tiêm thuốc cản quang (từ ≥ 256 dãy)",
+        "Giá dịch vụ (VNĐ)": "5.000.000",
+        "Ghi chú": "Chưa bao gồm thuốc cản quang"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000099",
+      "source": "BẢNG GIÁ DANH MỤC NGÀY GIƯỜNG ĐIỀU TRỊ THEO YÊU CẦU",
+      "id": "",
+      "context": "Giường loại I",
+      "price": "1.000.000",
+      "stt": "1",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ DANH MỤC NGÀY GIƯỜNG ĐIỀU TRỊ THEO YÊU CẦU",
+        "STT": "1",
+        "Dịch vụ kỹ thuật": "Giường loại I",
+        "Giá dịch vụ (VNĐ)": "1.000.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000100",
+      "source": "BẢNG GIÁ DANH MỤC NGÀY GIƯỜNG ĐIỀU TRỊ THEO YÊU CẦU",
+      "id": "",
+      "context": "Giường loại II",
+      "price": "750.000",
+      "stt": "2",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ DANH MỤC NGÀY GIƯỜNG ĐIỀU TRỊ THEO YÊU CẦU",
+        "STT": "2",
+        "Dịch vụ kỹ thuật": "Giường loại II",
+        "Giá dịch vụ (VNĐ)": "750.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000101",
+      "source": "BẢNG GIÁ DANH MỤC NGÀY GIƯỜNG ĐIỀU TRỊ THEO YÊU CẦU",
+      "id": "",
+      "context": "Giường loại III",
+      "price": "500.000",
+      "stt": "3",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ DANH MỤC NGÀY GIƯỜNG ĐIỀU TRỊ THEO YÊU CẦU",
+        "STT": "3",
+        "Dịch vụ kỹ thuật": "Giường loại III",
+        "Giá dịch vụ (VNĐ)": "500.000"
+      }
+    },
+    {
+      "doc_id": "dvktyc_000102",
+      "source": "BẢNG GIÁ DANH MỤC NGÀY GIƯỜNG ĐIỀU TRỊ THEO YÊU CẦU",
+      "id": "",
+      "context": "Giường loại IV",
+      "price": "400.000",
+      "stt": "4",
+      "raw": {
+        "Danh mục": "BẢNG GIÁ DANH MỤC NGÀY GIƯỜNG ĐIỀU TRỊ THEO YÊU CẦU",
+        "STT": "4",
+        "Dịch vụ kỹ thuật": "Giường loại IV",
+        "Giá dịch vụ (VNĐ)": "400.000"
+      }
+    }
+  ]
+}

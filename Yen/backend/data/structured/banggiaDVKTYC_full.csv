@@ -1,0 +1,103 @@
+﻿So_thu_tu_chung,Trang,Danh_muc,STT,Ma_tuong_duong,Dich_vu_ky_thuat,Gia_dich_vu,Gia_kham_benh,Gia_dich_vu_theo_yeu_cau,Ghi_chu
+1,3,BẢNG GIÁ DANH MỤC KHÁM BỆNH THEO YÊU CẦU,1,,Khám theo yêu cầu (mức 1),500000,200000,300000,Cơ sở 1
+2,3,BẢNG GIÁ DANH MỤC KHÁM BỆNH THEO YÊU CẦU,1,,Khám theo yêu cầu (mức 2),300000,100000,200000,Cơ sở 1
+3,3,BẢNG GIÁ DANH MỤC KHÁM BỆNH THEO YÊU CẦU,2,,Khám theo yêu cầu (mức 1),500000,200000,300000,Cơ sở 2
+4,3,BẢNG GIÁ DANH MỤC KHÁM BỆNH THEO YÊU CẦU,2,,Khám theo yêu cầu (mức 2),300000,100000,200000,Cơ sở 2
+5,3,BẢNG GIÁ DANH MỤC KHÁM BỆNH THEO YÊU CẦU,4,,Dịch vụ chăm sóc y tế dưới 4 giờ/ngày (Phòng 3 giường),300000,,300000,Khoa ĐTBN
+6,3,BẢNG GIÁ DANH MỤC KHÁM BỆNH THEO YÊU CẦU,4,,Dịch vụ chăm sóc y tế trên 4 giờ/ngày (Phòng 3 giường),500000,,500000,Khoa ĐTBN
+7,3,BẢNG GIÁ DANH MỤC KHÁM BỆNH THEO YÊU CẦU,4,,Dịch vụ chăm sóc y tế dưới 4 giờ/ngày (Phòng 13 giường),150000,,150000,Khoa ĐTBN
+8,3,BẢNG GIÁ DANH MỤC KHÁM BỆNH THEO YÊU CẦU,4,,Dịch vụ chăm sóc y tế trên 4 giờ/ngày (Phòng 13 giường),200000,,200000,Khoa ĐTBN
+9,4,BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU,1,18.0700.0066,Chụp cộng hưởng từ tim đánh giá quá tải sắt,2300000,,,
+10,4,BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU,2,18.0337.0065,Chụp cộng hưởng từ cột sống ngực có tiêm tương phản (0.2-1.5T),3700000,,,
+11,4,BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU,3,18.0297.0065,Chụp cộng hưởng từ sọ não có tiêm chất tương phản (0.2-1.5T),3700000,,,
+12,4,BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU,4,18.0336.0066,Chụp cộng hưởng từ cột sống ngực (0.2-1.5T),2300000,,,
+13,4,BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU,5,18.0339.0065,Chụp cộng hưởng từ cột sống thắt lưng - cùng có tiêm tương phản (0.2-1.5T),3700000,,,
+14,4,BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU,6,18.0353.0065,Chụp cộng hưởng từ động mạch chi trên có tiêm tương phản (1.5T),3700000,,,
+15,4,BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU,7,18.0301.0065,Chụp cộng hưởng từ hệ mạch cổ có tiêm chất tương phản (0.2-1.5T),3700000,,,
+16,4,BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU,8,18.0298.0066,Chụp cộng hưởng từ não- mạch não không tiêm chất tương phản (0.2-1.5T),2300000,,,
+17,4,BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU,9,18.0338.0066,Chụp cộng hưởng từ cột sống thắt lưng - cùng (0.2-1.5T),2300000,,,
+18,4,BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU,10,18.0303.0066,Chụp cộng hưởng từ hốc mắt và thần kinh thị giác (0.2-1.5T),2300000,,,
+19,4,BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU,11,18.0334.0066,Chụp cộng hưởng từ cột sống cổ (0.2-1.5T),2300000,,,
+20,4,BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU,12,18.0344.0065,Chụp cộng hưởng từ xương và tủy xương có tiêm tương phản (0.2-1.5T),3700000,,,
+21,4,BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU,13,18.0351.0065,"Chụp cộng hưởng từ tầng trên ổ bụng có khảo sát mạch các tạng (bao gồm mạch: gan, tụy, lách và mạch khối u) (1.5T)",3700000,,,
+22,4,BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU,14,18.0699.0065,Chụp cộng hưởng từ tim đánh giá các bệnh lý tim bẩm sinh,3700000,,,
+23,5,BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU,15,18.0308.0066,Chụp cộng hưởng từ khuếch tán (DWI - Diffusion-weighted Imaging) (0.2-1.5T),2300000,,,
+24,5,BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU,16,18.0697.0065,Chụp cộng hưởng từ tim đánh giá các khối u tim có tiêm thuốc tương phản,3700000,,,
+25,5,BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU,17,18.0701.0065,Chụp cộng hưởng từ tim đánh giá khuếch tán sức căng (DTI - Diffusion Tensor Imaging),3700000,,,
+26,5,BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU,18,18.0325.0065,"Chụp cộng hưởng từ bìu, dương vật có tiêm chất tương phản (0.2-1.5T)",3700000,,,
+27,5,BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU,19,18.0300.0066,Chụp cộng hưởng từ hệ mạch cổ không tiêm chất tương phản (0.2-1.5T),2300000,,,
+28,5,BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU,20,18.0359.0065,Chụp cộng hưởng từ tĩnh mạch có tiêm tương phản (1.5T),3700000,,,
+29,5,BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU,21,18.0352.0066,Chụp cộng hưởng từ động mạch chi trên (1.5T),2300000,,,
+30,5,BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU,22,18.0324.0066,"Chụp cộng hưởng từ bìu, dương vật (0.2-1.5T)",2300000,,,
+31,5,BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU,23,18.0358.0066,Chụp cộng hưởng từ tĩnh mạch (1.5T),2300000,,,
+32,5,BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU,24,18.0310.0066,Chụp cộng hưởng từ vùng mặt – cổ (0.2-1.5T),2300000,,,
+33,5,BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU,25,18.0341.0065,Chụp cộng hưởng từ khớp có tiêm tương phản tĩnh mạch (0.2-1.5T),3700000,,,
+34,5,BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU,26,18.0304.0065,Chụp cộng hưởng từ hốc mắt và thần kinh thị giác có tiêm chất tương phản (0.2-1.5T),3700000,,,
+35,5,BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU,27,18.0309.0065,Chụp cộng hưởng từ đáy sọ và xương đá (0.2-1.5T),3700000,,,
+36,5,BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU,28,18.0296.0066,Chụp cộng hưởng từ sọ não (0.2-1.5T),2300000,,,
+37,5,BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU,29,18.0305.0065,Chụp cộng hưởng từ tưới máu não (perfusion) (0.2-1.5T),3700000,,,
+38,5,BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU,30,18.0350.0065,Chụp cộng hưởng từ tim (1.5T),3700000,,,
+39,5,BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU,31,18.0319.0066,"Chụp cộng hưởng từ tầng bụng không tiêm chất tương phản (gồm: chụp cộng hưởng từ gan-mật, tụy, lách, thận, dạ dày-tá tràng...) (0.2-1.5T)",2300000,,,
+40,6,BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU,32,18.0348.0065,Chụp cộng hưởng từ động mạch chủ-ngực (1.5T),3700000,,,
+41,6,BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU,33,18.0311.0065,Chụp cộng hưởng từ vùng mặt – cổ có tiêm tương phản (0.2-1.5T),3700000,,,
+42,6,BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU,34,18.0361.0065,Chụp cộng hưởng từ bạch mạch có tiêm tương phản đặc hiệu (1.5T),3700000,,,
+43,6,BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU,35,18.0302.0065,Chụp cộng hưởng từ tuyến yên có tiêm chất tương phản (khảo sát động học) (0.2-1.5T),3700000,,,
+44,6,BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU,36,18.0345.0066,Chụp cộng hưởng từ phần mềm chi (0.2-1.5T),2300000,,,
+45,6,BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU,37,18.0355.0065,Chụp cộng hưởng từ động mạch chi dưới có tiêm tương phản (1.5T),3700000,,,
+46,6,BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU,38,18.0349.0065,Chụp cộng hưởng từ động mạch vành (1.5T),3700000,,,
+47,6,BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU,39,18.0329.0065,Chụp cộng hưởng từ tuyến tiền liệt có tiêm tương phản (0.2-1.5T),3700000,,,
+48,6,BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU,40,18.0335.0065,Chụp cộng hưởng từ cột sống cổ có tiêm tương phản (0.2-1.5T),3700000,,,
+49,6,BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU,41,18.0698.0065,Chụp cộng hưởng từ tim đánh giá các bệnh lý tim bẩm sinh có tiêm thuốc tương phản,3700000,,,
+50,6,BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU,42,18.0354.0066,Chụp cộng hưởng từ động mạch chi dưới (1.5T),2300000,,,
+51,6,BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU,43,18.0322.0065,Chụp cộng hưởng từ vùng chậu dò hậu môn (0.2-1.5T),3700000,,,
+52,6,BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU,44,18.0340.0066,Chụp cộng hưởng từ khớp (0.2-1.5T),2300000,,,
+53,6,BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU,45,18.0323.0065,"Chụp cộng hưởng từ vùng chậu có tiêm chất tương phản (gồm: chụp cộng hưởng từ tử cung-phần phụ, tiền liệt tuyến, đại tràng chậu hông, trực tràng, các khối u vùng chậu…) (0.2-1.5T)",3700000,,,
+54,6,BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU,46,18.0346.0065,Chụp cộng hưởng từ phần mềm chi có tiêm tương phản (0.2-1.5T),3700000,,,
+55,6,BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU,47,18.0343.0066,Chụp cộng hưởng từ xương và tủy xương (0.2-1.5T),2300000,,,
+56,7,BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU,48,18.0299.0065,Chụp cộng hưởng từ não- mạch não có tiêm chất tương phản (0.2-1.5T),3700000,,,
+57,7,BẢNG GIÁ CHỤP CỘNG HƯỞNG TỪ NGOÀI GIỜ THEO YÊU CẦU,49,18.0347.0065,Chụp cộng hưởng từ động mạch chủ-chậu (1.5T),3700000,,,
+58,8,BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU,1,18.0178.0047,Chụp CLVT sọ não không tiêm thuốc cản quang (từ ≥ 256 dãy),3500000,,,
+59,8,BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU,2,18.0179.0046,Chụp CLVT sọ não có tiêm thuốc cản quang (từ ≥ 256 dãy),5000000,,,Chưa bao gồm thuốc cản quang
+60,8,BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU,3,18.0180.0046,Chụp CLVT hệ động mạch cảnh có tiêm thuốc cản quang (từ ≥ 256 dãy),5000000,,,Chưa bao gồm thuốc cản quang
+61,8,BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU,4,18.0181.0046,Chụp CLVT tưới máu não (CT perfusion),5000000,,,Chưa bao gồm thuốc cản quang
+62,8,BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU,5,18.0182.0046,Chụp CLVT mạch máu não (từ ≥ 256 dãy),5000000,,,Chưa bao gồm thuốc cản quang
+63,8,BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU,6,18.0183.0047,Chụp CLVT sọ não có dựng hình 3D (từ ≥ 256 dãy),3500000,,,
+64,8,BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU,7,18.0184.0047,Chụp CLVT hàm-mặt không tiêm thuốc cản quang (từ ≥ 256 dãy),3500000,,,
+65,8,BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU,8,18.0185.0046,Chụp CLVT hàm-mặt có tiêm thuốc cản quang (từ ≥ 256 dãy),5000000,,,Chưa bao gồm thuốc cản quang
+66,8,BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU,9,18.0187.0047,Chụp CLVT tai-xương đá không tiêm thuốc cản quang (từ ≥ 256 dãy),3500000,,,
+67,8,BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU,10,18.0188.0046,Chụp CLVT tai-xương đá có tiêm thuốc cản quang (từ ≥ 256 dãy),5000000,,,Chưa bao gồm thuốc cản quang
+68,8,BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU,11,18.0189.0047,Chụp CLVT hốc mắt (từ ≥ 256 dãy),3500000,,,
+69,8,BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU,12,18.0190.0047,Chụp CLVT hàm mặt có dựng hình 3D (từ ≥ 256 dãy),3500000,,,
+70,9,BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU,13,18.0209.0047,Chụp cắt lớp vi tính lồng ngực không tiêm thuốc cản quang (từ ≥ 256 dãy),3500000,,,
+71,9,BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU,14,18.0210.0046,Chụp cắt lớp vi tính lồng ngực có tiêm thuốc cản quang (từ ≥ 256 dãy),5000000,,,Chưa bao gồm thuốc cản quang
+72,9,BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU,15,18.0211.0047,Chụp cắt lớp vi tính phổi độ phân giải cao (từ ≥ 256 dãy),3500000,,,
+73,9,BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU,16,18.0214.0046,Chụp cắt lớp vi tính động mạch phổi (từ ≥ 256 dãy),5000000,,,Chưa bao gồm thuốc cản quang
+74,9,BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU,17,18.0215.0046,Chụp cắt lớp vi tính động mạch chủ ngực (từ ≥ 256 dãy),5000000,,,Chưa bao gồm thuốc cản quang
+75,9,BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU,18,18.0216.0046,"Chụp cắt lớp vi tính động mạch vành, tim có dùng thuốc beta block (từ ≥ 256 dãy)",5000000,,,Chưa bao gồm thuốc cản quang
+76,9,BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU,19,18.0217.0046,"Chụp cắt lớp vi tính động mạch vành, tim không dùng thuốc beta block (từ ≥ 256 dãy)",5000000,,,Chưa bao gồm thuốc cản quang
+77,9,BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU,20,18.0218.0047,Chụp cắt lớp vi tính tính điểm vôi hóa mạch vành (từ ≥ 256 dãy),3500000,,,
+78,9,BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU,21,18.0243.0047,"Chụp cắt lớp vi tính tầng trên ổ bụng thường quy (gồm: chụp Cắt lớp vi tính gan-mật, tụy, lách, dạ dày-tá tràng.v.v.) (từ ≥ 256 dãy)",3500000,,,
+79,9,BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU,22,18.0243.0046,"Chụp cắt lớp vi tính tầng trên ổ bụng thường quy (gồm: chụp Cắt lớp vi tính gan-mật, tụy, lách, dạ dày-tá tràng.v.v.) (từ ≥ 256 dãy)",5000000,,,Chưa bao gồm thuốc cản quang
+80,9,BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU,23,18.0244.0047,Chụp cắt lớp vi tính bụng-tiểu khung thường quy (từ ≥ 256 dãy) (không thuốc),3500000,,,
+81,9,BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU,24,18.0244.0046,Chụp cắt lớp vi tính bụng-tiểu khung thường quy (từ ≥ 256 dãy) (có thuốc),5000000,,,Chưa bao gồm thuốc cản quang
+82,10,BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU,25,18.0245.0047,"Chụp cắt lớp vi tính tiểu khung thường quy (gồm: chụp cắt lớp vi tính tử cung-buồng trứng, tiền liệt tuyến, các khối u vùng tiểu khung.v.v.)",3500000,,,
+83,10,BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU,26,18.0245.0046,"Chụp cắt lớp vi tính tiểu khung thường quy (gồm: chụp cắt lớp vi tính tử cung-buồng trứng, tiền liệt tuyến, các khối u vùng tiểu khung.v.v.)",5000000,,,Chưa bao gồm thuốc cản quang
+84,10,BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU,27,18.0246.0047,Chụp cắt lớp vi tính hệ tiết niệu thường quy (từ ≥ 256 dãy),3500000,,,
+85,10,BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU,28,18.0246.0046,Chụp cắt lớp vi tính hệ tiết niệu thường quy (từ ≥ 256 dãy),5000000,,,Chưa bao gồm thuốc cản quang
+86,10,BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU,29,18.0247.0046,"Chụp cắt lớp vi tính tầng trên ổ bụng có khảo sát mạch các tạng (bao gồm mạch: gan, tụy, lách và mạch khối u) (từ ≥ 256 dãy)",5000000,,,Chưa bao gồm thuốc cản quang
+87,10,BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU,30,18.0248.0046,Chụp cắt lớp vi tính hệ tiết niệu có khảo sát mạch thận và/hoặc dựng hình đường bài xuất (từ ≥ 256 dãy),5000000,,,Chưa bao gồm thuốc cản quang
+88,10,BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU,31,18.0249.0046,Chụp cắt lớp vi tính gan có dựng hình đường mật (từ ≥ 256 dãy),5000000,,,Chưa bao gồm thuốc cản quang
+89,10,BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU,32,18.0250.0046,Chụp cắt lớp vi tính tạng khảo sát huyết động học khối u (CT perfusion) (từ ≥ 256 dãy),5000000,,,Chưa bao gồm thuốc cản quang
+90,10,BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU,33,18.0254.0046,Chụp cắt lớp vi tính động mạch chủ-chậu (từ ≥ 256 dãy),5000000,,,Chưa bao gồm thuốc cản quang
+91,10,BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU,34,18.0294.0046,Chụp cắt lớp vi tính mạch máu chi trên (từ ≥256 dãy),5000000,,,Chưa bao gồm thuốc cản quang
+92,10,BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU,35,18.0295.0046,Chụp cắt lớp vi tính mạch máu chi dưới (từ ≥256 dãy),5000000,,,Chưa bao gồm thuốc cản quang
+93,11,BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU,36,18.0282.0047,Chụp cắt lớp vi tính cột sống cổ không tiêm thuốc cản quang (từ ≥ 256 dãy),3500000,,,
+94,11,BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU,37,18.0283.0046,Chụp cắt lớp vi tính cột sống cổ có tiêm thuốc cản quang (từ ≥ 256 dãy),5000000,,,Chưa bao gồm thuốc cản quang
+95,11,BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU,38,18.0284.0047,Chụp cắt lớp vi tính cột sống ngực không tiêm thuốc cản quang (từ ≥ 256 dãy),3500000,,,
+96,11,BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU,39,18.0285.0046,Chụp cắt lớp vi tính cột sống ngực có tiêm thuốc cản quang (từ ≥ 256 dãy),5000000,,,Chưa bao gồm thuốc cản quang
+97,11,BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU,40,18.0286.0047,Chụp cắt lớp vi tính cột sống thắt lưng không tiêm thuốc cản quang (từ ≥ 256 dãy),3500000,,,
+98,11,BẢNG GIÁ CHỤP CẮT LỚP VI TÍNH TỪ 256 DÃY TRỞ LÊN NGOÀI GIỜ THEO YÊU CẦU,41,18.0287.0046,Chụp cắt lớp vi tính cột sống thắt lưng có tiêm thuốc cản quang (từ ≥ 256 dãy),5000000,,,Chưa bao gồm thuốc cản quang
+99,12,BẢNG GIÁ DANH MỤC NGÀY GIƯỜNG ĐIỀU TRỊ THEO YÊU CẦU,1,,Giường loại I,1000000,,,
+100,12,BẢNG GIÁ DANH MỤC NGÀY GIƯỜNG ĐIỀU TRỊ THEO YÊU CẦU,2,,Giường loại II,750000,,,
+101,12,BẢNG GIÁ DANH MỤC NGÀY GIƯỜNG ĐIỀU TRỊ THEO YÊU CẦU,3,,Giường loại III,500000,,,
+102,12,BẢNG GIÁ DANH MỤC NGÀY GIƯỜNG ĐIỀU TRỊ THEO YÊU CẦU,4,,Giường loại IV,400000,,,

@@ -108,8 +108,8 @@ def run_model_tool_loop(
         if not calls:
             rounds.append(round_record)
             fallback_text = (
-                "Xin lỗi, mình chưa nhận được phản hồi rõ ràng. Bạn nhắn lại triệu chứng "
-                "hoặc câu trả lời vừa rồi giúp mình nhé."
+                "Xin lỗi, mình chưa nhận được phản hồi rõ ràng. Bạn nhắn lại câu hỏi về dịch vụ, "
+                "giá khám hoặc triệu chứng vừa rồi giúp mình nhé."
             )
             return {
                 "status": "answered",
@@ -173,6 +173,10 @@ def main() -> None:
     parser.add_argument("--transcripts-dir", type=Path, default=ROOT / "transcripts")
     parser.add_argument("--history-window", type=int, default=5, help="Keep the last N user/assistant pairs in context.")
     parser.add_argument("--max-tool-rounds", type=int, default=4)
+    parser.add_argument("--voice", dest="use_voice", action="store_true",
+                        help="Bật chế độ giọng nói: dùng STT để nghe đầu vào, đọc kết quả bằng TTS.")
+    parser.add_argument("--voice-type", choices=["male", "female"], default="female",
+                        help="Giọng đọc TTS (mặc định: female).")
     args = parser.parse_args()
 
     system_prompt = args.system_prompt.read_text(encoding="utf-8")
@@ -204,13 +208,24 @@ def main() -> None:
     }
 
     print(f"Research Agent chat. artifact_version={artifact_version.artifact_version}")
+    if args.use_voice:
+        print("Chế độ giọng nói: nói vào mic để nhập, kết quả sẽ được đọc bằng giọng nói.")
     print("Type /exit to stop.")
 
     history: list[dict[str, str]] = []
     turn_index = 0
     while True:
         try:
-            user_text = input("\nYou> ").strip()
+            if args.use_voice:
+                from stt import speak_input
+                print("\n🎤 Đang nghe... (nói câu hỏi của bạn)")
+                try:
+                    user_text = (speak_input() or "").strip()
+                except Exception as exc:
+                    print(f"⚠️  Không nhận được giọng nói: {exc}")
+                    continue
+            else:
+                user_text = input("\nYou> ").strip()
         except (EOFError, KeyboardInterrupt):
             print()
             break
@@ -250,6 +265,13 @@ def main() -> None:
             print(f"\nAgent> {assistant_text}")
             history.append({"role": "user", "content": user_text})
             history.append({"role": "assistant", "content": assistant_text})
+
+            if assistant_text:
+                try:
+                    from stt import speak_output
+                    speak_output(assistant_text, voice_type=args.voice_type)
+                except Exception as exc:
+                    print(f"⚠️  Không thể đọc kết quả bằng giọng nói: {exc}")
         except Exception as exc:
             turn_record.update({
                 "status": "provider_error",

@@ -174,7 +174,7 @@ export default function HealthCalendar() {
         )}
 
         <p className="cal-disclaimer">
-          Yên là trợ lý AI y tế. Nội dung chỉ mang tính tham khảo, không thay thế chẩn đoán y khoa.
+          Yên là trợ lý hỗ trợ khách hàng của Bệnh viện Tim Hà Nội. Nội dung chỉ mang tính tham khảo, không thay thế chẩn đoán y khoa.
         </p>
       </div>
 
