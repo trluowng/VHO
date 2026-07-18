@@ -2,12 +2,11 @@ node_modules
 dist
 dist-ssr
 backend/logs/
-# backend/data/ holds runtime user data (accounts, health profiles) and must stay ignored,
-# but the first-aid provenance registry and reviewed rules are content, not runtime data —
-# use the "*" form (not a trailing-slash directory match) so the exception below can apply.
-!backend/data/first_aid/
-!backend/data/first_aid/**
-backend/data/first_aid/corpus/
+# The runtime SQLite DB (accounts, password hashes, health profiles) must never be
+# committed. Everything else under backend/data/ (pricing/RAG reference data etc.)
+# is legitimate tracked content, so only the DB files themselves are excluded.
+backend/data/*.db
+backend/data/*.db-journal
 .env
 .env.local
 *.local
