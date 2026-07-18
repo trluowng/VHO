@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { useAuth } from '../context/AuthContext.jsx'
 import { calendarApi } from '../lib/api.js'
 import { CATEGORIES, categoryMeta } from '../lib/calendarCategories.js'
-import { toISODate, monthKey, buildMonthGrid } from '../lib/calendarGrid.js'
+import { toISODate, monthKey, buildMonthGrid, addDays } from '../lib/calendarGrid.js'
 import { Calendar as CalendarIcon, Clock } from './icons.jsx'
 import CalendarSidebarLeft from './calendar/CalendarSidebarLeft.jsx'
 import CalendarSidebarRight from './calendar/CalendarSidebarRight.jsx'
@@ -16,6 +16,7 @@ export default function HealthCalendar() {
   const [entries, setEntries] = useState([])
   const [selected, setSelected] = useState(() => toISODate(new Date()))
   const [filter, setFilter] = useState('all')
+  const [view, setView] = useState('month')
   const [modalDate, setModalDate] = useState(null)
   const [busy, setBusy] = useState(false)
 
@@ -37,9 +38,20 @@ export default function HealthCalendar() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [key])
 
+  // Nhắc thuốc là 1 đợt lặp lại (entry_date -> date_end, nhiều giờ/ngày), nên phải
+  // xuất hiện trên MỌI ngày trong khoảng đó (lưới tháng + danh sách theo ngày),
+  // không chỉ đúng entry_date như các loại sự kiện 1 ngày còn lại.
   const entriesByDate = useMemo(() => {
     const map = {}
-    for (const e of entries) (map[e.entry_date] ||= []).push(e)
+    for (const e of entries) {
+      if (e.type === 'thuoc' && e.date_end && e.date_end > e.entry_date) {
+        for (let d = e.entry_date; d <= e.date_end; d = addDays(d, 1)) {
+          (map[d] ||= []).push(e)
+        }
+      } else {
+        (map[e.entry_date] ||= []).push(e)
+      }
+    }
     return map
   }, [entries])
 
@@ -48,8 +60,14 @@ export default function HealthCalendar() {
     [entries, filter],
   )
 
+  // Nhắc thuốc "sắp tới" là những đợt CHƯA kết thúc (date_end >= hôm nay), không
+  // chỉ những đợt bắt đầu từ hôm nay trở đi -- giữ nguyên entry_date thật (ngày
+  // bắt đầu đợt) để sidebar bên phải hiển thị đúng khoảng ngày, việc quy đổi
+  // "Hôm nay" cho hiển thị badge nằm ở AppointmentCard.
   const upcoming = useMemo(
-    () => filteredEntries.filter((e) => e.entry_date >= todayIso).sort((a, b) => (a.entry_date + (a.time_start || '')).localeCompare(b.entry_date + (b.time_start || ''))),
+    () => filteredEntries
+      .filter((e) => (e.type === 'thuoc' ? (e.date_end || e.entry_date) >= todayIso : e.entry_date >= todayIso))
+      .sort((a, b) => (a.entry_date + (a.time_start || (a.times && a.times[0]) || '')).localeCompare(b.entry_date + (b.time_start || (b.times && b.times[0]) || ''))),
     [filteredEntries, todayIso],
   )
   const appointments = useMemo(
@@ -57,11 +75,28 @@ export default function HealthCalendar() {
     [upcoming],
   )
   const followUps = useMemo(() => upcoming.filter((e) => e.type === 'tiem_chung'), [upcoming])
+  const medications = useMemo(() => upcoming.filter((e) => e.type === 'thuoc'), [upcoming])
 
   const todayEntries = entriesByDate[todayIso] || []
-  const monthLabel = cursor.toLocaleDateString('vi-VN', { month: 'long', year: 'numeric' })
-  const selectedDate = new Date(selected + 'T00:00:00')
   const selectedEntries = (entriesByDate[selected] || []).filter((e) => filter === 'all' || e.type === filter)
+  const todayDate = new Date(todayIso + 'T00:00:00')
+  const weekDates = useMemo(() => {
+    const anchor = new Date(selected + 'T00:00:00')
+    const mondayOffset = (anchor.getDay() + 6) % 7
+    const monday = new Date(anchor)
+    monday.setDate(anchor.getDate() - mondayOffset)
+    return Array.from({ length: 7 }, (_, index) => {
+      const date = new Date(monday)
+      date.setDate(monday.getDate() + index)
+      return date
+    })
+  }, [selected])
+  const monthEntries = useMemo(
+    () => [...filteredEntries].sort((a, b) => (
+      a.entry_date + (a.time_start || a.times?.[0] || '')
+    ).localeCompare(b.entry_date + (b.time_start || b.times?.[0] || ''))),
+    [filteredEntries],
+  )
 
   async function removeEntry(id) {
     setBusy(true)
@@ -71,6 +106,23 @@ export default function HealthCalendar() {
     } finally {
       setBusy(false)
     }
+  }
+
+  function jumpToToday() {
+    const now = new Date()
+    setCursor(new Date(now.getFullYear(), now.getMonth(), 1))
+    setSelected(todayIso)
+  }
+
+  function moveMonth(offset) {
+    const next = new Date(cursor.getFullYear(), cursor.getMonth() + offset, 1)
+    setCursor(next)
+    setSelected(toISODate(next))
+  }
+
+  function selectCalendarDay(date, inMonth) {
+    setSelected(toISODate(date))
+    if (!inMonth) setCursor(new Date(date.getFullYear(), date.getMonth(), 1))
   }
 
   return (
@@ -85,46 +137,105 @@ export default function HealthCalendar() {
       <div className="cal-main">
         <div className="cal-main__toolbar">
           <div className="cal-main__nav">
-            <button onClick={() => setCursor((d) => new Date(d.getFullYear(), d.getMonth() - 1, 1))} aria-label="Tháng trước">‹</button>
+            <button onClick={() => moveMonth(-1)} aria-label="Tháng trước">‹</button>
             <span className="cal-main__month">Tháng {cursor.getMonth() + 1}, {cursor.getFullYear()}</span>
-            <button onClick={() => setCursor((d) => new Date(d.getFullYear(), d.getMonth() + 1, 1))} aria-label="Tháng sau">›</button>
+            <button onClick={() => moveMonth(1)} aria-label="Tháng sau">›</button>
           </div>
-          <div className="cal-main__view-toggle">
-            <button className="is-active">Tháng</button>
-            <button disabled title="Sắp ra mắt">Tuần</button>
-            <button disabled title="Sắp ra mắt">Danh sách</button>
+          <div className="cal-main__view-toggle" role="group" aria-label="Kiểu hiển thị lịch">
+            <button type="button" className={view === 'month' ? 'is-active' : ''} onClick={() => setView('month')}>Tháng</button>
+            <button type="button" className={view === 'week' ? 'is-active' : ''} onClick={() => setView('week')}>Tuần</button>
+            <button type="button" className={view === 'list' ? 'is-active' : ''} onClick={() => setView('list')}>Danh sách</button>
           </div>
         </div>
 
-        <div className="cal-grid">
-          <div className="cal-grid__weekdays">
-            {WEEKDAYS.map((w) => <span key={w}>{w}</span>)}
+        {view === 'month' && (
+          <div className="cal-grid">
+            <div className="cal-grid__weekdays">
+              {WEEKDAYS.map((w) => <span key={w}>{w}</span>)}
+            </div>
+            <div className="cal-grid__cells">
+              {grid.map(({ date, inMonth }) => {
+                const iso = toISODate(date)
+                const dayEntries = entriesByDate[iso] || []
+                const visibleDayEntries = dayEntries.filter((e) => filter === 'all' || e.type === filter)
+                const firstMeta = visibleDayEntries[0] ? categoryMeta(visibleDayEntries[0].type) : null
+                const isToday = iso === todayIso
+                const isSelected = iso === selected
+                return (
+                  <button
+                    key={iso}
+                    className={`cal-grid__cell ${!inMonth ? 'is-muted' : ''} ${visibleDayEntries.length ? 'has-events' : ''} ${isSelected ? 'is-selected' : ''} ${isToday && !isSelected ? 'is-today' : ''}`}
+                    style={firstMeta ? { '--cal-day-color': firstMeta.dot } : undefined}
+                    onClick={() => selectCalendarDay(date, inMonth)}
+                  >
+                    <span className="cal-grid__day-number">{date.getDate()}</span>
+                    {visibleDayEntries.length > 0 && (
+                      <span className="cal-grid__dots">
+                        {visibleDayEntries.slice(0, 3).map((e, index) => (
+                          <i key={`${e.id}-${index}`} style={{ background: categoryMeta(e.type).dot }} />
+                        ))}
+                      </span>
+                    )}
+                  </button>
+                )
+              })}
+            </div>
           </div>
-          <div className="cal-grid__cells">
-            {grid.map(({ date, inMonth }) => {
+        )}
+
+        {view === 'week' && (
+          <div className="cal-week-view">
+            {weekDates.map((date, index) => {
               const iso = toISODate(date)
-              const dayEntries = entriesByDate[iso] || []
-              const isToday = iso === todayIso
-              const isSelected = iso === selected
+              const dayEntries = (entriesByDate[iso] || []).filter((e) => filter === 'all' || e.type === filter)
               return (
                 <button
+                  type="button"
                   key={iso}
-                  className={`cal-grid__cell ${!inMonth ? 'is-muted' : ''} ${isSelected ? 'is-selected' : ''} ${isToday && !isSelected ? 'is-today' : ''}`}
+                  className={`cal-week-day ${iso === selected ? 'is-selected' : ''} ${iso === todayIso ? 'is-today' : ''}`}
                   onClick={() => setSelected(iso)}
                 >
-                  <span>{date.getDate()}</span>
-                  {dayEntries.length > 0 && (
-                    <span className="cal-grid__dots">
-                      {dayEntries.slice(0, 3).map((e) => (
-                        <i key={e.id} style={{ background: categoryMeta(e.type).dot }} />
-                      ))}
-                    </span>
-                  )}
+                  <span className="cal-week-day__name">{WEEKDAYS[index]}</span>
+                  <strong>{date.getDate()}</strong>
+                  <span className="cal-week-day__events">
+                    {dayEntries.length === 0 && <small>Trống</small>}
+                    {dayEntries.slice(0, 3).map((entry) => (
+                      <i key={entry.id} style={{ '--entry-color': categoryMeta(entry.type).dot }}>
+                        {entry.time_start || entry.times?.[0] || 'Cả ngày'} · {entry.title}
+                      </i>
+                    ))}
+                  </span>
                 </button>
               )
             })}
           </div>
-        </div>
+        )}
+
+        {view === 'list' && (
+          <div className="cal-list-view">
+            {monthEntries.length === 0 && <p className="empty-hint">Không có sự kiện phù hợp trong tháng này.</p>}
+            {monthEntries.map((entry) => {
+              const meta = categoryMeta(entry.type)
+              const EntryIcon = meta.icon
+              return (
+                <button type="button" key={entry.id} className="cal-list-row" onClick={() => setSelected(entry.entry_date)}>
+                  <span className="cal-list-row__date">
+                    <strong>{new Date(entry.entry_date + 'T00:00:00').getDate()}</strong>
+                    <small>Tháng {new Date(entry.entry_date + 'T00:00:00').getMonth() + 1}</small>
+                  </span>
+                  <span className="cal-list-row__icon" style={{ color: meta.dot, background: `color-mix(in srgb, ${meta.dot} 14%, transparent)` }}>
+                    <EntryIcon width={17} height={17} />
+                  </span>
+                  <span className="cal-list-row__body">
+                    <strong>{entry.title}</strong>
+                    <small>{entry.doctor || entry.location || entry.note || meta.label}</small>
+                  </span>
+                  <span className="cal-list-row__time">{entry.time_start || entry.times?.join(', ') || 'Cả ngày'}</span>
+                </button>
+              )
+            })}
+          </div>
+        )}
 
         <div className="cal-legend">
           {CATEGORIES.map((c) => (
@@ -138,16 +249,14 @@ export default function HealthCalendar() {
           <span className="cal-today-card__icon"><CalendarIcon width={20} height={20} /></span>
           <div className="cal-today-card__body">
             <p className="cal-today-card__title">
-              {selected === todayIso ? 'Hôm nay' : 'Ngày đã chọn'} - {selectedDate.toLocaleDateString('vi-VN', { weekday: 'long', day: '2-digit', month: '2-digit', year: 'numeric' })}
+              Hôm nay - {todayDate.toLocaleDateString('vi-VN', { weekday: 'long', day: '2-digit', month: '2-digit', year: 'numeric' })}
             </p>
             <p className="cal-today-card__desc">
-              {selected === todayIso
-                ? (todayEntries.length > 0 ? `Bạn có ${todayEntries.length} lịch hẹn và nhắc nhở trong ngày.` : 'Bạn chưa có lịch hẹn hay nhắc nhở nào hôm nay.')
-                : (selectedEntries.length > 0 ? `${selectedEntries.length} mục trong ngày này.` : 'Chưa có lịch hẹn hay nhắc nhở nào cho ngày này.')}
+              {todayEntries.length > 0 ? `Bạn có ${todayEntries.length} lịch hẹn và nhắc nhở trong ngày.` : 'Bạn chưa có lịch hẹn hay nhắc nhở nào hôm nay.'}
             </p>
           </div>
-          <button type="button" className="btn btn--ghost cal-today-card__cta" onClick={() => setModalDate(selected)}>
-            Thêm lịch cho ngày này →
+          <button type="button" className="btn btn--ghost cal-today-card__cta" onClick={jumpToToday}>
+            Xem lịch hôm nay →
           </button>
         </div>
 
@@ -157,13 +266,20 @@ export default function HealthCalendar() {
               const meta = categoryMeta(e.type)
               return (
                 <li key={e.id}>
-                  <span style={{ color: meta.dot }}><meta.icon width={16} height={16} /></span>
+                  <span
+                    className="cal-day-list__icon"
+                    style={{ color: meta.dot, background: `color-mix(in srgb, ${meta.dot} 16%, transparent)` }}
+                  >
+                    <meta.icon width={15} height={15} />
+                  </span>
                   <span className="cal-day-list__body">
                     <span className="cal-day-list__title">{e.title}</span>
                     <span className="cal-day-list__meta">
                       {meta.label}
+                      {e.times?.length > 0 && <> · <Clock width={11} height={11} /> {e.times.join(', ')}</>}
                       {e.time_start && <> · <Clock width={11} height={11} /> {e.time_start}</>}
                       {e.doctor && ` · ${e.doctor}`}
+                      {e.type === 'thuoc' && e.note && ` · ${e.note}`}
                     </span>
                   </span>
                   <button className="cycle-history__remove" onClick={() => removeEntry(e.id)} disabled={busy}>Xoá</button>
@@ -178,7 +294,13 @@ export default function HealthCalendar() {
         </p>
       </div>
 
-      <CalendarSidebarRight appointments={appointments} followUps={followUps} />
+      <CalendarSidebarRight
+        appointments={appointments}
+        medications={medications}
+        followUps={followUps}
+        onRemove={removeEntry}
+        busy={busy}
+      />
 
       {modalDate && (
         <CalendarEntryModal date={modalDate} onClose={() => setModalDate(null)} onSaved={load} />

@@ -10,6 +10,13 @@ export function monthKey(d) {
   return `${d.getFullYear()}-${pad(d.getMonth() + 1)}`
 }
 
+/** Cộng n ngày vào 1 chuỗi ISO 'YYYY-MM-DD', trả về chuỗi ISO. */
+export function addDays(iso, n) {
+  const d = new Date(iso + 'T00:00:00')
+  d.setDate(d.getDate() + n)
+  return toISODate(d)
+}
+
 /** Lưới đủ 6 hàng x 7 cột, có kèm ngày đầu/cuối tháng liền kề (đánh dấu inMonth: false). */
 export function buildMonthGrid(year, month) {
   const first = new Date(year, month, 1)

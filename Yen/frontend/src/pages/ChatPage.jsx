@@ -261,11 +261,20 @@ export default function ChatPage() {
         push({ type: 'message', role: 'ai', text: 'Được — bạn cứ kể thêm bất kỳ chi tiết nào: thời gian, mức độ, hay bệnh nền / thuốc đang dùng. Mình sẽ cập nhật lại đánh giá.' })
         return
       }
+      if (/đặt lịch/i.test(cta.label)) {
+        // Nhãn CTA thường là "Đặt lịch khám <chuyên khoa>" -- gửi lại thành 1 câu
+        // yêu cầu rõ ràng thay vì gửi nguyên nhãn nút, để backend hiểu đây là yêu
+        // cầu xem bác sĩ/lịch trống (gọi xem_lich_kham) chứ không phải mô tả
+        // triệu chứng mới cần đánh giá lại từ đầu.
+        const specialty = cta.label.replace(/đặt lịch khám\s*/i, '').trim()
+        send(specialty ? `Tôi muốn đặt lịch khám ${specialty}.` : 'Tôi muốn đặt lịch khám.')
+        return
+      }
       if (/bác sĩ/i.test(cta.label)) {
         push({ type: 'message', role: 'ai', text: 'Mình đã chuẩn bị sẵn bản tóm tắt để bạn chia sẻ với bác sĩ hoặc nhân viên y tế. Trong lúc đó, hãy theo dõi nếu triệu chứng nặng lên.' })
       }
     },
-    [reset, push],
+    [reset, push, send],
   )
 
   const viewItems = reviewing ? reviewing.items : items

@@ -44,6 +44,9 @@ const ERROR_LABELS = {
   no_speech: 'Không nhận diện được lời nói. Hãy nói gần micro và thử lại.',
   audio_too_large: 'Bản ghi âm quá dài. Vui lòng ghi tối đa 30 giây.',
   stt_service_unavailable: 'Dịch vụ nhận dạng giọng nói đang bận. Vui lòng thử lại.',
+  slot_already_booked: 'Khung giờ này vừa có người đặt trước bạn. Vui lòng chọn khung giờ khác.',
+  slot_not_found: 'Khung giờ này không còn tồn tại. Vui lòng chọn lại.',
+  doctor_not_found: 'Không tìm thấy bác sĩ này.',
 }
 
 export const authApi = {
@@ -60,6 +63,19 @@ export const calendarApi = {
   list: (token, month) => request(`/calendar${month ? `?month=${month}` : ''}`, { token }),
   create: (token, entry) => request('/calendar', { method: 'POST', body: entry, token }),
   remove: (token, id) => request(`/calendar/${id}`, { method: 'DELETE', token }),
+}
+
+export const doctorsApi = {
+  list: (token, { query, campus, specialty } = {}) => {
+    const params = new URLSearchParams()
+    if (query) params.set('query', query)
+    if (campus) params.set('campus', campus)
+    if (specialty) params.set('specialty', specialty)
+    const qs = params.toString()
+    return request(`/doctors${qs ? `?${qs}` : ''}`, { token })
+  },
+  schedule: (token, doctorId) => request(`/doctors/${doctorId}/schedule`, { token }),
+  book: (token, doctorId, slot) => request(`/doctors/${doctorId}/book`, { method: 'POST', body: slot, token }),
 }
 
 export const cycleApi = {

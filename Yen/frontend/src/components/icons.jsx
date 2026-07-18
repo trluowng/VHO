@@ -175,3 +175,9 @@ export const Camera = (p) => (
     <circle {...S} cx="12" cy="13.5" r="3.4" />
   </svg>
 )
+export const Search = (p) => (
+  <svg viewBox="0 0 24 24" {...p}>
+    <circle {...S} cx="10.5" cy="10.5" r="6.5" />
+    <path {...S} d="M20 20l-4.5-4.5" />
+  </svg>
+)

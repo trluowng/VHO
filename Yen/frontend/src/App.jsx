@@ -7,6 +7,8 @@ import SignupPage from './pages/SignupPage.jsx'
 import ChatPage from './pages/ChatPage.jsx'
 import CalendarPage from './pages/CalendarPage.jsx'
 import ProfilePage from './pages/ProfilePage.jsx'
+import BookingPage from './pages/BookingPage.jsx'
+import DoctorDetailPage from './pages/DoctorDetailPage.jsx'
 
 export default function App() {
   return (
@@ -19,6 +21,8 @@ export default function App() {
         <Route element={<RequireAuth />}>
           <Route path="/app" element={<ChatPage />} />
           <Route path="/app/lich" element={<CalendarPage />} />
+          <Route path="/app/dat-lich" element={<BookingPage />} />
+          <Route path="/app/dat-lich/:doctorId" element={<DoctorDetailPage />} />
           <Route path="/app/ho-so" element={<ProfilePage />} />
         </Route>
 

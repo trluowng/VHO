@@ -1,5 +1,5 @@
 import { CATEGORIES, categoryMeta } from '../../lib/calendarCategories.js'
-import { Calendar as CalendarIcon, Edit, RefreshCw } from '../icons.jsx'
+import { Calendar as CalendarIcon, Edit, RefreshCw, Shield } from '../icons.jsx'
 
 function formatUpcomingDate(iso) {
   const today = new Date()
@@ -20,14 +20,14 @@ export default function CalendarSidebarLeft({ activeFilter, onFilterChange, upco
 
       <div className="cal-sidebar__section">
         <h4 className="cal-sidebar__heading">
-          <CalendarIcon width={14} height={14} /> Bộ lọc
+          <span>Bộ lọc</span><CalendarIcon width={14} height={14} />
         </h4>
         <div className="cal-sidebar__filters">
           <button
             className={`cal-filter-chip ${activeFilter === 'all' ? 'is-active' : ''}`}
             onClick={() => onFilterChange('all')}
           >
-            Tất cả
+            <Shield width={14} height={14} /> Tất cả
           </button>
           {CATEGORIES.map((c) => (
             <button
@@ -49,14 +49,19 @@ export default function CalendarSidebarLeft({ activeFilter, onFilterChange, upco
             const meta = categoryMeta(e.type)
             return (
               <li key={e.id}>
-                <span className="cal-upcoming-list__icon" style={{ color: meta.dot }}>
-                  <meta.icon width={16} height={16} />
+                <span
+                  className="cal-upcoming-list__icon"
+                  style={{ color: meta.dot, background: `color-mix(in srgb, ${meta.dot} 16%, transparent)` }}
+                >
+                  <meta.icon width={15} height={15} />
                 </span>
                 <span className="cal-upcoming-list__body">
                   <span className="cal-upcoming-list__title">{e.title}</span>
-                  <span className="cal-upcoming-list__meta">
-                    {formatUpcomingDate(e.entry_date)}{e.time_start ? ` · ${e.time_start}` : ''}
-                  </span>
+                  <span className="cal-upcoming-list__meta">{e.doctor || e.location || e.note || meta.label}</span>
+                </span>
+                <span className="cal-upcoming-list__when">
+                  <strong>{formatUpcomingDate(e.entry_date)}</strong>
+                  <small>{e.time_start || e.times?.[0] || ''}</small>
                 </span>
               </li>
             )
@@ -64,12 +69,13 @@ export default function CalendarSidebarLeft({ activeFilter, onFilterChange, upco
         </ul>
       </div>
 
-      <button type="button" className="btn btn--ghost cal-sidebar__sync-btn" disabled title="Sắp ra mắt">
-        <RefreshCw width={15} height={15} />
+      <button type="button" className="cal-sidebar__sync-btn" title="Tính năng đồng bộ đang được phát triển">
+        <span className="cal-sidebar__sync-icon"><RefreshCw width={17} height={17} /></span>
         <span>
           Đồng bộ lịch
           <small>Kết nối với Google Calendar</small>
         </span>
+        <span aria-hidden="true">→</span>
       </button>
     </aside>
   )

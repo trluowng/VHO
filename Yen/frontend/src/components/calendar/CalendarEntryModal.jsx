@@ -4,6 +4,8 @@ import { calendarApi } from '../../lib/api.js'
 import { CATEGORIES } from '../../lib/calendarCategories.js'
 import { X } from '../icons.jsx'
 
+const MAX_TIMES_PER_DAY = 6
+
 export default function CalendarEntryModal({ date, onClose, onSaved }) {
   const { token } = useAuth()
   const [category, setCategory] = useState('kham_benh')
@@ -13,10 +15,24 @@ export default function CalendarEntryModal({ date, onClose, onSaved }) {
   const [doctor, setDoctor] = useState('')
   const [location, setLocation] = useState('')
   const [note, setNote] = useState('')
+  const [dateStart, setDateStart] = useState(date)
+  const [dateEnd, setDateEnd] = useState(date)
+  const [times, setTimes] = useState([''])
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState(null)
 
   const showDoctorLocation = category === 'kham_benh' || category === 'xet_nghiem' || category === 'tiem_chung'
+  const isMedication = category === 'thuoc'
+
+  function updateTime(index, value) {
+    setTimes((prev) => prev.map((t, i) => (i === index ? value : t)))
+  }
+  function addTime() {
+    setTimes((prev) => (prev.length < MAX_TIMES_PER_DAY ? [...prev, ''] : prev))
+  }
+  function removeTime(index) {
+    setTimes((prev) => (prev.length > 1 ? prev.filter((_, i) => i !== index) : prev))
+  }
 
   async function submit(e) {
     e.preventDefault()
@@ -24,7 +40,14 @@ export default function CalendarEntryModal({ date, onClose, onSaved }) {
     setBusy(true)
     setError(null)
     try {
-      await calendarApi.create(token, {
+      await calendarApi.create(token, isMedication ? {
+        entry_date: dateStart,
+        date_end: dateEnd || dateStart,
+        type: category,
+        title: title.trim(),
+        note: note.trim() || null,
+        times: times.map((t) => t.trim()).filter(Boolean),
+      } : {
         entry_date: date,
         type: category,
         title: title.trim(),
@@ -72,25 +95,80 @@ export default function CalendarEntryModal({ date, onClose, onSaved }) {
           </label>
 
           <label>
-            <span>Tiêu đề</span>
-            <input value={title} onChange={(e) => setTitle(e.target.value)} placeholder="vd: Khám tim mạch định kỳ" required />
+            <span>{isMedication ? 'Tên thuốc + hàm lượng' : 'Tiêu đề'}</span>
+            <input
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+              placeholder={isMedication ? 'vd: Amlodipine 5mg' : 'vd: Khám tim mạch định kỳ'}
+              required
+            />
           </label>
 
-          <label>
-            <span>Ngày</span>
-            <input type="date" value={date} disabled />
-          </label>
+          {isMedication ? (
+            <div className="cal-modal__row">
+              <label>
+                <span>Từ ngày</span>
+                <input
+                  type="date"
+                  value={dateStart}
+                  onChange={(e) => {
+                    setDateStart(e.target.value)
+                    if (dateEnd < e.target.value) setDateEnd(e.target.value)
+                  }}
+                  required
+                />
+              </label>
+              <label>
+                <span>Đến ngày</span>
+                <input type="date" value={dateEnd} min={dateStart} onChange={(e) => setDateEnd(e.target.value)} required />
+              </label>
+            </div>
+          ) : (
+            <label>
+              <span>Ngày</span>
+              <input type="date" value={date} disabled />
+            </label>
+          )}
 
-          <div className="cal-modal__row">
+          {isMedication ? (
             <label>
-              <span>Giờ bắt đầu (tuỳ chọn)</span>
-              <input type="time" value={timeStart} onChange={(e) => setTimeStart(e.target.value)} />
+              <span>Số lần uống mỗi ngày</span>
+              <div className="cal-modal__times">
+                {times.map((t, i) => (
+                  <div className="cal-modal__time-row" key={i}>
+                    <input
+                      type="time"
+                      value={t}
+                      onChange={(e) => updateTime(i, e.target.value)}
+                      aria-label={`Giờ uống lần ${i + 1}`}
+                      required
+                    />
+                    {times.length > 1 && (
+                      <button type="button" className="cal-modal__time-remove" onClick={() => removeTime(i)} aria-label="Bỏ khung giờ này">
+                        ×
+                      </button>
+                    )}
+                  </div>
+                ))}
+                {times.length < MAX_TIMES_PER_DAY && (
+                  <button type="button" className="btn btn--ghost cal-modal__time-add" onClick={addTime}>
+                    + Thêm giờ uống
+                  </button>
+                )}
+              </div>
             </label>
-            <label>
-              <span>Giờ kết thúc (tuỳ chọn)</span>
-              <input type="time" value={timeEnd} onChange={(e) => setTimeEnd(e.target.value)} />
-            </label>
-          </div>
+          ) : (
+            <div className="cal-modal__row">
+              <label>
+                <span>Giờ bắt đầu (tuỳ chọn)</span>
+                <input type="time" value={timeStart} onChange={(e) => setTimeStart(e.target.value)} />
+              </label>
+              <label>
+                <span>Giờ kết thúc (tuỳ chọn)</span>
+                <input type="time" value={timeEnd} onChange={(e) => setTimeEnd(e.target.value)} />
+              </label>
+            </div>
+          )}
 
           {showDoctorLocation && (
             <div className="cal-modal__row">
@@ -106,8 +184,13 @@ export default function CalendarEntryModal({ date, onClose, onSaved }) {
           )}
 
           <label>
-            <span>Ghi chú (tuỳ chọn)</span>
-            <input value={note} onChange={(e) => setNote(e.target.value)} placeholder="vd: Nhịn ăn trước khi xét nghiệm" />
+            <span>{isMedication ? 'Liều dùng' : 'Ghi chú (tuỳ chọn)'}</span>
+            <input
+              value={note}
+              onChange={(e) => setNote(e.target.value)}
+              placeholder={isMedication ? 'vd: Uống 1 viên sau ăn sáng' : 'vd: Nhịn ăn trước khi xét nghiệm'}
+              required={isMedication}
+            />
           </label>
 
           {error && <p className="auth-error">{error}</p>}

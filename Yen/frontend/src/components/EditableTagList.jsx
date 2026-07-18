@@ -1,8 +1,19 @@
 import { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { Cross } from './icons.jsx'
+import { Cross, Edit } from './icons.jsx'
 
-export default function EditableTagList({ label, values, onChange, placeholder, busy, tone }) {
+export default function EditableTagList({
+  label,
+  values,
+  onChange,
+  placeholder,
+  busy,
+  tone,
+  icon: Icon,
+  className = '',
+  variant = 'chips',
+  children,
+}) {
   const [editing, setEditing] = useState(false)
   const [adding, setAdding] = useState(false)
   const [draft, setDraft] = useState('')
@@ -19,16 +30,19 @@ export default function EditableTagList({ label, values, onChange, placeholder, 
   }
 
   return (
-    <section className="panel">
+    <section className={`panel editable-tag-list editable-tag-list--${variant} ${className}`.trim()}>
       <div className="panel__head">
-        <p className="panel__label" style={{ margin: 0 }}>{label}</p>
-        <button className="edit-toggle" onClick={() => { setEditing((v) => !v); setAdding(false) }}>
+        <p className="panel__label profile-card__title" style={{ margin: 0 }}>
+          {Icon && <Icon width={17} height={17} />} {label}
+        </p>
+        <button type="button" className="edit-toggle" onClick={() => { setEditing((v) => !v); setAdding(false) }}>
+          {!editing && <Edit width={13} height={13} />}
           {editing ? 'Xong' : 'Sửa'}
         </button>
       </div>
 
       {values.length === 0 && !editing ? (
-        <p className="empty-hint">Chưa có thông tin. Bấm "Sửa" để thêm.</p>
+        !children && <p className="empty-hint">Chưa có thông tin. Bấm "Sửa" để thêm.</p>
       ) : (
         <div className="chips">
           <AnimatePresence>
@@ -69,6 +83,8 @@ export default function EditableTagList({ label, values, onChange, placeholder, 
           ))}
         </div>
       )}
+
+      {children}
     </section>
   )
 }
