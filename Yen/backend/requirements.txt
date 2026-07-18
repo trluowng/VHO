@@ -10,3 +10,7 @@ pypdf>=4.0.0
 fastapi>=0.110
 uvicorn>=0.29
 PyJWT>=2.8
+# Conversation memory: embeddings (bge-m3) + FAISS vector store
+sentence-transformers>=2.3.0
+faiss-cpu>=1.8.0
+numpy>=1.24

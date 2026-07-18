@@ -1,0 +1,35 @@
+{
+  "summary": {
+    "provider": "groq",
+    "model": "qwen/qwen3.6-27b",
+    "total_cases": 2,
+    "provider_error_cases": 0,
+    "accuracy_mean": 0.0,
+    "recall_mean": 0,
+    "latency_ms_mean": 51995.6,
+    "latency_ms_p95": 31493.1,
+    "latency_ms_max": 72498.0
+  },
+  "results": [
+    {
+      "id": "smoke_price_khambenh",
+      "latency_ms": 31493.1,
+      "accuracy": 0.0,
+      "keywords_hit": [],
+      "keywords_total": 2,
+      "recall_hit": false,
+      "provider_error": null,
+      "output_preview": "Xin lỗi, mình chưa nhận được phản hồi rõ ràng. Bạn nhắn lại câu hỏi về dịch vụ, giá khám hoặc triệu chứng vừa rồi giúp mình nhé."
+    },
+    {
+      "id": "smoke_price_sieuamtim",
+      "latency_ms": 72498.0,
+      "accuracy": 0.0,
+      "keywords_hit": [],
+      "keywords_total": 2,
+      "recall_hit": false,
+      "provider_error": null,
+      "output_preview": "Xin lỗi, mình chưa nhận được phản hồi rõ ràng. Bạn nhắn lại câu hỏi về dịch vụ, giá khám hoặc triệu chứng vừa rồi giúp mình nhé."
+    }
+  ]
+}
