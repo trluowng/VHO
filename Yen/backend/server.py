@@ -237,7 +237,19 @@ def _agent_result_to_response(result: dict) -> dict:
 
 
 def triage(payload: dict, user_id: str | None) -> dict:
-    messages = _build_messages(payload.get("history", []), payload.get("message", ""), user_id)
+    # Nếu client bật giọng nói (use_voice), dùng STT để lấy đầu vào thay vì text.
+    use_voice = bool(payload.get("use_voice"))
+    message = payload.get("message", "")
+    if use_voice and not message:
+        try:
+            from stt import speak_input
+            message = (speak_input() or "").strip()
+        except Exception as exc:
+            raise HTTPException(status_code=400, detail=f"voice_input_failed: {exc}") from exc
+
+    # Giọng đọc TTS kết quả (mặc định nữ).
+    voice_type = payload.get("voice_type", "female")
+    messages = _build_messages(payload.get("history", []), message, user_id)
 
     timestamp = datetime.now().strftime("%Y%m%dT%H%M%S%f")
     transcript_id = "_".join([safe_slug(VERSION), safe_slug(PROVIDER_NAME), timestamp])
@@ -259,7 +271,7 @@ def triage(payload: dict, user_id: str | None) -> dict:
     turn_record = {
         "turn_index": 1,
         "started_at": now_iso(),
-        "user": payload.get("message", ""),
+        "user": message,
         "history_length": len(payload.get("history", [])),
         "status": "started",
         "assistant_text": None,
@@ -274,11 +286,19 @@ def triage(payload: dict, user_id: str | None) -> dict:
         model=SELECTED_MODEL,
         max_tool_rounds=MAX_TOOL_ROUNDS,
     )
-
     turn_record.update(result)
     turn_record["ended_at"] = now_iso()
     transcript["turns"].append(turn_record)
     write_transcript(transcript_path, transcript)
+
+    # Luôn đọc kết quả bằng giọng nói sau khi sinh xong (TTS / "speakup").
+    assistant_text = result.get("assistant_text", "")
+    if assistant_text:
+        try:
+            from stt import speak_output
+            speak_output(assistant_text, voice_type=voice_type)
+        except Exception as exc:
+            print(f"⚠️  speakup failed: {exc}")
 
     return _agent_result_to_response(result)
 
