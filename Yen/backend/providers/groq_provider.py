@@ -22,7 +22,11 @@ class GroqProvider(OpenAIProvider):
             # this free/on-demand tier also caps *requested* tokens-per-minute at
             # 8000 (prompt + max_tokens counted together), so this can't just be set
             # to the max -- tuned to leave headroom for the system prompt + history.
-            max_tokens=4000,
+            # Lowered from 4000 after adding the tra_gia/tra_cuu/xem_lich_kham tool
+            # descriptions grew the system prompt. Lowered again from 3000 -- with
+            # the HỒ SƠ BỆNH NHÂN (patient profile) block injected too, prompt_tokens
+            # reached ~5368, still tripping the 413 at 3000. Confirmed live.
+            max_tokens=2500,
         )
 
     def _extra_body(self, model: str) -> dict[str, Any] | None:

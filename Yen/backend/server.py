@@ -19,6 +19,8 @@ khoản người dùng + hồ sơ sức khỏe + lịch theo dõi sức khỏe.
 - GET  /cycle                  (auth) -> danh sách chu kỳ + dự đoán
 - POST /cycle                  (auth) -> thêm ngày bắt đầu kỳ kinh
 - DELETE /cycle/{id}           (auth)
+- GET  /doctors?query=&campus=&specialty=   (auth) -> danh sách bác sĩ + 2 lịch trống gần nhất
+- GET  /doctors/{id}/schedule                (auth) -> toàn bộ lịch trống của 1 bác sĩ
 
 Chạy:
     cd Yen/backend
@@ -42,6 +44,7 @@ import db
 from env_loader import load_lab_env
 from providers import make_provider
 from tools import load_tool_declarations, to_openai_tools
+from tools._shared import fold_text
 from auth import create_token, hash_password, verify_password, verify_token
 
 # Import the core agent loop and helpers from chat.py
@@ -74,10 +77,13 @@ STT_MAX_AUDIO_BYTES = int(os.getenv("STT_MAX_AUDIO_BYTES", str(8 * 1024 * 1024))
 
 SYSTEM_PROMPT = (ARTIFACTS_DIR / "system_prompt.md").read_text(encoding="utf-8")
 TOOL_DECLARATIONS = load_tool_declarations(ARTIFACTS_DIR / "tools.yaml")
-# Triage chỉ cần "clarify" (hỏi lại bệnh nhân). lookup/fetch/format là tool nghiên cứu
-# web sót lại từ template gốc — không cần cho tư vấn triệu chứng, và mỗi lần model gọi
-# thêm 1 vòng round-trip Gemini nữa (chậm hẳn), nên bỏ khỏi danh sách tool đưa cho model.
-TRIAGE_TOOL_NAMES = {"clarify"}
+# Triage cần "clarify" (hỏi lại bệnh nhân), "tra_gia" (tra bảng giá), "tra_cuu"
+# (RAG quy trình hành chính/chính sách/luật KBCB), và "xem_lich_kham" (tìm bác
+# sĩ theo chuyên khoa + lịch trống). lookup/fetch/format là tool nghiên cứu web
+# sót lại từ template gốc — không cần cho tư vấn triệu chứng, và mỗi lần model
+# gọi thêm 1 vòng round-trip nữa (chậm hẳn), nên bỏ khỏi danh sách tool đưa cho
+# model.
+TRIAGE_TOOL_NAMES = {"clarify", "tra_gia", "tra_cuu", "xem_lich_kham"}
 OPENAI_TOOLS = [t for t in to_openai_tools(TOOL_DECLARATIONS) if t["function"]["name"] in TRIAGE_TOOL_NAMES]
 PROVIDER = make_provider(PROVIDER_NAME)
 SELECTED_MODEL = MODEL or getattr(PROVIDER, "default_model", None)
@@ -450,6 +456,7 @@ def put_profile(payload: dict = Body(...), authorization: str | None = Header(No
 
 CALENDAR_TYPES = {"kham_benh", "xet_nghiem", "thuoc", "tiem_chung", "khac"}
 TIME_RE = re.compile(r"\d{2}:\d{2}")
+TIME_SLOT_RE = re.compile(r"\d{2}:\d{2}-\d{2}:\d{2}")
 
 
 @app.get("/calendar")
@@ -470,6 +477,8 @@ def create_calendar_entry(payload: dict = Body(...), authorization: str | None =
     time_end = (payload.get("time_end") or "").strip() or None
     doctor = (payload.get("doctor") or "").strip() or None
     location = (payload.get("location") or "").strip() or None
+    date_end = (payload.get("date_end") or "").strip() or None
+    times = [t.strip() for t in (payload.get("times") or []) if t and t.strip()]
 
     if not entry_date:
         raise HTTPException(status_code=400, detail="entry_date_required")
@@ -486,9 +495,30 @@ def create_calendar_entry(payload: dict = Body(...), authorization: str | None =
     if time_end and not TIME_RE.fullmatch(time_end):
         raise HTTPException(status_code=400, detail="invalid_time_end")
 
+    if entry_type == "thuoc":
+        # Nhắc uống thuốc là 1 đợt lặp lại (từ ngày -> đến ngày, N lần/ngày),
+        # khác với các loại còn lại (1 sự kiện đúng 1 ngày, 1 khung giờ).
+        if not times:
+            raise HTTPException(status_code=400, detail="times_required")
+        if any(not TIME_RE.fullmatch(t) for t in times):
+            raise HTTPException(status_code=400, detail="invalid_times")
+        if date_end:
+            try:
+                date.fromisoformat(date_end)
+            except ValueError:
+                raise HTTPException(status_code=400, detail="invalid_date_end")
+            if date_end < entry_date:
+                raise HTTPException(status_code=400, detail="date_end_before_entry_date")
+        else:
+            date_end = entry_date
+    else:
+        date_end = None
+        times = None
+
     entry_id = db.add_calendar_entry(
         user_id, entry_date, entry_type, title, payload.get("note"), now_iso(),
         time_start=time_start, time_end=time_end, doctor=doctor, location=location,
+        date_end=date_end, times=times,
     )
     return {"id": entry_id}
 
@@ -499,6 +529,141 @@ def delete_calendar_entry(entry_id: str, authorization: str | None = Header(None
     if not db.delete_calendar_entry(user_id, entry_id):
         raise HTTPException(status_code=404, detail="not_found")
     return {"ok": True}
+
+
+# ---------------------------------------------------------------------------
+# Routes — doctor directory / booking search (tab "Đặt lịch khám")
+#
+# Tách riêng khỏi tool xem_lich_kham dùng cho AI (search mờ theo từ khóa) --
+# ở đây khách tự gõ tên + chọn lọc cơ sở/khoa chính xác trên giao diện, nên
+# cần match rõ ràng (substring theo tên, exact theo cơ sở/khoa) thay vì
+# scoring mờ, và trả về TOÀN BỘ danh sách phù hợp (không giới hạn top-N).
+# ---------------------------------------------------------------------------
+
+_DOCTORS_PATH = ROOT / "data" / "doctors.json"
+_SCHEDULE_SLOTS_PATH = ROOT / "data" / "schedule_slots.json"
+_doctors_cache: list[dict] | None = None
+_schedule_by_doctor_cache: dict[str, list[dict]] | None = None
+
+
+def _load_doctors() -> list[dict]:
+    global _doctors_cache
+    if _doctors_cache is None:
+        _doctors_cache = json.loads(_DOCTORS_PATH.read_text(encoding="utf-8"))
+    return _doctors_cache
+
+
+def _load_schedule_by_doctor() -> dict[str, list[dict]]:
+    global _schedule_by_doctor_cache
+    if _schedule_by_doctor_cache is None:
+        slots = json.loads(_SCHEDULE_SLOTS_PATH.read_text(encoding="utf-8"))
+        by_doctor: dict[str, list[dict]] = {}
+        for slot in slots:
+            if slot.get("status") != "available":
+                continue
+            by_doctor.setdefault(slot["id_doctor"], []).append(slot)
+        for doctor_slots in by_doctor.values():
+            doctor_slots.sort(key=lambda s: (s["visit_date"], s["time_slot"]))
+        _schedule_by_doctor_cache = by_doctor
+    return _schedule_by_doctor_cache
+
+
+def _open_slots(doctor_id: str) -> list[dict]:
+    """Lịch trống thật của 1 bác sĩ = có trong data mock (status available) VÀ
+    chưa bị ai đặt qua app (calendar_entries.time_slot) -- 1 khung giờ đã đặt
+    thì biến mất khỏi danh sách trống cho MỌI người dùng, không chỉ người đã đặt."""
+    booked = db.list_booked_slots(doctor_id)
+    return [
+        s for s in _load_schedule_by_doctor().get(doctor_id, [])
+        if (s["visit_date"], s["time_slot"]) not in booked
+    ]
+
+
+@app.get("/doctors")
+def list_doctors(
+    query: str | None = None,
+    campus: str | None = None,
+    specialty: str | None = None,
+    authorization: str | None = Header(None),
+) -> dict:
+    _require_user_id(authorization)
+    folded_query = fold_text(query.strip()) if query and query.strip() else None
+
+    results = []
+    for doctor in _load_doctors():
+        if campus and doctor.get("campus") != campus:
+            continue
+        if specialty and doctor.get("specialty") != specialty:
+            continue
+        if folded_query and folded_query not in fold_text(doctor.get("full_name", "")):
+            continue
+        open_slots = _open_slots(doctor["id_doctor"])
+        results.append({
+            **doctor,
+            "next_slots": [
+                {"visit_date": s["visit_date"], "time_slot": s["time_slot"], "campus": s["campus"], "room": s["room"]}
+                for s in open_slots[:2]
+            ],
+            "available_count": len(open_slots),
+        })
+
+    results.sort(key=lambda d: fold_text(d["full_name"]))
+    return {"doctors": results}
+
+
+@app.get("/doctors/{doctor_id}/schedule")
+def get_doctor_schedule(doctor_id: str, authorization: str | None = Header(None)) -> dict:
+    _require_user_id(authorization)
+    doctor = next((d for d in _load_doctors() if d["id_doctor"] == doctor_id), None)
+    if not doctor:
+        raise HTTPException(status_code=404, detail="doctor_not_found")
+    return {
+        "doctor": doctor,
+        "slots": [
+            {"visit_date": s["visit_date"], "time_slot": s["time_slot"], "campus": s["campus"], "room": s["room"]}
+            for s in _open_slots(doctor_id)
+        ],
+    }
+
+
+@app.post("/doctors/{doctor_id}/book")
+def book_doctor_slot(doctor_id: str, payload: dict = Body(...), authorization: str | None = Header(None)) -> dict:
+    user_id = _require_user_id(authorization)
+    doctor = next((d for d in _load_doctors() if d["id_doctor"] == doctor_id), None)
+    if not doctor:
+        raise HTTPException(status_code=404, detail="doctor_not_found")
+
+    visit_date = (payload.get("visit_date") or "").strip()
+    time_slot = (payload.get("time_slot") or "").strip()
+    try:
+        date.fromisoformat(visit_date)
+    except ValueError:
+        raise HTTPException(status_code=400, detail="invalid_visit_date")
+    if not TIME_SLOT_RE.fullmatch(time_slot):
+        raise HTTPException(status_code=400, detail="invalid_time_slot")
+
+    # Khung giờ phải thật sự có trong data mock (đúng bác sĩ/ngày/giờ) VÀ chưa
+    # bị ai đặt trước -- chặn cả đặt bừa slot không tồn tại lẫn double-booking.
+    matching_slot = next(
+        (s for s in _load_schedule_by_doctor().get(doctor_id, [])
+         if s["visit_date"] == visit_date and s["time_slot"] == time_slot),
+        None,
+    )
+    if not matching_slot:
+        raise HTTPException(status_code=404, detail="slot_not_found")
+    if db.find_booking(doctor_id, visit_date, time_slot):
+        raise HTTPException(status_code=409, detail="slot_already_booked")
+
+    time_start, _, time_end = time_slot.partition("-")
+    entry_id = db.add_calendar_entry(
+        user_id, visit_date, "kham_benh", f"Khám {doctor['specialty']}",
+        f"Đặt lịch qua Yên với {doctor['full_name']}.", now_iso(),
+        time_start=time_start, time_end=time_end,
+        doctor=f"{doctor['full_name']} ({doctor['degree']})",
+        location=f"{matching_slot['campus']} - {doctor['department']} - {matching_slot['room']}",
+        doctor_id=doctor_id, time_slot=time_slot,
+    )
+    return {"id": entry_id}
 
 
 # ---------------------------------------------------------------------------
