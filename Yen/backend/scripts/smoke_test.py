@@ -90,7 +90,15 @@ def main() -> None:
     args = parser.parse_args()
 
     # Import the server's in-process triage flow (sets up provider + memory).
+    # Text-only smoke test: stub out the `stt` module so speak_output is a no-op and
+    # never imports config / speech_recognition / pygame.
+    import types
+
     sys.path.insert(0, str(ROOT))
+    _stt_stub = types.ModuleType("stt")
+    _stt_stub.speak_input = lambda *a, **k: ""
+    _stt_stub.speak_output = lambda *a, **k: None
+    sys.modules["stt"] = _stt_stub
     import server as srv
 
     provider_name = args.provider

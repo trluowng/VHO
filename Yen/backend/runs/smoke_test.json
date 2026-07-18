@@ -1,35 +1,105 @@
 {
   "summary": {
     "provider": "groq",
-    "model": "qwen/qwen3.6-27b",
-    "total_cases": 2,
+    "model": "llama-3.3-70b-versatile",
+    "total_cases": 8,
     "provider_error_cases": 0,
-    "accuracy_mean": 0.0,
+    "accuracy_mean": 0.2917,
     "recall_mean": 0,
-    "latency_ms_mean": 51995.6,
-    "latency_ms_p95": 31493.1,
-    "latency_ms_max": 72498.0
+    "latency_ms_mean": 7853.7,
+    "latency_ms_p95": 14184.0,
+    "latency_ms_max": 15570.4
   },
   "results": [
     {
       "id": "smoke_price_khambenh",
-      "latency_ms": 31493.1,
-      "accuracy": 0.0,
-      "keywords_hit": [],
+      "latency_ms": 4908.4,
+      "accuracy": 0.5,
+      "keywords_hit": [
+        "khám bệnh"
+      ],
       "keywords_total": 2,
       "recall_hit": false,
       "provider_error": null,
-      "output_preview": "Xin lỗi, mình chưa nhận được phản hồi rõ ràng. Bạn nhắn lại câu hỏi về dịch vụ, giá khám hoặc triệu chứng vừa rồi giúp mình nhé."
+      "output_preview": "Giá khám bệnh tại bệnh viện là bao nhiêu?"
     },
     {
       "id": "smoke_price_sieuamtim",
-      "latency_ms": 72498.0,
+      "latency_ms": 1087.0,
+      "accuracy": 0.5,
+      "keywords_hit": [
+        "siêu âm tim gắng sức"
+      ],
+      "keywords_total": 2,
+      "recall_hit": false,
+      "provider_error": null,
+      "output_preview": "Siêu âm tim gắng sức tại Bệnh viện Tim Hà Nội có giá bao nhiêu?"
+    },
+    {
+      "id": "smoke_price_dientamdo",
+      "latency_ms": 1150.9,
+      "accuracy": 0.5,
+      "keywords_hit": [
+        "điện tâm đồ"
+      ],
+      "keywords_total": 2,
+      "recall_hit": false,
+      "provider_error": null,
+      "output_preview": "Nghiệm pháp gắng sức điện tâm đồ hết bao nhiêu?"
+    },
+    {
+      "id": "smoke_price_xquangnguc",
+      "latency_ms": 1059.6,
+      "accuracy": 0.5,
+      "keywords_hit": [
+        "x-quang ngực"
+      ],
+      "keywords_total": 2,
+      "recall_hit": false,
+      "provider_error": null,
+      "output_preview": "Chụp X-quang ngực nghiêng giá bao nhiêu?"
+    },
+    {
+      "id": "smoke_bhyt_giayto",
+      "latency_ms": 10740.2,
+      "accuracy": 0.0,
+      "keywords_hit": [],
+      "keywords_total": 3,
+      "recall_hit": false,
+      "provider_error": null,
+      "output_preview": "Để đi khám bảo hiểm y tế ở viện, khách cần chuẩn bị những giấy tờ gì?"
+    },
+    {
+      "id": "smoke_quytrinh_kham",
+      "latency_ms": 14129.0,
+      "accuracy": 0.3333,
+      "keywords_hit": [
+        "khám"
+      ],
+      "keywords_total": 3,
+      "recall_hit": false,
+      "provider_error": null,
+      "output_preview": "Quy trình khám tại bệnh viện tim diễn ra như thế nào?"
+    },
+    {
+      "id": "smoke_emergency_nguc",
+      "latency_ms": 15570.4,
       "accuracy": 0.0,
       "keywords_hit": [],
       "keywords_total": 2,
       "recall_hit": false,
       "provider_error": null,
-      "output_preview": "Xin lỗi, mình chưa nhận được phản hồi rõ ràng. Bạn nhắn lại câu hỏi về dịch vụ, giá khám hoặc triệu chứng vừa rồi giúp mình nhé."
+      "output_preview": "Bạn đang gặp khó thở và đau ngực dữ dội, có thể cho tôi biết thêm về tình trạng của bạn không?"
+    },
+    {
+      "id": "smoke_unknown_price",
+      "latency_ms": 14184.0,
+      "accuracy": 0.0,
+      "keywords_hit": [],
+      "keywords_total": 2,
+      "recall_hit": false,
+      "provider_error": null,
+      "output_preview": "Bệnh viện có dịch vụ chụp MRI cột sống không, giá bao nhiêu?"
     }
   ]
 }

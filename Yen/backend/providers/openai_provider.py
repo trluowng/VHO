@@ -56,4 +56,9 @@ class OpenAIProvider:
         for call in msg.tool_calls or []:
             args = json.loads(call.function.arguments or "{}")
             calls.append(ToolCall(name=call.function.name, args=args))
-        return ModelResponse(text=msg.content, tool_calls=calls, raw=resp)
+        # qwen3 (and other reasoning models) may wrap output in a <think>...</think>
+        # block; strip it so the visible text isn't empty.
+        text = msg.content or ""
+        if "<think>" in text:
+            text = text.split("</think>", 1)[-1].strip()
+        return ModelResponse(text=text or None, tool_calls=calls, raw=resp)
