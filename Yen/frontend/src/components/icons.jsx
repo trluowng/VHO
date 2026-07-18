@@ -7,6 +7,12 @@ export const Cross = (p) => (
 export const Send = (p) => (
   <svg viewBox="0 0 24 24" {...p}><path {...S} d="M5 12l14-7-6 14-2.5-5.5L5 12z" /></svg>
 )
+export const Microphone = (p) => (
+  <svg viewBox="0 0 24 24" {...p}>
+    <rect {...S} x="9" y="3" width="6" height="11" rx="3" />
+    <path {...S} d="M6.5 11.5a5.5 5.5 0 0 0 11 0M12 17v4M8.5 21h7" />
+  </svg>
+)
 export const Restart = (p) => (
   <svg viewBox="0 0 24 24" {...p}><path {...S} d="M4 12a8 8 0 1 0 2.5-5.8M4 4v3.5H7.5" /></svg>
 )

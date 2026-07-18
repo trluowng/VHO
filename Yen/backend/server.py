@@ -6,6 +6,8 @@ khoản người dùng + hồ sơ sức khỏe + lịch theo dõi sức khỏe/c
 
 - POST /triage              body: { history, message }, header Authorization tùy chọn
                              trả về: { events, profile }
+- POST /stt/transcribe       body: audio/wav, header Authorization bắt buộc
+                             trả về: { text, language }
 - GET  /health               kiểm tra server
 - POST /auth/register        { email, password, age, gender } -> { token, user, profile }
 - POST /auth/login           { email, password } -> { token, user, profile }
@@ -46,6 +48,12 @@ from auth import create_token, hash_password, verify_password, verify_token
 from chat import run_model_tool_loop, trim_history, write_transcript, safe_slug, now_iso
 from versioning import artifact_version_dict, build_artifact_version
 from seed_demo import seed_demo_accounts
+from stt import (
+    InvalidAudioError,
+    NoSpeechRecognizedError,
+    SpeechRecognizer,
+    SpeechServiceError,
+)
 
 
 # ---------------------------------------------------------------------------
@@ -62,6 +70,7 @@ MODEL = os.getenv("TRIAGE_MODEL", None)          # None → provider's default_m
 HISTORY_WINDOW = int(os.getenv("TRIAGE_HISTORY_WINDOW", "5"))
 MAX_TOOL_ROUNDS = int(os.getenv("TRIAGE_MAX_TOOL_ROUNDS", "4"))
 PORT = int(os.getenv("PORT", os.getenv("TRIAGE_PORT", "8787")))
+STT_MAX_AUDIO_BYTES = int(os.getenv("STT_MAX_AUDIO_BYTES", str(8 * 1024 * 1024)))
 
 SYSTEM_PROMPT = (ARTIFACTS_DIR / "system_prompt.md").read_text(encoding="utf-8")
 TOOL_DECLARATIONS = load_tool_declarations(ARTIFACTS_DIR / "tools.yaml")
@@ -290,6 +299,31 @@ def triage(payload: dict, user_id: str | None) -> dict:
 @app.get("/health")
 def health() -> dict:
     return {"ok": True, "provider": PROVIDER_NAME, "model": SELECTED_MODEL, "port": PORT}
+
+
+@app.post("/stt/transcribe")
+def transcribe_speech(
+    audio: bytes = Body(..., media_type="audio/wav"),
+    authorization: str | None = Header(None),
+) -> dict:
+    """Convert a short browser-recorded WAV clip to Vietnamese text."""
+    _require_user_id(authorization)
+
+    if not audio:
+        raise HTTPException(status_code=400, detail="empty_audio")
+    if len(audio) > STT_MAX_AUDIO_BYTES:
+        raise HTTPException(status_code=413, detail="audio_too_large")
+
+    try:
+        text = SpeechRecognizer().recognize_wav_bytes(audio)
+    except InvalidAudioError as exc:
+        raise HTTPException(status_code=400, detail="invalid_audio") from exc
+    except NoSpeechRecognizedError as exc:
+        raise HTTPException(status_code=422, detail="no_speech") from exc
+    except SpeechServiceError as exc:
+        raise HTTPException(status_code=502, detail="stt_service_unavailable") from exc
+
+    return {"text": text, "language": "vi-VN"}
 
 
 @app.post("/triage")

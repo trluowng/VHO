@@ -8,7 +8,7 @@ import time
 import uuid
 import gc
 from gtts import gTTS
-from config import TTS_CONFIG, LANGUAGE, AVAILABLE_VOICES
+from .config import TTS_CONFIG, LANGUAGE, AVAILABLE_VOICES
 
 # Use pygame for cross-platform audio playback
 import pygame

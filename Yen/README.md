@@ -4,7 +4,8 @@
 > hiểu, hỏi thêm khi cần, rồi đưa ra **mức độ khẩn cấp + bước tiếp theo** kèm độ chắc
 > chắn và lý do. Có tài khoản + hồ sơ sức khỏe (tuổi, giới tính, bệnh nền, dị ứng) để Yên
 > nhớ mà không hỏi lại mỗi lần, cộng thêm lịch theo dõi sức khỏe (tài khoản nữ có thêm
-> tab theo dõi chu kỳ kinh nguyệt). Lấy cảm hứng & cải tiến từ Ada Health (track Healthcare).
+> tab theo dõi chu kỳ kinh nguyệt). Ô chat hỗ trợ **nhập tiếng Việt bằng micro** qua module
+> `backend/stt`. Lấy cảm hứng & cải tiến từ Ada Health (track Healthcare).
 
 Prototype cho Day 06 — built với React + Vite + Framer Motion (frontend), FastAPI + SQLite (backend).
 
@@ -33,6 +34,12 @@ npm run dev:all      # chạy `python -X utf8 server.py` (:8787) + `vite` (:5173
 
 Mở `http://localhost:5173` → màn hình landing → **Tạo tài khoản miễn phí** (chọn tuổi +
 giới tính) → vào thẳng khu chat, hồ sơ được lưu để không phải khai lại lần sau.
+
+Trong ô chat, bấm nút **micro**, cho phép trình duyệt truy cập micro, nói tối đa 30 giây rồi
+bấm lại để dừng. Trên Chrome/Edge, transcript tạm xuất hiện trực tiếp trong lúc đang nói;
+khi dừng, backend `stt` xử lý WAV và thay bằng transcript cuối để người dùng kiểm tra trước
+khi gửi. Trình duyệt không hỗ trợ nhận dạng trực tiếp vẫn dùng chế độ backend sau khi dừng.
+Micro chỉ hoạt động trên `localhost` hoặc website HTTPS.
 
 Build production: `npm run build` → `npm run preview` (chỉ build frontend; backend chạy
 bằng `python server.py` như bình thường).
@@ -69,6 +76,8 @@ frontend/src/
 ├── context/AuthContext.jsx      # token + user + profile, persist localStorage
 ├── lib/
 │   ├── api.js                   # client gọi backend (auth, profile, calendar, cycle)
+│   ├── audioRecorder.js         # ghi micro trình duyệt thành PCM WAV
+│   ├── liveSpeechRecognition.js # transcript tạm theo thời gian thực (Chrome/Edge)
 │   └── triageEngine.js          # "AI" lõi rule-based + callRealModel() gọi Gemini
 ├── pages/
 │   ├── LandingPage.jsx          # trang giới thiệu (public)
@@ -87,6 +96,7 @@ backend/
 ├── server.py                    # FastAPI: /triage, /auth/*, /profile, /calendar, /cycle
 ├── db.py                        # SQLite (accounts, hồ sơ, lịch, chu kỳ) — file tại backend/data/app.db
 ├── auth.py                      # hash mật khẩu (PBKDF2) + JWT session token
+├── stt/                         # SpeechRecognition tiếng Việt, nhận WAV từ trình duyệt
 └── artifacts/system_prompt.md   # hướng dẫn Gemini dùng hồ sơ bệnh nhân khi có
 ```
 
@@ -140,6 +150,7 @@ luận, không cần đăng ký + điền hồ sơ thủ công. Mật khẩu chu
 | `GET/PUT /profile` | Đọc/sửa hồ sơ sức khỏe (auth) |
 | `GET/POST/DELETE /calendar` | Lịch sức khỏe theo ngày (auth) |
 | `GET/POST/DELETE /cycle` | Chu kỳ kinh nguyệt + dự đoán (auth) |
+| `POST /stt/transcribe` | WAV từ micro → `{ text, language }` (auth) |
 | `POST /triage` | Chat — `Authorization` tùy chọn, có thì nạp hồ sơ vào context |
 
 ### Chạy AI THẬT bằng Gemini (cho điểm "AI chạy thật trong ≥1 flow")

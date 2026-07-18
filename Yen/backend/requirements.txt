@@ -10,3 +10,5 @@ pypdf>=4.0.0
 fastapi>=0.110
 uvicorn>=0.29
 PyJWT>=2.8
+# Browser-recorded Vietnamese speech-to-text (/stt/transcribe):
+SpeechRecognition>=3.10

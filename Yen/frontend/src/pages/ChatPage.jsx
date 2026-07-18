@@ -2,7 +2,7 @@ import { useEffect, useRef, useState, useCallback } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { createSession, handleUser, setSymptoms, callRealModel, detectRedFlag } from '../lib/triageEngine.js'
 import { loadSessions, upsertSession } from '../lib/sessionLog.js'
-import { isApiConfigured } from '../lib/api.js'
+import { isApiConfigured, sttApi } from '../lib/api.js'
 import { useAuth } from '../context/AuthContext.jsx'
 import { Cross } from '../components/icons.jsx'
 import TabNav from '../components/TabNav.jsx'
@@ -184,6 +184,11 @@ export default function ChatPage() {
     [busy, session, push, playEvents, runReal],
   )
 
+  const transcribeSpeech = useCallback(
+    (audioBlob) => sttApi.transcribe(token, audioBlob),
+    [token],
+  )
+
   const reset = useCallback(() => {
     sidRef.current = null
     startedAtRef.current = null
@@ -338,7 +343,12 @@ export default function ChatPage() {
               </div>
             </div>
 
-            <Composer onSend={send} disabled={busy} locked={!!emergency || !!reviewing} />
+            <Composer
+              onSend={send}
+              onTranscribe={transcribeSpeech}
+              disabled={busy}
+              locked={!!emergency || !!reviewing}
+            />
 
             <AnimatePresence>
               {emergency && <Emergency flag={emergency.flag} onBack={onBack} />}

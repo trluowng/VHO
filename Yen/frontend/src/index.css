@@ -814,12 +814,34 @@ input, textarea { font-family: inherit; }
   border-color: var(--sage-bright);
   box-shadow: 0 0 0 4px rgba(31, 122, 140, 0.16);
 }
+.composer__inner.is-recording {
+  border-color: var(--red);
+  box-shadow: 0 0 0 4px rgba(192, 71, 59, 0.13);
+}
 .composer textarea {
   flex: 1; border: none; background: none; resize: none;
   font-size: 15px; line-height: 1.5; color: var(--ink);
   max-height: 130px; padding: 9px 0; outline: none;
 }
 .composer textarea::placeholder { color: var(--ink-faint); }
+.mic-btn {
+  width: 42px; height: 42px; flex: none; border-radius: 13px;
+  display: grid; place-items: center;
+  border: 1px solid var(--card-edge); background: var(--card);
+  color: var(--sage-deep);
+  transition: transform 0.16s var(--ease), color 0.2s, background 0.2s, border-color 0.2s, opacity 0.2s;
+}
+.mic-btn svg { width: 20px; height: 20px; }
+.mic-btn:hover:not(:disabled) { transform: translateY(-1px); border-color: var(--sage-bright); background: var(--sage-tint-2); }
+.mic-btn.is-recording {
+  color: #fff; background: var(--red); border-color: var(--red);
+  animation: mic-pulse 1.25s ease-in-out infinite;
+}
+.mic-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+@keyframes mic-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(192, 71, 59, 0.22); }
+  50% { box-shadow: 0 0 0 7px rgba(192, 71, 59, 0); }
+}
 .send-btn {
   width: 44px; height: 44px; flex: none; border-radius: 14px;
   display: grid; place-items: center; border: none;
@@ -835,6 +857,7 @@ input, textarea { font-family: inherit; }
   font-size: 11px; color: var(--ink-faint); text-align: center;
   margin-top: 10px; font-family: var(--font-mono); letter-spacing: 0.02em;
 }
+.composer__hint.is-error { color: var(--red-deep); }
 .composer.is-locked { opacity: 0.55; pointer-events: none; }
 
 /* ============================================================
