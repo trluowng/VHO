@@ -2,34 +2,94 @@
   "summary": {
     "provider": "groq",
     "model": "qwen/qwen3.6-27b",
-    "total_cases": 2,
-    "provider_error_cases": 0,
+    "total_cases": 8,
+    "provider_error_cases": 8,
     "accuracy_mean": 0.0,
-    "recall_mean": 0,
-    "latency_ms_mean": 51995.6,
-    "latency_ms_p95": 31493.1,
-    "latency_ms_max": 72498.0
+    "recall_mean": 0.0,
+    "latency_ms_mean": 0.6,
+    "latency_ms_p95": 0.5,
+    "latency_ms_max": 2.3
   },
   "results": [
     {
       "id": "smoke_price_khambenh",
-      "latency_ms": 31493.1,
+      "latency_ms": 2.3,
       "accuracy": 0.0,
       "keywords_hit": [],
       "keywords_total": 2,
       "recall_hit": false,
-      "provider_error": null,
-      "output_preview": "Xin lỗi, mình chưa nhận được phản hồi rõ ràng. Bạn nhắn lại câu hỏi về dịch vụ, giá khám hoặc triệu chứng vừa rồi giúp mình nhé."
+      "provider_error": "RuntimeError: Install live provider dependency first: pip install openai",
+      "output_preview": ""
     },
     {
       "id": "smoke_price_sieuamtim",
-      "latency_ms": 72498.0,
+      "latency_ms": 0.5,
       "accuracy": 0.0,
       "keywords_hit": [],
       "keywords_total": 2,
       "recall_hit": false,
-      "provider_error": null,
-      "output_preview": "Xin lỗi, mình chưa nhận được phản hồi rõ ràng. Bạn nhắn lại câu hỏi về dịch vụ, giá khám hoặc triệu chứng vừa rồi giúp mình nhé."
+      "provider_error": "RuntimeError: Install live provider dependency first: pip install openai",
+      "output_preview": ""
+    },
+    {
+      "id": "smoke_price_dientamdo",
+      "latency_ms": 0.4,
+      "accuracy": 0.0,
+      "keywords_hit": [],
+      "keywords_total": 2,
+      "recall_hit": false,
+      "provider_error": "RuntimeError: Install live provider dependency first: pip install openai",
+      "output_preview": ""
+    },
+    {
+      "id": "smoke_price_xquangnguc",
+      "latency_ms": 0.4,
+      "accuracy": 0.0,
+      "keywords_hit": [],
+      "keywords_total": 2,
+      "recall_hit": false,
+      "provider_error": "RuntimeError: Install live provider dependency first: pip install openai",
+      "output_preview": ""
+    },
+    {
+      "id": "smoke_bhyt_giayto",
+      "latency_ms": 0.4,
+      "accuracy": 0.0,
+      "keywords_hit": [],
+      "keywords_total": 3,
+      "recall_hit": false,
+      "provider_error": "RuntimeError: Install live provider dependency first: pip install openai",
+      "output_preview": ""
+    },
+    {
+      "id": "smoke_quytrinh_kham",
+      "latency_ms": 0.4,
+      "accuracy": 0.0,
+      "keywords_hit": [],
+      "keywords_total": 3,
+      "recall_hit": false,
+      "provider_error": "RuntimeError: Install live provider dependency first: pip install openai",
+      "output_preview": ""
+    },
+    {
+      "id": "smoke_emergency_nguc",
+      "latency_ms": 0.3,
+      "accuracy": 0.0,
+      "keywords_hit": [],
+      "keywords_total": 2,
+      "recall_hit": false,
+      "provider_error": "RuntimeError: Install live provider dependency first: pip install openai",
+      "output_preview": ""
+    },
+    {
+      "id": "smoke_unknown_price",
+      "latency_ms": 0.4,
+      "accuracy": 0.0,
+      "keywords_hit": [],
+      "keywords_total": 2,
+      "recall_hit": false,
+      "provider_error": "RuntimeError: Install live provider dependency first: pip install openai",
+      "output_preview": ""
     }
   ]
 }
