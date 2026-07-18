@@ -2,9 +2,38 @@ from __future__ import annotations
 
 import json
 import os
+import re
 from typing import Any
 
 from providers.base import ModelResponse, ToolCall
+
+# Groq occasionally emits tool calls in a malformed text pseudo-XML instead of
+# proper structured function-calling (known issue with reasoning models on Groq,
+# more common with reasoning disabled) -- when that happens the API answers with
+# a 400 "tool_use_failed" instead of the normal response, but still includes the
+# model's attempt in "failed_generation". Recover the call from that text rather
+# than losing the turn outright.
+_TOOL_CALL_FN_RE = re.compile(r"<function=([a-zA-Z_][a-zA-Z0-9_]*)")
+_TOOL_CALL_PARAM_RE = re.compile(r"<parameter=([a-zA-Z_][a-zA-Z0-9_]*)>\s*(.*?)\s*</parameter>", re.DOTALL)
+
+
+def _extract_failed_generation(exc: Exception) -> str | None:
+    body = getattr(exc, "body", None)
+    if isinstance(body, dict):
+        error = body.get("error", body)
+        if isinstance(error, dict) and error.get("code") == "tool_use_failed":
+            return error.get("failed_generation")
+    return None
+
+
+def _recover_tool_call(failed_generation: str) -> ToolCall | None:
+    fn_match = _TOOL_CALL_FN_RE.search(failed_generation)
+    if not fn_match:
+        return None
+    args: dict[str, Any] = {}
+    for param_match in _TOOL_CALL_PARAM_RE.finditer(failed_generation):
+        args[param_match.group(1)] = param_match.group(2).strip()
+    return ToolCall(name=fn_match.group(1), args=args)
 
 
 class OpenAIProvider:
@@ -62,7 +91,16 @@ class OpenAIProvider:
         if extra_body:
             kwargs["extra_body"] = extra_body
 
-        resp = client.chat.completions.create(**kwargs)
+        try:
+            resp = client.chat.completions.create(**kwargs)
+        except Exception as exc:
+            failed_generation = _extract_failed_generation(exc)
+            if failed_generation:
+                recovered = _recover_tool_call(failed_generation)
+                if recovered:
+                    return ModelResponse(text=None, tool_calls=[recovered], raw=None)
+            raise
+
         msg = resp.choices[0].message
         calls: list[ToolCall] = []
         for call in msg.tool_calls or []:

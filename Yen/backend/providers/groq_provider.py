@@ -27,7 +27,14 @@ class GroqProvider(OpenAIProvider):
 
     def _extra_body(self, model: str) -> dict[str, Any] | None:
         if model.startswith("qwen/qwen3"):
-            # Keep private reasoning out of the visible response so the triage
-            # endpoint receives only the JSON requested by its system prompt.
-            return {"reasoning_format": "hidden"}
+            # For complex prompts (hospital pricing rules + triage + doctor-routing
+            # all combined) this model would burn its ENTIRE completion budget on
+            # hidden reasoning and never write the actual JSON (finish_reason
+            # "length", reasoning_tokens == max_tokens, content=""). The system
+            # prompt already spells out the exact reasoning steps, so the model's
+            # own open-ended "thinking" isn't needed -- reasoning_effort="none"
+            # disables thinking-token generation outright (stronger than
+            # reasoning_format="hidden", which still generates them, just hides
+            # them from the response).
+            return {"reasoning_effort": "none"}
         return None
