@@ -11,6 +11,22 @@ Prototype cho Day 06 — built với React + Vite + Framer Motion (frontend), Fa
 
 ---
 
+## Tài khoản demo (đăng nhập thẳng, không cần đăng ký)
+
+Mật khẩu chung: **`Demo123456`**.
+
+| Email | Hồ sơ | Minh hoạ cho |
+|---|---|---|
+| `demo1@yen.vn` | Nữ, 16 tuổi, đã có 1 mục chu kỳ kinh nguyệt | Tuổi dậy thì + tab Chu kỳ kinh nguyệt |
+| `demo2@yen.vn` | Nam, 45 tuổi, đái tháo đường type 2, dùng Metformin | Tham chiếu bệnh nền mạn tính |
+| `demo3@yen.vn` | Nữ, 30 tuổi, dị ứng đậu phộng + hải sản | Cảnh giác phản ứng dị ứng |
+| `demo4@yen.vn` | Nam, 70 tuổi, cao huyết áp, dùng Amlodipine | Tham chiếu thuốc đang dùng + tuổi già |
+| `demo5@yen.vn` | Nữ, 50 tuổi, không bệnh nền | Suy luận theo độ tuổi (tiền mãn kinh) |
+
+> Chi tiết cách seed ở [phần "Tài khoản & hồ sơ sức khỏe"](#tài-khoản--hồ-sơ-sức-khỏe) bên dưới.
+
+---
+
 ## Chạy thử
 
 > ⚠️ Từ khi có tài khoản, **backend bắt buộc phải chạy** — đăng ký/đăng nhập gọi thẳng
