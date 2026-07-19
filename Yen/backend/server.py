@@ -56,6 +56,7 @@ from email_service import AppointmentEmail, AppointmentEmailService
 from chat import run_model_tool_loop, trim_history, write_transcript, safe_slug, now_iso
 from versioning import artifact_version_dict, build_artifact_version
 from seed_demo import seed_demo_accounts
+from artifacts.skills import load_skills, build_skills_section
 from stt import (
     InvalidAudioError,
     NoSpeechRecognizedError,
@@ -87,6 +88,11 @@ EMAIL_SERVICE = AppointmentEmailService.from_env()
 LOGGER = logging.getLogger(__name__)
 
 SYSTEM_PROMPT = (ARTIFACTS_DIR / "system_prompt.md").read_text(encoding="utf-8")
+# Skills are task-specific markdown instructions layered on top of the base
+# persona so the LLM follows them (e.g. phân khoa triệu chứng). Built once at
+# boot; falls back to the base prompt if the skills folder is empty/missing.
+SKILLS_DIR = ARTIFACTS_DIR / "skills"
+SYSTEM_PROMPT = SYSTEM_PROMPT.rstrip() + "\n\n" + build_skills_section(load_skills(SKILLS_DIR))
 TOOL_DECLARATIONS = load_tool_declarations(ARTIFACTS_DIR / "tools.yaml")
 # Triage cần "clarify" (hỏi lại bệnh nhân), "tra_gia" (tra bảng giá), "tra_cuu"
 # (RAG quy trình hành chính/chính sách/luật KBCB), và "xem_lich_kham" (tìm bác
