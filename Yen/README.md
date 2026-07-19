@@ -199,3 +199,9 @@ cp .env.example .env    # điền GROQ_API_KEY — lấy tại https://console.g
 | _(điền)_ | | Evidence / SPEC |
 
 > Cập nhật bảng trên với mã học viên + họ tên thật của nhóm trước khi nộp.
+
+## AI Log
+
+Nhật ký sử dụng công cụ AI (bằng chứng phiên làm việc theo yêu cầu ban tổ chức) ở
+[AI_LOG.md](AI_LOG.md). Nếu dùng công cụ AI khác ngoài Claude Code, bổ sung link/file phiên riêng
+vào file đó trước khi nộp.

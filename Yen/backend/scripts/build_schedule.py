@@ -1,6 +1,6 @@
 """
-Convert data/mock_hospital_dataset_v3.xlsx into plain JSON so the runtime
-lookup tools don't need pandas/openpyxl as a live dependency.
+Convert data/structured/mock_hospital_dataset_v4.xlsx into plain JSON so the
+runtime lookup tools don't need pandas/openpyxl as a live dependency.
 
 Writes:
   - data/doctors.json        : list of doctor records (id_doctor, full_name,
@@ -27,7 +27,7 @@ from pathlib import Path
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parent.parent
-SRC = ROOT / "data" / "mock_hospital_dataset_v3.xlsx"
+SRC = ROOT / "data" / "structured" / "mock_hospital_dataset_v4.xlsx"
 DOCTORS_OUT = ROOT / "data" / "doctors.json"
 SCHEDULE_OUT = ROOT / "data" / "schedule_slots.json"
 
