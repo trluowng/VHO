@@ -2,7 +2,7 @@ import { useEffect, useRef, useState, useCallback } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { createSession, handleUser, setSymptoms, callRealModel, detectRedFlag } from '../lib/triageEngine.js'
 import { loadSessions, upsertSession } from '../lib/sessionLog.js'
-import { isApiConfigured } from '../lib/api.js'
+import { isApiConfigured, sttApi } from '../lib/api.js'
 import { useAuth } from '../context/AuthContext.jsx'
 import { Cross } from '../components/icons.jsx'
 import TabNav from '../components/TabNav.jsx'
@@ -184,6 +184,11 @@ export default function ChatPage() {
     [busy, session, push, playEvents, runReal],
   )
 
+  const transcribeSpeech = useCallback(
+    (audioBlob) => sttApi.transcribe(token, audioBlob),
+    [token],
+  )
+
   const reset = useCallback(() => {
     sidRef.current = null
     startedAtRef.current = null
@@ -256,11 +261,20 @@ export default function ChatPage() {
         push({ type: 'message', role: 'ai', text: 'Được — bạn cứ kể thêm bất kỳ chi tiết nào: thời gian, mức độ, hay bệnh nền / thuốc đang dùng. Mình sẽ cập nhật lại đánh giá.' })
         return
       }
+      if (/đặt lịch/i.test(cta.label)) {
+        // Nhãn CTA thường là "Đặt lịch khám <chuyên khoa>" -- gửi lại thành 1 câu
+        // yêu cầu rõ ràng thay vì gửi nguyên nhãn nút, để backend hiểu đây là yêu
+        // cầu xem bác sĩ/lịch trống (gọi xem_lich_kham) chứ không phải mô tả
+        // triệu chứng mới cần đánh giá lại từ đầu.
+        const specialty = cta.label.replace(/đặt lịch khám\s*/i, '').trim()
+        send(specialty ? `Tôi muốn đặt lịch khám ${specialty}.` : 'Tôi muốn đặt lịch khám.')
+        return
+      }
       if (/bác sĩ/i.test(cta.label)) {
         push({ type: 'message', role: 'ai', text: 'Mình đã chuẩn bị sẵn bản tóm tắt để bạn chia sẻ với bác sĩ hoặc nhân viên y tế. Trong lúc đó, hãy theo dõi nếu triệu chứng nặng lên.' })
       }
     },
-    [reset, push],
+    [reset, push, send],
   )
 
   const viewItems = reviewing ? reviewing.items : items
@@ -338,7 +352,12 @@ export default function ChatPage() {
               </div>
             </div>
 
-            <Composer onSend={send} disabled={busy} locked={!!emergency || !!reviewing} />
+            <Composer
+              onSend={send}
+              onTranscribe={transcribeSpeech}
+              disabled={busy}
+              locked={!!emergency || !!reviewing}
+            />
 
             <AnimatePresence>
               {emergency && <Emergency flag={emergency.flag} onBack={onBack} />}

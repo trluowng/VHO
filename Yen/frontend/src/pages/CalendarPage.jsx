@@ -16,13 +16,13 @@ export default function CalendarPage() {
         <div className="atmos__veil" />
       </div>
 
-      <div className="shell">
+      <div className="shell shell--calendar">
         <header className="topbar">
           <div className="brand">
             <div className="brand__mark"><Cross /></div>
             <div>
               <div className="brand__name">Yên<em> · sức khỏe</em></div>
-              <div className="brand__sub">Lịch theo dõi sức khỏe</div>
+              <div className="brand__sub">AI y tế cá nhân</div>
             </div>
           </div>
           <TabNav />

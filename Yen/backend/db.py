@@ -74,7 +74,10 @@ CREATE INDEX IF NOT EXISTS idx_calendar_user ON calendar_entries(user_id, entry_
 
 # Cột thêm sau lần tạo bảng đầu tiên — DB cũ trên máy dev cần ALTER TABLE để có đủ cột.
 TABLE_MIGRATIONS = {
-    "calendar_entries": ["time_start TEXT", "time_end TEXT", "doctor TEXT", "location TEXT"],
+    "calendar_entries": [
+        "time_start TEXT", "time_end TEXT", "doctor TEXT", "location TEXT",
+        "date_end TEXT", "times TEXT", "doctor_id TEXT", "time_slot TEXT",
+    ],
     "health_profiles": [
         "full_name TEXT", "birth_date TEXT", "phone TEXT", "address TEXT", "occupation TEXT",
         "blood_type TEXT", "insurance_status TEXT", "insurance_number TEXT",
@@ -238,30 +241,69 @@ def add_calendar_entry(
     time_end: str | None = None,
     doctor: str | None = None,
     location: str | None = None,
+    date_end: str | None = None,
+    times: list[str] | None = None,
+    doctor_id: str | None = None,
+    time_slot: str | None = None,
 ) -> str:
     entry_id = new_id()
     with get_conn() as conn:
         conn.execute(
             "INSERT INTO calendar_entries "
-            "(id, user_id, entry_date, type, title, note, time_start, time_end, doctor, location, created_at) "
-            "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
-            (entry_id, user_id, entry_date, entry_type, title, note, time_start, time_end, doctor, location, created_at),
+            "(id, user_id, entry_date, type, title, note, time_start, time_end, doctor, location, "
+            "date_end, times, doctor_id, time_slot, created_at) "
+            "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+            (
+                entry_id, user_id, entry_date, entry_type, title, note, time_start, time_end, doctor, location,
+                date_end, json.dumps(times, ensure_ascii=False) if times else None, doctor_id, time_slot, created_at,
+            ),
         )
     return entry_id
+
+
+def find_booking(doctor_id: str, entry_date: str, time_slot: str) -> sqlite3.Row | None:
+    """Đợt đặt trùng (bất kỳ user nào) trên đúng bác sĩ/ngày/khung giờ -- dùng để
+    chặn double-booking và loại slot đã có người đặt khỏi danh sách lịch trống."""
+    with get_conn() as conn:
+        return conn.execute(
+            "SELECT * FROM calendar_entries WHERE doctor_id = ? AND entry_date = ? AND time_slot = ?",
+            (doctor_id, entry_date, time_slot),
+        ).fetchone()
+
+
+def list_booked_slots(doctor_id: str) -> set[tuple[str, str]]:
+    with get_conn() as conn:
+        rows = conn.execute(
+            "SELECT entry_date, time_slot FROM calendar_entries WHERE doctor_id = ? AND time_slot IS NOT NULL",
+            (doctor_id,),
+        ).fetchall()
+    return {(row["entry_date"], row["time_slot"]) for row in rows}
+
+
+def _parse_entry_row(row: sqlite3.Row) -> dict:
+    entry = dict(row)
+    entry["times"] = json.loads(entry["times"]) if entry.get("times") else []
+    return entry
 
 
 def list_calendar_entries(user_id: str, month: str | None = None) -> list[dict]:
     with get_conn() as conn:
         if month:
+            # Một nhắc thuốc nhiều ngày (entry_date..date_end) có thể bắt đầu ở
+            # tháng trước nhưng vẫn còn hiệu lực trong tháng đang xem -- so khớp
+            # theo khoảng ngày chồng lấn với tháng, không chỉ entry_date LIKE.
+            month_start = f"{month}-01"
+            month_end = f"{month}-31"
             rows = conn.execute(
-                "SELECT * FROM calendar_entries WHERE user_id = ? AND entry_date LIKE ? ORDER BY entry_date",
-                (user_id, f"{month}%"),
+                "SELECT * FROM calendar_entries WHERE user_id = ? AND entry_date <= ? "
+                "AND COALESCE(date_end, entry_date) >= ? ORDER BY entry_date",
+                (user_id, month_end, month_start),
             ).fetchall()
         else:
             rows = conn.execute(
                 "SELECT * FROM calendar_entries WHERE user_id = ? ORDER BY entry_date", (user_id,)
             ).fetchall()
-    return [dict(row) for row in rows]
+    return [_parse_entry_row(row) for row in rows]
 
 
 def delete_calendar_entry(user_id: str, entry_id: str) -> bool:

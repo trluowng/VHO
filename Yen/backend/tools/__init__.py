@@ -11,6 +11,9 @@ from .clarify.tool import ask_user
 from .fetch.tool import read_url
 from .format.tool import render_digest
 from .lookup.tool import web_search
+from .tra_cuu.tool import search_policy
+from .tra_gia.tool import search_price
+from .xem_lich_kham.tool import search_schedule
 
 
 # NOTE (starter_v0): tool names here are intentionally vague. These keys are the
@@ -23,6 +26,9 @@ TOOL_FUNCTIONS = {
     "lookup": web_search,
     "fetch": read_url,
     "format": render_digest,
+    "tra_gia": search_price,
+    "tra_cuu": search_policy,
+    "xem_lich_kham": search_schedule,
 }
 
 

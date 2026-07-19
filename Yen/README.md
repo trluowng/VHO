@@ -4,24 +4,41 @@
 > hiểu, hỏi thêm khi cần, rồi đưa ra **mức độ khẩn cấp + bước tiếp theo** kèm độ chắc
 > chắn và lý do. Có tài khoản + hồ sơ sức khỏe (tuổi, giới tính, bệnh nền, dị ứng) để Yên
 > nhớ mà không hỏi lại mỗi lần, cộng thêm lịch theo dõi sức khỏe (tài khoản nữ có thêm
-> tab theo dõi chu kỳ kinh nguyệt). Lấy cảm hứng & cải tiến từ Ada Health (track Healthcare).
+> tab theo dõi chu kỳ kinh nguyệt). Ô chat hỗ trợ **nhập tiếng Việt bằng micro** qua module
+> `backend/stt`. Lấy cảm hứng & cải tiến từ Ada Health (track Healthcare).
 
 Prototype cho Day 06 — built với React + Vite + Framer Motion (frontend), FastAPI + SQLite (backend).
+
+---
+
+## Tài khoản demo (đăng nhập thẳng, không cần đăng ký)
+
+Mật khẩu chung: **`Demo123456`**.
+
+| Email | Hồ sơ | Minh hoạ cho |
+|---|---|---|
+| `demo1@yen.vn` | Nữ, 16 tuổi, đã có 1 mục chu kỳ kinh nguyệt | Tuổi dậy thì + tab Chu kỳ kinh nguyệt |
+| `demo2@yen.vn` | Nam, 45 tuổi, đái tháo đường type 2, dùng Metformin | Tham chiếu bệnh nền mạn tính |
+| `demo3@yen.vn` | Nữ, 30 tuổi, dị ứng đậu phộng + hải sản | Cảnh giác phản ứng dị ứng |
+| `demo4@yen.vn` | Nam, 70 tuổi, cao huyết áp, dùng Amlodipine | Tham chiếu thuốc đang dùng + tuổi già |
+| `demo5@yen.vn` | Nữ, 50 tuổi, không bệnh nền | Suy luận theo độ tuổi (tiền mãn kinh) |
+
+> Chi tiết cách seed ở [phần "Tài khoản & hồ sơ sức khỏe"](#tài-khoản--hồ-sơ-sức-khỏe) bên dưới.
 
 ---
 
 ## Chạy thử
 
 > ⚠️ Từ khi có tài khoản, **backend bắt buộc phải chạy** — đăng ký/đăng nhập gọi thẳng
-> backend (SQLite), không có đường rơi về rule-based cho phần auth. AI trả lời (Gemini)
-> vẫn tự fallback rule-based engine nếu thiếu `GEMINI_API_KEY`, nhưng riêng đăng nhập thì
+> backend (SQLite), không có đường rơi về rule-based cho phần auth. AI trả lời (Groq/Qwen3)
+> vẫn tự fallback rule-based engine nếu thiếu `GROQ_API_KEY`, nhưng riêng đăng nhập thì
 > không. Luôn dùng `npm run dev:all` (chạy cả 2), đừng chỉ `npm run dev`.
 
 ```bash
 # 1) Backend — cài deps + điền key
 cd Yen/backend
 pip install -r requirements.txt
-cp .env.example .env                # điền GEMINI_API_KEY (xem phần Gemini bên dưới)
+cp .env.example .env                # điền GROQ_API_KEY (xem phần AI thật bên dưới)
 
 # 2) Frontend — cài deps
 cd ../frontend
@@ -33,6 +50,12 @@ npm run dev:all      # chạy `python -X utf8 server.py` (:8787) + `vite` (:5173
 
 Mở `http://localhost:5173` → màn hình landing → **Tạo tài khoản miễn phí** (chọn tuổi +
 giới tính) → vào thẳng khu chat, hồ sơ được lưu để không phải khai lại lần sau.
+
+Trong ô chat, bấm nút **micro**, cho phép trình duyệt truy cập micro, nói tối đa 30 giây rồi
+bấm lại để dừng. Trên Chrome/Edge, transcript tạm xuất hiện trực tiếp trong lúc đang nói;
+khi dừng, backend `stt` xử lý WAV và thay bằng transcript cuối để người dùng kiểm tra trước
+khi gửi. Trình duyệt không hỗ trợ nhận dạng trực tiếp vẫn dùng chế độ backend sau khi dừng.
+Micro chỉ hoạt động trên `localhost` hoặc website HTTPS.
 
 Build production: `npm run build` → `npm run preview` (chỉ build frontend; backend chạy
 bằng `python server.py` như bình thường).
@@ -69,7 +92,9 @@ frontend/src/
 ├── context/AuthContext.jsx      # token + user + profile, persist localStorage
 ├── lib/
 │   ├── api.js                   # client gọi backend (auth, profile, calendar, cycle)
-│   └── triageEngine.js          # "AI" lõi rule-based + callRealModel() gọi Gemini
+│   ├── audioRecorder.js         # ghi micro trình duyệt thành PCM WAV
+│   ├── liveSpeechRecognition.js # transcript tạm theo thời gian thực (Chrome/Edge)
+│   └── triageEngine.js          # fallback rule-based + callRealModel() gọi backend LLM
 ├── pages/
 │   ├── LandingPage.jsx          # trang giới thiệu (public)
 │   ├── LoginPage.jsx / SignupPage.jsx   # đăng nhập / đăng ký (chọn tuổi + giới tính)
@@ -87,7 +112,8 @@ backend/
 ├── server.py                    # FastAPI: /triage, /auth/*, /profile, /calendar, /cycle
 ├── db.py                        # SQLite (accounts, hồ sơ, lịch, chu kỳ) — file tại backend/data/app.db
 ├── auth.py                      # hash mật khẩu (PBKDF2) + JWT session token
-└── artifacts/system_prompt.md   # hướng dẫn Gemini dùng hồ sơ bệnh nhân khi có
+├── stt/                         # SpeechRecognition tiếng Việt, nhận WAV từ trình duyệt
+└── artifacts/system_prompt.md   # hướng dẫn LLM dùng hồ sơ bệnh nhân khi có
 ```
 
 ---
@@ -97,7 +123,7 @@ backend/
 - Đăng ký cần **ngày sinh** (tự tính tuổi) + **giới tính** (nam/nữ); bệnh nền, dị ứng,
   thuốc đang dùng có thể bổ sung sau qua `PUT /profile`.
 - Mỗi lượt chat gửi kèm `Authorization: Bearer <token>` — backend tự nạp hồ sơ vào context
-  cho Gemini (xem `_profile_context_message()` trong `server.py`), nên Yên **không hỏi lại**
+  cho LLM (xem `_profile_context_message()` trong `server.py`), nên Yên **không hỏi lại**
   tuổi/giới tính/bệnh nền/dị ứng đã biết.
 - **Tài khoản nữ tự động có thêm sub-tab "Chu kỳ kinh nguyệt"** trong mục Lịch — không hỏi
   bật/tắt, chỉ dựa vào `gender === 'nu'`. Ghi ngày bắt đầu kỳ kinh → hệ thống tự tính chu kỳ
@@ -130,7 +156,7 @@ luận, không cần đăng ký + điền hồ sơ thủ công. Mật khẩu chu
 | Auth | PBKDF2 password hash + JWT (PyJWT) |
 | Fonts | Fraunces · Be Vietnam Pro · Spline Sans Mono (Google Fonts) |
 | AI (mặc định) | Rule-based triage engine mô phỏng — `src/lib/triageEngine.js` |
-| AI thật | **Google Gemini** qua backend `backend/server.py` |
+| AI thật | **Qwen3-32B trên Groq** qua backend `backend/server.py` |
 
 ### API chính
 
@@ -140,21 +166,23 @@ luận, không cần đăng ký + điền hồ sơ thủ công. Mật khẩu chu
 | `GET/PUT /profile` | Đọc/sửa hồ sơ sức khỏe (auth) |
 | `GET/POST/DELETE /calendar` | Lịch sức khỏe theo ngày (auth) |
 | `GET/POST/DELETE /cycle` | Chu kỳ kinh nguyệt + dự đoán (auth) |
+| `POST /stt/transcribe` | WAV từ micro → `{ text, language }` (auth) |
 | `POST /triage` | Chat — `Authorization` tùy chọn, có thì nạp hồ sơ vào context |
 
-### Chạy AI THẬT bằng Gemini (cho điểm "AI chạy thật trong ≥1 flow")
+### Chạy AI THẬT bằng Groq + Qwen3-32B (cho điểm "AI chạy thật trong ≥1 flow")
 
 ```bash
 cd Yen/backend
-cp .env.example .env    # điền GEMINI_API_KEY — lấy tại https://aistudio.google.com/apikey
+cp .env.example .env    # điền GROQ_API_KEY — lấy tại https://console.groq.com/keys
 ```
 
-- Khi có `GEMINI_API_KEY`, toàn bộ hội thoại đi qua **Gemini thật**; chỉnh sửa triệu chứng
+- Khi có `GROQ_API_KEY`, toàn bộ hội thoại đi qua **Qwen3-32B trên Groq**; chỉnh sửa triệu chứng
   cũng gửi correction về backend đánh giá lại.
 - Backend tắt / thiếu key / trả JSON hỏng → frontend **tự fallback rule-based engine** cho
   riêng phần AI trả lời (đăng nhập/tài khoản thì không có fallback — xem cảnh báo ở trên).
-- Đổi model qua `TRIAGE_MODEL` trong `backend/.env` (mặc định dùng `gemini-2.5-flash`
-  nếu bạn theo `.env.example`, hoặc model mặc định của provider nếu để trống).
+- Đổi provider/model qua `TRIAGE_PROVIDER` và `TRIAGE_MODEL` trong `backend/.env`.
+  `.env.example` mặc định dùng `groq` + `qwen/qwen3-32b`; Gemini vẫn được hỗ trợ như
+  provider thay thế.
 - **Không commit `.env`** (đã gitignore) — chỉ commit `.env.example`. File DB
   `backend/data/app.db` cũng gitignore — mỗi máy có DB local riêng.
 

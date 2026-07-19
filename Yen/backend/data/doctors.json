@@ -1,0 +1,902 @@
+[
+  {
+    "id_doctor": "D000001",
+    "full_name": "Đỗ Xuân Bách",
+    "specialty": "Da liễu",
+    "degree": "ThS.BS",
+    "campus": "Cơ sở 1",
+    "department": "Khu khám đa khoa",
+    "room": "Phòng khám 1"
+  },
+  {
+    "id_doctor": "D000002",
+    "full_name": "Lê Hữu Phúc",
+    "specialty": "Tim mạch",
+    "degree": "BSCKI",
+    "campus": "Cơ sở 1",
+    "department": "Khu khám đa khoa",
+    "room": "Phòng khám 7"
+  },
+  {
+    "id_doctor": "D000003",
+    "full_name": "Hồ Phương Thảo",
+    "specialty": "Nhi",
+    "degree": "BSCKI",
+    "campus": "Cơ sở 1",
+    "department": "Khu khám tự nguyện",
+    "room": "Phòng khám 2"
+  },
+  {
+    "id_doctor": "D000004",
+    "full_name": "Võ Hồng Nhung",
+    "specialty": "Da liễu",
+    "degree": "BSCKI",
+    "campus": "Cơ sở 2",
+    "department": "Khu khám tự nguyện",
+    "room": "Phòng khám 2"
+  },
+  {
+    "id_doctor": "D000005",
+    "full_name": "Hồ Bảo Long",
+    "specialty": "Nội tổng quát",
+    "degree": "ThS.BS",
+    "campus": "Cơ sở 2",
+    "department": "Khu khám tự nguyện",
+    "room": "Phòng khám 5"
+  },
+  {
+    "id_doctor": "D000006",
+    "full_name": "Mai Thu Trang",
+    "specialty": "Tim mạch",
+    "degree": "BSCKI",
+    "campus": "Cơ sở 2",
+    "department": "Khu khám đa khoa",
+    "room": "Phòng khám 8"
+  },
+  {
+    "id_doctor": "D000007",
+    "full_name": "Lê Thành Đạt",
+    "specialty": "Nội tổng quát",
+    "degree": "ThS.BS",
+    "campus": "Cơ sở 2",
+    "department": "Khu khám đa khoa",
+    "room": "Phòng khám 6"
+  },
+  {
+    "id_doctor": "D000008",
+    "full_name": "Đỗ Hải Yến",
+    "specialty": "Nội tổng quát",
+    "degree": "BSCKI",
+    "campus": "Cơ sở 1",
+    "department": "Khu khám đa khoa",
+    "room": "Phòng khám 4"
+  },
+  {
+    "id_doctor": "D000009",
+    "full_name": "Trần Hồng Nhung",
+    "specialty": "Tim mạch",
+    "degree": "BS",
+    "campus": "Cơ sở 2",
+    "department": "Khu khám đa khoa",
+    "room": "Phòng khám 4"
+  },
+  {
+    "id_doctor": "D000010",
+    "full_name": "Huỳnh Diệu Linh",
+    "specialty": "Nhi",
+    "degree": "BSCKI",
+    "campus": "Cơ sở 1",
+    "department": "Khu khám tự nguyện",
+    "room": "Phòng khám 2"
+  },
+  {
+    "id_doctor": "D000011",
+    "full_name": "Lý Hồng Nhung",
+    "specialty": "Tim mạch",
+    "degree": "ThS.BS",
+    "campus": "Cơ sở 2",
+    "department": "Khu khám tự nguyện",
+    "room": "Phòng khám 6"
+  },
+  {
+    "id_doctor": "D000012",
+    "full_name": "Hoàng Bảo Long",
+    "specialty": "Da liễu",
+    "degree": "ThS.BS",
+    "campus": "Cơ sở 1",
+    "department": "Khu khám đa khoa",
+    "room": "Phòng khám 6"
+  },
+  {
+    "id_doctor": "D000013",
+    "full_name": "Trịnh Hữu Phúc",
+    "specialty": "Tim mạch",
+    "degree": "BS",
+    "campus": "Cơ sở 1",
+    "department": "Khu khám tự nguyện",
+    "room": "Phòng khám 6"
+  },
+  {
+    "id_doctor": "D000014",
+    "full_name": "Trần Anh Tuấn",
+    "specialty": "Nội tổng quát",
+    "degree": "ThS.BS",
+    "campus": "Cơ sở 1",
+    "department": "Khu khám đa khoa",
+    "room": "Phòng khám 8"
+  },
+  {
+    "id_doctor": "D000015",
+    "full_name": "Lý Đình Khoa",
+    "specialty": "Nhi",
+    "degree": "ThS.BS",
+    "campus": "Cơ sở 1",
+    "department": "Khu khám đa khoa",
+    "room": "Phòng khám 4"
+  },
+  {
+    "id_doctor": "D000016",
+    "full_name": "Hoàng Quốc Anh",
+    "specialty": "Nội tổng quát",
+    "degree": "BSCKI",
+    "campus": "Cơ sở 1",
+    "department": "Khu khám tự nguyện",
+    "room": "Phòng khám 1"
+  },
+  {
+    "id_doctor": "D000017",
+    "full_name": "Ngô Bích Ngọc",
+    "specialty": "Nội tổng quát",
+    "degree": "ThS.BS",
+    "campus": "Cơ sở 2",
+    "department": "Khu khám đa khoa",
+    "room": "Phòng khám 1"
+  },
+  {
+    "id_doctor": "D000018",
+    "full_name": "Hoàng Xuân Bách",
+    "specialty": "Nhi",
+    "degree": "ThS.BS",
+    "campus": "Cơ sở 2",
+    "department": "Khu khám tự nguyện",
+    "room": "Phòng khám 4"
+  },
+  {
+    "id_doctor": "D000019",
+    "full_name": "Lý Thùy Linh",
+    "specialty": "Nhi",
+    "degree": "BSCKI",
+    "campus": "Cơ sở 1",
+    "department": "Khu khám tự nguyện",
+    "room": "Phòng khám 4"
+  },
+  {
+    "id_doctor": "D000020",
+    "full_name": "Hồ Hải Yến",
+    "specialty": "Nhi",
+    "degree": "ThS.BS",
+    "campus": "Cơ sở 2",
+    "department": "Khu khám đa khoa",
+    "room": "Phòng khám 6"
+  },
+  {
+    "id_doctor": "D000021",
+    "full_name": "Lý Gia Huy",
+    "specialty": "Tim mạch",
+    "degree": "BS",
+    "campus": "Cơ sở 2",
+    "department": "Khu khám đa khoa",
+    "room": "Phòng khám 7"
+  },
+  {
+    "id_doctor": "D000022",
+    "full_name": "Võ Văn Minh",
+    "specialty": "Nội tổng quát",
+    "degree": "ThS.BS",
+    "campus": "Cơ sở 2",
+    "department": "Khu khám tự nguyện",
+    "room": "Phòng khám 8"
+  },
+  {
+    "id_doctor": "D000023",
+    "full_name": "Vũ Bích Ngọc",
+    "specialty": "Nhi",
+    "degree": "BSCKI",
+    "campus": "Cơ sở 2",
+    "department": "Khu khám tự nguyện",
+    "room": "Phòng khám 2"
+  },
+  {
+    "id_doctor": "D000024",
+    "full_name": "Huỳnh Việt Hùng",
+    "specialty": "Da liễu",
+    "degree": "ThS.BS",
+    "campus": "Cơ sở 1",
+    "department": "Khu khám đa khoa",
+    "room": "Phòng khám 6"
+  },
+  {
+    "id_doctor": "D000025",
+    "full_name": "Hoàng Tuấn Kiệt",
+    "specialty": "Tim mạch",
+    "degree": "BSCKI",
+    "campus": "Cơ sở 1",
+    "department": "Khu khám tự nguyện",
+    "room": "Phòng khám 3"
+  },
+  {
+    "id_doctor": "D000026",
+    "full_name": "Trần Thu Trang",
+    "specialty": "Nội tổng quát",
+    "degree": "BS",
+    "campus": "Cơ sở 1",
+    "department": "Khu khám đa khoa",
+    "room": "Phòng khám 7"
+  },
+  {
+    "id_doctor": "D000027",
+    "full_name": "Vũ Hồng Nhung",
+    "specialty": "Nội tổng quát",
+    "degree": "BSCKI",
+    "campus": "Cơ sở 2",
+    "department": "Khu khám đa khoa",
+    "room": "Phòng khám 7"
+  },
+  {
+    "id_doctor": "D000028",
+    "full_name": "Trịnh Công Danh",
+    "specialty": "Tim mạch",
+    "degree": "ThS.BS",
+    "campus": "Cơ sở 1",
+    "department": "Khu khám tự nguyện",
+    "room": "Phòng khám 2"
+  },
+  {
+    "id_doctor": "D000029",
+    "full_name": "Đinh Thùy Linh",
+    "specialty": "Tim mạch",
+    "degree": "ThS.BS",
+    "campus": "Cơ sở 1",
+    "department": "Khu khám tự nguyện",
+    "room": "Phòng khám 7"
+  },
+  {
+    "id_doctor": "D000030",
+    "full_name": "Vũ Việt Hùng",
+    "specialty": "Da liễu",
+    "degree": "BS",
+    "campus": "Cơ sở 1",
+    "department": "Khu khám đa khoa",
+    "room": "Phòng khám 2"
+  },
+  {
+    "id_doctor": "D000031",
+    "full_name": "Hồ Diệu Linh",
+    "specialty": "Nhi",
+    "degree": "BSCKI",
+    "campus": "Cơ sở 1",
+    "department": "Khu khám tự nguyện",
+    "room": "Phòng khám 6"
+  },
+  {
+    "id_doctor": "D000032",
+    "full_name": "Đỗ Trọng Nghĩa",
+    "specialty": "Da liễu",
+    "degree": "BSCKI",
+    "campus": "Cơ sở 1",
+    "department": "Khu khám tự nguyện",
+    "room": "Phòng khám 8"
+  },
+  {
+    "id_doctor": "D000033",
+    "full_name": "Võ Anh Tuấn",
+    "specialty": "Nội tổng quát",
+    "degree": "BSCKI",
+    "campus": "Cơ sở 2",
+    "department": "Khu khám tự nguyện",
+    "room": "Phòng khám 4"
+  },
+  {
+    "id_doctor": "D000034",
+    "full_name": "Hồ Quốc Anh",
+    "specialty": "Nội tổng quát",
+    "degree": "ThS.BS",
+    "campus": "Cơ sở 1",
+    "department": "Khu khám đa khoa",
+    "room": "Phòng khám 2"
+  },
+  {
+    "id_doctor": "D000035",
+    "full_name": "Dương Văn Minh",
+    "specialty": "Nhi",
+    "degree": "BS",
+    "campus": "Cơ sở 1",
+    "department": "Khu khám tự nguyện",
+    "room": "Phòng khám 5"
+  },
+  {
+    "id_doctor": "D000036",
+    "full_name": "Đào Thảo Vy",
+    "specialty": "Da liễu",
+    "degree": "BSCKI",
+    "campus": "Cơ sở 1",
+    "department": "Khu khám đa khoa",
+    "room": "Phòng khám 3"
+  },
+  {
+    "id_doctor": "D000037",
+    "full_name": "Đào Gia Huy",
+    "specialty": "Da liễu",
+    "degree": "BSCKI",
+    "campus": "Cơ sở 1",
+    "department": "Khu khám tự nguyện",
+    "room": "Phòng khám 8"
+  },
+  {
+    "id_doctor": "D000038",
+    "full_name": "Lê Ngọc Hà",
+    "specialty": "Nội tổng quát",
+    "degree": "ThS.BS",
+    "campus": "Cơ sở 2",
+    "department": "Khu khám tự nguyện",
+    "room": "Phòng khám 6"
+  },
+  {
+    "id_doctor": "D000039",
+    "full_name": "Mai Minh Quân",
+    "specialty": "Tim mạch",
+    "degree": "BS",
+    "campus": "Cơ sở 2",
+    "department": "Khu khám đa khoa",
+    "room": "Phòng khám 2"
+  },
+  {
+    "id_doctor": "D000040",
+    "full_name": "Mai Trọng Nghĩa",
+    "specialty": "Nhi",
+    "degree": "BSCKI",
+    "campus": "Cơ sở 2",
+    "department": "Khu khám đa khoa",
+    "room": "Phòng khám 3"
+  },
+  {
+    "id_doctor": "D000041",
+    "full_name": "Huỳnh Quốc Anh",
+    "specialty": "Da liễu",
+    "degree": "ThS.BS",
+    "campus": "Cơ sở 2",
+    "department": "Khu khám tự nguyện",
+    "room": "Phòng khám 2"
+  },
+  {
+    "id_doctor": "D000042",
+    "full_name": "Đặng Thu Hương",
+    "specialty": "Da liễu",
+    "degree": "BS",
+    "campus": "Cơ sở 1",
+    "department": "Khu khám tự nguyện",
+    "room": "Phòng khám 3"
+  },
+  {
+    "id_doctor": "D000043",
+    "full_name": "Trịnh Ngọc Hà",
+    "specialty": "Nội tổng quát",
+    "degree": "ThS.BS",
+    "campus": "Cơ sở 1",
+    "department": "Khu khám tự nguyện",
+    "room": "Phòng khám 1"
+  },
+  {
+    "id_doctor": "D000044",
+    "full_name": "Lê Kim Ngân",
+    "specialty": "Tim mạch",
+    "degree": "BS",
+    "campus": "Cơ sở 1",
+    "department": "Khu khám tự nguyện",
+    "room": "Phòng khám 8"
+  },
+  {
+    "id_doctor": "D000045",
+    "full_name": "Phạm Thu Trang",
+    "specialty": "Nhi",
+    "degree": "ThS.BS",
+    "campus": "Cơ sở 2",
+    "department": "Khu khám tự nguyện",
+    "room": "Phòng khám 2"
+  },
+  {
+    "id_doctor": "D000046",
+    "full_name": "Vũ Công Danh",
+    "specialty": "Nội tổng quát",
+    "degree": "ThS.BS",
+    "campus": "Cơ sở 1",
+    "department": "Khu khám đa khoa",
+    "room": "Phòng khám 3"
+  },
+  {
+    "id_doctor": "D000047",
+    "full_name": "Trịnh Anh Tuấn",
+    "specialty": "Tim mạch",
+    "degree": "BSCKI",
+    "campus": "Cơ sở 1",
+    "department": "Khu khám tự nguyện",
+    "room": "Phòng khám 7"
+  },
+  {
+    "id_doctor": "D000048",
+    "full_name": "Phạm Hải Yến",
+    "specialty": "Tim mạch",
+    "degree": "BS",
+    "campus": "Cơ sở 1",
+    "department": "Khu khám đa khoa",
+    "room": "Phòng khám 2"
+  },
+  {
+    "id_doctor": "D000049",
+    "full_name": "Dương Đình Khoa",
+    "specialty": "Nhi",
+    "degree": "BSCKI",
+    "campus": "Cơ sở 1",
+    "department": "Khu khám đa khoa",
+    "room": "Phòng khám 1"
+  },
+  {
+    "id_doctor": "D000050",
+    "full_name": "Vũ Anh Tuấn",
+    "specialty": "Tim mạch",
+    "degree": "BSCKI",
+    "campus": "Cơ sở 1",
+    "department": "Khu khám tự nguyện",
+    "room": "Phòng khám 2"
+  },
+  {
+    "id_doctor": "D000051",
+    "full_name": "Phan Ngọc Hà",
+    "specialty": "Nội tổng quát",
+    "degree": "BS",
+    "campus": "Cơ sở 1",
+    "department": "Khu khám đa khoa",
+    "room": "Phòng khám 2"
+  },
+  {
+    "id_doctor": "D000052",
+    "full_name": "Lý Thị Lan",
+    "specialty": "Nội tổng quát",
+    "degree": "BSCKI",
+    "campus": "Cơ sở 1",
+    "department": "Khu khám đa khoa",
+    "room": "Phòng khám 7"
+  },
+  {
+    "id_doctor": "D000053",
+    "full_name": "Phan Thành Đạt",
+    "specialty": "Tim mạch",
+    "degree": "BSCKI",
+    "campus": "Cơ sở 1",
+    "department": "Khu khám đa khoa",
+    "room": "Phòng khám 6"
+  },
+  {
+    "id_doctor": "D000054",
+    "full_name": "Ngô Mai Anh",
+    "specialty": "Tim mạch",
+    "degree": "ThS.BS",
+    "campus": "Cơ sở 1",
+    "department": "Khu khám tự nguyện",
+    "room": "Phòng khám 4"
+  },
+  {
+    "id_doctor": "D000055",
+    "full_name": "Bùi Ngọc Hà",
+    "specialty": "Da liễu",
+    "degree": "BSCKI",
+    "campus": "Cơ sở 1",
+    "department": "Khu khám đa khoa",
+    "room": "Phòng khám 7"
+  },
+  {
+    "id_doctor": "D000056",
+    "full_name": "Nguyễn Thanh Tâm",
+    "specialty": "Nội tổng quát",
+    "degree": "BSCKI",
+    "campus": "Cơ sở 2",
+    "department": "Khu khám tự nguyện",
+    "room": "Phòng khám 7"
+  },
+  {
+    "id_doctor": "D000057",
+    "full_name": "Bùi Văn Minh",
+    "specialty": "Nhi",
+    "degree": "ThS.BS",
+    "campus": "Cơ sở 1",
+    "department": "Khu khám đa khoa",
+    "room": "Phòng khám 5"
+  },
+  {
+    "id_doctor": "D000058",
+    "full_name": "Nguyễn Thảo Vy",
+    "specialty": "Nội tổng quát",
+    "degree": "BSCKI",
+    "campus": "Cơ sở 2",
+    "department": "Khu khám tự nguyện",
+    "room": "Phòng khám 7"
+  },
+  {
+    "id_doctor": "D000059",
+    "full_name": "Hồ Minh Châu",
+    "specialty": "Tim mạch",
+    "degree": "BS",
+    "campus": "Cơ sở 2",
+    "department": "Khu khám đa khoa",
+    "room": "Phòng khám 2"
+  },
+  {
+    "id_doctor": "D000060",
+    "full_name": "Đỗ Thanh Tâm",
+    "specialty": "Nhi",
+    "degree": "BS",
+    "campus": "Cơ sở 2",
+    "department": "Khu khám đa khoa",
+    "room": "Phòng khám 6"
+  },
+  {
+    "id_doctor": "D000061",
+    "full_name": "Đào Kim Ngân",
+    "specialty": "Da liễu",
+    "degree": "BSCKI",
+    "campus": "Cơ sở 1",
+    "department": "Khu khám tự nguyện",
+    "room": "Phòng khám 7"
+  },
+  {
+    "id_doctor": "D000062",
+    "full_name": "Nguyễn Công Danh",
+    "specialty": "Tim mạch",
+    "degree": "BS",
+    "campus": "Cơ sở 2",
+    "department": "Khu khám đa khoa",
+    "room": "Phòng khám 1"
+  },
+  {
+    "id_doctor": "D000063",
+    "full_name": "Phan Thu Hương",
+    "specialty": "Nội tổng quát",
+    "degree": "BS",
+    "campus": "Cơ sở 2",
+    "department": "Khu khám đa khoa",
+    "room": "Phòng khám 8"
+  },
+  {
+    "id_doctor": "D000064",
+    "full_name": "Đặng Trọng Nghĩa",
+    "specialty": "Da liễu",
+    "degree": "BSCKI",
+    "campus": "Cơ sở 2",
+    "department": "Khu khám tự nguyện",
+    "room": "Phòng khám 1"
+  },
+  {
+    "id_doctor": "D000065",
+    "full_name": "Đặng Thùy Linh",
+    "specialty": "Nhi",
+    "degree": "ThS.BS",
+    "campus": "Cơ sở 2",
+    "department": "Khu khám đa khoa",
+    "room": "Phòng khám 3"
+  },
+  {
+    "id_doctor": "D000066",
+    "full_name": "Trịnh Kim Ngân",
+    "specialty": "Tim mạch",
+    "degree": "BS",
+    "campus": "Cơ sở 1",
+    "department": "Khu khám tự nguyện",
+    "room": "Phòng khám 8"
+  },
+  {
+    "id_doctor": "D000067",
+    "full_name": "Mai Đình Khoa",
+    "specialty": "Nhi",
+    "degree": "BSCKI",
+    "campus": "Cơ sở 1",
+    "department": "Khu khám tự nguyện",
+    "room": "Phòng khám 6"
+  },
+  {
+    "id_doctor": "D000068",
+    "full_name": "Huỳnh Thu Trang",
+    "specialty": "Da liễu",
+    "degree": "BSCKI",
+    "campus": "Cơ sở 2",
+    "department": "Khu khám đa khoa",
+    "room": "Phòng khám 7"
+  },
+  {
+    "id_doctor": "D000069",
+    "full_name": "Đào Minh Châu",
+    "specialty": "Nội tổng quát",
+    "degree": "BSCKI",
+    "campus": "Cơ sở 1",
+    "department": "Khu khám tự nguyện",
+    "room": "Phòng khám 1"
+  },
+  {
+    "id_doctor": "D000070",
+    "full_name": "Vũ Tuấn Kiệt",
+    "specialty": "Nhi",
+    "degree": "BS",
+    "campus": "Cơ sở 2",
+    "department": "Khu khám tự nguyện",
+    "room": "Phòng khám 7"
+  },
+  {
+    "id_doctor": "D000071",
+    "full_name": "Vũ Quốc Anh",
+    "specialty": "Nhi",
+    "degree": "ThS.BS",
+    "campus": "Cơ sở 1",
+    "department": "Khu khám tự nguyện",
+    "room": "Phòng khám 1"
+  },
+  {
+    "id_doctor": "D000072",
+    "full_name": "Đào Hữu Phúc",
+    "specialty": "Nhi",
+    "degree": "BSCKI",
+    "campus": "Cơ sở 2",
+    "department": "Khu khám tự nguyện",
+    "room": "Phòng khám 4"
+  },
+  {
+    "id_doctor": "D000073",
+    "full_name": "Đỗ Phương Thảo",
+    "specialty": "Da liễu",
+    "degree": "ThS.BS",
+    "campus": "Cơ sở 2",
+    "department": "Khu khám đa khoa",
+    "room": "Phòng khám 8"
+  },
+  {
+    "id_doctor": "D000074",
+    "full_name": "Nguyễn Thị Lan",
+    "specialty": "Nội tổng quát",
+    "degree": "BSCKI",
+    "campus": "Cơ sở 1",
+    "department": "Khu khám đa khoa",
+    "room": "Phòng khám 7"
+  },
+  {
+    "id_doctor": "D000075",
+    "full_name": "Bùi Thảo Vy",
+    "specialty": "Da liễu",
+    "degree": "BSCKI",
+    "campus": "Cơ sở 1",
+    "department": "Khu khám đa khoa",
+    "room": "Phòng khám 8"
+  },
+  {
+    "id_doctor": "D000076",
+    "full_name": "Đào Thu Trang",
+    "specialty": "Nội tổng quát",
+    "degree": "ThS.BS",
+    "campus": "Cơ sở 1",
+    "department": "Khu khám đa khoa",
+    "room": "Phòng khám 3"
+  },
+  {
+    "id_doctor": "D000077",
+    "full_name": "Phan Mai Anh",
+    "specialty": "Nội tổng quát",
+    "degree": "BS",
+    "campus": "Cơ sở 1",
+    "department": "Khu khám đa khoa",
+    "room": "Phòng khám 7"
+  },
+  {
+    "id_doctor": "D000078",
+    "full_name": "Trần Gia Huy",
+    "specialty": "Nhi",
+    "degree": "ThS.BS",
+    "campus": "Cơ sở 2",
+    "department": "Khu khám tự nguyện",
+    "room": "Phòng khám 5"
+  },
+  {
+    "id_doctor": "D000079",
+    "full_name": "Huỳnh Bích Ngọc",
+    "specialty": "Nội tổng quát",
+    "degree": "BS",
+    "campus": "Cơ sở 1",
+    "department": "Khu khám tự nguyện",
+    "room": "Phòng khám 8"
+  },
+  {
+    "id_doctor": "D000080",
+    "full_name": "Lê Diệu Linh",
+    "specialty": "Da liễu",
+    "degree": "ThS.BS",
+    "campus": "Cơ sở 2",
+    "department": "Khu khám tự nguyện",
+    "room": "Phòng khám 8"
+  },
+  {
+    "id_doctor": "D000081",
+    "full_name": "Phan Thị Lan",
+    "specialty": "Nội tổng quát",
+    "degree": "BSCKI",
+    "campus": "Cơ sở 1",
+    "department": "Khu khám tự nguyện",
+    "room": "Phòng khám 3"
+  },
+  {
+    "id_doctor": "D000082",
+    "full_name": "Võ Thị Lan",
+    "specialty": "Nhi",
+    "degree": "BS",
+    "campus": "Cơ sở 2",
+    "department": "Khu khám tự nguyện",
+    "room": "Phòng khám 4"
+  },
+  {
+    "id_doctor": "D000083",
+    "full_name": "Bùi Hữu Phúc",
+    "specialty": "Nội tổng quát",
+    "degree": "BS",
+    "campus": "Cơ sở 1",
+    "department": "Khu khám tự nguyện",
+    "room": "Phòng khám 5"
+  },
+  {
+    "id_doctor": "D000084",
+    "full_name": "Nguyễn Thu Hương",
+    "specialty": "Da liễu",
+    "degree": "ThS.BS",
+    "campus": "Cơ sở 1",
+    "department": "Khu khám tự nguyện",
+    "room": "Phòng khám 8"
+  },
+  {
+    "id_doctor": "D000085",
+    "full_name": "Phạm Diệu Linh",
+    "specialty": "Nội tổng quát",
+    "degree": "BS",
+    "campus": "Cơ sở 2",
+    "department": "Khu khám tự nguyện",
+    "room": "Phòng khám 3"
+  },
+  {
+    "id_doctor": "D000086",
+    "full_name": "Dương Thu Trang",
+    "specialty": "Nội tổng quát",
+    "degree": "ThS.BS",
+    "campus": "Cơ sở 2",
+    "department": "Khu khám đa khoa",
+    "room": "Phòng khám 5"
+  },
+  {
+    "id_doctor": "D000087",
+    "full_name": "Lý Việt Hùng",
+    "specialty": "Tim mạch",
+    "degree": "ThS.BS",
+    "campus": "Cơ sở 1",
+    "department": "Khu khám đa khoa",
+    "room": "Phòng khám 4"
+  },
+  {
+    "id_doctor": "D000088",
+    "full_name": "Lý Tuấn Kiệt",
+    "specialty": "Da liễu",
+    "degree": "ThS.BS",
+    "campus": "Cơ sở 2",
+    "department": "Khu khám đa khoa",
+    "room": "Phòng khám 4"
+  },
+  {
+    "id_doctor": "D000089",
+    "full_name": "Lý Minh Châu",
+    "specialty": "Nội tổng quát",
+    "degree": "BS",
+    "campus": "Cơ sở 1",
+    "department": "Khu khám tự nguyện",
+    "room": "Phòng khám 7"
+  },
+  {
+    "id_doctor": "D000090",
+    "full_name": "Phan Văn Minh",
+    "specialty": "Da liễu",
+    "degree": "BS",
+    "campus": "Cơ sở 2",
+    "department": "Khu khám đa khoa",
+    "room": "Phòng khám 6"
+  },
+  {
+    "id_doctor": "D000091",
+    "full_name": "Trần Phương Thảo",
+    "specialty": "Da liễu",
+    "degree": "BSCKI",
+    "campus": "Cơ sở 1",
+    "department": "Khu khám đa khoa",
+    "room": "Phòng khám 2"
+  },
+  {
+    "id_doctor": "D000092",
+    "full_name": "Vũ Minh Châu",
+    "specialty": "Nhi",
+    "degree": "BS",
+    "campus": "Cơ sở 2",
+    "department": "Khu khám tự nguyện",
+    "room": "Phòng khám 7"
+  },
+  {
+    "id_doctor": "D000093",
+    "full_name": "Huỳnh Công Danh",
+    "specialty": "Nhi",
+    "degree": "BS",
+    "campus": "Cơ sở 2",
+    "department": "Khu khám đa khoa",
+    "room": "Phòng khám 4"
+  },
+  {
+    "id_doctor": "D000094",
+    "full_name": "Bùi Kim Ngân",
+    "specialty": "Tim mạch",
+    "degree": "BSCKI",
+    "campus": "Cơ sở 2",
+    "department": "Khu khám đa khoa",
+    "room": "Phòng khám 4"
+  },
+  {
+    "id_doctor": "D000095",
+    "full_name": "Dương Thanh Tâm",
+    "specialty": "Tim mạch",
+    "degree": "ThS.BS",
+    "campus": "Cơ sở 2",
+    "department": "Khu khám tự nguyện",
+    "room": "Phòng khám 3"
+  },
+  {
+    "id_doctor": "D000096",
+    "full_name": "Hồ Kim Ngân",
+    "specialty": "Nội tổng quát",
+    "degree": "BSCKI",
+    "campus": "Cơ sở 2",
+    "department": "Khu khám đa khoa",
+    "room": "Phòng khám 3"
+  },
+  {
+    "id_doctor": "D000097",
+    "full_name": "Hoàng Thu Trang",
+    "specialty": "Nội tổng quát",
+    "degree": "BSCKI",
+    "campus": "Cơ sở 2",
+    "department": "Khu khám đa khoa",
+    "room": "Phòng khám 6"
+  },
+  {
+    "id_doctor": "D000098",
+    "full_name": "Trịnh Minh Châu",
+    "specialty": "Tim mạch",
+    "degree": "ThS.BS",
+    "campus": "Cơ sở 1",
+    "department": "Khu khám tự nguyện",
+    "room": "Phòng khám 4"
+  },
+  {
+    "id_doctor": "D000099",
+    "full_name": "Dương Hải Yến",
+    "specialty": "Nhi",
+    "degree": "BSCKI",
+    "campus": "Cơ sở 1",
+    "department": "Khu khám tự nguyện",
+    "room": "Phòng khám 6"
+  },
+  {
+    "id_doctor": "D000100",
+    "full_name": "Lý Diệu Linh",
+    "specialty": "Tim mạch",
+    "degree": "BSCKI",
+    "campus": "Cơ sở 1",
+    "department": "Khu khám tự nguyện",
+    "room": "Phòng khám 3"
+  }
+]

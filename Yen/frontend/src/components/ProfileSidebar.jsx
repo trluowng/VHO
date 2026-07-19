@@ -9,9 +9,22 @@ function formatDate(iso) {
   return d.toLocaleDateString('vi-VN', { day: '2-digit', month: '2-digit', year: 'numeric' })
 }
 
+function calculateAge(iso) {
+  if (!iso) return null
+  const birthDate = new Date(`${iso}T00:00:00`)
+  if (Number.isNaN(birthDate.getTime())) return null
+  const today = new Date()
+  let age = today.getFullYear() - birthDate.getFullYear()
+  const birthdayHasPassed = today.getMonth() > birthDate.getMonth()
+    || (today.getMonth() === birthDate.getMonth() && today.getDate() >= birthDate.getDate())
+  if (!birthdayHasPassed) age -= 1
+  return age > 0 ? age : null
+}
+
 export default function ProfileSidebar({ user, profile }) {
   const displayName = profile?.full_name || user?.email || 'Bạn'
-  const ageGender = [profile?.age ? `${profile.age} tuổi` : null, GENDER_LABEL[profile?.gender]]
+  const displayAge = calculateAge(profile?.birth_date) || profile?.age
+  const ageGender = [displayAge ? `${displayAge} tuổi` : null, GENDER_LABEL[profile?.gender]]
     .filter(Boolean)
     .join(' · ')
 
@@ -35,7 +48,7 @@ export default function ProfileSidebar({ user, profile }) {
         <div className="profile-sidebar__row">
           <span className="profile-sidebar__row-icon"><Shield width={15} height={15} /></span>
           <span>Bảo hiểm y tế</span>
-          <strong>{profile?.insurance_status || 'Chưa cập nhật'}</strong>
+          <strong className="profile-sidebar__insurance-status">{profile?.insurance_status || 'Chưa cập nhật'}</strong>
         </div>
         {profile?.insurance_number && (
           <div className="profile-sidebar__row profile-sidebar__row--sub">
