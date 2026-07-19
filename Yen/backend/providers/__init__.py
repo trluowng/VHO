@@ -7,7 +7,7 @@ from providers.groq_provider import GroqProvider
 
 def make_provider(name: str):
     if name == "openai":
-        return OpenAIProvider()
+        return OpenAIProvider(use_structured_output=True)
     if name == "openrouter":
         return OpenRouterProvider()
     if name == "anthropic":

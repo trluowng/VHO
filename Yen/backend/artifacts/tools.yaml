@@ -1,15 +1,6 @@
-# starter_v0 — tool declarations (intentionally vague).
-# Names and descriptions here are a rough first draft. Routing rules, name->handle
-# mapping, arg conventions (news/timeframe/Top), and the send-confirmation boundary
-# are NOT spelled out anywhere yet. Your job is to make these declarations + the
-# system prompt good enough that the agent routes correctly on the eval.
-#
-# If you rename a tool, keep the name in sync across:
-#   this file  ->  tools/__init__.py (TOOL_FUNCTIONS)  ->  data/eval_base.json + data/eval_research_extension.json
 tools:
-  # ---------------- Core tools ----------------
   - name: clarify
-    description: "Gửi một câu hỏi/làm rõ cho khách hàng của Bệnh viện Tim Hà Nội (hỏi thêm về triệu chứng, dịch vụ, hoặc xác nhận thông tin)."
+    description: "Gửi một câu hỏi/làm rõ cho khách hàng của Bệnh viện Tim Hà Nội."
     parameters:
       type: object
       properties:
@@ -19,30 +10,33 @@ tools:
       required: [question]
 
   - name: tra_gia
-    description: "Tra cứu giá dịch vụ kỹ thuật/khám bệnh tại Bệnh viện Tim Hà Nội (bảng giá BHYT, dịch vụ kỹ thuật 2025, dịch vụ thường, dịch vụ theo yêu cầu). Dùng khi khách hỏi về chi phí, giá khám, giá xét nghiệm/thủ thuật."
+    description: "Tra cứu giá dịch vụ kỹ thuật/khám bệnh tại Bệnh viện Tim Hà Nội."
     parameters:
       type: object
       properties:
-        query: {type: string, description: "BẮT BUỘC — tên dịch vụ/xét nghiệm/thủ thuật cần tra giá, trích từ đúng câu hỏi của khách, ví dụ 'siêu âm tim' hoặc 'khám nội tim mạch'. KHÔNG được để trống."}
+        query: {type: string, description: "BẮT BUỘC - tên dịch vụ/xét nghiệm/thủ thuật cần tra giá, ví dụ 'siêu âm tim' hoặc 'khám nội tim mạch'. Không được để trống."}
         max_results: {type: integer, default: 8, description: "Số kết quả tối đa trả về"}
       required: [query]
 
   - name: tra_cuu
-    description: "Tra cứu quy trình hành chính (đặt lịch, thủ tục khám), chính sách bệnh viện, và Luật Khám bệnh, chữa bệnh 15/2023/QH15. Dùng khi khách hỏi về cách đặt lịch, giờ làm việc, quyền/nghĩa vụ người bệnh, hoặc quy định pháp luật liên quan."
+    description: "Tra cứu quy trình hành chính, chính sách bệnh viện và Luật Khám bệnh, chữa bệnh 15/2023/QH15."
     parameters:
       type: object
       properties:
-        query: {type: string, description: "BẮT BUỘC — nội dung cần tra cứu, trích từ đúng câu hỏi của khách, ví dụ 'cách đặt lịch khám' hoặc 'quyền của người bệnh'. KHÔNG được để trống."}
+        query: {type: string, description: "BẮT BUỘC - nội dung cần tra cứu, ví dụ 'cách đặt lịch khám' hoặc 'quyền của người bệnh'. Không được để trống."}
         max_results: {type: integer, default: 3, description: "Số kết quả tối đa trả về"}
       required: [query]
 
   - name: xem_lich_kham
-    description: "Tìm bác sĩ theo chuyên khoa và xem lịch khám còn trống (ngày, khung giờ, cơ sở, phòng) tại Bệnh viện Tim Hà Nội. Dùng sau khi đã xác định chuyên khoa phù hợp để gợi ý bác sĩ + thời gian cụ thể cho khách đặt lịch. KHÔNG tự đặt lịch, chỉ tra cứu và gợi ý."
+    description: "Tìm bác sĩ theo chuyên khoa và xem lịch khám còn trống. Chỉ gọi sau khi đã hỏi khách muốn khám ngày nào/khung giờ nào, hoặc khách nói rõ ngày giờ nào cũng được. Không tự đặt lịch."
     parameters:
       type: object
       properties:
-        query: {type: string, description: "BẮT BUỘC — chuyên khoa cần tìm bác sĩ: 'Tim mạch', 'Nhi', 'Da liễu', hoặc 'Nội tổng quát'. KHÔNG được để trống."}
+        query: {type: string, description: "BẮT BUỘC - chuyên khoa cần tìm bác sĩ: 'Tim mạch', 'Nhi', 'Da liễu', hoặc 'Nội tổng quát'. Không được để trống."}
+        preferred_date: {type: string, default: "", description: "Ngày khách muốn khám, định dạng YYYY-MM-DD. Để trống nếu khách chỉ nói khung giờ/buổi."}
+        preferred_time_slot: {type: string, default: "", description: "Khung giờ khách muốn khám, định dạng HH:MM-HH:MM, ví dụ 08:00-09:00. Để trống nếu khách chỉ nói ngày."}
+        preferred_time_period: {type: string, enum: ["", morning, afternoon], default: "", description: "Buổi khách muốn khám: morning cho buổi sáng, afternoon cho buổi chiều. Dùng khi khách nói 'sáng mai', 'chiều mai' nhưng chưa chọn slot cụ thể."}
+        flexible_time: {type: boolean, default: false, description: "Chỉ set true khi khách nói rõ ngày/giờ nào cũng được hoặc muốn xem lịch gần nhất bất kỳ."}
         max_doctors: {type: integer, default: 3, description: "Số bác sĩ tối đa trả về"}
         max_slots_per_doctor: {type: integer, default: 3, description: "Số khung giờ trống tối đa mỗi bác sĩ"}
       required: [query]
-

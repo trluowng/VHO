@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
+import { useLocation } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext.jsx'
 import { calendarApi } from '../lib/api.js'
 import { CATEGORIES, categoryMeta } from '../lib/calendarCategories.js'
@@ -12,8 +13,13 @@ const WEEKDAYS = ['T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'CN']
 
 export default function HealthCalendar() {
   const { token } = useAuth()
+  const location = useLocation()
   const [cursor, setCursor] = useState(() => new Date())
   const [entries, setEntries] = useState([])
+  // "Sắp tới" ở sidebar phải là MỌI lịch hẹn tương lai, không chỉ lịch trong tháng đang
+  // xem trên lưới — trước đây dùng chung `entries` (theo tháng) nên vừa đặt lịch xong,
+  // nếu lịch rơi vào tháng khác tháng đang mở, sidebar coi như không thấy gì.
+  const [allEntries, setAllEntries] = useState([])
   const [selected, setSelected] = useState(() => toISODate(new Date()))
   const [filter, setFilter] = useState('all')
   const [view, setView] = useState('month')
@@ -26,8 +32,12 @@ export default function HealthCalendar() {
 
   async function load() {
     try {
-      const data = await calendarApi.list(token, key)
-      setEntries(data.entries)
+      const [monthData, allData] = await Promise.all([
+        calendarApi.list(token, key),
+        calendarApi.list(token),
+      ])
+      setEntries(monthData.entries)
+      setAllEntries(allData.entries)
     } catch {
       // giữ danh sách cũ nếu tải lỗi — không chặn giao diện
     }
@@ -37,6 +47,19 @@ export default function HealthCalendar() {
     load()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [key])
+
+  // Vừa đặt lịch xong ở tab "Đặt lịch khám" và bấm "Xem trong tab Lịch" → nhảy thẳng
+  // tới tháng của lịch hẹn đó thay vì luôn mở tháng hiện tại (lịch demo hay rơi vào
+  // tháng sau, nên trước đây trông như "chưa cập nhật" dù đã lưu đúng).
+  useEffect(() => {
+    const focusDate = location.state?.focusDate
+    if (!focusDate) return
+    const parsed = new Date(`${focusDate}T00:00:00`)
+    if (Number.isNaN(parsed.getTime())) return
+    setCursor(new Date(parsed.getFullYear(), parsed.getMonth(), 1))
+    setSelected(focusDate)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [location.state?.focusDate])
 
   // Nhắc thuốc là 1 đợt lặp lại (entry_date -> date_end, nhiều giờ/ngày), nên phải
   // xuất hiện trên MỌI ngày trong khoảng đó (lưới tháng + danh sách theo ngày),
@@ -59,16 +82,22 @@ export default function HealthCalendar() {
     () => (filter === 'all' ? entries : entries.filter((e) => e.type === filter)),
     [entries, filter],
   )
+  const filteredAllEntries = useMemo(
+    () => (filter === 'all' ? allEntries : allEntries.filter((e) => e.type === filter)),
+    [allEntries, filter],
+  )
 
   // Nhắc thuốc "sắp tới" là những đợt CHƯA kết thúc (date_end >= hôm nay), không
   // chỉ những đợt bắt đầu từ hôm nay trở đi -- giữ nguyên entry_date thật (ngày
   // bắt đầu đợt) để sidebar bên phải hiển thị đúng khoảng ngày, việc quy đổi
-  // "Hôm nay" cho hiển thị badge nằm ở AppointmentCard.
+  // "Hôm nay" cho hiển thị badge nằm ở AppointmentCard. Dùng `filteredAllEntries`
+  // (không giới hạn theo tháng đang xem trên lưới) để lịch hẹn tháng sau vẫn hiện
+  // ở đây ngay cả khi lưới đang mở tháng này.
   const upcoming = useMemo(
-    () => filteredEntries
+    () => filteredAllEntries
       .filter((e) => (e.type === 'thuoc' ? (e.date_end || e.entry_date) >= todayIso : e.entry_date >= todayIso))
       .sort((a, b) => (a.entry_date + (a.time_start || (a.times && a.times[0]) || '')).localeCompare(b.entry_date + (b.time_start || (b.times && b.times[0]) || ''))),
-    [filteredEntries, todayIso],
+    [filteredAllEntries, todayIso],
   )
   const appointments = useMemo(
     () => upcoming.filter((e) => e.type === 'kham_benh' || e.type === 'xet_nghiem'),

@@ -13,7 +13,7 @@ from typing import Any
 
 from tools._shared import ROOT, err, fold_text, terms
 
-_SERVICES_PATH = ROOT / "data" / "services_merged.json"
+_SERVICES_PATH = ROOT / "data" / "markdown_chunks" / "services_merged.json"
 _index: list[tuple[dict, set[str], str]] | None = None  # (doc, term_set, folded_context)
 _idf: dict[str, float] | None = None
 

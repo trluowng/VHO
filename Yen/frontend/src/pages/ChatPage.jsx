@@ -4,7 +4,7 @@ import { createSession, handleUser, setSymptoms, callRealModel, detectRedFlag } 
 import { loadSessions, upsertSession } from '../lib/sessionLog.js'
 import { isApiConfigured, sttApi, ttsApi } from '../lib/api.js'
 import { useAuth } from '../context/AuthContext.jsx'
-import { Cross, Volume, VolumeOff } from '../components/icons.jsx'
+import { Cross } from '../components/icons.jsx'
 import TabNav from '../components/TabNav.jsx'
 import SessionHistory from '../components/SessionHistory.jsx'
 import Message from '../components/Message.jsx'
@@ -14,6 +14,7 @@ import Composer from '../components/Composer.jsx'
 import WelcomeHero from '../components/WelcomeHero.jsx'
 import ProfileRail from '../components/ProfileRail.jsx'
 import TriageResult from '../components/TriageResult.jsx'
+import ChatBookingOptions from '../components/ChatBookingOptions.jsx'
 import Emergency from '../components/Emergency.jsx'
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms))
@@ -54,7 +55,7 @@ export default function ChatPage() {
   const [sessions, setSessions] = useState(loadSessions)
   const [sid, setSid] = useState(null)
   const [reviewing, setReviewing] = useState(null)
-  const [voiceOutput, setVoiceOutput] = useState(() => localStorage.getItem('yen_voice_output') === '1')
+  const [speakingMessageId, setSpeakingMessageId] = useState(null)
 
   const idRef = useRef(0)
   const sidRef = useRef(null)
@@ -62,28 +63,14 @@ export default function ChatPage() {
   const preEmergency = useRef(null)
   const scrollRef = useRef(null)
   const itemsRef = useRef([])
-  const voiceOutputRef = useRef(voiceOutput)
-  const speechQueueRef = useRef([])
-  const speakingRef = useRef(false)
   const currentAudioRef = useRef(null)
   const started = items.some((i) => i.role === 'user')
 
-  useEffect(() => {
-    voiceOutputRef.current = voiceOutput
-    localStorage.setItem('yen_voice_output', voiceOutput ? '1' : '0')
-    if (!voiceOutput) {
-      speechQueueRef.current = []
-      currentAudioRef.current?.pause()
-    }
-  }, [voiceOutput])
-
-  // Đọc to từng đoạn AI vừa nói theo hàng đợi (tuần tự, không chồng tiếng) --
-  // lỗi TTS bị nuốt lặng lẽ, không được chặn/làm hỏng luồng chat chữ.
-  const processSpeechQueue = useCallback(async () => {
-    if (speakingRef.current) return
-    const text = speechQueueRef.current.shift()
+  // Đọc từng câu trả lời AI khi người dùng bấm nút loa dưới message.
+  const speakAiMessage = useCallback(async (messageId, text) => {
     if (!text) return
-    speakingRef.current = true
+    currentAudioRef.current?.pause()
+    setSpeakingMessageId(messageId)
     try {
       const blob = await ttsApi.synthesize(token, text)
       const url = URL.createObjectURL(blob)
@@ -96,22 +83,12 @@ export default function ChatPage() {
       })
       URL.revokeObjectURL(url)
     } catch {
-      // bỏ qua lỗi TTS, không hiện lỗi cho khách
+      // Bỏ qua lỗi TTS để luồng chat chữ không bị ảnh hưởng.
     } finally {
-      speakingRef.current = false
+      setSpeakingMessageId(null)
       currentAudioRef.current = null
-      processSpeechQueue()
     }
   }, [token])
-
-  const enqueueSpeech = useCallback(
-    (text) => {
-      if (!voiceOutputRef.current || !text) return
-      speechQueueRef.current.push(text)
-      processSpeechQueue()
-    },
-    [processSpeechQueue],
-  )
 
   useEffect(() => {
     itemsRef.current = items
@@ -162,19 +139,23 @@ export default function ChatPage() {
         const m = firstAi ? meta : null
         if (ev.type === 'message' || ev.type === 'question') {
           push({ type: 'message', role: 'ai', text: ev.text, confirm: ev.confirm, meta: m })
-          enqueueSpeech(ev.text)
           if (ev.type === 'question') setQuick(ev.quick || null)
           firstAi = false
         } else if (ev.type === 'result') {
           push({ type: 'result', triage: ev.triage, meta: m })
-          if (ev.triage?.reason) enqueueSpeech(ev.triage.reason)
+          firstAi = false
+        } else if (ev.type === 'booking_options') {
+          push({ type: 'booking_options', options: ev.options || [], meta: m })
+          firstAi = false
+        } else if (ev.type === 'booking_confirmation') {
+          push({ type: 'booking_confirmation', booking: ev.booking, meta: m })
           firstAi = false
         }
         await sleep(170)
       }
       setBusy(false)
     },
-    [push, enqueueSpeech],
+    [push],
   )
 
   // Gọi backend Gemini thật; lỗi/không cấu hình → fallback rule-based engine.
@@ -196,7 +177,7 @@ export default function ChatPage() {
         const history = itemsRef.current
           .filter((i) => i.type === 'message')
           .map((i) => ({ role: i.role, text: i.text }))
-        const data = await callRealModel(history, text, token)
+        const data = await callRealModel(history, text, token, sidRef.current)
         const ms = data?._meta?.latencyMs ?? Math.round(performance.now() - t0)
         setTyping(false)
         if (data.profile) setSession((s) => ({ ...createSession(), ...data.profile, result: s.result }))
@@ -239,6 +220,19 @@ export default function ChatPage() {
   const transcribeSpeech = useCallback(
     (audioBlob) => sttApi.transcribe(token, audioBlob),
     [token],
+  )
+
+  const handleBookedFromChat = useCallback(
+    (booking) => {
+      const doctorName = booking.doctor?.full_name || booking.doctor_name || 'bác sĩ'
+      const emailNote =
+        booking.emailNotification === 'sent'
+          ? 'Email xác nhận cũng đã được gửi tới email tài khoản của bạn.'
+          : 'Nếu email chưa gửi được, lịch khám vẫn đã được lưu trong hệ thống.'
+      const text = `Đã chốt lịch với ${doctorName} vào ${booking.visit_date} lúc ${booking.time_slot}. Lịch này đã xuất hiện trong tab Lịch và slot đã được loại khỏi tab Đặt lịch khám. ${emailNote}`
+      push({ type: 'message', role: 'ai', text, confirm: true })
+    },
+    [push],
   )
 
   const reset = useCallback(() => {
@@ -348,16 +342,6 @@ export default function ChatPage() {
               <div className="brand__sub">Symptom Triage Assistant</div>
             </div>
           </div>
-          <button
-            type="button"
-            className={`voice-output-toggle ${voiceOutput ? 'is-active' : ''}`}
-            onClick={() => setVoiceOutput((v) => !v)}
-            aria-pressed={voiceOutput}
-            title={voiceOutput ? 'Tắt đọc to câu trả lời' : 'Bật đọc to câu trả lời'}
-          >
-            {voiceOutput ? <Volume width={16} height={16} /> : <VolumeOff width={16} height={16} />}
-            <span>Đọc to</span>
-          </button>
           <TabNav />
         </header>
 
@@ -398,8 +382,25 @@ export default function ChatPage() {
                       <motion.div key={it.id} layout>
                         <TriageResult triage={it.triage} onCta={onCta} />
                       </motion.div>
+                    ) : it.type === 'booking_options' ? (
+                      <motion.div key={it.id} layout>
+                        <ChatBookingOptions options={it.options} token={token} onBooked={handleBookedFromChat} />
+                      </motion.div>
+                    ) : it.type === 'booking_confirmation' ? (
+                      <motion.div key={it.id} layout>
+                        <ChatBookingOptions confirmed={it.booking} token={token} />
+                      </motion.div>
                     ) : (
-                      <Message key={it.id} role={it.role} text={it.text} confirm={it.confirm} stamp={it.stamp} meta={it.meta} />
+                      <Message
+                        key={it.id}
+                        role={it.role}
+                        text={it.text}
+                        confirm={it.confirm}
+                        stamp={it.stamp}
+                        meta={it.meta}
+                        speaking={speakingMessageId === it.id}
+                        onSpeak={it.role === 'ai' && !reviewing ? (text) => speakAiMessage(it.id, text) : undefined}
+                      />
                     ),
                   )}
                 </AnimatePresence>

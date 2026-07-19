@@ -94,13 +94,20 @@ SYSTEM_PROMPT = (ARTIFACTS_DIR / "system_prompt.md").read_text(encoding="utf-8")
 SKILLS_DIR = ARTIFACTS_DIR / "skills"
 SYSTEM_PROMPT = SYSTEM_PROMPT.rstrip() + "\n\n" + build_skills_section(load_skills(SKILLS_DIR))
 TOOL_DECLARATIONS = load_tool_declarations(ARTIFACTS_DIR / "tools.yaml")
-# Triage cần "clarify" (hỏi lại bệnh nhân), "tra_gia" (tra bảng giá), "tra_cuu"
-# (RAG quy trình hành chính/chính sách/luật KBCB), và "xem_lich_kham" (tìm bác
-# sĩ theo chuyên khoa + lịch trống). lookup/fetch/format là tool nghiên cứu web
-# sót lại từ template gốc — không cần cho tư vấn triệu chứng, và mỗi lần model
-# gọi thêm 1 vòng round-trip nữa (chậm hẳn), nên bỏ khỏi danh sách tool đưa cho
-# model.
-TRIAGE_TOOL_NAMES = {"clarify", "tra_gia", "tra_cuu", "xem_lich_kham"}
+# Triage cần "tra_gia" (tra bảng giá), "tra_cuu" (RAG quy trình hành chính/chính
+# sách/luật KBCB), và "xem_lich_kham" (tìm bác sĩ theo chuyên khoa + lịch trống).
+# lookup/fetch/format là tool nghiên cứu web sót lại từ template gốc -- không
+# cần cho tư vấn triệu chứng, và mỗi lần model gọi thêm 1 vòng round-trip nữa
+# (chậm hẳn), nên bỏ khỏi danh sách tool đưa cho model.
+# "clarify" CŨNG bị bỏ có chủ đích: hệ thống JSON schema (xem "ĐỊNH DẠNG TRẢ VỀ"
+# trong system_prompt.md) đã có event "question" để hỏi lại khách, đi kèm luôn
+# "profile" (symptoms/facts) trong CÙNG response. Khi model được cấp cả 2 lựa
+# chọn, nó hay gọi tool "clarify" thay vì trả JSON -- nhưng nhánh xử lý clarify
+# trong chat.py (status "waiting_for_user") chỉ trả text câu hỏi thô, KHÔNG có
+# profile, nên symptoms/facts không bao giờ được cập nhật khi model chọn nhánh
+# đó (xác nhận qua live test). Bỏ "clarify" buộc model luôn đi qua nhánh JSON
+# đầy đủ.
+TRIAGE_TOOL_NAMES = {"tra_gia", "tra_cuu", "xem_lich_kham"}
 OPENAI_TOOLS = [t for t in to_openai_tools(TOOL_DECLARATIONS) if t["function"]["name"] in TRIAGE_TOOL_NAMES]
 PROVIDER = make_provider(PROVIDER_NAME)
 SELECTED_MODEL = MODEL or getattr(PROVIDER, "default_model", None)
@@ -223,7 +230,20 @@ def _build_messages(history: list[dict], message: str, user_id: str | None) -> l
     # trong system_prompt.md; luật không-lặp-câu-hỏi cũng nằm ở đó để chặn hỏi lan man.
     trimmed = trim_history(flat, HISTORY_WINDOW)
 
-    messages = [{"role": "system", "content": SYSTEM_PROMPT}]
+    today = date.today()
+    tomorrow = date.fromordinal(today.toordinal() + 1)
+    messages = [
+        {"role": "system", "content": SYSTEM_PROMPT},
+        {
+            "role": "system",
+            "content": (
+                "NGÀY HỆ THỐNG: hôm nay là "
+                f"{today.isoformat()}; ngày mai là {tomorrow.isoformat()}. "
+                "Khi khách nói ngày tương đối như 'mai', 'sáng mai', hãy quy đổi sang YYYY-MM-DD "
+                "trước khi gọi tool xem_lich_kham."
+            ),
+        },
+    ]
     if user_id:
         profile_msg = _profile_context_message(user_id)
         if profile_msg:
@@ -244,27 +264,113 @@ def _normalize_profile(profile: dict) -> dict:
     return profile
 
 
-def _agent_result_to_response(result: dict) -> dict:
+# Last known-good profile per session, for when the model breaks the mandatory JSON
+# contract mid-conversation (seen live on Groq/Qwen deep in multi-round tool-calling —
+# it occasionally answers in plain prose instead of the JSON schema). Without this, the
+# fallback below used to wipe profile.symptoms/facts back to empty and guess a stage,
+# silently discarding everything gathered in earlier turns.
+_LAST_PROFILE: dict[str, dict] = {}
+_LAST_BOOKING_OPTIONS: dict[str, list[dict]] = {}
+
+
+def _booking_options_from_tool_events(tool_events: list[dict[str, Any]]) -> list[dict]:
+    options: list[dict] = []
+    seen: set[tuple[str, str, str]] = set()
+    for event in tool_events or []:
+        if event.get("tool") != "xem_lich_kham":
+            continue
+        result = event.get("result") or {}
+        if not isinstance(result, dict):
+            continue
+        for item in result.get("items") or []:
+            doctor_id = item.get("ma_bac_si")
+            if not doctor_id:
+                continue
+            for slot in item.get("lich_trong") or []:
+                visit_date = slot.get("ngay")
+                time_slot = slot.get("khung_gio")
+                if not visit_date or not time_slot:
+                    continue
+                key = (doctor_id, visit_date, time_slot)
+                if key in seen:
+                    continue
+                seen.add(key)
+                options.append({
+                    "doctor_id": doctor_id,
+                    "doctor_name": item.get("bac_si"),
+                    "specialty": item.get("chuyen_khoa"),
+                    "visit_date": visit_date,
+                    "time_slot": time_slot,
+                    "campus": slot.get("co_so"),
+                    "location": slot.get("khoa_phong"),
+                })
+    return options[:6]
+
+
+def _looks_like_booking_confirmation(text: str) -> bool:
+    folded = fold_text(text or "")
+    if not folded:
+        return False
+    positive = ("chot", "xac nhan", "dat", "book", "ok", "dong y", "lay", "chon")
+    exploratory = ("tim", "xem", "goi y", "liet ke", "co gi")
+    return any(word in folded for word in positive) and not any(word in folded for word in exploratory)
+
+
+def _pick_booking_option(text: str, options: list[dict]) -> dict | None:
+    if not options:
+        return None
+    folded = fold_text(text or "")
+    ordinal_map = {
+        "dau tien": 0, "thu nhat": 0, "so 1": 0, "1": 0,
+        "thu hai": 1, "so 2": 1, "2": 1,
+        "thu ba": 2, "so 3": 2, "3": 2,
+    }
+    for marker, index in ordinal_map.items():
+        if marker in folded and index < len(options):
+            return options[index]
+    for option in options:
+        doctor_name = (option.get("doctor_name") or "").split("(")[0].strip()
+        if doctor_name and fold_text(doctor_name) in folded:
+            return option
+    return options[0]
+
+
+def _booking_error_message(detail: str | None) -> str:
+    labels = {
+        "slot_already_booked": "Khung giờ này vừa có người đặt trước bạn. Mình chưa chốt lịch được, bạn chọn khung giờ khác trong thẻ lịch nhé.",
+        "slot_not_found": "Khung giờ này không còn tồn tại trong lịch trống. Mình chưa chốt lịch được, bạn chọn lại giúp mình nhé.",
+        "doctor_not_found": "Mình không còn tìm thấy bác sĩ này trong danh sách hiện tại, nên chưa chốt lịch được.",
+    }
+    return labels.get(detail or "", "Mình chưa chốt lịch được vì có lỗi khi lưu lịch. Bạn thử chọn lại khung giờ nhé.")
+
+
+def _agent_result_to_response(result: dict, session_id: str) -> dict:
+    booking_options = _booking_options_from_tool_events(result.get("tool_events") or [])
+    if booking_options:
+        _LAST_BOOKING_OPTIONS[session_id] = booking_options
+
     assistant_text = result.get("assistant_text", "")
-    status = result.get("status", "answered")
 
     parsed = _extract_json(assistant_text)
     if parsed and "events" in parsed:
         events = parsed["events"] if isinstance(parsed["events"], list) else []
+        if booking_options:
+            events.append({"type": "booking_options", "options": booking_options})
         profile = _normalize_profile(
             parsed.get("profile") if isinstance(parsed.get("profile"), dict) else {}
         )
+        _LAST_PROFILE[session_id] = profile
         return {"events": events, "profile": profile}
 
-    stage_map = {
-        "waiting_for_user": "questioning",
-        "max_tool_rounds": "done",
-        "answered": "done",
-    }
-    stage = stage_map.get(status, "questioning")
-
+    # Model didn't return valid JSON this round -- carry forward the last profile we
+    # actually parsed for this session (nothing about the tracked symptoms/stage changed,
+    # the model just failed to restate it), rather than resetting to a bare default and
+    # mislabeling stage as "done" when the patient may still be mid-questioning.
     events: list[dict] = [{"type": "message", "text": assistant_text, "confirm": False}]
-    profile = _normalize_profile({"stage": stage})
+    profile = _LAST_PROFILE.get(session_id)
+    profile = dict(profile) if profile else _normalize_profile({"stage": "questioning"})
+    if booking_options:
+        events.append({"type": "booking_options", "options": booking_options})
     return {"events": events, "profile": profile}
 
 
@@ -289,8 +395,18 @@ def triage(payload: dict, user_id: str | None) -> dict:
         except Exception as exc:
             raise HTTPException(status_code=400, detail=f"voice_input_failed: {exc}") from exc
 
-    # Lấy lại 1 cặp hội thoại gần nhất từ vector store (bge-m3, k=1, không rerank).
     session_id = _session_id(payload, user_id)
+    try:
+        chat_booking = _maybe_book_from_chat_confirmation(message, session_id, user_id)
+    except HTTPException as exc:
+        return {
+            "events": [{"type": "message", "text": _booking_error_message(str(exc.detail)), "confirm": False}],
+            "profile": dict(_LAST_PROFILE.get(session_id) or _normalize_profile({"stage": "done"})),
+        }
+    if chat_booking:
+        return chat_booking
+
+    # Lấy lại 1 cặp hội thoại gần nhất từ vector store (bge-m3, k=1, không rerank).
     memory = get_memory_manager()
     past = memory.retrieve(session_id, message, k=1)
     if past:
@@ -351,7 +467,7 @@ def triage(payload: dict, user_id: str | None) -> dict:
     if assistant_text:
         memory.record_turn(session_id, message, assistant_text)
 
-    return _agent_result_to_response(result)
+    return _agent_result_to_response(result, session_id)
 
 
 @app.post("/triage/end")
@@ -656,6 +772,116 @@ def _open_slots(doctor_id: str) -> list[dict]:
     ]
 
 
+def _book_doctor_slot_for_user(user_id: str, doctor_id: str, visit_date: str, time_slot: str) -> dict:
+    doctor = next((d for d in _load_doctors() if d["id_doctor"] == doctor_id), None)
+    if not doctor:
+        raise HTTPException(status_code=404, detail="doctor_not_found")
+
+    visit_date = (visit_date or "").strip()
+    time_slot = (time_slot or "").strip()
+    try:
+        date.fromisoformat(visit_date)
+    except ValueError:
+        raise HTTPException(status_code=400, detail="invalid_visit_date")
+    if not TIME_SLOT_RE.fullmatch(time_slot):
+        raise HTTPException(status_code=400, detail="invalid_time_slot")
+
+    matching_slot = next(
+        (s for s in _load_schedule_by_doctor().get(doctor_id, [])
+         if s["visit_date"] == visit_date and s["time_slot"] == time_slot),
+        None,
+    )
+    if not matching_slot:
+        raise HTTPException(status_code=404, detail="slot_not_found")
+    if db.find_booking(doctor_id, visit_date, time_slot):
+        raise HTTPException(status_code=409, detail="slot_already_booked")
+
+    time_start, _, time_end = time_slot.partition("-")
+    location = f"{matching_slot['campus']} - {doctor['department']} - {matching_slot['room']}"
+    entry_id = db.add_calendar_entry(
+        user_id, visit_date, "kham_benh", f"Khám {doctor['specialty']}",
+        f"Đặt lịch qua Yên với {doctor['full_name']}.", now_iso(),
+        time_start=time_start, time_end=time_end,
+        doctor=f"{doctor['full_name']} ({doctor['degree']})",
+        location=location,
+        doctor_id=doctor_id, time_slot=time_slot,
+    )
+
+    email_notification = "disabled"
+    user = db.get_user_by_id(user_id)
+    if EMAIL_SERVICE.configured and user:
+        profile = db.get_profile(user_id) or {}
+        try:
+            EMAIL_SERVICE.send_confirmation(AppointmentEmail(
+                recipient_email=user["email"],
+                patient_name=profile.get("full_name") or "Quý khách",
+                doctor_name=doctor["full_name"],
+                doctor_degree=doctor["degree"],
+                specialty=doctor["specialty"],
+                visit_date=visit_date,
+                time_slot=time_slot,
+                location=location,
+                appointment_id=entry_id,
+            ))
+            email_notification = "sent"
+        except Exception:
+            # Lịch hẹn đã được lưu; sự cố SMTP không được làm người dùng mất lịch.
+            email_notification = "failed"
+            LOGGER.exception("Could not send appointment email for booking %s", entry_id)
+
+    return {
+        "id": entry_id,
+        "email_notification": email_notification,
+        "doctor": {
+            "id_doctor": doctor["id_doctor"],
+            "full_name": doctor["full_name"],
+            "degree": doctor["degree"],
+            "specialty": doctor["specialty"],
+            "department": doctor["department"],
+        },
+        "visit_date": visit_date,
+        "time_slot": time_slot,
+        "location": location,
+    }
+
+
+def _maybe_book_from_chat_confirmation(message: str, session_id: str, user_id: str | None) -> dict | None:
+    if not user_id or not _looks_like_booking_confirmation(message):
+        return None
+    option = _pick_booking_option(message, _LAST_BOOKING_OPTIONS.get(session_id, []))
+    if not option:
+        return None
+
+    booking = _book_doctor_slot_for_user(
+        user_id,
+        option["doctor_id"],
+        option["visit_date"],
+        option["time_slot"],
+    )
+    _LAST_BOOKING_OPTIONS.pop(session_id, None)
+
+    doctor = booking["doctor"]
+    email_text = {
+        "sent": "Email xác nhận đã được gửi tới email tài khoản của bạn.",
+        "failed": "Chưa gửi được email xác nhận, nhưng lịch khám đã được lưu.",
+        "disabled": "Chưa cấu hình SMTP nên chưa gửi email, nhưng lịch khám đã được lưu.",
+    }.get(booking["email_notification"], "")
+    text = (
+        f"Mình đã chốt lịch khám {doctor['specialty']} với {doctor['full_name']} "
+        f"vào {booking['visit_date']} lúc {booking['time_slot']}. "
+        "Lịch này đã xuất hiện trong tab Lịch và slot đã được loại khỏi tab Đặt lịch khám. "
+        f"{email_text}"
+    ).strip()
+    profile = _LAST_PROFILE.get(session_id)
+    return {
+        "events": [
+            {"type": "message", "text": text, "confirm": True},
+            {"type": "booking_confirmation", "booking": booking},
+        ],
+        "profile": dict(profile) if profile else _normalize_profile({"stage": "done"}),
+    }
+
+
 @app.get("/doctors")
 def list_doctors(
     query: str | None = None,
@@ -713,65 +939,12 @@ def get_doctor_schedule(doctor_id: str, authorization: str | None = Header(None)
 @app.post("/doctors/{doctor_id}/book")
 def book_doctor_slot(doctor_id: str, payload: dict = Body(...), authorization: str | None = Header(None)) -> dict:
     user_id = _require_user_id(authorization)
-    doctor = next((d for d in _load_doctors() if d["id_doctor"] == doctor_id), None)
-    if not doctor:
-        raise HTTPException(status_code=404, detail="doctor_not_found")
-
-    visit_date = (payload.get("visit_date") or "").strip()
-    time_slot = (payload.get("time_slot") or "").strip()
-    try:
-        date.fromisoformat(visit_date)
-    except ValueError:
-        raise HTTPException(status_code=400, detail="invalid_visit_date")
-    if not TIME_SLOT_RE.fullmatch(time_slot):
-        raise HTTPException(status_code=400, detail="invalid_time_slot")
-
-    # Khung giờ phải thật sự có trong data mock (đúng bác sĩ/ngày/giờ) VÀ chưa
-    # bị ai đặt trước -- chặn cả đặt bừa slot không tồn tại lẫn double-booking.
-    matching_slot = next(
-        (s for s in _load_schedule_by_doctor().get(doctor_id, [])
-         if s["visit_date"] == visit_date and s["time_slot"] == time_slot),
-        None,
+    return _book_doctor_slot_for_user(
+        user_id,
+        doctor_id,
+        payload.get("visit_date") or "",
+        payload.get("time_slot") or "",
     )
-    if not matching_slot:
-        raise HTTPException(status_code=404, detail="slot_not_found")
-    if db.find_booking(doctor_id, visit_date, time_slot):
-        raise HTTPException(status_code=409, detail="slot_already_booked")
-
-    time_start, _, time_end = time_slot.partition("-")
-    location = f"{matching_slot['campus']} - {doctor['department']} - {matching_slot['room']}"
-    entry_id = db.add_calendar_entry(
-        user_id, visit_date, "kham_benh", f"Khám {doctor['specialty']}",
-        f"Đặt lịch qua Yên với {doctor['full_name']}.", now_iso(),
-        time_start=time_start, time_end=time_end,
-        doctor=f"{doctor['full_name']} ({doctor['degree']})",
-        location=location,
-        doctor_id=doctor_id, time_slot=time_slot,
-    )
-
-    email_notification = "disabled"
-    user = db.get_user_by_id(user_id)
-    if EMAIL_SERVICE.configured and user:
-        profile = db.get_profile(user_id) or {}
-        try:
-            EMAIL_SERVICE.send_confirmation(AppointmentEmail(
-                recipient_email=user["email"],
-                patient_name=profile.get("full_name") or "Quý khách",
-                doctor_name=doctor["full_name"],
-                doctor_degree=doctor["degree"],
-                specialty=doctor["specialty"],
-                visit_date=visit_date,
-                time_slot=time_slot,
-                location=location,
-                appointment_id=entry_id,
-            ))
-            email_notification = "sent"
-        except Exception:
-            # Lịch hẹn đã được lưu; sự cố SMTP không được làm người dùng mất lịch.
-            email_notification = "failed"
-            LOGGER.exception("Could not send appointment email for booking %s", entry_id)
-
-    return {"id": entry_id, "email_notification": email_notification}
 
 
 # ---------------------------------------------------------------------------

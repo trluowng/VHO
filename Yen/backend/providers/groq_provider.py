@@ -25,8 +25,10 @@ class GroqProvider(OpenAIProvider):
             # Lowered from 4000 after adding the tra_gia/tra_cuu/xem_lich_kham tool
             # descriptions grew the system prompt. Lowered again from 3000 -- with
             # the HỒ SƠ BỆNH NHÂN (patient profile) block injected too, prompt_tokens
-            # reached ~5368, still tripping the 413 at 3000. Confirmed live.
-            max_tokens=2500,
+            # reached ~5368, still tripping the 413 at 3000. Lowered again from 2500
+            # after adding the THU THẬP TRIỆU CHỨNG guidance (deeper symptom
+            # gathering before concluding) grew the prompt further -- confirmed live.
+            max_tokens=1800,
         )
 
     def _extra_body(self, model: str) -> dict[str, Any] | None:

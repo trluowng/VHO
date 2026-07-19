@@ -603,6 +603,35 @@ input, textarea { font-family: inherit; }
 .run-tag.gemini { background: var(--sage-tint-2); color: var(--sage-deep); border-color: #c9e8ed; }
 .run-tag.rule { background: var(--paper-2); color: var(--ink-faint); }
 .pulse-dot.is-idle { background: var(--ink-faint); animation: none; box-shadow: none; }
+.msg-speak-btn {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  width: fit-content;
+  margin: 1px 0 0 4px;
+  padding: 4px 9px;
+  border: 1px solid var(--card-edge);
+  border-radius: 999px;
+  background: rgba(251, 248, 241, 0.78);
+  color: var(--ink-faint);
+  font-size: 10.5px;
+  font-weight: 600;
+  line-height: 1;
+  transition: color 0.16s ease, background 0.16s ease, border-color 0.16s ease, transform 0.16s ease;
+}
+.msg-speak-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  border-color: var(--sage-bright);
+  background: var(--sage-tint-2);
+  color: var(--sage-deep);
+}
+.msg-speak-btn.is-speaking,
+.msg-speak-btn:disabled {
+  cursor: wait;
+  color: var(--sage-deep);
+  background: var(--sage-tint-2);
+}
 .bubble strong { font-weight: 600; }
 .bubble .confirm-line {
   display: block;
@@ -719,6 +748,130 @@ input, textarea { font-family: inherit; }
 .btn--primary { background: var(--sage); color: #f1f5ee; }
 .btn--primary:hover { background: var(--sage-deep); }
 .btn--ghost { background: var(--card); color: var(--ink-2); border-color: var(--card-edge); }
+
+.chat-booking-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: min(720px, 100%);
+  margin-left: 46px;
+  padding: 15px;
+  border: 1px solid var(--card-edge);
+  border-radius: 16px;
+  background: var(--paper-warm);
+  box-shadow: var(--sh-1);
+}
+.chat-booking-card__head {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.chat-booking-card__head > span,
+.chat-booking-card__success-icon {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  color: var(--sage-deep);
+  background: var(--sage-tint-2);
+}
+.chat-booking-card__head strong,
+.chat-booking-card--success strong {
+  color: var(--ink);
+  font-size: 13.5px;
+}
+.chat-booking-card__head p,
+.chat-booking-card--success p {
+  margin: 3px 0 0;
+  color: var(--ink-soft);
+  font-size: 12px;
+  line-height: 1.5;
+}
+.chat-booking-card__list {
+  display: grid;
+  gap: 9px;
+}
+.chat-booking-option {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid #e4edf1;
+  border-radius: 12px;
+  background: #fbfdfc;
+}
+.chat-booking-option__main {
+  display: flex;
+  min-width: 0;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+}
+.chat-booking-option__main strong {
+  width: 100%;
+  color: var(--ink);
+  font-size: 13px;
+}
+.chat-booking-option__main small {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--ink-soft);
+  font-size: 11px;
+}
+.chat-booking-option .btn {
+  min-width: 112px;
+  justify-content: center;
+  padding: 9px 13px;
+  font-size: 11.5px;
+}
+.chat-booking-card--success {
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr) auto;
+  align-items: center;
+  border-color: #b8e3d2;
+  background: linear-gradient(135deg, #edf9f4, #f8fdfa);
+}
+.chat-booking-card--success .chat-booking-card__success-icon {
+  color: #fff;
+  background: #24a977;
+}
+.chat-booking-card__success-copy {
+  min-width: 0;
+}
+.chat-booking-card--success small {
+  display: block;
+  margin-top: 4px;
+  color: #23795f;
+  font-size: 11px;
+}
+.chat-booking-card--success small.is-error {
+  color: var(--red-deep);
+}
+.chat-booking-card--success a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--sage-deep);
+  font-size: 12px;
+  font-weight: 650;
+  text-decoration: none;
+  white-space: nowrap;
+}
+@media (max-width: 720px) {
+  .chat-booking-card {
+    margin-left: 0;
+  }
+  .chat-booking-option,
+  .chat-booking-card--success {
+    grid-template-columns: 1fr;
+  }
+  .chat-booking-option .btn {
+    width: 100%;
+  }
+}
 
 /* ============================================================
    Emergency overlay (Red flag — Path C)
@@ -3049,6 +3202,52 @@ input, textarea { font-family: inherit; }
 .booking-hero__trust > span { display: flex; flex-direction: column; }
 .booking-hero__trust strong { color: #21517f; font-size: 11.5px; }
 .booking-hero__trust small { margin-top: 2px; color: #7489a8; font-size: 9.5px; }
+
+.booking-upcoming {
+  padding: 16px 20px;
+  border: 1px solid #dce8f2;
+  border-radius: 14px;
+  background: #fff;
+}
+.booking-upcoming__head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  color: #14345f;
+  font-size: 12.5px;
+}
+.booking-upcoming__head strong { flex: 1; }
+.booking-upcoming__head a { color: #087ebd; font-size: 11px; text-decoration: none; }
+.booking-upcoming__head a:hover { text-decoration: underline; }
+.booking-upcoming__list { display: flex; flex-wrap: wrap; gap: 10px; }
+.booking-upcoming__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 220px;
+  padding: 9px 12px;
+  border: 1px solid #e4edf5;
+  border-radius: 11px;
+  background: #f7fbfd;
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.booking-upcoming__item:hover { border-color: #9ed0eb; background: #eef8fd; }
+.booking-upcoming__date {
+  flex: none;
+  padding: 4px 8px;
+  border-radius: 8px;
+  background: #e2f1fa;
+  color: #0877b6;
+  font-size: 10.5px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.booking-upcoming__info { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.booking-upcoming__info strong { font-size: 12px; color: #21517f; }
+.booking-upcoming__info small { font-size: 10.5px; color: #7489a8; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
 .booking-stepper {
   display: grid;

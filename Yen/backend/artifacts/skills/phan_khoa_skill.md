@@ -1,8 +1,8 @@
 # Skill: Phân khoa theo triệu chứng (Bệnh viện Tim Hà Nội)
 
-Mục tiêu: từ mô tả triệu chứng của khách, xác định **khoa lâm sàng phù hợp nhất**, rồi
-suy ra **chuyên khoa để gọi tool `xem_lich_kham`** (hiện tool chỉ nhận đúng 1 trong 4 giá
-trị: `"Tim mạch"`, `"Nhi"`, `"Da liễu"`, `"Nội tổng quát"`).
+Mục tiêu: từ mô tả triệu chứng của khách, xác định **khoa lâm sàng phù hợp nhất**, rồi suy
+ra **chuyên khoa để đưa vào event "result"** (hiện chỉ có đúng 1 trong 4 giá trị hợp lệ cho
+`xem_lich_kham` sau này: `"Tim mạch"`, `"Nhi"`, `"Da liễu"`, `"Nội tổng quát"`).
 
 Nguồn dữ liệu chi tiết: `data/structured/trieu_chung_phan_khoa.csv` (24 khoa, đầy đủ câu
 hỏi sàng lọc + mức khẩn cấp). File này là bản tóm tắt để dùng trực tiếp trong hội thoại.
@@ -23,8 +23,13 @@ hoặc đến **Khoa Cấp cứu** ngay. Không hỏi thêm câu sàng lọc nà
    khi bác sĩ Nội/Can thiệp đã chẩn đoán và chỉ định, rồi hạ về khoa "tiếp nhận trực tiếp"
    gần nhất (ví dụ nghi cần phẫu thuật tim → vẫn hướng khách đặt lịch khoa Nội hoặc Tim
    mạch can thiệp trước để được chẩn đoán và chuyển tuyến đúng quy trình).
-4. Dùng bảng ánh xạ ở mục 3 để chuyển khoa chi tiết → 1 trong 4 chuyên khoa demo.
-5. Gọi `xem_lich_kham(query=<chuyên khoa đã ánh xạ>)` để lấy bác sĩ + giờ trống thật.
+4. Dùng bảng ánh xạ ở mục 3 để chuyển khoa chi tiết → 1 trong 4 chuyên khoa demo, đưa vào
+   event "result" (xem mục FINAL ASSESSMENT của system prompt chính).
+5. KHÔNG gọi `xem_lich_kham` ngay ở bước này — theo quy tắc chung, phải hỏi khách có muốn
+   tìm bác sĩ/đặt lịch không trước (event "question" ngay sau "result"). Nếu khách đồng ý,
+   hỏi tiếp ngày/khung giờ muốn khám nếu khách chưa nói. Chỉ gọi
+   `xem_lich_kham(query=<chuyên khoa đã ánh xạ>, preferred_date=..., preferred_time_period=..., preferred_time_slot=...)`
+   SAU KHI đã có mong muốn thời gian, hoặc `flexible_time=true` nếu khách nói ngày/giờ nào cũng được.
 
 ## 2. Bảng phân khoa theo triệu chứng
 

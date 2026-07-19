@@ -8,6 +8,10 @@ from typing import Any, Protocol
 class ToolCall:
     name: str
     args: dict[str, Any]
+    # Vendor-issued call id (OpenAI/Groq/OpenRouter) -- needed to build the
+    # proper `role: "tool"` reply message. None for providers (Gemini) whose
+    # wire protocol doesn't use this id-matched request/response pairing.
+    id: str | None = None
 
 
 @dataclass

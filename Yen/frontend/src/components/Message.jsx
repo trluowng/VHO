@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion'
-import { Pulse } from './icons.jsx'
+import { Pulse, Volume } from './icons.jsx'
 
 const time = () =>
   new Date().toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' })
 
-export default function Message({ role, text, confirm, stamp, meta }) {
+export default function Message({ role, text, confirm, stamp, meta, onSpeak, speaking }) {
   const ai = role === 'ai'
   const ms = meta?.ms
   return (
@@ -29,6 +29,19 @@ export default function Message({ role, text, confirm, stamp, meta }) {
             </span>
           )}
         </span>
+        {ai && onSpeak && text && (
+          <button
+            type="button"
+            className={`msg-speak-btn ${speaking ? 'is-speaking' : ''}`}
+            onClick={() => onSpeak(text)}
+            disabled={speaking}
+            aria-label="Đọc câu trả lời này"
+            title="Đọc câu trả lời này"
+          >
+            <Volume width={13} height={13} />
+            <span>{speaking ? 'Đang đọc…' : 'Nghe câu này'}</span>
+          </button>
+        )}
       </div>
     </motion.div>
   )

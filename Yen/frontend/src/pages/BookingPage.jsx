@@ -1,10 +1,66 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext.jsx'
-import { doctorsApi } from '../lib/api.js'
+import { doctorsApi, calendarApi } from '../lib/api.js'
 import { Calendar as CalendarIcon, ChevronRight, Clock, Cross, MapPin, Search, Shield, Stethoscope, X } from '../components/icons.jsx'
 import TabNav from '../components/TabNav.jsx'
 import BookingStepper from '../components/booking/BookingStepper.jsx'
+
+function todayIso() {
+  return new Date().toISOString().slice(0, 10)
+}
+
+function formatUpcomingDate(iso) {
+  const d = new Date(iso + 'T00:00:00')
+  return d.toLocaleDateString('vi-VN', { weekday: 'short', day: '2-digit', month: '2-digit' })
+}
+
+// Lịch hẹn vừa đặt (qua trang này hoặc qua Yên) không có nơi nào hiện lại trên tab
+// "Đặt lịch khám" -- trang chỉ có banner báo thành công một lần rồi mất khi rời trang.
+// Lấy trực tiếp từ /calendar (không giới hạn tháng) để luôn thấy lịch sắp tới ở đây.
+function UpcomingBookings({ token }) {
+  const [entries, setEntries] = useState([])
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    let cancelled = false
+    calendarApi.list(token)
+      .then((data) => {
+        if (cancelled) return
+        const today = todayIso()
+        const upcoming = (data.entries || [])
+          .filter((e) => e.type === 'kham_benh' && e.entry_date >= today)
+          .sort((a, b) => (a.entry_date + (a.time_start || '')).localeCompare(b.entry_date + (b.time_start || '')))
+        setEntries(upcoming)
+      })
+      .catch(() => {})
+      .finally(() => { if (!cancelled) setLoading(false) })
+    return () => { cancelled = true }
+  }, [token])
+
+  if (loading || entries.length === 0) return null
+
+  return (
+    <section className="booking-upcoming">
+      <div className="booking-upcoming__head">
+        <CalendarIcon width={15} height={15} />
+        <strong>Lịch hẹn sắp tới của bạn</strong>
+        <Link to="/app/lich">Xem tất cả trong tab Lịch</Link>
+      </div>
+      <div className="booking-upcoming__list">
+        {entries.slice(0, 3).map((e) => (
+          <Link key={e.id} to="/app/lich" state={{ focusDate: e.entry_date }} className="booking-upcoming__item">
+            <span className="booking-upcoming__date">{formatUpcomingDate(e.entry_date)}</span>
+            <span className="booking-upcoming__info">
+              <strong>{e.title || 'Khám bệnh'}</strong>
+              <small>{e.time_start ? `${e.time_start}${e.time_end ? `-${e.time_end}` : ''} · ` : ''}{e.doctor || e.location}</small>
+            </span>
+          </Link>
+        ))}
+      </div>
+    </section>
+  )
+}
 
 const CAMPUSES = ['Cơ sở 1', 'Cơ sở 2']
 const SPECIALTIES = ['Tim mạch', 'Nhi', 'Da liễu', 'Nội tổng quát']
@@ -176,6 +232,8 @@ export default function BookingPage() {
                 <span><strong>Thông tin được bảo mật</strong><small>Xác nhận ngay trên tài khoản của bạn</small></span>
               </div>
             </section>
+
+            <UpcomingBookings token={token} />
 
             <BookingStepper current={1} />
 

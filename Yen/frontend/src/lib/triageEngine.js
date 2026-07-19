@@ -460,7 +460,7 @@ export function setSymptoms(prev, symptoms) {
    Bật: trỏ VITE_API_BASE_URL → http://localhost:8787
    (xem .env.example và Yen/README.md chi tiết). Lỗi → App tự fallback.
    ============================================================ */
-export async function callRealModel(history, userText, token) {
+export async function callRealModel(history, userText, token, sessionId) {
   const base = import.meta.env.VITE_API_BASE_URL
   if (!base) throw new Error('VITE_API_BASE_URL chưa cấu hình — đang dùng rule-based engine.')
   const headers = { 'Content-Type': 'application/json' }
@@ -468,7 +468,7 @@ export async function callRealModel(history, userText, token) {
   const res = await fetch(`${base.replace(/\/$/, '')}/triage`, {
     method: 'POST',
     headers,
-    body: JSON.stringify({ history, message: userText }),
+    body: JSON.stringify({ history, message: userText, session_id: sessionId }),
   })
   if (!res.ok) throw new Error('Triage API error ' + res.status)
   return res.json() // kỳ vọng: { events: [...] } cùng schema với handleUser

@@ -45,7 +45,7 @@ export default function TriageResult({ triage, onCta }) {
 
         {conditions.length > 0 && (
           <div>
-            <div className="triage__section-l">Có thể liên quan đến</div>
+            <div className="triage__section-l">Tóm tắt triệu chứng đã ghi nhận</div>
             <ul className="cond-list">
               {conditions.map((c) => (
                 <li key={c.name}><span className="dot" />{c.name}{c.pct && <span className="pct">{c.pct}</span>}</li>

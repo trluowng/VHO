@@ -33,7 +33,7 @@ file dài hàng chục MB. Do đó **các file phiên KHÔNG được đưa vào
 
 | Công cụ | Đường dẫn trên máy | Kích thước |
 |---|---|---|
-| Claude Code | `~/.claude/projects/d--AI-VHO/91bb68d9-8ab7-4dfa-848b-e44b13829464.jsonl` (Windows: `C:\Users\tranl\.claude\projects\d--AI-VHO\...jsonl`) | ~80MB |
+| Claude Code | `~/.claude/projects/d--AI-VHO/91bb68d9-8ab7-4dfa-848b-e44b13829464.jsonl` (Windows: `C:\Users\tranl\.claude\projects\d--AI-VHO\...jsonl`) | ~82MB (đang tăng, chưa kết thúc phiên) |
 | Codex (phiên chính) | `~/.codex/sessions/2026/07/17/rollout-2026-07-17T21-39-31-019f7084-9942-75e1-94b2-fdffa713934c.jsonl` | ~23MB |
 | Codex (subagent "guardian" nội bộ) | `~/.codex/sessions/2026/07/17/rollout-2026-07-17T22-02-18-019f7099-7547-7302-8e8a-e68de2cef27a.jsonl` | ~330KB |
 
@@ -103,12 +103,33 @@ Commit hash để đối chiếu với `git log`.
 - `7c45720` Thiết kế lại tab chu kỳ kinh nguyệt: thẻ số liệu, thanh tiến trình chu kỳ theo từng
   ngày, ô lịch tô màu theo giai đoạn (hành kinh/dễ thụ thai/rụng trứng/an toàn) thay vì chấm nhỏ.
 
+### 2026-07-19 — AI log, cập nhật data bác sĩ, sửa TTS, sửa tool-calling cho OpenAI
+- `3045b1c` Viết `AI_LOG.md` lần đầu — phát hiện file phiên Claude Code chứa API key Groq thật bị
+  dán vào chat, GitHub push protection chặn; xoá secret khỏi lịch sử local trước khi push, đổi log
+  sang chỉ ghi đường dẫn file thay vì đính kèm nguyên văn (xem mục cảnh báo bảo mật bên trên).
+- `be6e1fa` Data bác sĩ/lịch khám chuyển sang `data/structured/mock_hospital_dataset_v4.xlsx` (đợt
+  hẹn/trạng thái đặt được sinh lại toàn bộ) — trỏ lại `build_schedule.py`, build lại
+  `schedule_slots.json`, verify sống luồng đặt lịch (đặt → chặn trùng lịch → xoá dọn).
+- `5e0d386` Phát hiện & sửa lỗi kiến trúc TTS: `server.py` gọi `stt/speaker.py` (phát bằng
+  `pygame.mixer`) trên **mọi** phản hồi `/triage` — phát âm thanh trên loa máy chủ (vô dụng khi
+  deploy cloud) và chặn mỗi phản hồi thêm vài giây. Thay bằng endpoint `POST /tts` sinh MP3 qua
+  gTTS thẳng vào bộ nhớ, trình duyệt tự phát; thêm nút "Đọc to" ở giao diện chat.
+- *(chưa commit)* Đổi provider sang OpenAI (`gpt-4o-mini`) theo yêu cầu người dùng — phát hiện
+  model bỏ qua kết quả tool thật (`tra_gia` chạy đúng nhưng model báo "lỗi kỹ thuật" giả) vì
+  `chat.py` dùng định dạng tool-call không đúng chuẩn OpenAI (nhúng JSON vào text thay vì
+  `tool_calls`/`tool_call_id` thật). Đang sửa `providers/base.py`, `providers/openai_provider.py`,
+  `chat.py` để dùng đúng giao thức OpenAI mà không phá luồng Gemini đang chạy song song.
+
 ## Ghi chú
 
-- Các commit của `laiducanh26112004-debug` (Groq provider ban đầu, STT, mock data bác sĩ/lịch)
-  **không nằm trong phiên Claude Code** ở trên nhưng có khả năng trùng với phiên Codex đã tìm thấy
-  (cùng máy, cùng thư mục dự án, cùng khung thời gian 07-17 → 07-18) — cần thành viên đó xác nhận.
-- Commit của `Luu Nhat Nam` (`c8893c8`, first-aid rule seed) không khớp với phiên AI nào tìm thấy
-  trên máy này — nếu có dùng công cụ AI, cần thành viên đó tự bổ sung link/file log riêng.
+- Các commit của `laiducanh26112004-debug` / `Lai_Duc_Anh` (cùng 1 người — Groq provider ban đầu,
+  STT, mock data bác sĩ/lịch, module memory hội thoại, các lần merge PR) **không nằm trong phiên
+  Claude Code** ở trên nhưng có khả năng trùng với phiên Codex đã tìm thấy (cùng máy, cùng thư mục
+  dự án, cùng khung thời gian 07-17 → 07-18) — cần thành viên đó xác nhận.
+- Các commit của `Luu Nhat Nam` (first-aid rule seed, bộ câu hỏi phân khoa theo triệu chứng,
+  `phan_khoa_skill.md`) không khớp với phiên AI nào tìm thấy trên máy này — nếu có dùng công cụ
+  AI, cần thành viên đó tự bổ sung link/file log riêng.
 - Commit đầu tiên (`d8607c0`, 2026-07-09) có trước thời điểm tạo cả 2 phiên trên (Claude Code từ
   2026-07-15, Codex từ 2026-07-17) nên không thuộc phạm vi bằng chứng ở đây.
+- File phiên Claude Code vẫn đang là **1 phiên liên tục duy nhất** (chưa kết thúc) — kích thước sẽ
+  tiếp tục tăng; cập nhật lại kích thước trong bảng ở trên ngay trước khi nộp bài.

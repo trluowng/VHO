@@ -44,19 +44,25 @@ def trim_history(history: list[dict[str, str]], window: int) -> list[dict[str, s
 def execute_tool_call(call: ToolCall) -> dict[str, Any]:
     func = TOOL_FUNCTIONS.get(call.name)
     if not func:
-        return {
-            "tool": call.name,
-            "args": call.args,
-            "result": {"error": "unknown_tool", "message": f"No local implementation for {call.name}"},
-        }
-    try:
-        result = func(**call.args)
-    except Exception as exc:
-        result = {"error": type(exc).__name__, "message": str(exc)}
-    return {"tool": call.name, "args": call.args, "result": result}
+        result = {"error": "unknown_tool", "message": f"No local implementation for {call.name}"}
+    else:
+        try:
+            result = func(**call.args)
+        except Exception as exc:
+            result = {"error": type(exc).__name__, "message": str(exc)}
+    return {"tool": call.name, "args": call.args, "result": result, "call_id": call.id}
 
 
-def tool_results_message(events: list[dict[str, Any]]) -> dict[str, str]:
+def tool_results_message(events: list[dict[str, Any]]) -> dict[str, Any]:
+    """Provider-neutral tool-result turn.
+
+    `content` is a text rendering every provider can read (Gemini has no
+    concept of a `tool` role and just treats this as the next user turn).
+    `tool_results` additionally carries each result keyed by the vendor call
+    id -- OpenAI-family providers (OpenAI/Groq/OpenRouter) translate this into
+    the real `role: "tool"` reply messages their API requires; providers that
+    don't need it (Gemini) simply ignore the extra key.
+    """
     return {
         "role": "user",
         "content": (
@@ -65,15 +71,23 @@ def tool_results_message(events: list[dict[str, Any]]) -> dict[str, str]:
             "Use only these tool results. If the user asked for a digest and the items are ready, "
             "call the formatting tool. Otherwise answer the user directly with cited sources when available."
         ),
+        "tool_results": [
+            {"tool_call_id": e["call_id"], "content": json_text(e["result"])}
+            for e in events if e.get("call_id")
+        ],
     }
 
 
-def assistant_tool_message(response_text: str | None, calls: list[ToolCall]) -> dict[str, str]:
+def assistant_tool_message(response_text: str | None, calls: list[ToolCall]) -> dict[str, Any]:
     call_summary = [{"name": call.name, "args": call.args} for call in calls]
     content = response_text or "I will call the selected tool(s)."
     return {
         "role": "assistant",
         "content": f"{content}\n\nTOOL_CALLS_JSON:\n{json_text(call_summary)}",
+        "text": response_text,
+        "tool_calls": [
+            {"id": call.id, "name": call.name, "args": call.args} for call in calls if call.id
+        ],
     }
 
 
@@ -88,6 +102,12 @@ def run_model_tool_loop(
     working_messages = list(messages)
     rounds: list[dict[str, Any]] = []
     all_tool_events: list[dict[str, Any]] = []
+    # Anti-loop guard: some models (confirmed live on gpt-4o-mini) get stuck re-issuing the
+    # exact same tool+args round after round when the tool has nothing useful to return (e.g.
+    # tra_cuu on a pure symptom query -- it only indexes procedure/policy text, so it always
+    # comes back empty, but the model keeps "double-checking"). Prompt-only fixes didn't stick
+    # across several attempts, so this reacts to the actual repeat instead.
+    seen_call_signatures: set[tuple[str, str]] = set()
 
     for round_index in range(1, max_tool_rounds + 1):
         response = provider.complete(working_messages, tools, model=model, temperature=0.1)
@@ -120,9 +140,14 @@ def run_model_tool_loop(
 
         working_messages.append(assistant_tool_message(response.text, calls))
         non_clarification_events: list[dict[str, Any]] = []
+        repeated_calls = 0
 
         for call in calls:
             print(f"🔧 {call.name}({json.dumps(call.args, ensure_ascii=False, sort_keys=True)})")
+            signature = (call.name, json.dumps(call.args, ensure_ascii=False, sort_keys=True))
+            if signature in seen_call_signatures:
+                repeated_calls += 1
+            seen_call_signatures.add(signature)
             event = execute_tool_call(call)
             round_record["tool_results"].append(event)
             all_tool_events.append(event)
@@ -147,11 +172,23 @@ def run_model_tool_loop(
             non_clarification_events.append(event)
 
         rounds.append(round_record)
-        working_messages.append(tool_results_message(non_clarification_events))
+        tool_msg = tool_results_message(non_clarification_events)
+        if calls and repeated_calls == len(calls):
+            # Every call this round exactly repeats a call from an earlier round -- force a
+            # stop instead of burning the remaining rounds on identical retries.
+            tool_msg["content"] += (
+                "\n\nLƯU Ý: Các tool trên vừa được gọi lại y hệt vòng trước, sẽ không có kết quả "
+                "mới nào khác. DỪNG gọi tool ngay, trả lời NGAY bằng JSON theo đúng schema dựa "
+                "trên thông tin đã có."
+            )
+        working_messages.append(tool_msg)
 
     return {
         "status": "max_tool_rounds",
-        "assistant_text": f"Stopped after {max_tool_rounds} tool rounds. Inspect the transcript for details.",
+        "assistant_text": (
+            "Xin lỗi, mình đang gặp khó khăn để tra cứu đủ thông tin cho câu hỏi này. Bạn thử "
+            "hỏi lại ngắn gọn hơn hoặc liên hệ tổng đài bệnh viện giúp mình nhé."
+        ),
         "rounds": rounds,
         "tool_events": all_tool_events,
     }

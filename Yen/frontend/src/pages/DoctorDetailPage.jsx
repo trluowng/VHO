@@ -202,7 +202,9 @@ export default function DoctorDetailPage() {
                     </small>
                   )}
                 </div>
-                <Link to="/app/lich">Xem trong tab Lịch <ArrowRight width={14} height={14} /></Link>
+                <Link to="/app/lich" state={{ focusDate: booked.visit_date }}>
+                  Xem trong tab Lịch <ArrowRight width={14} height={14} />
+                </Link>
               </section>
             )}
 
