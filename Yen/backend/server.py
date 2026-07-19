@@ -58,6 +58,10 @@ from stt import (
     SpeechServiceError,
 )
 
+# Conversation memory: live turns in RAM; on disconnect, persist with 1h TTL and
+# embed each (user, assistant) pair into a FAISS vector store (bge-m3, k=1 retrieval).
+from memory import default as get_memory_manager
+
 
 # ---------------------------------------------------------------------------
 # Bootstrap
@@ -251,6 +255,16 @@ def _agent_result_to_response(result: dict) -> dict:
     return {"events": events, "profile": profile}
 
 
+def _session_id(payload: dict, user_id: str | None) -> str:
+    """Stable session key: explicit session_id > user_id > anonymous singleton."""
+    sid = payload.get("session_id")
+    if sid:
+        return str(sid)
+    if user_id:
+        return f"user_{user_id}"
+    return "anon"
+
+
 def triage(payload: dict, user_id: str | None) -> dict:
     # Nếu client bật giọng nói (use_voice), dùng STT để lấy đầu vào thay vì text.
     use_voice = bool(payload.get("use_voice"))
@@ -264,7 +278,23 @@ def triage(payload: dict, user_id: str | None) -> dict:
 
     # Giọng đọc TTS kết quả (mặc định nữ).
     voice_type = payload.get("voice_type", "female")
+
+    # Lấy lại 1 cặp hội thoại gần nhất từ vector store (bge-m3, k=1, không rerank).
+    session_id = _session_id(payload, user_id)
+    memory = get_memory_manager()
+    past = memory.retrieve(session_id, message, k=1)
+    if past:
+        recalled = past[0]
+        recall_ctx = (
+            "\n\n# HỘI THOẠI LIÊN QUAN ĐÃ LƯU (gợi nhớ từ bộ nhớ, chỉ để tham khảo):\n"
+            f"- Khách: {recalled.get('user', '')}\n"
+            f"- Yên: {recalled.get('assistant', '')}"
+        )
+    else:
+        recall_ctx = ""
     messages = _build_messages(payload.get("history", []), message, user_id)
+    if recall_ctx:
+        messages.append({"role": "system", "content": recall_ctx})
 
     timestamp = datetime.now().strftime("%Y%m%dT%H%M%S%f")
     transcript_id = "_".join([safe_slug(VERSION), safe_slug(PROVIDER_NAME), timestamp])
@@ -309,6 +339,8 @@ def triage(payload: dict, user_id: str | None) -> dict:
     # Luôn đọc kết quả bằng giọng nói sau khi sinh xong (TTS / "speakup").
     assistant_text = result.get("assistant_text", "")
     if assistant_text:
+        # Lưu cặp (user, assistant) vào bộ nhớ hội thoại (chỉ RAM, chưa ghi đĩa).
+        memory.record_turn(session_id, message, assistant_text)
         try:
             from stt import speak_output
             speak_output(assistant_text, voice_type=voice_type)
@@ -316,6 +348,18 @@ def triage(payload: dict, user_id: str | None) -> dict:
             print(f"⚠️  speakup failed: {exc}")
 
     return _agent_result_to_response(result)
+
+
+@app.post("/triage/end")
+def triage_end_route(payload: dict = Body(...), authorization: str | None = Header(None)) -> dict:
+    """Client gọi khi user rời đi / mất kết nối: lưu conversation (TTL 1h) + embed vào vector store."""
+    user_id = _bearer_user_id(authorization)
+    session_id = _session_id(payload, user_id)
+    try:
+        summary = get_memory_manager().end_session(session_id)
+        return {"ok": True, "session_id": session_id, **summary}
+    except Exception as exc:
+        raise HTTPException(status_code=500, detail=f"{type(exc).__name__}: {exc}") from exc
 
 
 # ---------------------------------------------------------------------------
