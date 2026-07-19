@@ -8,6 +8,17 @@ import BookingStepper from '../components/booking/BookingStepper.jsx'
 
 const CAMPUSES = ['Cơ sở 1', 'Cơ sở 2']
 const SPECIALTIES = ['Tim mạch', 'Nhi', 'Da liễu', 'Nội tổng quát']
+const TIME_SLOTS = [
+  '07:00-08:00',
+  '08:00-09:00',
+  '09:00-10:00',
+  '10:00-11:00',
+  '11:00-12:00',
+  '13:00-14:00',
+  '14:00-15:00',
+  '15:00-16:00',
+  '16:00-17:00',
+]
 const SPECIALTY_COLORS = {
   'Tim mạch': 'var(--cal-blue)',
   'Nhi': 'var(--green)',
@@ -30,11 +41,12 @@ function doctorInitials(name = '') {
     .toUpperCase()
 }
 
-function DoctorCard({ doctor }) {
+function DoctorCard({ doctor, timeSlot }) {
   const color = SPECIALTY_COLORS[doctor.specialty] || 'var(--cal-blue)'
+  const detailUrl = `/app/dat-lich/${doctor.id_doctor}${timeSlot ? `?time_slot=${encodeURIComponent(timeSlot)}` : ''}`
 
   return (
-    <Link to={`/app/dat-lich/${doctor.id_doctor}`} className="booking-card booking-card--link">
+    <Link to={detailUrl} className="booking-card booking-card--link">
       <div className="booking-card__head">
         <span className="booking-card__avatar" style={{ color, background: `color-mix(in srgb, ${color} 13%, white)` }}>
           {doctorInitials(doctor.full_name)}
@@ -84,6 +96,7 @@ export default function BookingPage() {
   const [query, setQuery] = useState('')
   const [campus, setCampus] = useState('')
   const [specialty, setSpecialty] = useState('')
+  const [timeSlot, setTimeSlot] = useState('')
   const [doctors, setDoctors] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
@@ -100,7 +113,7 @@ export default function BookingPage() {
       setLoading(true)
       setError(null)
       try {
-        const data = await doctorsApi.list(token, { query, campus, specialty })
+        const data = await doctorsApi.list(token, { query, campus, specialty, timeSlot })
         if (!cancelled) setDoctors(data.doctors || [])
       } catch (err) {
         if (!cancelled) setError(err.message)
@@ -110,7 +123,7 @@ export default function BookingPage() {
     }
     load()
     return () => { cancelled = true }
-  }, [token, query, campus, specialty])
+  }, [token, query, campus, specialty, timeSlot])
 
   const resultCountLabel = useMemo(() => {
     if (loading) return 'Đang tải…'
@@ -121,13 +134,14 @@ export default function BookingPage() {
     () => doctors.reduce((total, doctor) => total + (doctor.available_count || 0), 0),
     [doctors],
   )
-  const hasFilters = Boolean(rawQuery || campus || specialty)
+  const hasFilters = Boolean(rawQuery || campus || specialty || timeSlot)
 
   function clearFilters() {
     setRawQuery('')
     setQuery('')
     setCampus('')
     setSpecialty('')
+    setTimeSlot('')
   }
 
   return (
@@ -199,6 +213,17 @@ export default function BookingPage() {
                     ))}
                   </div>
                 </div>
+
+                <div className="booking-filter-block">
+                  <span className="booking-filters__label">Khung giờ khám</span>
+                  <label className="booking-time-select">
+                    <Clock width={15} height={15} />
+                    <select value={timeSlot} onChange={(event) => setTimeSlot(event.target.value)} aria-label="Chọn khung giờ khám">
+                      <option value="">Tất cả khung giờ</option>
+                      {TIME_SLOTS.map((item) => <option key={item} value={item}>{item}</option>)}
+                    </select>
+                  </label>
+                </div>
               </aside>
 
               <main className="booking-results">
@@ -221,10 +246,11 @@ export default function BookingPage() {
                     <h2>Danh sách bác sĩ</h2>
                     <p>{resultCountLabel}{!loading && ` · ${availableSlotCount} khung giờ có thể đặt`}</p>
                   </div>
-                  {(specialty || campus) && (
+                  {(specialty || campus || timeSlot) && (
                     <div className="booking-results__active-filters">
                       {specialty && <span>{specialty}</span>}
                       {campus && <span>{campus}</span>}
+                      {timeSlot && <span><Clock width={10} height={10} /> {timeSlot}</span>}
                     </div>
                   )}
                 </div>
@@ -244,7 +270,7 @@ export default function BookingPage() {
                   </div>
                 ) : (
                   <div className="booking-results__grid">
-                    {doctors.map((doctor) => <DoctorCard key={doctor.id_doctor} doctor={doctor} />)}
+                    {doctors.map((doctor) => <DoctorCard key={doctor.id_doctor} doctor={doctor} timeSlot={timeSlot} />)}
                   </div>
                 )}
               </main>

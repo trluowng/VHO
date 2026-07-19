@@ -16,3 +16,5 @@ faiss-cpu>=1.8.0
 numpy>=1.24
 # Browser-recorded Vietnamese speech-to-text (/stt/transcribe):
 SpeechRecognition>=3.10
+# Vietnamese text-to-speech (/tts) -- generates MP3 in-memory, no local playback
+gTTS>=2.5.0

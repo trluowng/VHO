@@ -66,11 +66,12 @@ export const calendarApi = {
 }
 
 export const doctorsApi = {
-  list: (token, { query, campus, specialty } = {}) => {
+  list: (token, { query, campus, specialty, timeSlot } = {}) => {
     const params = new URLSearchParams()
     if (query) params.set('query', query)
     if (campus) params.set('campus', campus)
     if (specialty) params.set('specialty', specialty)
+    if (timeSlot) params.set('time_slot', timeSlot)
     const qs = params.toString()
     return request(`/doctors${qs ? `?${qs}` : ''}`, { token })
   },
@@ -102,6 +103,29 @@ export const sttApi = {
       throw err
     }
     return data
+  },
+}
+
+export const ttsApi = {
+  /** Trả về Blob audio/mpeg -- trình duyệt tự phát bằng thẻ <audio>, backend không
+   *  phát âm thanh cục bộ (server có thể chạy headless trên cloud). */
+  synthesize: async (token, text) => {
+    const headers = { 'Content-Type': 'application/json' }
+    if (token) headers.Authorization = `Bearer ${token}`
+
+    const res = await fetch(`${API_BASE}/tts`, {
+      method: 'POST',
+      headers,
+      body: JSON.stringify({ text }),
+    })
+    if (!res.ok) {
+      const data = await res.json().catch(() => ({}))
+      const err = new Error(ERROR_LABELS[data.detail] || data.detail || `Lỗi máy chủ (${res.status})`)
+      err.status = res.status
+      err.detail = data.detail
+      throw err
+    }
+    return res.blob()
   },
 }
 

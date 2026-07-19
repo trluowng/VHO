@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { Link, useParams, useSearchParams } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext.jsx'
 import { doctorsApi } from '../lib/api.js'
 import {
@@ -50,6 +50,8 @@ function doctorInitials(name = '') {
 
 export default function DoctorDetailPage() {
   const { doctorId } = useParams()
+  const [searchParams] = useSearchParams()
+  const preferredTimeSlot = searchParams.get('time_slot') || ''
   const { token, user, profile } = useAuth()
   const [doctor, setDoctor] = useState(null)
   const [slots, setSlots] = useState([])
@@ -95,8 +97,13 @@ export default function DoctorDetailPage() {
       setSelectedDate('')
       return
     }
-    if (!groups.some(([date]) => date === selectedDate)) setSelectedDate(groups[0][0])
-  }, [groups, selectedDate])
+    if (!groups.some(([date]) => date === selectedDate)) {
+      const preferredGroup = preferredTimeSlot
+        ? groups.find(([, groupSlots]) => groupSlots.some((slot) => slot.time_slot === preferredTimeSlot))
+        : null
+      setSelectedDate(preferredGroup?.[0] || groups[0][0])
+    }
+  }, [groups, preferredTimeSlot, selectedDate])
 
   const visibleSlots = useMemo(
     () => groups.find(([date]) => date === selectedDate)?.[1] || [],
@@ -127,11 +134,11 @@ export default function DoctorDetailPage() {
     setBooking(true)
     setBookError(null)
     try {
-      await doctorsApi.book(token, doctorId, {
+      const result = await doctorsApi.book(token, doctorId, {
         visit_date: selected.visit_date,
         time_slot: selected.time_slot,
       })
-      setBooked(selected)
+      setBooked({ ...selected, emailNotification: result.email_notification })
       setSelected(null)
       setConfirmOpen(false)
       await load()
@@ -186,6 +193,14 @@ export default function DoctorDetailPage() {
                 <div>
                   <strong>Đặt lịch khám thành công</strong>
                   <p>{formatGroupDate(booked.visit_date)} · {booked.time_slot} với {doctor.full_name}</p>
+                  {booked.emailNotification === 'sent' && (
+                    <small className="doctor-booking-success__email">Email xác nhận đã được gửi tới {user?.email}.</small>
+                  )}
+                  {(booked.emailNotification === 'failed' || booked.emailNotification === 'disabled') && (
+                    <small className="doctor-booking-success__email is-error" role="alert">
+                      Không thể gửi email xác nhận. Lịch khám vẫn đã được lưu trong tab Lịch.
+                    </small>
+                  )}
                 </div>
                 <Link to="/app/lich">Xem trong tab Lịch <ArrowRight width={14} height={14} /></Link>
               </section>
@@ -340,7 +355,11 @@ export default function DoctorDetailPage() {
             </div>
 
             <div className="doctor-confirm-modal__note">
-              <Shield width={15} height={15} /> Khi xác nhận, lịch hẹn sẽ được thêm vào tab Lịch của bạn.
+              <Shield width={15} height={15} />
+              <span>
+                Khi xác nhận, lịch hẹn sẽ được thêm vào tab Lịch của bạn.
+                <strong>Email xác nhận sẽ được gửi tới {user?.email || 'email tài khoản của bạn'}.</strong>
+              </span>
             </div>
             {bookError && <p className="auth-error">{bookError}</p>}
             <div className="cal-modal__actions">

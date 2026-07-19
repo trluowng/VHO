@@ -8,6 +8,8 @@ khoản người dùng + hồ sơ sức khỏe + lịch theo dõi sức khỏe.
                              trả về: { events, profile }
 - POST /stt/transcribe       body: audio/wav, header Authorization bắt buộc
                              trả về: { text, language }
+- POST /tts                  body: { text }, header Authorization bắt buộc
+                             trả về: audio/mpeg (MP3) để trình duyệt tự phát
 - GET  /health               kiểm tra server
 - POST /auth/register        { email, password, age, gender } -> { token, user, profile }
 - POST /auth/login           { email, password } -> { token, user, profile }
@@ -30,14 +32,16 @@ Rồi ở frontend (Yen/frontend/.env):  VITE_TRIAGE_API_URL=http://localhost:87
 """
 from __future__ import annotations
 
+import io
 import json
+import logging
 import os
 import re
 from datetime import date, datetime, timezone
 from pathlib import Path
 from typing import Any
 
-from fastapi import Body, FastAPI, Header, HTTPException
+from fastapi import Body, FastAPI, Header, HTTPException, Response
 from fastapi.middleware.cors import CORSMiddleware
 
 import db
@@ -46,6 +50,7 @@ from providers import make_provider
 from tools import load_tool_declarations, to_openai_tools
 from tools._shared import fold_text
 from auth import create_token, hash_password, verify_password, verify_token
+from email_service import AppointmentEmail, AppointmentEmailService
 
 # Import the core agent loop and helpers from chat.py
 from chat import run_model_tool_loop, trim_history, write_transcript, safe_slug, now_iso
@@ -78,6 +83,8 @@ HISTORY_WINDOW = int(os.getenv("TRIAGE_HISTORY_WINDOW", "5"))
 MAX_TOOL_ROUNDS = int(os.getenv("TRIAGE_MAX_TOOL_ROUNDS", "4"))
 PORT = int(os.getenv("PORT", os.getenv("TRIAGE_PORT", "8787")))
 STT_MAX_AUDIO_BYTES = int(os.getenv("STT_MAX_AUDIO_BYTES", str(8 * 1024 * 1024)))
+EMAIL_SERVICE = AppointmentEmailService.from_env()
+LOGGER = logging.getLogger(__name__)
 
 SYSTEM_PROMPT = (ARTIFACTS_DIR / "system_prompt.md").read_text(encoding="utf-8")
 TOOL_DECLARATIONS = load_tool_declarations(ARTIFACTS_DIR / "tools.yaml")
@@ -276,9 +283,6 @@ def triage(payload: dict, user_id: str | None) -> dict:
         except Exception as exc:
             raise HTTPException(status_code=400, detail=f"voice_input_failed: {exc}") from exc
 
-    # Giọng đọc TTS kết quả (mặc định nữ).
-    voice_type = payload.get("voice_type", "female")
-
     # Lấy lại 1 cặp hội thoại gần nhất từ vector store (bge-m3, k=1, không rerank).
     session_id = _session_id(payload, user_id)
     memory = get_memory_manager()
@@ -336,16 +340,10 @@ def triage(payload: dict, user_id: str | None) -> dict:
     transcript["turns"].append(turn_record)
     write_transcript(transcript_path, transcript)
 
-    # Luôn đọc kết quả bằng giọng nói sau khi sinh xong (TTS / "speakup").
+    # Lưu cặp (user, assistant) vào bộ nhớ hội thoại (chỉ RAM, chưa ghi đĩa).
     assistant_text = result.get("assistant_text", "")
     if assistant_text:
-        # Lưu cặp (user, assistant) vào bộ nhớ hội thoại (chỉ RAM, chưa ghi đĩa).
         memory.record_turn(session_id, message, assistant_text)
-        try:
-            from stt import speak_output
-            speak_output(assistant_text, voice_type=voice_type)
-        except Exception as exc:
-            print(f"⚠️  speakup failed: {exc}")
 
     return _agent_result_to_response(result)
 
@@ -394,6 +392,35 @@ def transcribe_speech(
         raise HTTPException(status_code=502, detail="stt_service_unavailable") from exc
 
     return {"text": text, "language": "vi-VN"}
+
+
+TTS_MAX_CHARS = 2000
+
+
+@app.post("/tts")
+def synthesize_speech(payload: dict = Body(...), authorization: str | None = Header(None)) -> Response:
+    """Sinh giọng đọc tiếng Việt cho 1 đoạn text, trả về audio/mpeg để trình duyệt tự phát.
+
+    Không dùng backend/stt/speaker.py (module đó phát âm thanh bằng pygame.mixer trên
+    MÁY CHẠY SERVER -- vô dụng khi server chạy trên cloud vì không ai nghe được, và mỗi
+    lần "phát" sẽ chặn cả request thêm vài giây). gTTS.write_to_fp() sinh MP3 thẳng vào
+    bộ nhớ rồi trả về qua HTTP, để trình duyệt phát bằng thẻ <audio> phía client.
+    """
+    _require_user_id(authorization)
+    text = (payload.get("text") or "").strip()
+    if not text:
+        raise HTTPException(status_code=400, detail="empty_text")
+    if len(text) > TTS_MAX_CHARS:
+        raise HTTPException(status_code=413, detail="text_too_long")
+
+    try:
+        from gtts import gTTS
+        buffer = io.BytesIO()
+        gTTS(text=text, lang="vi").write_to_fp(buffer)
+    except Exception as exc:
+        raise HTTPException(status_code=502, detail=f"tts_service_unavailable: {exc}") from exc
+
+    return Response(content=buffer.getvalue(), media_type="audio/mpeg")
 
 
 @app.post("/triage")
@@ -628,10 +655,13 @@ def list_doctors(
     query: str | None = None,
     campus: str | None = None,
     specialty: str | None = None,
+    time_slot: str | None = None,
     authorization: str | None = Header(None),
 ) -> dict:
     _require_user_id(authorization)
     folded_query = fold_text(query.strip()) if query and query.strip() else None
+    if time_slot and not TIME_SLOT_RE.fullmatch(time_slot):
+        raise HTTPException(status_code=400, detail="invalid_time_slot")
 
     results = []
     for doctor in _load_doctors():
@@ -642,6 +672,10 @@ def list_doctors(
         if folded_query and folded_query not in fold_text(doctor.get("full_name", "")):
             continue
         open_slots = _open_slots(doctor["id_doctor"])
+        if time_slot:
+            open_slots = [slot for slot in open_slots if slot["time_slot"] == time_slot]
+            if not open_slots:
+                continue
         results.append({
             **doctor,
             "next_slots": [
@@ -699,15 +733,39 @@ def book_doctor_slot(doctor_id: str, payload: dict = Body(...), authorization: s
         raise HTTPException(status_code=409, detail="slot_already_booked")
 
     time_start, _, time_end = time_slot.partition("-")
+    location = f"{matching_slot['campus']} - {doctor['department']} - {matching_slot['room']}"
     entry_id = db.add_calendar_entry(
         user_id, visit_date, "kham_benh", f"Khám {doctor['specialty']}",
         f"Đặt lịch qua Yên với {doctor['full_name']}.", now_iso(),
         time_start=time_start, time_end=time_end,
         doctor=f"{doctor['full_name']} ({doctor['degree']})",
-        location=f"{matching_slot['campus']} - {doctor['department']} - {matching_slot['room']}",
+        location=location,
         doctor_id=doctor_id, time_slot=time_slot,
     )
-    return {"id": entry_id}
+
+    email_notification = "disabled"
+    user = db.get_user_by_id(user_id)
+    if EMAIL_SERVICE.configured and user:
+        profile = db.get_profile(user_id) or {}
+        try:
+            EMAIL_SERVICE.send_confirmation(AppointmentEmail(
+                recipient_email=user["email"],
+                patient_name=profile.get("full_name") or "Quý khách",
+                doctor_name=doctor["full_name"],
+                doctor_degree=doctor["degree"],
+                specialty=doctor["specialty"],
+                visit_date=visit_date,
+                time_slot=time_slot,
+                location=location,
+                appointment_id=entry_id,
+            ))
+            email_notification = "sent"
+        except Exception:
+            # Lịch hẹn đã được lưu; sự cố SMTP không được làm người dùng mất lịch.
+            email_notification = "failed"
+            LOGGER.exception("Could not send appointment email for booking %s", entry_id)
+
+    return {"id": entry_id, "email_notification": email_notification}
 
 
 # ---------------------------------------------------------------------------

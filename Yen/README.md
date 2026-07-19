@@ -166,8 +166,29 @@ luận, không cần đăng ký + điền hồ sơ thủ công. Mật khẩu chu
 | `GET/PUT /profile` | Đọc/sửa hồ sơ sức khỏe (auth) |
 | `GET/POST/DELETE /calendar` | Lịch sức khỏe theo ngày (auth) |
 | `GET/POST/DELETE /cycle` | Chu kỳ kinh nguyệt + dự đoán (auth) |
+| `POST /doctors/{id}/book` | Đặt lịch bác sĩ, lưu vào lịch và gửi email xác nhận (auth) |
 | `POST /stt/transcribe` | WAV từ micro → `{ text, language }` (auth) |
 | `POST /triage` | Chat — `Authorization` tùy chọn, có thì nạp hồ sơ vào context |
+
+### Email xác nhận lịch khám
+
+Backend gửi email xác nhận ngay sau khi đặt lịch thành công qua SMTP. Sao chép các biến
+`SMTP_*` trong `backend/.env.example` sang `backend/.env`. Với Gmail, cấu hình thường dùng:
+
+```env
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USERNAME=your-email@gmail.com
+SMTP_PASSWORD=your-16-character-app-password
+SMTP_FROM_EMAIL=your-email@gmail.com
+SMTP_FROM_NAME=Yên · sức khỏe
+SMTP_USE_TLS=true
+SMTP_USE_SSL=false
+```
+
+Hãy dùng **Google App Password**, không dùng mật khẩu đăng nhập Gmail. Nếu SMTP lỗi, lịch khám
+vẫn được lưu và API trả `email_notification: "failed"`; khi chưa cấu hình SMTP, trạng thái là
+`"disabled"`.
 
 ### Chạy AI THẬT bằng Groq + Qwen3-32B (cho điểm "AI chạy thật trong ≥1 flow")
 

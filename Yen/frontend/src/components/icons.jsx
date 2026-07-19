@@ -181,3 +181,15 @@ export const Search = (p) => (
     <path {...S} d="M20 20l-4.5-4.5" />
   </svg>
 )
+export const Volume = (p) => (
+  <svg viewBox="0 0 24 24" {...p}>
+    <path {...S} d="M4 9v6h4l5 4V5L8 9H4z" />
+    <path {...S} d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12" />
+  </svg>
+)
+export const VolumeOff = (p) => (
+  <svg viewBox="0 0 24 24" {...p}>
+    <path {...S} d="M4 9v6h4l5 4V5L8 9H4z" />
+    <path {...S} d="M16 9l5 6M21 9l-5 6" />
+  </svg>
+)

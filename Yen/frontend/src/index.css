@@ -239,6 +239,17 @@ input, textarea { font-family: inherit; }
 .restart-btn:hover { background: #fff; box-shadow: var(--sh-1); transform: translateY(-1px); }
 .restart-btn svg { width: 15px; height: 15px; }
 
+.voice-output-toggle {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 12.5px; font-weight: 500; color: var(--ink-faint);
+  background: var(--card);
+  border: 1px solid var(--card-edge);
+  padding: 8px 13px; border-radius: 100px;
+  transition: transform 0.18s var(--ease), box-shadow 0.2s, background 0.2s, color 0.2s;
+}
+.voice-output-toggle:hover { background: #fff; box-shadow: var(--sh-1); transform: translateY(-1px); }
+.voice-output-toggle.is-active { background: var(--sage-tint-2); border-color: var(--sage-bright); color: var(--sage-deep); }
+
 /* ============================================================
    Layout grid: profile rail + chat
    ============================================================ */
@@ -3165,6 +3176,30 @@ input, textarea { font-family: inherit; }
 }
 .booking-campus-options button:first-child { grid-column: 1 / -1; }
 .booking-campus-options button.is-active { border-color: #99d0e9; color: #0877b5; background: #edf8fd; font-weight: 650; }
+.booking-time-select {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 38px;
+  padding: 8px 10px;
+  border: 1px solid #dde6ef;
+  border-radius: 9px;
+  color: #2685b2;
+  background: #fff;
+}
+.booking-time-select:focus-within { border-color: #87cbe5; background: #f4fbfe; box-shadow: 0 0 0 3px rgba(38, 164, 215, 0.08); }
+.booking-time-select > svg { flex: none; }
+.booking-time-select select {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  color: #496587;
+  background: transparent;
+  font-family: var(--font-ui);
+  font-size: 9.5px;
+  cursor: pointer;
+}
 
 .shell--booking .booking-results {
   min-width: 0;
@@ -3201,7 +3236,7 @@ input, textarea { font-family: inherit; }
 .booking-results__head h2 { margin: 0; color: #193762; font-family: var(--font-ui); font-size: 15px; font-weight: 700; }
 .booking-results__head p { margin: 3px 0 0; color: #8392aa; font-size: 9.5px; }
 .booking-results__active-filters { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 5px; }
-.booking-results__active-filters span { padding: 4px 8px; border-radius: 999px; color: #187aac; background: #eaf7fd; font-size: 8.5px; }
+.booking-results__active-filters span { display: inline-flex; align-items: center; gap: 4px; padding: 4px 8px; border-radius: 999px; color: #187aac; background: #eaf7fd; font-size: 8.5px; }
 .shell--booking .booking-results__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
 .shell--booking .booking-card {
   gap: 11px;
@@ -3363,6 +3398,17 @@ input, textarea { font-family: inherit; }
 .doctor-booking-success > div { display: flex; min-width: 0; flex: 1; flex-direction: column; }
 .doctor-booking-success strong { color: #176c51; font-size: 12px; }
 .doctor-booking-success p { margin: 3px 0 0; color: #5f8a79; font-size: 9.5px; text-transform: capitalize; }
+.doctor-booking-success__email { margin-top: 5px; color: #23795f; font-size: 8.5px; }
+.doctor-booking-success__email.is-error {
+  align-self: flex-start;
+  margin-top: 7px;
+  padding: 5px 8px;
+  border: 1px solid #efc3bd;
+  border-radius: 7px;
+  color: #a94538;
+  background: #fff2f0;
+  font-weight: 650;
+}
 .doctor-booking-success > a { display: inline-flex; align-items: center; gap: 5px; color: #13805e; font-size: 9.5px; font-weight: 650; text-decoration: none; }
 
 .doctor-confirm-overlay { background: rgba(17, 39, 63, 0.52); backdrop-filter: blur(5px); }
@@ -3390,7 +3436,10 @@ input, textarea { font-family: inherit; }
 .doctor-confirm-modal__patient small { color: #8795aa; font-size: 7.5px; }
 .doctor-confirm-modal__patient strong { margin-top: 2px; overflow: hidden; color: #2b476c; font-size: 8.5px; text-overflow: ellipsis; white-space: nowrap; }
 .doctor-confirm-modal__patient > p { display: flex; align-items: flex-start; gap: 5px; margin: 9px 0 0; color: #b07a38; font-size: 8.5px; line-height: 1.45; }
-.doctor-confirm-modal__note { display: flex; align-items: center; gap: 6px; margin: 13px 22px 0; padding: 9px 10px; border-radius: 9px; color: #587696; background: #edf7fb; font-size: 8.5px; }
+.doctor-confirm-modal__note { display: flex; align-items: flex-start; gap: 8px; margin: 13px 22px 0; padding: 10px 11px; border-radius: 9px; color: #587696; background: #edf7fb; font-size: 8.5px; line-height: 1.5; }
+.doctor-confirm-modal__note > svg { flex: none; margin-top: 2px; color: #1389c2; }
+.doctor-confirm-modal__note > span { display: flex; min-width: 0; flex-direction: column; gap: 2px; }
+.doctor-confirm-modal__note strong { color: #147f9e; font-size: 8.5px; font-weight: 700; overflow-wrap: anywhere; }
 .doctor-confirm-modal > .auth-error { margin: 12px 22px 0; }
 .doctor-confirm-modal .cal-modal__actions { padding: 17px 22px 20px; }
 .doctor-confirm-modal .cal-modal__actions .btn { font-size: 10px; }
