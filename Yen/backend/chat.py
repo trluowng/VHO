@@ -102,12 +102,16 @@ def run_model_tool_loop(
     working_messages = list(messages)
     rounds: list[dict[str, Any]] = []
     all_tool_events: list[dict[str, Any]] = []
-    # Anti-loop guard: some models (confirmed live on gpt-4o-mini) get stuck re-issuing the
-    # exact same tool+args round after round when the tool has nothing useful to return (e.g.
-    # tra_cuu on a pure symptom query -- it only indexes procedure/policy text, so it always
-    # comes back empty, but the model keeps "double-checking"). Prompt-only fixes didn't stick
-    # across several attempts, so this reacts to the actual repeat instead.
+    # Anti-loop guard: some models (confirmed live on gpt-4o-mini) get stuck re-issuing tool
+    # calls round after round instead of answering. Two variants seen live:
+    # 1. Exact same tool+args repeated (e.g. tra_cuu on a pure symptom query -- always empty,
+    #    but the model keeps "double-checking").
+    # 2. DIFFERENT query wording each round, but the search tool keeps returning the same top
+    #    results anyway (e.g. rephrasing "cách đặt lịch khám" three ways in a row) -- the call
+    #    signature differs so #1 doesn't catch it, but the model already has everything it's
+    #    going to get and just isn't recognizing that. Track both signatures.
     seen_call_signatures: set[tuple[str, str]] = set()
+    seen_result_signatures: set[str] = set()
 
     for round_index in range(1, max_tool_rounds + 1):
         response = provider.complete(working_messages, tools, model=model, temperature=0.1)
@@ -141,6 +145,7 @@ def run_model_tool_loop(
         working_messages.append(assistant_tool_message(response.text, calls))
         non_clarification_events: list[dict[str, Any]] = []
         repeated_calls = 0
+        repeated_results = 0
 
         for call in calls:
             print(f"🔧 {call.name}({json.dumps(call.args, ensure_ascii=False, sort_keys=True)})")
@@ -151,6 +156,11 @@ def run_model_tool_loop(
             event = execute_tool_call(call)
             round_record["tool_results"].append(event)
             all_tool_events.append(event)
+
+            result_signature = f"{call.name}:{json.dumps(event.get('result'), ensure_ascii=False, sort_keys=True)}"
+            if result_signature in seen_result_signatures:
+                repeated_results += 1
+            seen_result_signatures.add(result_signature)
 
             # Detect the clarification/pause tool by its output flag (rename-proof),
             # not by a hard-coded tool name.
@@ -172,16 +182,40 @@ def run_model_tool_loop(
             non_clarification_events.append(event)
 
         rounds.append(round_record)
-        tool_msg = tool_results_message(non_clarification_events)
-        if calls and repeated_calls == len(calls):
-            # Every call this round exactly repeats a call from an earlier round -- force a
-            # stop instead of burning the remaining rounds on identical retries.
-            tool_msg["content"] += (
-                "\n\nLƯU Ý: Các tool trên vừa được gọi lại y hệt vòng trước, sẽ không có kết quả "
-                "mới nào khác. DỪNG gọi tool ngay, trả lời NGAY bằng JSON theo đúng schema dựa "
-                "trên thông tin đã có."
-            )
-        working_messages.append(tool_msg)
+        working_messages.append(tool_results_message(non_clarification_events))
+        # NOTE: nudges must be sent as a SEPARATE plain message, not appended to the
+        # tool_results_message's own "content" field -- confirmed via transcript inspection
+        # that _to_wire_messages() (openai_provider.py) silently DISCARDS that field for
+        # OpenAI whenever "tool_results" is present (it only forwards each entry's own
+        # per-call content into the role:"tool" replies). Every earlier nudge attempt that
+        # appended to tool_msg["content"] was therefore a complete no-op on OpenAI -- the
+        # model never saw it, which is why identical repeat queries kept sailing through
+        # unblocked despite the guard supposedly firing.
+        if calls and (repeated_calls == len(calls) or repeated_results == len(calls)):
+            # Every call this round exactly repeats an earlier call, OR returned the same
+            # results as an earlier call despite different wording -- force a stop instead of
+            # burning the remaining rounds on retries that won't surface anything new.
+            working_messages.append({
+                "role": "user",
+                "content": (
+                    "LƯU Ý: Các tool trên vừa trả về đúng kết quả y hệt vòng trước (dù query khác "
+                    "chữ), sẽ không có kết quả mới nào khác. DỪNG gọi tool ngay, trả lời NGAY bằng "
+                    "JSON theo đúng schema dựa trên thông tin đã có."
+                ),
+            })
+        elif round_index >= max_tool_rounds - 1:
+            # Not a detected repeat, but running out of rounds regardless -- confirmed live
+            # that gpt-4o-mini can burn all remaining rounds on genuinely-different-but-
+            # already-sufficient exploratory searches (e.g. re-querying sub-aspects of one
+            # topic) and get cut off mid-research with no answer at all. Give it an explicit
+            # heads-up before that happens instead of only reacting after the fact.
+            working_messages.append({
+                "role": "user",
+                "content": (
+                    "LƯU Ý: Sắp hết lượt gọi tool (chỉ còn tối đa 1 lượt nữa). Nếu thông tin hiện "
+                    "có đã đủ để trả lời, DỪNG gọi tool và trả lời NGAY bằng JSON theo đúng schema."
+                ),
+            })
 
     return {
         "status": "max_tool_rounds",

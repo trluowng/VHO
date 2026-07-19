@@ -81,7 +81,7 @@ seed_demo_accounts()
 PROVIDER_NAME = os.getenv("TRIAGE_PROVIDER", "gemini")
 MODEL = os.getenv("TRIAGE_MODEL", None)          # None → provider's default_model
 HISTORY_WINDOW = int(os.getenv("TRIAGE_HISTORY_WINDOW", "5"))
-MAX_TOOL_ROUNDS = int(os.getenv("TRIAGE_MAX_TOOL_ROUNDS", "4"))
+MAX_TOOL_ROUNDS = int(os.getenv("TRIAGE_MAX_TOOL_ROUNDS", "5"))
 PORT = int(os.getenv("PORT", os.getenv("TRIAGE_PORT", "8787")))
 STT_MAX_AUDIO_BYTES = int(os.getenv("STT_MAX_AUDIO_BYTES", str(8 * 1024 * 1024)))
 EMAIL_SERVICE = AppointmentEmailService.from_env()

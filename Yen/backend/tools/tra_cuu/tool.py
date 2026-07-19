@@ -33,16 +33,16 @@ _NARRATIVE_SOURCES = {
 }
 _MAX_CONTENT_CHARS = 700
 
-_index: list[tuple[dict, set[str], str]] | None = None  # (doc, term_set, folded_context)
+_index: list[tuple[dict, set[str], set[str], str]] | None = None  # (doc, title_terms, body_terms, folded_context)
 _idf: dict[str, float] | None = None
 
 
-def _load_index() -> list[tuple[dict, set[str], str]]:
+def _load_index() -> list[tuple[dict, set[str], set[str], str]]:
     global _index
     if _index is None:
         data = json.loads(_SERVICES_PATH.read_text(encoding="utf-8"))
         _index = [
-            (doc, terms(f"{doc.get('title', '')} {doc.get('context', '')}"), fold_text(doc.get("context", "")))
+            (doc, terms(doc.get("title", "")), terms(doc.get("context", "")), fold_text(doc.get("context", "")))
             for doc in data.get("documents", [])
             if doc.get("source_id") in _NARRATIVE_SOURCES
         ]
@@ -54,8 +54,8 @@ def _load_idf() -> dict[str, float]:
     if _idf is None:
         items = _load_index()
         doc_freq: dict[str, int] = {}
-        for _, doc_terms, _folded in items:
-            for term in doc_terms:
+        for _, title_terms, body_terms, _folded in items:
+            for term in title_terms | body_terms:
                 doc_freq[term] = doc_freq.get(term, 0) + 1
         n = len(items) or 1
         # Smoothed idf: common words (e.g. "cách", "khám" appearing in nearly every
@@ -100,16 +100,43 @@ def search_policy(query: str = "", max_results: int = 3) -> dict[str, Any]:
         folded_query = fold_text(query)
         idf = _load_idf()
         scored: list[tuple[float, dict]] = []
-        for doc, doc_terms, folded_context in _load_index():
-            score = sum(idf.get(term, 1.0) for term in query_terms & doc_terms)
+        for doc, title_terms, body_terms, folded_context in _load_index():
+            # Title match ~= curated relevance signal ("Đặt lịch khám..." as a section
+            # heading means the whole chunk IS about that), so it's weighted well above
+            # an incidental body-text overlap of the same term -- confirmed via live
+            # testing that without this boost, generic Luật KBCB articles (1000+ of them,
+            # each sharing common words like "khám"/"bệnh") buried the one specific
+            # procedure doc that actually answers "cách đặt lịch khám".
+            title_score = sum(idf.get(term, 1.0) for term in query_terms & title_terms) * 3
+            body_score = sum(idf.get(term, 1.0) for term in query_terms & body_terms)
+            score = title_score + body_score
             if folded_query and folded_query in folded_context:
                 score += 3
             if score > 0:
                 scored.append((score, doc))
         scored.sort(key=lambda pair: -pair[0])
 
+        # Long articles/procedures split into many chunks (e.g. Điều 15 has 7 khoản)
+        # legitimately share one title, but with only `max_results` slots, letting
+        # score order alone decide can fill ALL of them with fragments of the SAME
+        # title -- confirmed live this made the model think search wasn't finding
+        # anything useful (saw the identical title 3x) and kept retrying instead of
+        # answering. Prioritize one chunk per distinct title first; only reuse a
+        # title for a second chunk once every other relevant title has a slot.
+        seen_titles: set[str] = set()
+        primary: list[dict] = []
+        secondary: list[dict] = []
+        for _, doc in scored:
+            title = _title_of(doc)
+            if title not in seen_titles:
+                seen_titles.add(title)
+                primary.append(doc)
+            else:
+                secondary.append(doc)
+        ordered = (primary + secondary)[:max_results]
+
         items = []
-        for _, doc in scored[:max_results]:
+        for doc in ordered:
             body = doc.get("context", "")
             truncated = body[:_MAX_CONTENT_CHARS] + ("…" if len(body) > _MAX_CONTENT_CHARS else "")
             items.append({
