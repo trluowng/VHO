@@ -12,6 +12,7 @@ from env_loader import load_lab_env
 from providers import make_provider
 from tools import TOOL_FUNCTIONS, load_tool_declarations, to_openai_tools
 from versioning import artifact_version_dict, build_artifact_version
+from artifacts.skills import load_skills, build_skills_section
 
 
 ROOT = Path(__file__).parent
@@ -273,6 +274,10 @@ def main() -> None:
     args = parser.parse_args()
 
     system_prompt = args.system_prompt.read_text(encoding="utf-8")
+    # Append skills (task-specific markdown instructions) discovered next to the
+    # system prompt so evals exercise the same prompt the server uses.
+    skills_dir = args.system_prompt.parent / "skills"
+    system_prompt = system_prompt.rstrip() + "\n\n" + build_skills_section(load_skills(skills_dir))
     artifact_version = build_artifact_version(args.version, args.system_prompt, args.tools)
     provider = make_provider(args.provider)
     selected_model = args.model or getattr(provider, "default_model", None)
