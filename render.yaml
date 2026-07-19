@@ -22,6 +22,14 @@ services:
         sync: false
       - key: JWT_SECRET
         sync: false
+      # requirements.txt pulls in sentence-transformers + faiss-cpu for the optional
+      # conversation-recall feature (memory/embedder.py), which tries to download and
+      # load BAAI/bge-m3 (~2GB) on first use. The free plan here is capped at 512MB RAM,
+      # so that OOMs the process on literally every /triage call. embedder.py already
+      # supports this off-switch (falls back to a lightweight hash vector) -- confirmed
+      # live that /triage was 500ing on Render even for a trivial "hi" until this was set.
+      - key: MEMORY_EMBED_MODEL
+        value: "off"
     autoDeploy: true
 
   # Frontend — React + Vite static site

@@ -407,8 +407,15 @@ def triage(payload: dict, user_id: str | None) -> dict:
         return chat_booking
 
     # Lấy lại 1 cặp hội thoại gần nhất từ vector store (bge-m3, k=1, không rerank).
+    # Chỉ là gợi nhớ tham khảo (không bắt buộc) -- lỗi ở đây (model embedding quá nặng
+    # cho RAM free-tier, tải model lần đầu chậm, v.v.) không được làm hỏng cả lượt
+    # triage; bỏ qua gợi nhớ và tiếp tục bình thường thay vì trả lỗi 500.
     memory = get_memory_manager()
-    past = memory.retrieve(session_id, message, k=1)
+    try:
+        past = memory.retrieve(session_id, message, k=1)
+    except Exception:
+        LOGGER.exception("memory.retrieve failed, continuing without recall context")
+        past = []
     if past:
         recalled = past[0]
         recall_ctx = (
@@ -462,10 +469,14 @@ def triage(payload: dict, user_id: str | None) -> dict:
     transcript["turns"].append(turn_record)
     write_transcript(transcript_path, transcript)
 
-    # Lưu cặp (user, assistant) vào bộ nhớ hội thoại (chỉ RAM, chưa ghi đĩa).
+    # Lưu cặp (user, assistant) vào bộ nhớ hội thoại (chỉ RAM, chưa ghi đĩa). Chạy SAU KHI
+    # đã có câu trả lời thật -- lỗi ở đây không được nuốt mất câu trả lời vừa tạo được.
     assistant_text = result.get("assistant_text", "")
     if assistant_text:
-        memory.record_turn(session_id, message, assistant_text)
+        try:
+            memory.record_turn(session_id, message, assistant_text)
+        except Exception:
+            LOGGER.exception("memory.record_turn failed, response still returned to client")
 
     return _agent_result_to_response(result, session_id)
 

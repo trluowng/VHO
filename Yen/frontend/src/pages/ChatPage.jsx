@@ -2,7 +2,7 @@ import { useEffect, useRef, useState, useCallback } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { createSession, handleUser, setSymptoms, callRealModel, detectRedFlag } from '../lib/triageEngine.js'
 import { loadSessions, upsertSession } from '../lib/sessionLog.js'
-import { isApiConfigured, sttApi, ttsApi } from '../lib/api.js'
+import { isApiConfigured, sttApi } from '../lib/api.js'
 import { useAuth } from '../context/AuthContext.jsx'
 import { Cross } from '../components/icons.jsx'
 import TabNav from '../components/TabNav.jsx'
@@ -63,32 +63,37 @@ export default function ChatPage() {
   const preEmergency = useRef(null)
   const scrollRef = useRef(null)
   const itemsRef = useRef([])
-  const currentAudioRef = useRef(null)
+  const currentUtteranceRef = useRef(null)
   const started = items.some((i) => i.role === 'user')
 
   // Đọc từng câu trả lời AI khi người dùng bấm nút loa dưới message.
-  const speakAiMessage = useCallback(async (messageId, text) => {
+  const speakAiMessage = useCallback((messageId, text) => {
     if (!text) return
-    currentAudioRef.current?.pause()
+    const synth = window.speechSynthesis
+    if (!synth) return
+    synth.cancel()
     setSpeakingMessageId(messageId)
-    try {
-      const blob = await ttsApi.synthesize(token, text)
-      const url = URL.createObjectURL(blob)
-      const audio = new Audio(url)
-      currentAudioRef.current = audio
-      await new Promise((resolve) => {
-        audio.onended = resolve
-        audio.onerror = resolve
-        audio.play().catch(resolve)
-      })
-      URL.revokeObjectURL(url)
-    } catch {
-      // Bỏ qua lỗi TTS để luồng chat chữ không bị ảnh hưởng.
-    } finally {
+
+    const utterance = new SpeechSynthesisUtterance(text)
+    utterance.lang = 'vi-VN'
+    utterance.rate = 0.95
+    utterance.pitch = 1
+    utterance.voice = synth
+      .getVoices()
+      .find((voice) => voice.lang?.toLowerCase().startsWith('vi')) || null
+    utterance.onend = () => setSpeakingMessageId(null)
+    utterance.onerror = () => setSpeakingMessageId(null)
+    currentUtteranceRef.current = utterance
+    synth.speak(utterance)
+  }, [])
+
+  useEffect(() => {
+    return () => {
+      window.speechSynthesis?.cancel()
       setSpeakingMessageId(null)
-      currentAudioRef.current = null
+      currentUtteranceRef.current = null
     }
-  }, [token])
+  }, [])
 
   useEffect(() => {
     itemsRef.current = items
