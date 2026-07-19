@@ -1,9 +1,9 @@
 """Tra cứu bác sĩ theo chuyên khoa và lịch khám còn trống tại Bệnh viện Tim Hà Nội.
 
 Nguồn: data/doctors.json + data/schedule_slots.json — sinh sẵn từ
-data/mock_hospital_dataset_v3.xlsx (dữ liệu mock/demo, xem data/README.md và
-backend/scripts/build_schedule.py) bằng script build_schedule.py, để runtime
-không cần pandas/openpyxl.
+data/structured/mock_hospital_dataset_v4.xlsx (dữ liệu mock/demo, xem
+data/README.md và backend/scripts/build_schedule.py) bằng script
+build_schedule.py, để runtime không cần pandas/openpyxl.
 
 Chỉ tra cứu và gợi ý — KHÔNG tự đặt lịch (khách xác nhận đặt lịch qua CTA
 trên giao diện, ngoài phạm vi tool này).
