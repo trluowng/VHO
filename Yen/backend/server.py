@@ -114,13 +114,29 @@ SELECTED_MODEL = MODEL or getattr(PROVIDER, "default_model", None)
 
 TRANSCRIPTS_DIR = ROOT / "transcripts"
 VERSION = os.getenv("TRIAGE_VERSION", "server")
+CORS_ORIGINS = [
+    origin.strip()
+    for origin in os.getenv(
+        "CORS_ORIGINS",
+        ",".join(
+            [
+                "http://localhost:5173",
+                "http://127.0.0.1:5173",
+                "https://vho-triage-frontend.onrender.com",
+                "https://vho-yen-frontend.onrender.com",
+            ]
+        ),
+    ).split(",")
+    if origin.strip()
+]
 
 GENDERS = {"nam", "nu"}
 
 app = FastAPI(title="Yên Triage Server")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=CORS_ORIGINS,
+    allow_origin_regex=r"https://.*\.onrender\.com",
     allow_methods=["*"],
     allow_headers=["*"],
 )

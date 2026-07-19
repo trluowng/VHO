@@ -2,7 +2,7 @@ import { useEffect, useRef, useState, useCallback } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { createSession, handleUser, setSymptoms, callRealModel, detectRedFlag } from '../lib/triageEngine.js'
 import { loadSessions, upsertSession } from '../lib/sessionLog.js'
-import { isApiConfigured, sttApi } from '../lib/api.js'
+import { isApiConfigured, sttApi, ttsApi } from '../lib/api.js'
 import { useAuth } from '../context/AuthContext.jsx'
 import { Cross } from '../components/icons.jsx'
 import TabNav from '../components/TabNav.jsx'
@@ -63,37 +63,81 @@ export default function ChatPage() {
   const preEmergency = useRef(null)
   const scrollRef = useRef(null)
   const itemsRef = useRef([])
+  const currentAudioRef = useRef(null)
   const currentUtteranceRef = useRef(null)
+  const speechRunRef = useRef(0)
   const started = items.some((i) => i.role === 'user')
 
   // Đọc từng câu trả lời AI khi người dùng bấm nút loa dưới message.
-  const speakAiMessage = useCallback((messageId, text) => {
-    if (!text) return
-    const synth = window.speechSynthesis
-    if (!synth) return
-    synth.cancel()
-    setSpeakingMessageId(messageId)
-
-    const utterance = new SpeechSynthesisUtterance(text)
-    utterance.lang = 'vi-VN'
-    utterance.rate = 0.95
-    utterance.pitch = 1
-    utterance.voice = synth
-      .getVoices()
-      .find((voice) => voice.lang?.toLowerCase().startsWith('vi')) || null
-    utterance.onend = () => setSpeakingMessageId(null)
-    utterance.onerror = () => setSpeakingMessageId(null)
-    currentUtteranceRef.current = utterance
-    synth.speak(utterance)
+  const stopSpeaking = useCallback(() => {
+    speechRunRef.current += 1
+    if (currentAudioRef.current) {
+      currentAudioRef.current.pause()
+      currentAudioRef.current = null
+    }
+    window.speechSynthesis?.cancel()
+    currentUtteranceRef.current = null
   }, [])
+
+  const speakWithBrowserFallback = useCallback((text) => {
+    return new Promise((resolve) => {
+      const synth = window.speechSynthesis
+      if (!synth || typeof SpeechSynthesisUtterance === 'undefined') {
+        resolve()
+        return
+      }
+
+      const utterance = new SpeechSynthesisUtterance(text)
+      utterance.lang = 'vi-VN'
+      utterance.rate = 0.95
+      utterance.pitch = 1
+      utterance.voice = synth
+        .getVoices()
+        .find((voice) => voice.lang?.toLowerCase().startsWith('vi')) || null
+      utterance.onend = resolve
+      utterance.onerror = resolve
+      currentUtteranceRef.current = utterance
+      synth.speak(utterance)
+    })
+  }, [])
+
+  const speakAiMessage = useCallback(async (messageId, text) => {
+    if (!text || speakingMessageId === messageId) return
+    stopSpeaking()
+    const runId = ++speechRunRef.current
+    setSpeakingMessageId(messageId)
+    let audioUrl = null
+
+    try {
+      const blob = await ttsApi.synthesize(token, text)
+      audioUrl = URL.createObjectURL(blob)
+      const audio = new Audio(audioUrl)
+      currentAudioRef.current = audio
+      await new Promise((resolve) => {
+        audio.onended = resolve
+        audio.onerror = resolve
+        audio.onpause = resolve
+        audio.play().catch(resolve)
+      })
+    } catch (error) {
+      console.warn('Backend TTS unavailable, falling back to browser voice.', error)
+      await speakWithBrowserFallback(text)
+    } finally {
+      if (audioUrl) URL.revokeObjectURL(audioUrl)
+      if (speechRunRef.current === runId) {
+        setSpeakingMessageId(null)
+        currentAudioRef.current = null
+        currentUtteranceRef.current = null
+      }
+    }
+  }, [speakingMessageId, speakWithBrowserFallback, stopSpeaking, token])
 
   useEffect(() => {
     return () => {
-      window.speechSynthesis?.cancel()
+      stopSpeaking()
       setSpeakingMessageId(null)
-      currentUtteranceRef.current = null
     }
-  }, [])
+  }, [stopSpeaking])
 
   useEffect(() => {
     itemsRef.current = items
