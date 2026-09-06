@@ -1,5 +1,5 @@
 """
-Conversation memory for Yên (Bệnh viện Tim Hà Nội assistant).
+Conversation memory for Yên (personal healthcare assistant).
 
 Strategy
 --------

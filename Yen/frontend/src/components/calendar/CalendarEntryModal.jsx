@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useAuth } from '../../context/AuthContext.jsx'
+import { useSession } from '../../context/SessionContext.jsx'
 import { calendarApi } from '../../lib/api.js'
 import { CATEGORIES } from '../../lib/calendarCategories.js'
 import { X } from '../icons.jsx'
@@ -7,7 +7,7 @@ import { X } from '../icons.jsx'
 const MAX_TIMES_PER_DAY = 6
 
 export default function CalendarEntryModal({ date, onClose, onSaved }) {
-  const { token } = useAuth()
+  const { clientId } = useSession()
   const [category, setCategory] = useState('kham_benh')
   const [title, setTitle] = useState('')
   const [timeStart, setTimeStart] = useState('')
@@ -40,7 +40,7 @@ export default function CalendarEntryModal({ date, onClose, onSaved }) {
     setBusy(true)
     setError(null)
     try {
-      await calendarApi.create(token, isMedication ? {
+      await calendarApi.create(clientId, isMedication ? {
         entry_date: dateStart,
         date_end: dateEnd || dateStart,
         type: category,
@@ -193,7 +193,7 @@ export default function CalendarEntryModal({ date, onClose, onSaved }) {
             />
           </label>
 
-          {error && <p className="auth-error">{error}</p>}
+          {error && <p className="form-error">{error}</p>}
 
           <div className="cal-modal__actions">
             <button type="button" className="btn btn--ghost" onClick={onClose}>Huỷ</button>

@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
-import { useAuth } from '../context/AuthContext.jsx'
+import { useSession } from '../context/SessionContext.jsx'
 import { cycleApi } from '../lib/api.js'
 import { toISODate, buildMonthGrid } from '../lib/calendarGrid.js'
 import { Calendar as CalendarIcon, Droplet, Heart, Info, Sparkle, X } from './icons.jsx'
@@ -117,7 +117,7 @@ function CycleProgressBar({ prediction }) {
 }
 
 export default function CycleTracker() {
-  const { token } = useAuth()
+  const { clientId } = useSession()
   const [entries, setEntries] = useState([])
   const [prediction, setPrediction] = useState(null)
   const [cursor, setCursor] = useState(() => new Date())
@@ -130,7 +130,7 @@ export default function CycleTracker() {
 
   async function load() {
     try {
-      const data = await cycleApi.list(token)
+      const data = await cycleApi.list(clientId)
       setEntries(data.entries)
       setPrediction(data.prediction)
     } catch (err) {
@@ -143,7 +143,7 @@ export default function CycleTracker() {
   useEffect(() => {
     load()
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, [clientId])
 
   async function addEntry(event) {
     event.preventDefault()
@@ -151,7 +151,7 @@ export default function CycleTracker() {
     setBusy(true)
     setError(null)
     try {
-      const data = await cycleApi.create(token, { period_start_date: newDate, note: note || null })
+      const data = await cycleApi.create(clientId, { period_start_date: newDate, note: note || null })
       setEntries(data.entries)
       setPrediction(data.prediction)
       const recordedDate = new Date(`${newDate}T00:00:00`)
@@ -170,7 +170,7 @@ export default function CycleTracker() {
     setBusy(true)
     setError(null)
     try {
-      const data = await cycleApi.remove(token, id)
+      const data = await cycleApi.remove(clientId, id)
       setEntries(data.entries)
       setPrediction(data.prediction)
     } catch (err) {
@@ -400,7 +400,7 @@ export default function CycleTracker() {
               </label>
               <button className="btn btn--primary" type="submit" disabled={busy}>{busy ? 'Đang lưu…' : 'Ghi nhận chu kỳ'}</button>
             </form>
-            {error && <p className="auth-error">{error}</p>}
+            {error && <p className="form-error">{error}</p>}
           </section>
 
           <section className="cycle-history-card">

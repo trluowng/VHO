@@ -135,6 +135,47 @@ _TRIAGE_EVENT_SCHEMA: dict[str, Any] = {
     "additionalProperties": False,
 }
 
+_HEALTH_PROFILE_UPDATES_SCHEMA: dict[str, Any] = {
+    "type": "object",
+    "properties": {
+        "full_name": {"type": ["string", "null"]},
+        "age": {"type": ["integer", "null"]},
+        "birth_date": {"type": ["string", "null"]},
+        "gender": {"type": ["string", "null"], "enum": ["nam", "nu", None]},
+        "phone": {"type": ["string", "null"]},
+        "email": {"type": ["string", "null"]},
+        "address": {"type": ["string", "null"]},
+        "occupation": {"type": ["string", "null"]},
+        "blood_type": {"type": ["string", "null"]},
+        "insurance_status": {"type": ["string", "null"]},
+        "insurance_number": {"type": ["string", "null"]},
+        "emergency_contact_name": {"type": ["string", "null"]},
+        "emergency_contact_relationship": {"type": ["string", "null"]},
+        "emergency_contact_phone": {"type": ["string", "null"]},
+        "chronic_conditions": {
+            "type": ["array", "null"],
+            "items": {"type": "string"},
+        },
+        "allergies": {
+            "type": ["array", "null"],
+            "items": {"type": "string"},
+        },
+        "medications": {
+            "type": ["array", "null"],
+            "items": {"type": "string"},
+        },
+    },
+    # OpenAI strict schemas require every property to be present. Unknown facts
+    # are represented as null and are discarded by server-side validation.
+    "required": [
+        "full_name", "age", "birth_date", "gender", "phone", "email", "address",
+        "occupation", "blood_type", "insurance_status", "insurance_number",
+        "emergency_contact_name", "emergency_contact_relationship",
+        "emergency_contact_phone", "chronic_conditions", "allergies", "medications",
+    ],
+    "additionalProperties": False,
+}
+
 _TRIAGE_RESPONSE_SCHEMA: dict[str, Any] = {
     "type": "object",
     "properties": {
@@ -169,8 +210,9 @@ _TRIAGE_RESPONSE_SCHEMA: dict[str, Any] = {
             "required": ["stage", "symptoms", "confidence", "confTier", "missing", "facts"],
             "additionalProperties": False,
         },
+        "health_profile_updates": _HEALTH_PROFILE_UPDATES_SCHEMA,
     },
-    "required": ["events", "profile"],
+    "required": ["events", "profile", "health_profile_updates"],
     "additionalProperties": False,
 }
 

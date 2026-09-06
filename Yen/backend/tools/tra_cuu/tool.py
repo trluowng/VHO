@@ -78,7 +78,7 @@ def _reference_of(doc: dict[str, Any]) -> str:
         so_hieu = doc.get("so_hieu", "")
         return f"Điều {dieu} - Luật KBCB {so_hieu}".strip()
     if source_id in {"quy_trinh", "huong_dan", "khoa_phong", "dich_vu", "lich_su_phat_trien"}:
-        return "Bệnh viện Tim Hà Nội"
+        return "cơ sở y tế"
     if source_id == "youmed_gioi_thieu":
         return "Bài viết bên thứ ba (YouMed) - không phải nguồn chính thức từ bệnh viện"
     if source_id == "bookingcare_gioi_thieu":

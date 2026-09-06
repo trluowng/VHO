@@ -2,8 +2,8 @@
 
 > Trợ lý phân loại triệu chứng — mô tả bằng ngôn ngữ tự nhiên, Yên xác nhận lại điều đã
 > hiểu, hỏi thêm khi cần, rồi đưa ra **mức độ khẩn cấp + bước tiếp theo** kèm độ chắc
-> chắn và lý do. Có tài khoản + hồ sơ sức khỏe (tuổi, giới tính, bệnh nền, dị ứng) để Yên
-> nhớ mà không hỏi lại mỗi lần, cộng thêm lịch theo dõi sức khỏe (tài khoản nữ có thêm
+> chắn và lý do. Hồ sơ sức khỏe (tuổi, giới tính, bệnh nền, dị ứng) được lưu theo trình
+> duyệt để Yên nhớ mà không hỏi lại mỗi lần; hồ sơ nữ có thêm
 > tab theo dõi chu kỳ kinh nguyệt). Ô chat hỗ trợ **nhập tiếng Việt bằng micro** qua module
 > `backend/stt`. Lấy cảm hứng & cải tiến từ Ada Health (track Healthcare).
 
@@ -11,28 +11,18 @@ Prototype cho Day 06 — built với React + Vite + Framer Motion (frontend), Fa
 
 ---
 
-## Tài khoản demo (đăng nhập thẳng, không cần đăng ký)
+## Sử dụng không cần đăng nhập
 
-Mật khẩu chung: **`Demo123456`**.
-
-| Email | Hồ sơ | Minh hoạ cho |
-|---|---|---|
-| `demo1@yen.vn` | Nữ, 16 tuổi, đã có 1 mục chu kỳ kinh nguyệt | Tuổi dậy thì + tab Chu kỳ kinh nguyệt |
-| `demo2@yen.vn` | Nam, 45 tuổi, đái tháo đường type 2, dùng Metformin | Tham chiếu bệnh nền mạn tính |
-| `demo3@yen.vn` | Nữ, 30 tuổi, dị ứng đậu phộng + hải sản | Cảnh giác phản ứng dị ứng |
-| `demo4@yen.vn` | Nam, 70 tuổi, cao huyết áp, dùng Amlodipine | Tham chiếu thuốc đang dùng + tuổi già |
-| `demo5@yen.vn` | Nữ, 50 tuổi, không bệnh nền | Suy luận theo độ tuổi (tiền mãn kinh) |
-
-> Chi tiết cách seed ở [phần "Tài khoản & hồ sơ sức khỏe"](#tài-khoản--hồ-sơ-sức-khỏe) bên dưới.
+Người dùng mở ứng dụng và dùng ngay. Frontend tự tạo một `X-Client-ID` ngẫu nhiên, lưu trong
+`localStorage` và gửi kèm các API cần dữ liệu cá nhân. Backend dùng mã này để tách hồ sơ, lịch
+và chu kỳ giữa các trình duyệt; không thu thập mật khẩu và không có màn hình đăng ký/đăng nhập.
 
 ---
 
 ## Chạy thử
 
-> ⚠️ Từ khi có tài khoản, **backend bắt buộc phải chạy** — đăng ký/đăng nhập gọi thẳng
-> backend (SQLite), không có đường rơi về rule-based cho phần auth. AI trả lời (Groq/Qwen3)
-> vẫn tự fallback rule-based engine nếu thiếu `GROQ_API_KEY`, nhưng riêng đăng nhập thì
-> không. Luôn dùng `npm run dev:all` (chạy cả 2), đừng chỉ `npm run dev`.
+> **Backend phải chạy** để tải/lưu hồ sơ, lịch và chu kỳ. AI trả lời vẫn tự fallback về
+> rule-based engine nếu thiếu API key. Dùng `npm run dev:all` để chạy cả frontend và backend.
 
 ```bash
 # 1) Backend — cài deps + điền key
@@ -48,8 +38,8 @@ npm install
 npm run dev:all      # chạy `python -X utf8 server.py` (:8787) + `vite` (:5173) cùng lúc
 ```
 
-Mở `http://localhost:5173` → màn hình landing → **Tạo tài khoản miễn phí** (chọn tuổi +
-giới tính) → vào thẳng khu chat, hồ sơ được lưu để không phải khai lại lần sau.
+Mở `http://localhost:5173` → màn hình landing → **Trò chuyện với Yên**. Không cần đăng nhập;
+có thể cập nhật ngày sinh, giới tính và thông tin liên hệ trong tab **Hồ sơ**.
 
 Trong ô chat, bấm nút **micro**, cho phép trình duyệt truy cập micro, nói tối đa 30 giây rồi
 bấm lại để dừng. Trên Chrome/Edge, transcript tạm xuất hiện trực tiếp trong lúc đang nói;
@@ -88,62 +78,46 @@ Mọi kết quả luôn kèm disclaimer **"Đây không phải chẩn đoán y k
 
 ```
 frontend/src/
-├── App.jsx                      # router: Landing / Login / Signup / (App: Chat, Lịch)
-├── context/AuthContext.jsx      # token + user + profile, persist localStorage
+├── App.jsx                      # router: Landing / Chat / Lịch / Đặt lịch / Hồ sơ
+├── context/SessionContext.jsx   # mã phiên trình duyệt + hồ sơ, persist localStorage
 ├── lib/
-│   ├── api.js                   # client gọi backend (auth, profile, calendar, cycle)
+│   ├── api.js                   # client gọi backend (profile, calendar, cycle)
 │   ├── audioRecorder.js         # ghi micro trình duyệt thành PCM WAV
 │   ├── liveSpeechRecognition.js # transcript tạm theo thời gian thực (Chrome/Edge)
 │   └── triageEngine.js          # fallback rule-based + callRealModel() gọi backend LLM
 ├── pages/
 │   ├── LandingPage.jsx          # trang giới thiệu (public)
-│   ├── LoginPage.jsx / SignupPage.jsx   # đăng nhập / đăng ký (chọn tuổi + giới tính)
 │   ├── ChatPage.jsx             # khu chat (== App.jsx cũ, giờ là 1 page trong router)
 │   └── CalendarPage.jsx         # lịch sức khỏe + sub-tab chu kỳ kinh nguyệt (nếu nữ)
 ├── components/
-│   ├── RequireAuth.jsx          # bảo vệ /app/*, redirect /dang-nhap nếu chưa đăng nhập
-│   ├── TabNav.jsx                # tab Trò chuyện/Lịch + đăng xuất, dùng chung 2 page
+│   ├── TabNav.jsx                # điều hướng Trò chuyện/Lịch/Đặt lịch/Hồ sơ
 │   ├── HealthCalendar.jsx        # lưới lịch tháng + form thêm mục
 │   ├── CycleTracker.jsx          # tóm tắt dự đoán + lịch sử chu kỳ kinh nguyệt
 │   ├── ProfileRail.jsx / TriageResult.jsx / Emergency.jsx / ... (như cũ)
 └── index.css                     # design system (CSS variables, atmosphere, animations)
 
 backend/
-├── server.py                    # FastAPI: /triage, /auth/*, /profile, /calendar, /cycle
-├── db.py                        # SQLite (accounts, hồ sơ, lịch, chu kỳ) — file tại backend/data/app.db
-├── auth.py                      # hash mật khẩu (PBKDF2) + JWT session token
+├── server.py                    # FastAPI: /triage, /profile, /calendar, /cycle
+├── db.py                        # SQLite (phiên ẩn danh, hồ sơ, lịch, chu kỳ)
 ├── stt/                         # SpeechRecognition tiếng Việt, nhận WAV từ trình duyệt
 └── artifacts/system_prompt.md   # hướng dẫn LLM dùng hồ sơ bệnh nhân khi có
 ```
 
 ---
 
-## Tài khoản & hồ sơ sức khỏe
+## Phiên trình duyệt & hồ sơ sức khỏe
 
-- Đăng ký cần **ngày sinh** (tự tính tuổi) + **giới tính** (nam/nữ); bệnh nền, dị ứng,
-  thuốc đang dùng có thể bổ sung sau qua `PUT /profile`.
-- Mỗi lượt chat gửi kèm `Authorization: Bearer <token>` — backend tự nạp hồ sơ vào context
+- Tab Hồ sơ cho phép nhập **ngày sinh** (tự tính tuổi), **giới tính** (nam/nữ), bệnh nền,
+  dị ứng, thuốc đang dùng và thông tin liên hệ.
+- Mỗi lượt chat gửi kèm `X-Client-ID` — backend tự nạp hồ sơ vào context
   cho LLM (xem `_profile_context_message()` trong `server.py`), nên Yên **không hỏi lại**
   tuổi/giới tính/bệnh nền/dị ứng đã biết.
-- **Tài khoản nữ tự động có thêm sub-tab "Chu kỳ kinh nguyệt"** trong mục Lịch — không hỏi
+- **Hồ sơ nữ tự động có thêm sub-tab "Chu kỳ kinh nguyệt"** trong mục Lịch — không hỏi
   bật/tắt, chỉ dựa vào `gender === 'nu'`. Ghi ngày bắt đầu kỳ kinh → hệ thống tự tính chu kỳ
   trung bình, đang ở ngày mấy, dự đoán kỳ tiếp theo — và số này cũng được đưa vào context
   chat nếu triệu chứng có thể liên quan (đau bụng dưới, ra máu bất thường...).
-- Mật khẩu hash bằng PBKDF2-SHA256 (200k vòng), không lưu plaintext. Token là JWT 30 ngày.
-
-### Tài khoản demo (đăng nhập thẳng, không cần đăng ký)
-
-Backend tự seed 5 tài khoản demo (idempotent, chạy lại mỗi lần khởi động — xem
-`backend/seed_demo.py`) với hồ sơ bệnh lý khác nhau để demo/QA việc AI dùng hồ sơ để suy
-luận, không cần đăng ký + điền hồ sơ thủ công. Mật khẩu chung: **`Demo123456`**.
-
-| Email | Hồ sơ | Minh hoạ cho |
-|---|---|---|
-| `demo1@yen.vn` | Nữ, 16 tuổi, đã có 1 mục chu kỳ kinh nguyệt | Tuổi dậy thì + tab Chu kỳ kinh nguyệt |
-| `demo2@yen.vn` | Nam, 45 tuổi, đái tháo đường type 2, dùng Metformin | Tham chiếu bệnh nền mạn tính |
-| `demo3@yen.vn` | Nữ, 30 tuổi, dị ứng đậu phộng + hải sản | Cảnh giác phản ứng dị ứng |
-| `demo4@yen.vn` | Nam, 70 tuổi, cao huyết áp, dùng Amlodipine | Tham chiếu thuốc đang dùng + tuổi già |
-| `demo5@yen.vn` | Nữ, 50 tuổi, không bệnh nền | Suy luận theo độ tuổi (tiền mãn kinh) |
+- Không có mật khẩu/JWT. Xoá dữ liệu website trong trình duyệt sẽ tạo một phiên mới và
+  trình duyệt đó không còn liên kết với dữ liệu phiên cũ.
 
 ---
 
@@ -153,7 +127,7 @@ luận, không cần đăng ký + điền hồ sơ thủ công. Mật khẩu chu
 |---|---|
 | Frontend | React 18 + Vite 5 + React Router 7 + Framer Motion |
 | Backend | FastAPI + Uvicorn + SQLite (stdlib `sqlite3`, không ORM) |
-| Auth | PBKDF2 password hash + JWT (PyJWT) |
+| Tách dữ liệu | `X-Client-ID` ngẫu nhiên, lưu trong `localStorage` |
 | Fonts | Fraunces · Be Vietnam Pro · Spline Sans Mono (Google Fonts) |
 | AI (mặc định) | Rule-based triage engine mô phỏng — `src/lib/triageEngine.js` |
 | AI thật | **Qwen3-32B trên Groq** qua backend `backend/server.py` |
@@ -162,13 +136,12 @@ luận, không cần đăng ký + điền hồ sơ thủ công. Mật khẩu chu
 
 | Route | Việc |
 |---|---|
-| `POST /auth/register`, `POST /auth/login` | Tài khoản → trả `{ token, user, profile }` |
-| `GET/PUT /profile` | Đọc/sửa hồ sơ sức khỏe (auth) |
-| `GET/POST/DELETE /calendar` | Lịch sức khỏe theo ngày (auth) |
-| `GET/POST/DELETE /cycle` | Chu kỳ kinh nguyệt + dự đoán (auth) |
-| `POST /doctors/{id}/book` | Đặt lịch bác sĩ, lưu vào lịch và gửi email xác nhận (auth) |
-| `POST /stt/transcribe` | WAV từ micro → `{ text, language }` (auth) |
-| `POST /triage` | Chat — `Authorization` tùy chọn, có thì nạp hồ sơ vào context |
+| `GET/PUT /profile` | Đọc/sửa hồ sơ sức khỏe theo `X-Client-ID` |
+| `GET/POST/DELETE /calendar` | Lịch sức khỏe theo `X-Client-ID` |
+| `GET/POST/DELETE /cycle` | Chu kỳ kinh nguyệt + dự đoán theo `X-Client-ID` |
+| `POST /doctors/{id}/book` | Đặt lịch, lưu vào lịch và gửi email trong hồ sơ nếu có |
+| `POST /stt/transcribe` | WAV từ micro → `{ text, language }` |
+| `POST /triage` | Chat + nạp hồ sơ theo `X-Client-ID` vào context |
 
 ### Email xác nhận lịch khám
 
@@ -200,7 +173,7 @@ cp .env.example .env    # điền GROQ_API_KEY — lấy tại https://console.g
 - Khi có `GROQ_API_KEY`, toàn bộ hội thoại đi qua **Qwen3-32B trên Groq**; chỉnh sửa triệu chứng
   cũng gửi correction về backend đánh giá lại.
 - Backend tắt / thiếu key / trả JSON hỏng → frontend **tự fallback rule-based engine** cho
-  riêng phần AI trả lời (đăng nhập/tài khoản thì không có fallback — xem cảnh báo ở trên).
+  phần AI trả lời; các tính năng lưu hồ sơ/lịch vẫn cần backend.
 - Đổi provider/model qua `TRIAGE_PROVIDER` và `TRIAGE_MODEL` trong `backend/.env`.
   `.env.example` mặc định dùng `groq` + `qwen/qwen3-32b`; Gemini vẫn được hỗ trợ như
   provider thay thế.

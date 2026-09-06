@@ -1,12 +1,12 @@
 import { useState } from 'react'
-import { useAuth } from '../context/AuthContext.jsx'
+import { useSession } from '../context/SessionContext.jsx'
 import { Cross, Calendar as CalendarIcon, Droplet } from '../components/icons.jsx'
 import TabNav from '../components/TabNav.jsx'
 import HealthCalendar from '../components/HealthCalendar.jsx'
 import CycleTracker from '../components/CycleTracker.jsx'
 
 export default function CalendarPage() {
-  const { isFemale } = useAuth()
+  const { isFemale } = useSession()
   const [subTab, setSubTab] = useState('calendar') // 'calendar' | 'cycle'
 
   return (

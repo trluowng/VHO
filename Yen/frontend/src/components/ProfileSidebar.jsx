@@ -1,13 +1,6 @@
-import { User, Droplet, Shield, Calendar as CalendarIcon, Camera } from './icons.jsx'
+import { User, Droplet, Shield, Camera } from './icons.jsx'
 
 const GENDER_LABEL = { nu: 'Nữ', nam: 'Nam' }
-
-function formatDate(iso) {
-  if (!iso) return '—'
-  const d = new Date(iso)
-  if (Number.isNaN(d.getTime())) return '—'
-  return d.toLocaleDateString('vi-VN', { day: '2-digit', month: '2-digit', year: 'numeric' })
-}
 
 function calculateAge(iso) {
   if (!iso) return null
@@ -21,8 +14,8 @@ function calculateAge(iso) {
   return age > 0 ? age : null
 }
 
-export default function ProfileSidebar({ user, profile }) {
-  const displayName = profile?.full_name || user?.email || 'Bạn'
+export default function ProfileSidebar({ profile }) {
+  const displayName = profile?.full_name || 'Bạn'
   const displayAge = calculateAge(profile?.birth_date) || profile?.age
   const ageGender = [displayAge ? `${displayAge} tuổi` : null, GENDER_LABEL[profile?.gender]]
     .filter(Boolean)
@@ -57,11 +50,6 @@ export default function ProfileSidebar({ user, profile }) {
             <strong>{profile.insurance_number}</strong>
           </div>
         )}
-        <div className="profile-sidebar__row">
-          <span className="profile-sidebar__row-icon"><CalendarIcon width={15} height={15} /></span>
-          <span>Ngày tham gia</span>
-          <strong>{formatDate(user?.created_at)}</strong>
-        </div>
       </div>
 
       <button

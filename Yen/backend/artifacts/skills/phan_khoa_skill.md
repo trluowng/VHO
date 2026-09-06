@@ -1,4 +1,4 @@
-# Skill: Phân khoa theo triệu chứng (Bệnh viện Tim Hà Nội)
+# Skill: Phân khoa theo triệu chứng
 
 Mục tiêu: từ mô tả triệu chứng của khách, xác định **khoa lâm sàng phù hợp nhất**, rồi suy
 ra **chuyên khoa để đưa vào event "result"** (hiện chỉ có đúng 1 trong 4 giá trị hợp lệ cho

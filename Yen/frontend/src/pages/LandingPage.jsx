@@ -54,7 +54,7 @@ export default function LandingPage() {
         <PhoneCall className="h-7 w-7 shrink-0" strokeWidth={1.8} />
         <p className="m-0 text-[14px] leading-relaxed">
           Khi phát hiện dấu hiệu khẩn cấp (đau ngực dữ dội, khó thở, đột quỵ...), Yên bỏ qua mọi
-          bước hỏi đáp và hướng dẫn gọi <strong>115</strong> hoặc đến khoa Cấp cứu Bệnh viện Tim Hà Nội ngay lập tức.
+          bước hỏi đáp và hướng dẫn gọi <strong>115</strong> hoặc đến cơ sở cấp cứu gần nhất ngay lập tức.
         </p>
       </section>
 
@@ -62,7 +62,7 @@ export default function LandingPage() {
         <div className="flex items-start justify-center gap-2.5 text-[11.5px] leading-relaxed text-slate-text">
           <ShieldAlert className="h-4 w-4 flex-none translate-y-[1px] text-slate-text" strokeWidth={1.8} />
           <span>
-            Yên là trợ lý hỗ trợ khách hàng của Bệnh viện Tim Hà Nội, <strong className="text-navy">không thay thế chẩn đoán y khoa</strong>.
+            Yên là trợ lý hỗ trợ sức khỏe, <strong className="text-navy">không thay thế chẩn đoán y khoa</strong>.
             Khi nghi ngờ, hãy liên hệ nhân viên y tế của bệnh viện.
           </span>
         </div>

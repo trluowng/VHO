@@ -57,14 +57,14 @@ flowchart TD
 ### 1. AI Tư vấn triệu chứng + Cảnh báo khẩn cấp — ✅ Đã có
 - **Output:** tư vấn/hướng dẫn tự chăm sóc cho tình huống bình thường; cảnh báo đỏ + hướng
   dẫn gọi 115 cho tình huống khẩn cấp.
-- Có **tài khoản + hồ sơ sức khỏe** (tuổi, giới tính, bệnh nền, dị ứng, thuốc đang dùng) —
-  đăng nhập rồi thì Yên không hỏi lại các thông tin đã biết ở mỗi phiên chat mới.
+- Có **hồ sơ sức khỏe theo trình duyệt** (tuổi, giới tính, bệnh nền, dị ứng, thuốc đang dùng) —
+  không cần đăng nhập và Yên không hỏi lại các thông tin đã biết ở mỗi phiên chat mới.
 - Chat hỏi triệu chứng nhiều vòng, mỗi câu trả lời luôn kèm gợi ý cụ thể (không để bệnh nhân
   chờ mà không có hướng dẫn gì — xem mục 13.3/2.2).
 - Sàng lọc red-flag bằng từ khóa **ngay tại client** trước khi gọi LLM, để tình huống khẩn
   cấp không phải chờ round-trip API (xem mục 15.2).
 - Code: [`Yen/`](Yen/) — backend FastAPI + Groq/Qwen3 + SQLite (`Yen/backend`), frontend
-  (`Yen/frontend`, gồm landing page, đăng ký/đăng nhập, chat, lịch).
+  (`Yen/frontend`, gồm landing page, chat, lịch, đặt lịch và hồ sơ).
 - Deploy lên Render — xem [`DEPLOY.md`](DEPLOY.md).
 
 ### 2. Giám sát sinh hiệu real-time — 🔲 Chưa làm
@@ -169,7 +169,7 @@ Song song với thiết kế pipeline ở mục 2.2/13, có một **prototype th
 đặt trong [`Yen/`](Yen/) — trợ lý phân loại triệu chứng: hỏi tối đa 3 câu, xác nhận lại điều
 đã hiểu, rồi đưa ra mức khẩn cấp + bước tiếp theo kèm độ chắc chắn (React + Vite, backend
 FastAPI + Qwen3-32B trên Groq qua tool-calling, sàng lọc red-flag tại client trước khi gọi LLM).
-Có tài khoản + hồ sơ sức khỏe (SQLite) và lịch theo dõi sức khỏe/chu kỳ kinh nguyệt — xem
+Có hồ sơ sức khỏe ẩn danh (SQLite) và lịch theo dõi sức khỏe/chu kỳ kinh nguyệt — xem
 mục 1.1 ở đầu tài liệu. Chi tiết — xem [`Yen/README.md`](Yen/README.md).
 
 > Trước đó có thử ghép thêm một UI mô phỏng đồng hồ đeo tay (wearable simulator +

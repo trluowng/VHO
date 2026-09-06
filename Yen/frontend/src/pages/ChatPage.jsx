@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { createSession, handleUser, setSymptoms, callRealModel, detectRedFlag } from '../lib/triageEngine.js'
 import { loadSessions, upsertSession } from '../lib/sessionLog.js'
 import { isApiConfigured, sttApi, ttsApi } from '../lib/api.js'
-import { useAuth } from '../context/AuthContext.jsx'
+import { useSession } from '../context/SessionContext.jsx'
 import { Cross } from '../components/icons.jsx'
 import TabNav from '../components/TabNav.jsx'
 import SessionHistory from '../components/SessionHistory.jsx'
@@ -44,7 +44,7 @@ function lastLevel(items) {
 }
 
 export default function ChatPage() {
-  const { token } = useAuth()
+  const { clientId, syncProfile } = useSession()
   const [session, setSession] = useState(createSession)
   const [items, setItems] = useState([])
   const [quick, setQuick] = useState(null)
@@ -109,7 +109,7 @@ export default function ChatPage() {
     let audioUrl = null
 
     try {
-      const blob = await ttsApi.synthesize(token, text)
+      const blob = await ttsApi.synthesize(clientId, text)
       audioUrl = URL.createObjectURL(blob)
       const audio = new Audio(audioUrl)
       currentAudioRef.current = audio
@@ -130,7 +130,7 @@ export default function ChatPage() {
         currentUtteranceRef.current = null
       }
     }
-  }, [speakingMessageId, speakWithBrowserFallback, stopSpeaking, token])
+  }, [speakingMessageId, speakWithBrowserFallback, stopSpeaking, clientId])
 
   useEffect(() => {
     return () => {
@@ -226,10 +226,11 @@ export default function ChatPage() {
         const history = itemsRef.current
           .filter((i) => i.type === 'message')
           .map((i) => ({ role: i.role, text: i.text }))
-        const data = await callRealModel(history, text, token, sidRef.current)
+        const data = await callRealModel(history, text, clientId, sidRef.current)
         const ms = data?._meta?.latencyMs ?? Math.round(performance.now() - t0)
         setTyping(false)
         if (data.profile) setSession((s) => ({ ...createSession(), ...data.profile, result: s.result }))
+        if (data.health_profile) syncProfile(data.health_profile)
         await playEvents(data.events || [], { ms, source: 'gemini' })
       } catch (err) {
         setTyping(false)
@@ -241,7 +242,7 @@ export default function ChatPage() {
         setBusy(false)
       }
     },
-    [session, playEvents, token],
+    [session, playEvents, clientId, syncProfile],
   )
 
   const send = useCallback(
@@ -267,8 +268,8 @@ export default function ChatPage() {
   )
 
   const transcribeSpeech = useCallback(
-    (audioBlob) => sttApi.transcribe(token, audioBlob),
-    [token],
+    (audioBlob) => sttApi.transcribe(clientId, audioBlob),
+    [clientId],
   )
 
   const handleBookedFromChat = useCallback(
@@ -276,7 +277,7 @@ export default function ChatPage() {
       const doctorName = booking.doctor?.full_name || booking.doctor_name || 'bác sĩ'
       const emailNote =
         booking.emailNotification === 'sent'
-          ? 'Email xác nhận cũng đã được gửi tới email tài khoản của bạn.'
+          ? 'Email xác nhận cũng đã được gửi tới địa chỉ trong hồ sơ của bạn.'
           : 'Nếu email chưa gửi được, lịch khám vẫn đã được lưu trong hệ thống.'
       const text = `Đã chốt lịch với ${doctorName} vào ${booking.visit_date} lúc ${booking.time_slot}. Lịch này đã xuất hiện trong tab Lịch và slot đã được loại khỏi tab Đặt lịch khám. ${emailNote}`
       push({ type: 'message', role: 'ai', text, confirm: true })
@@ -433,11 +434,11 @@ export default function ChatPage() {
                       </motion.div>
                     ) : it.type === 'booking_options' ? (
                       <motion.div key={it.id} layout>
-                        <ChatBookingOptions options={it.options} token={token} onBooked={handleBookedFromChat} />
+                        <ChatBookingOptions options={it.options} clientId={clientId} onBooked={handleBookedFromChat} />
                       </motion.div>
                     ) : it.type === 'booking_confirmation' ? (
                       <motion.div key={it.id} layout>
-                        <ChatBookingOptions confirmed={it.booking} token={token} />
+                        <ChatBookingOptions confirmed={it.booking} clientId={clientId} />
                       </motion.div>
                     ) : (
                       <Message

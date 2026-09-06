@@ -6,10 +6,9 @@ google-genai>=0.8.0
 requests>=2.31.0
 PyYAML>=6.0
 pypdf>=4.0.0
-# Web server + auth (accounts, health profile, calendar, cycle tracking):
+# Web server (anonymous browser profiles, calendar, cycle tracking):
 fastapi>=0.110
 uvicorn>=0.29
-PyJWT>=2.8
 # Conversation memory: embeddings (bge-m3) + FAISS vector store
 sentence-transformers>=2.3.0
 faiss-cpu>=1.8.0

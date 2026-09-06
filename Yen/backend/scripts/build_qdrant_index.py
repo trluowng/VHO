@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Embed every RAG chunk with BGE-M3 (dense + sparse) and upsert into an
 embedded (local-mode, no server) Qdrant collection, enabling hybrid search
-(dense cosine + sparse lexical) over the Benh vien Tim Ha Noi knowledge base.
+(dense cosine + sparse lexical) over the healthcare knowledge base.
 
 The single source of truth for chunks is data/markdown_chunks/services_merged.json
 (built by data/scripts/merge_all_into_services.py, which consolidates the 8
@@ -27,7 +27,7 @@ BACKEND_DIR = os.path.dirname(SCRIPT_DIR)
 DATA_DIR = os.path.join(BACKEND_DIR, "data")
 SERVICES_PATH = os.path.join(DATA_DIR, "markdown_chunks", "services_merged.json")
 QDRANT_PATH = os.path.join(DATA_DIR, "qdrant_storage")
-COLLECTION = "benhvientimhanoi_rag"
+COLLECTION = "yen_healthcare_rag"
 BATCH_SIZE = 16
 MAX_LENGTH = 512
 

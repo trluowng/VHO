@@ -1,5 +1,5 @@
 /* ============================================================
-   api.js — client gọi backend Yên (auth, hồ sơ sức khỏe, lịch, chu kỳ)
+   api.js — client gọi backend Yên (hồ sơ sức khỏe, lịch, chu kỳ)
    ============================================================ */
 
 const API_BASE = (import.meta.env.VITE_API_BASE_URL || '').replace(/\/$/, '')
@@ -8,9 +8,9 @@ export function isApiConfigured() {
   return !!API_BASE
 }
 
-async function request(path, { method = 'GET', body, token, auth = true } = {}) {
+async function request(path, { method = 'GET', body, clientId } = {}) {
   const headers = { 'Content-Type': 'application/json' }
-  if (auth && token) headers.Authorization = `Bearer ${token}`
+  if (clientId) headers['X-Client-ID'] = clientId
 
   const res = await fetch(`${API_BASE}${path}`, {
     method,
@@ -30,12 +30,10 @@ async function request(path, { method = 'GET', body, token, auth = true } = {}) 
 
 const ERROR_LABELS = {
   invalid_email: 'Email không hợp lệ.',
-  password_too_short: 'Mật khẩu cần tối thiểu 6 ký tự.',
   invalid_gender: 'Vui lòng chọn giới tính.',
   invalid_age: 'Tuổi không hợp lệ.',
-  email_taken: 'Email này đã được đăng ký.',
-  invalid_credentials: 'Email hoặc mật khẩu không đúng.',
-  unauthorized: 'Phiên đăng nhập đã hết hạn, vui lòng đăng nhập lại.',
+  invalid_birth_date: 'Ngày sinh không hợp lệ.',
+  client_id_required: 'Không xác định được phiên trên trình duyệt. Vui lòng tải lại trang.',
   period_start_date_in_future: 'Ngày bắt đầu kỳ kinh không thể ở tương lai.',
   period_start_date_required: 'Vui lòng chọn ngày bắt đầu kỳ kinh.',
   invalid_period_start_date: 'Ngày bắt đầu kỳ kinh không hợp lệ.',
@@ -49,46 +47,41 @@ const ERROR_LABELS = {
   doctor_not_found: 'Không tìm thấy bác sĩ này.',
 }
 
-export const authApi = {
-  register: (payload) => request('/auth/register', { method: 'POST', body: payload, auth: false }),
-  login: (payload) => request('/auth/login', { method: 'POST', body: payload, auth: false }),
-}
-
 export const profileApi = {
-  get: (token) => request('/profile', { token }),
-  update: (token, updates) => request('/profile', { method: 'PUT', body: updates, token }),
+  get: (clientId) => request('/profile', { clientId }),
+  update: (clientId, updates) => request('/profile', { method: 'PUT', body: updates, clientId }),
 }
 
 export const calendarApi = {
-  list: (token, month) => request(`/calendar${month ? `?month=${month}` : ''}`, { token }),
-  create: (token, entry) => request('/calendar', { method: 'POST', body: entry, token }),
-  remove: (token, id) => request(`/calendar/${id}`, { method: 'DELETE', token }),
+  list: (clientId, month) => request(`/calendar${month ? `?month=${month}` : ''}`, { clientId }),
+  create: (clientId, entry) => request('/calendar', { method: 'POST', body: entry, clientId }),
+  remove: (clientId, id) => request(`/calendar/${id}`, { method: 'DELETE', clientId }),
 }
 
 export const doctorsApi = {
-  list: (token, { query, campus, specialty, timeSlot } = {}) => {
+  list: (clientId, { query, campus, specialty, timeSlot } = {}) => {
     const params = new URLSearchParams()
     if (query) params.set('query', query)
     if (campus) params.set('campus', campus)
     if (specialty) params.set('specialty', specialty)
     if (timeSlot) params.set('time_slot', timeSlot)
     const qs = params.toString()
-    return request(`/doctors${qs ? `?${qs}` : ''}`, { token })
+    return request(`/doctors${qs ? `?${qs}` : ''}`, { clientId })
   },
-  schedule: (token, doctorId) => request(`/doctors/${doctorId}/schedule`, { token }),
-  book: (token, doctorId, slot) => request(`/doctors/${doctorId}/book`, { method: 'POST', body: slot, token }),
+  schedule: (clientId, doctorId) => request(`/doctors/${doctorId}/schedule`, { clientId }),
+  book: (clientId, doctorId, slot) => request(`/doctors/${doctorId}/book`, { method: 'POST', body: slot, clientId }),
 }
 
 export const cycleApi = {
-  list: (token) => request('/cycle', { token }),
-  create: (token, entry) => request('/cycle', { method: 'POST', body: entry, token }),
-  remove: (token, id) => request(`/cycle/${id}`, { method: 'DELETE', token }),
+  list: (clientId) => request('/cycle', { clientId }),
+  create: (clientId, entry) => request('/cycle', { method: 'POST', body: entry, clientId }),
+  remove: (clientId, id) => request(`/cycle/${id}`, { method: 'DELETE', clientId }),
 }
 
 export const sttApi = {
-  transcribe: async (token, audioBlob) => {
+  transcribe: async (clientId, audioBlob) => {
     const headers = { 'Content-Type': 'audio/wav' }
-    if (token) headers.Authorization = `Bearer ${token}`
+    if (clientId) headers['X-Client-ID'] = clientId
 
     const res = await fetch(`${API_BASE}/stt/transcribe`, {
       method: 'POST',
@@ -109,9 +102,9 @@ export const sttApi = {
 export const ttsApi = {
   /** Trả về Blob audio/mpeg -- trình duyệt tự phát bằng thẻ <audio>, backend không
    *  phát âm thanh cục bộ (server có thể chạy headless trên cloud). */
-  synthesize: async (token, text) => {
+  synthesize: async (clientId, text) => {
     const headers = { 'Content-Type': 'application/json' }
-    if (token) headers.Authorization = `Bearer ${token}`
+    if (clientId) headers['X-Client-ID'] = clientId
 
     const res = await fetch(`${API_BASE}/tts`, {
       method: 'POST',

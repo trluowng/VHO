@@ -1,4 +1,4 @@
-"""Tra cứu giá dịch vụ kỹ thuật/khám bệnh tại Bệnh viện Tim Hà Nội.
+"""Tra cứu giá dịch vụ kỹ thuật/khám bệnh.
 
 Nguồn: data/services_merged.json — 4.674 dòng gộp từ 4 bảng giá chính thức
 (BHYT 2023, DVKT 2025, DVKT thường, DVKT theo yêu cầu). Tìm theo từ khóa trên

@@ -119,7 +119,10 @@ def run_model_tool_loop(
             # Gemini/qwen occasionally return a genuinely empty candidate (no visible
             # text, no tool call) -- usually transient, so retry once before giving the
             # patient a blank chat bubble.
-            print("⚠️  empty model response, retrying once")
+            # Keep server diagnostics ASCII-only so a Windows process using a
+            # legacy console encoding (for example cp1252) cannot turn a
+            # successful model response into an HTTP 500.
+            print("[agent] empty model response, retrying once")
             response = provider.complete(working_messages, tools, model=model, temperature=0.1)
         calls = response.tool_calls
         round_record: dict[str, Any] = {
@@ -148,7 +151,10 @@ def run_model_tool_loop(
         repeated_results = 0
 
         for call in calls:
-            print(f"🔧 {call.name}({json.dumps(call.args, ensure_ascii=False, sort_keys=True)})")
+            print(
+                f"[agent] tool {call.name}("
+                f"{json.dumps(call.args, ensure_ascii=True, sort_keys=True)})"
+            )
             signature = (call.name, json.dumps(call.args, ensure_ascii=False, sort_keys=True))
             if signature in seen_call_signatures:
                 repeated_calls += 1

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { User, PenLine } from 'lucide-react'
+import { MessageCircle } from 'lucide-react'
 
 export default function Header() {
   return (
@@ -21,18 +21,11 @@ export default function Header() {
 
       <nav className="flex shrink-0 items-center gap-2 sm:gap-3">
         <Link
-          to="/dang-nhap"
-          className="hidden h-[54px] items-center gap-2 rounded-[16px] border border-skytint-border bg-white px-5 text-[14px] font-semibold text-navy shadow-[0_2px_8px_rgba(16,42,92,0.05)] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_18px_rgba(16,42,92,0.10)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan sm:inline-flex"
-        >
-          <User className="h-4 w-4" strokeWidth={2} />
-          Đăng nhập
-        </Link>
-        <Link
-          to="/dang-ky"
+          to="/app"
           className="inline-flex h-[44px] items-center gap-1.5 rounded-[14px] bg-gradient-to-r from-teal to-teal-deep px-4 text-[13px] font-semibold text-white shadow-[0_10px_24px_rgba(7,137,154,0.28)] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_14px_28px_rgba(7,137,154,0.34)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan sm:h-[54px] sm:gap-2 sm:px-5 sm:text-[14px]"
         >
-          <PenLine className="h-3.5 w-3.5 sm:h-4 sm:w-4" strokeWidth={2} />
-          Bắt đầu miễn phí
+          <MessageCircle className="h-3.5 w-3.5 sm:h-4 sm:w-4" strokeWidth={2} />
+          Mở Yên
         </Link>
       </nav>
     </header>

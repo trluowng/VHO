@@ -1,0 +1,699 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Báo cáo kỹ thuật dự án Yên</title>
+  <style>
+    :root {
+      --teal: #1f7a8c;
+      --teal-dark: #145a68;
+      --cyan: #35a7bb;
+      --teal-soft: #e7f4f6;
+      --blue-soft: #eff7fb;
+      --ink: #17323b;
+      --muted: #55727c;
+      --line: #d6e6e9;
+      --paper: #ffffff;
+      --green: #25875f;
+      --amber: #b87525;
+      --red: #b6463b;
+      --purple: #735bc5;
+    }
+
+    * { box-sizing: border-box; }
+    html { background: #dfecee; }
+    body {
+      margin: 0 auto;
+      max-width: 210mm;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: "Segoe UI", Arial, sans-serif;
+      font-size: 10.2pt;
+      line-height: 1.58;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    @page { size: A4; margin: 15mm 15mm 16mm; }
+    @media screen {
+      body { padding: 15mm; box-shadow: 0 15px 50px rgba(24, 63, 72, .18); }
+      .cover { margin: -15mm -15mm 0; padding: 22mm 20mm; }
+    }
+    @media print {
+      body { max-width: none; }
+      .cover { margin: -15mm -15mm -16mm; padding: 22mm 20mm 18mm; height: 297mm; }
+      a { color: inherit; text-decoration: none; }
+    }
+
+    h1, h2, h3, h4 { color: var(--teal-dark); line-height: 1.24; page-break-after: avoid; }
+    h1 { margin: 0; font-size: 30pt; letter-spacing: -.7px; }
+    h2 {
+      margin: 24px 0 11px;
+      padding-bottom: 7px;
+      border-bottom: 2px solid var(--teal-soft);
+      font-size: 18pt;
+    }
+    h3 { margin: 18px 0 8px; font-size: 13pt; }
+    h4 { margin: 13px 0 5px; font-size: 10.5pt; }
+    p { margin: 0 0 9px; }
+    ul, ol { margin: 6px 0 11px; padding-left: 20px; }
+    li { margin: 2px 0; }
+    strong { color: #193f49; }
+    code {
+      padding: 1px 4px;
+      border-radius: 4px;
+      color: #225762;
+      background: #edf5f6;
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 8.8pt;
+    }
+
+    .cover {
+      position: relative;
+      display: flex;
+      min-height: 266mm;
+      overflow: hidden;
+      flex-direction: column;
+      justify-content: space-between;
+      color: #15323b;
+      background:
+        linear-gradient(90deg, rgba(255,255,255,.98) 0%, rgba(255,255,255,.93) 46%, rgba(255,255,255,.25) 100%),
+        url("../Image/ChatGPT Image 15_54_32 15 thg 7, 2026.png") center / cover no-repeat;
+      page-break-after: always;
+    }
+    .cover::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(180deg, transparent 55%, rgba(19, 76, 87, .12));
+    }
+    .cover__top, .cover__main, .cover__bottom { position: relative; z-index: 1; }
+    .brand { display: flex; align-items: center; gap: 12px; }
+    .brand__mark {
+      display: grid;
+      width: 46px;
+      height: 46px;
+      place-items: center;
+      border-radius: 14px;
+      color: #fff;
+      background: linear-gradient(145deg, var(--cyan), var(--teal-dark));
+      box-shadow: 0 8px 24px rgba(20, 90, 104, .23);
+      font-size: 26px;
+      font-weight: 300;
+    }
+    .brand__name { color: #133640; font-size: 19pt; font-weight: 750; }
+    .brand__name em { color: var(--teal); font-family: Georgia, serif; font-weight: 400; }
+    .brand__sub { color: #709099; font-size: 7.5pt; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
+    .cover__main { max-width: 122mm; }
+    .cover__eyebrow { margin-bottom: 10px; color: var(--teal); font-size: 9pt; font-weight: 800; letter-spacing: 1.7px; text-transform: uppercase; }
+    .cover h1 span { display: block; margin-top: 7px; color: var(--teal); font-size: 17pt; font-weight: 550; letter-spacing: 0; }
+    .cover__lead { max-width: 108mm; margin-top: 17px; color: #486872; font-size: 11.5pt; line-height: 1.7; }
+    .cover__meta { display: grid; max-width: 112mm; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 24px; }
+    .cover__meta div { padding: 10px 12px; border: 1px solid rgba(104, 155, 164, .28); border-radius: 10px; background: rgba(255,255,255,.72); }
+    .cover__meta small { display: block; color: #7a969e; font-size: 7pt; text-transform: uppercase; }
+    .cover__meta strong { display: block; margin-top: 2px; color: #244b56; font-size: 9.5pt; }
+    .cover__bottom { color: #567680; font-size: 8.5pt; }
+
+    .page-break { page-break-before: always; }
+    .keep { break-inside: avoid; page-break-inside: avoid; }
+    .section-kicker { color: var(--teal); font-size: 8pt; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase; }
+    .lead { color: #496b75; font-size: 11pt; line-height: 1.7; }
+    .note, .warning, .success {
+      margin: 12px 0;
+      padding: 11px 13px;
+      border-left: 4px solid var(--teal);
+      border-radius: 8px;
+      color: #496b75;
+      background: var(--blue-soft);
+    }
+    .warning { border-left-color: var(--amber); background: #fff7e9; }
+    .success { border-left-color: var(--green); background: #eef9f4; }
+
+    .stats { display: grid; grid-template-columns: repeat(5, 1fr); gap: 7px; margin: 14px 0 18px; }
+    .stat { padding: 10px 8px; border: 1px solid var(--line); border-radius: 10px; text-align: center; background: #fbfefe; }
+    .stat strong { display: block; color: var(--teal); font-size: 17pt; line-height: 1.1; }
+    .stat span { display: block; margin-top: 4px; color: #718d95; font-size: 7.2pt; line-height: 1.3; }
+
+    .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 10px 0 14px; }
+    .card { padding: 12px 13px; border: 1px solid var(--line); border-radius: 11px; background: #fcfefe; break-inside: avoid; }
+    .card h3, .card h4 { margin-top: 0; }
+    .card p:last-child, .card ul:last-child { margin-bottom: 0; }
+    .card__num {
+      display: inline-grid;
+      width: 26px;
+      height: 26px;
+      margin-right: 6px;
+      place-items: center;
+      border-radius: 8px;
+      color: #fff;
+      background: var(--teal);
+      font-size: 9pt;
+    }
+
+    table { width: 100%; margin: 9px 0 15px; border-collapse: collapse; font-size: 8.7pt; break-inside: auto; }
+    thead { display: table-header-group; }
+    tr { break-inside: avoid; page-break-inside: avoid; }
+    th { padding: 7px 8px; color: #fff; background: var(--teal); text-align: left; font-weight: 700; }
+    th:first-child { border-radius: 7px 0 0 0; }
+    th:last-child { border-radius: 0 7px 0 0; }
+    td { padding: 6px 8px; border-bottom: 1px solid #dfebed; vertical-align: top; }
+    tbody tr:nth-child(even) { background: #f7fbfc; }
+    .status { display: inline-block; padding: 2px 6px; border-radius: 999px; font-size: 7pt; font-weight: 750; white-space: nowrap; }
+    .status--done { color: #176948; background: #dff4e9; }
+    .status--partial { color: #8b5a1f; background: #fff0d6; }
+    .status--roadmap { color: #6550a6; background: #eeeafd; }
+
+    .architecture { margin: 12px 0 17px; padding: 14px; border: 1px solid var(--line); border-radius: 12px; background: #f8fcfd; break-inside: avoid; }
+    .arch-row { display: flex; align-items: stretch; justify-content: center; gap: 5px; }
+    .arch-box { display: flex; min-height: 45px; flex: 1; align-items: center; justify-content: center; padding: 7px; border: 1px solid #bcd8dd; border-radius: 8px; color: #264f59; background: #fff; text-align: center; font-size: 8pt; font-weight: 700; }
+    .arch-box--main { color: #fff; border-color: var(--teal); background: linear-gradient(145deg, var(--teal), var(--teal-dark)); }
+    .arch-arrow { display: grid; place-items: center; color: var(--teal); font-weight: 900; }
+    .arch-down { margin: 4px 0; color: var(--teal); text-align: center; font-weight: 900; }
+    .arch-caption { margin: 9px 0 0; color: #6e8992; font-size: 7.5pt; text-align: center; }
+
+    .flow { counter-reset: flow; margin: 10px 0 15px; padding: 0; list-style: none; }
+    .flow li { position: relative; margin: 0 0 7px 18px; padding: 9px 11px 9px 34px; border: 1px solid var(--line); border-radius: 9px; background: #fbfefe; break-inside: avoid; }
+    .flow li::before { counter-increment: flow; content: counter(flow); position: absolute; top: 8px; left: -17px; display: grid; width: 28px; height: 28px; place-items: center; border-radius: 50%; color: #fff; background: var(--teal); font-size: 8pt; font-weight: 800; }
+
+    .code-block { margin: 9px 0 14px; padding: 11px 13px; overflow-wrap: anywhere; border-radius: 9px; color: #dcecef; background: #18353d; font-family: Consolas, "Courier New", monospace; font-size: 8pt; line-height: 1.55; white-space: pre-wrap; }
+    .tree { color: #315862; background: #f0f7f8; }
+    .two-col { columns: 2; column-gap: 28px; }
+    .two-col > * { break-inside: avoid; }
+    .footer-note { margin-top: 20px; padding-top: 9px; border-top: 1px solid var(--line); color: #779198; font-size: 7.8pt; }
+  </style>
+</head>
+<body>
+  <section class="cover">
+    <div class="cover__top">
+      <div class="brand">
+        <div class="brand__mark">+</div>
+        <div>
+          <div class="brand__name">Yên<em> · sức khỏe</em></div>
+          <div class="brand__sub">AI y tế cá nhân</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cover__main">
+      <div class="cover__eyebrow">Báo cáo kỹ thuật hệ thống</div>
+      <h1>YÊN<span>Trợ lý AI y tế cá nhân</span></h1>
+      <p class="cover__lead">
+        Báo cáo tổng hợp giải pháp, kiến trúc, chức năng, dữ liệu, API, luồng nghiệp vụ,
+        kiểm thử và định hướng phát triển của ứng dụng Yên trong repo VHO.
+      </p>
+      <div class="cover__meta">
+        <div><small>Phiên bản</small><strong>Prototype 1.0</strong></div>
+        <div><small>Ngày báo cáo</small><strong>19/07/2026</strong></div>
+        <div><small>Phạm vi</small><strong>Thư mục Yen/</strong></div>
+        <div><small>Nền tảng</small><strong>React · FastAPI · AI</strong></div>
+      </div>
+    </div>
+
+    <div class="cover__bottom">
+      VHO · Vietnam Health Organization · Tài liệu nội bộ phục vụ trình bày và đánh giá dự án
+    </div>
+  </section>
+
+  <section>
+    <div class="section-kicker">Tóm tắt điều hành</div>
+    <h2>1. Tổng quan dự án</h2>
+    <p class="lead">
+      <strong>Yên</strong> là ứng dụng web hỗ trợ người dùng quản lý sức khỏe cá nhân, trao đổi với
+      trợ lý AI hỗ trợ sức khỏe, tra cứu thông tin y tế và chủ động đặt lịch khám.
+      Hệ thống kết hợp hội thoại AI, hồ sơ sức khỏe, giọng nói, lịch nhắc, theo dõi chu kỳ
+      kinh nguyệt và luồng đặt lịch bác sĩ trong một trải nghiệm thống nhất.
+    </p>
+
+    <div class="stats">
+      <div class="stat"><strong>18</strong><span>HTTP API endpoints</span></div>
+      <div class="stat"><strong>100</strong><span>bác sĩ mô phỏng</span></div>
+      <div class="stat"><strong>8.784</strong><span>khung giờ khả dụng</span></div>
+      <div class="stat"><strong>1.348</strong><span>knowledge chunks</span></div>
+      <div class="stat"><strong>4</strong><span>AI tools chính</span></div>
+    </div>
+
+    <div class="note">
+      <strong>Phạm vi báo cáo:</strong> mô tả những gì đang tồn tại trong code của thư mục
+      <code>Yen/</code>. Các ý tưởng wearable, giám sát dịch bệnh và cứu hộ tự động trong README
+      cấp repo được xem là định hướng dài hạn, chưa phải chức năng hoàn thiện của prototype hiện tại.
+    </div>
+
+    <h3>1.1. Bài toán và giá trị mang lại</h3>
+    <div class="cards">
+      <article class="card">
+        <h4><span class="card__num">1</span>Tiếp cận thông tin sức khỏe</h4>
+        <p>Người dùng mô tả triệu chứng tự nhiên, AI hỏi làm rõ, tra cứu dữ liệu và đưa ra hướng xử trí phù hợp kèm cảnh báo an toàn.</p>
+      </article>
+      <article class="card">
+        <h4><span class="card__num">2</span>Quản lý sức khỏe liên tục</h4>
+        <p>Hồ sơ, thuốc, dị ứng, lịch khám, nhắc uống thuốc và chu kỳ kinh nguyệt được lưu theo tài khoản.</p>
+      </article>
+      <article class="card">
+        <h4><span class="card__num">3</span>Kết nối dịch vụ khám</h4>
+        <p>Tìm bác sĩ theo chuyên khoa, cơ sở và khung giờ; chống trùng lịch; xác nhận qua email sau khi đặt.</p>
+      </article>
+      <article class="card">
+        <h4><span class="card__num">4</span>Tăng khả năng tiếp cận</h4>
+        <p>Voice dictation hiển thị chữ khi nói, backend STT hoàn thiện transcript và TTS hỗ trợ phát phản hồi.</p>
+      </article>
+    </div>
+
+    <h3>1.2. Đối tượng sử dụng</h3>
+    <ul>
+      <li>Người dùng cần hỏi nhanh về triệu chứng hoặc quy trình khám.</li>
+      <li>Bệnh nhân cần quản lý hồ sơ, thuốc, lịch hẹn và nhắc nhở sức khỏe.</li>
+      <li>Người dùng nữ cần theo dõi kỳ kinh và các mốc chu kỳ ước tính.</li>
+      <li>Người dùng cần tra giá, tìm bác sĩ và đặt lịch trực tuyến.</li>
+    </ul>
+  </section>
+
+  <section class="page-break">
+    <div class="section-kicker">Phạm vi sản phẩm</div>
+    <h2>2. Các phân hệ chức năng</h2>
+    <table>
+      <thead><tr><th>Phân hệ</th><th>Chức năng chính</th><th>Trạng thái</th></tr></thead>
+      <tbody>
+        <tr><td>Tài khoản & hồ sơ</td><td>Đăng ký, đăng nhập, hồ sơ cá nhân, bệnh nền, dị ứng, thuốc, liên hệ khẩn cấp.</td><td><span class="status status--done">Đã có</span></td></tr>
+        <tr><td>AI Chat</td><td>Hội thoại nhiều vòng, red-flag, tool calling, triage, giải thích và disclaimer.</td><td><span class="status status--done">Đã có</span></td></tr>
+        <tr><td>STT & TTS</td><td>Thu âm WAV, transcript trực tiếp trên trình duyệt, nhận dạng tiếng Việt và phát giọng nói.</td><td><span class="status status--done">Đã có</span></td></tr>
+        <tr><td>Lịch sức khỏe</td><td>Lịch tháng/tuần/danh sách; lịch khám, xét nghiệm, tiêm chủng, nhắc thuốc.</td><td><span class="status status--done">Đã có</span></td></tr>
+        <tr><td>Chu kỳ kinh nguyệt</td><td>Ghi nhận kỳ kinh, dự đoán kỳ tới, ngày dễ mang thai, rụng trứng và ngày an toàn ước lượng.</td><td><span class="status status--done">Đã có</span></td></tr>
+        <tr><td>Đặt lịch khám</td><td>Lọc bác sĩ theo tên, chuyên khoa, cơ sở, giờ; chọn slot và chống double-booking.</td><td><span class="status status--done">Đã có</span></td></tr>
+        <tr><td>Email xác nhận</td><td>SMTP gửi thông tin lịch hẹn; báo sent/failed/disabled nhưng không làm mất lịch đã lưu.</td><td><span class="status status--done">Đã có</span></td></tr>
+        <tr><td>RAG & dữ liệu viện</td><td>Tra giá, quy trình, chính sách, pháp luật và lịch bác sĩ từ dữ liệu đã chuẩn hóa.</td><td><span class="status status--done">Đã có</span></td></tr>
+        <tr><td>Bộ nhớ hội thoại</td><td>Lưu phiên, embedding bge-m3 và truy hồi FAISS để giữ ngữ cảnh.</td><td><span class="status status--partial">Prototype</span></td></tr>
+        <tr><td>Wearable & dịch bệnh</td><td>Sinh hiệu thời gian thực, bản đồ dịch và cảnh báo cứu hộ.</td><td><span class="status status--roadmap">Roadmap</span></td></tr>
+      </tbody>
+    </table>
+
+    <h3>2.1. Trợ lý AI y tế</h3>
+    <ul>
+      <li>Sử dụng provider có thể cấu hình; cấu hình mẫu hiện ưu tiên <strong>Groq + Qwen3-32B</strong>, đồng thời hỗ trợ Gemini, OpenRouter, OpenAI và Anthropic.</li>
+      <li>Red-flag được ưu tiên để các tình huống như đau ngực, khó thở có thể chuyển nhanh sang cảnh báo cấp cứu.</li>
+      <li>AI không chỉ trả lời tự do mà có thể gọi công cụ tra giá, tra cứu quy trình/pháp luật, hỏi làm rõ và xem lịch khám.</li>
+      <li>Hồ sơ sức khỏe và dữ liệu chu kỳ liên quan được nạp vào ngữ cảnh nhằm giảm hỏi lại.</li>
+    </ul>
+
+    <h3>2.2. Lịch, hồ sơ và chu kỳ</h3>
+    <ul>
+      <li>Lịch hỗ trợ nhiều loại sự kiện, thời gian bắt đầu/kết thúc, bác sĩ, địa điểm và nhắc thuốc nhiều lần trong ngày.</li>
+      <li>Thuốc trong tab Lịch được đồng bộ để hiển thị trong Hồ sơ.</li>
+      <li>Chu kỳ kinh nguyệt chỉ xuất hiện với tài khoản nữ; từng ngày có thể chọn để xem trạng thái và giải thích.</li>
+      <li>Các mốc rụng trứng, ngày dễ mang thai và ngày an toàn đều là ước lượng, không được dùng như biện pháp tránh thai.</li>
+    </ul>
+  </section>
+
+  <section class="page-break">
+    <div class="section-kicker">Thiết kế kỹ thuật</div>
+    <h2>3. Kiến trúc tổng thể</h2>
+
+    <div class="architecture">
+      <div class="arch-row">
+        <div class="arch-box">Người dùng<br/>Chrome / Edge</div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-box arch-box--main">React 18 + Vite<br/>Frontend SPA</div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-box arch-box--main">FastAPI<br/>REST Backend</div>
+      </div>
+      <div class="arch-down">↓</div>
+      <div class="arch-row">
+        <div class="arch-box">SQLite<br/>User · Profile · Calendar</div>
+        <div class="arch-box">AI Providers<br/>Groq · Gemini · OpenRouter</div>
+        <div class="arch-box">Tools & RAG<br/>Giá · Quy trình · Lịch</div>
+        <div class="arch-box">Speech<br/>STT · TTS</div>
+        <div class="arch-box">SMTP<br/>Email xác nhận</div>
+      </div>
+      <p class="arch-caption">Mô hình client–server modular; dữ liệu nhạy cảm và khóa dịch vụ được giữ ở backend.</p>
+    </div>
+
+    <h3>3.1. Frontend</h3>
+    <div class="cards">
+      <div class="card">
+        <h4>Công nghệ</h4>
+        <ul>
+          <li>React 18, React Router 7</li>
+          <li>Vite 5, Framer Motion</li>
+          <li>CSS design system “Clarity Teal”</li>
+          <li>Responsive desktop/mobile</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>Các trang chính</h4>
+        <ul>
+          <li>Landing, đăng ký, đăng nhập</li>
+          <li>Trò chuyện AI</li>
+          <li>Lịch sức khỏe & chu kỳ</li>
+          <li>Đặt lịch bác sĩ</li>
+          <li>Hồ sơ sức khỏe</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>3.2. Backend</h3>
+    <div class="cards">
+      <div class="card">
+        <h4>Dịch vụ lõi</h4>
+        <ul>
+          <li>FastAPI + Uvicorn</li>
+          <li>JWT, PBKDF2-SHA256</li>
+          <li>SQLite không ORM</li>
+          <li>Provider abstraction cho LLM</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>Dịch vụ bổ trợ</h4>
+        <ul>
+          <li>SpeechRecognition và gTTS</li>
+          <li>SMTP email service</li>
+          <li>FAISS + sentence-transformers</li>
+          <li>Tool registry và transcript log</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>3.3. Nguyên tắc thiết kế</h3>
+    <ul>
+      <li><strong>Fail-safe:</strong> AI lỗi có fallback; SMTP lỗi không hủy lịch khám đã tạo.</li>
+      <li><strong>Separation of concerns:</strong> giao diện, API, lưu trữ, provider, tools và email được tách module.</li>
+      <li><strong>Medical safety:</strong> cảnh báo khẩn cấp, độ chắc chắn và disclaimer được đặt trong luồng.</li>
+      <li><strong>Config-driven:</strong> model, provider, JWT, SMTP, giới hạn audio và cổng server được cấu hình qua biến môi trường.</li>
+    </ul>
+  </section>
+
+  <section class="page-break">
+    <div class="section-kicker">Luồng nghiệp vụ</div>
+    <h2>4. Các luồng hoạt động chính</h2>
+
+    <h3>4.1. Hội thoại AI và phân luồng triệu chứng</h3>
+    <ol class="flow">
+      <li>Người dùng nhập văn bản hoặc nói bằng micro; transcript được hiển thị để kiểm tra.</li>
+      <li>Frontend sàng lọc dấu hiệu đỏ và gửi lịch sử hội thoại cùng token tới backend.</li>
+      <li>Backend nạp hồ sơ sức khỏe, thuốc, dị ứng và ngữ cảnh liên quan.</li>
+      <li>LLM hỏi làm rõ hoặc gọi công cụ tra giá, tra cứu, xem lịch bác sĩ.</li>
+      <li>Hệ thống trả mức khẩn cấp, lý do, bước tiếp theo, độ chắc chắn và disclaimer.</li>
+      <li>Phiên được ghi transcript; bộ nhớ có thể embedding và truy hồi cho lượt sau.</li>
+    </ol>
+
+    <h3>4.2. Voice dictation</h3>
+    <ol class="flow">
+      <li>Trình duyệt xin quyền micro và ghi PCM WAV; Chrome/Edge có thể hiển thị transcript tạm thời khi đang nói.</li>
+      <li>Khi dừng, file WAV được gửi tới <code>POST /stt/transcribe</code>.</li>
+      <li>Backend nhận dạng tiếng Việt, trả transcript cuối và cho phép người dùng sửa trước khi gửi.</li>
+      <li>Phản hồi có thể được chuyển thành MP3 qua <code>POST /tts</code>.</li>
+    </ol>
+
+    <h3>4.3. Đặt lịch bác sĩ và gửi email</h3>
+    <ol class="flow">
+      <li>Lọc danh sách theo tên, 4 chuyên khoa, 2 cơ sở và 9 khung giờ thực có trong dữ liệu.</li>
+      <li>Backend chỉ trả bác sĩ còn slot phù hợp và loại các slot đã có người đặt.</li>
+      <li>Người dùng chọn bác sĩ, ngày, giờ và kiểm tra thông tin trong popup xác nhận.</li>
+      <li>Backend kiểm tra slot tồn tại, chống đặt trùng và ghi một sự kiện khám bệnh vào lịch.</li>
+      <li>SMTP gửi email gồm bác sĩ, thời gian, địa điểm và mã lịch hẹn tới email tài khoản.</li>
+      <li>API trả <code>sent</code>, <code>failed</code> hoặc <code>disabled</code>; giao diện báo rõ nếu email chưa gửi được.</li>
+    </ol>
+
+    <div class="success"><strong>Tính nhất quán:</strong> lịch đã đặt sẽ tự xuất hiện trong tab Lịch. Sự cố email chỉ ảnh hưởng thông báo, không làm người dùng mất slot hoặc phải đặt lại.</div>
+
+    <h3>4.4. Theo dõi chu kỳ kinh nguyệt</h3>
+    <ol class="flow">
+      <li>Người dùng ghi ngày bắt đầu kỳ kinh và ghi chú tùy chọn.</li>
+      <li>Backend tính chu kỳ trung bình từ lịch sử hợp lệ, mặc định 28 ngày nếu chưa đủ dữ liệu.</li>
+      <li>Kỳ tiếp theo, rụng trứng và cửa sổ dễ mang thai được ước tính từ chu kỳ.</li>
+      <li>Lịch tô màu từng ngày; người dùng nhấn từng ô để xem pha, ngày chu kỳ và ghi chú.</li>
+    </ol>
+  </section>
+
+  <section class="page-break">
+    <div class="section-kicker">Trí tuệ nhân tạo & dữ liệu</div>
+    <h2>5. AI, tools và pipeline RAG</h2>
+
+    <h3>5.1. Vòng lặp AI tool-calling</h3>
+    <div class="architecture">
+      <div class="arch-row">
+        <div class="arch-box">Câu hỏi + hồ sơ</div><div class="arch-arrow">→</div>
+        <div class="arch-box arch-box--main">LLM Provider</div><div class="arch-arrow">→</div>
+        <div class="arch-box">Chọn tool</div><div class="arch-arrow">→</div>
+        <div class="arch-box">Kết quả có nguồn</div><div class="arch-arrow">→</div>
+        <div class="arch-box arch-box--main">Phản hồi an toàn</div>
+      </div>
+    </div>
+
+    <table>
+      <thead><tr><th>Tool</th><th>Nhiệm vụ</th><th>Dữ liệu/đầu ra</th></tr></thead>
+      <tbody>
+        <tr><td><code>clarify</code></td><td>Hỏi thêm hoặc xác nhận thông tin.</td><td>Text, yes/no, choice.</td></tr>
+        <tr><td><code>tra_gia</code></td><td>Tra chi phí khám, xét nghiệm và dịch vụ kỹ thuật.</td><td>Bảng giá BHYT, DVKT thường/yêu cầu.</td></tr>
+        <tr><td><code>tra_cuu</code></td><td>Tra quy trình hành chính, chính sách và pháp luật.</td><td>Knowledge chunks có metadata nguồn.</td></tr>
+        <tr><td><code>xem_lich_kham</code></td><td>Tìm bác sĩ và lịch trống theo chuyên khoa.</td><td>Bác sĩ, ngày, giờ, cơ sở, phòng.</td></tr>
+      </tbody>
+    </table>
+
+    <h3>5.2. Kho dữ liệu</h3>
+    <div class="stats">
+      <div class="stat"><strong>12</strong><span>tài liệu nguồn</span></div>
+      <div class="stat"><strong>1.348</strong><span>markdown chunks</span></div>
+      <div class="stat"><strong>701</strong><span>dòng giá BHYT</span></div>
+      <div class="stat"><strong>2.946</strong><span>dòng DVKT 2025</span></div>
+      <div class="stat"><strong>1.027</strong><span>dòng giá khác</span></div>
+    </div>
+
+    <p>Dữ liệu gồm Luật Khám bệnh, chữa bệnh 15/2023/QH15; quy trình bệnh viện; hướng dẫn khám; thông tin khoa/phòng; lịch sử bệnh viện; và bốn nhóm bảng giá. Mỗi chunk có các trường chuẩn:</p>
+    <div class="code-block">doc_id · chunk_id · parent_id · source_doc · section · category · effective_date · approved_by</div>
+
+    <h3>5.3. Kiểm soát chất lượng dữ liệu</h3>
+    <ul>
+      <li>Tài liệu pháp lý được tách theo Điều → Khoản → Điểm, giữ quan hệ cha/con.</li>
+      <li>Bảng giá được giữ nguyên dòng và metadata cơ sở pháp lý để tra số chính xác.</li>
+      <li>Nguồn bên thứ ba như YouMed/BookingCare chỉ dùng cho thông tin tổng quan, không ưu tiên khi hỏi giá.</li>
+      <li>Thông tin thanh toán hoặc pháp lý cần đối chiếu lại file gốc trước khi dùng trong nghiệp vụ chính thức.</li>
+    </ul>
+  </section>
+
+  <section class="page-break">
+    <div class="section-kicker">Giao tiếp hệ thống</div>
+    <h2>6. Danh mục API chính</h2>
+    <table>
+      <thead><tr><th>Method</th><th>Route</th><th>Mục đích</th><th>Auth</th></tr></thead>
+      <tbody>
+        <tr><td>GET</td><td><code>/health</code></td><td>Kiểm tra server/provider/model.</td><td>Không</td></tr>
+        <tr><td>POST</td><td><code>/auth/register</code></td><td>Tạo tài khoản và hồ sơ ban đầu.</td><td>Không</td></tr>
+        <tr><td>POST</td><td><code>/auth/login</code></td><td>Đăng nhập và nhận JWT.</td><td>Không</td></tr>
+        <tr><td>GET/PUT</td><td><code>/profile</code></td><td>Đọc/cập nhật hồ sơ sức khỏe.</td><td>Có</td></tr>
+        <tr><td>POST</td><td><code>/triage</code></td><td>Hội thoại AI và tool calling.</td><td>Tùy chọn</td></tr>
+        <tr><td>POST</td><td><code>/triage/end</code></td><td>Kết thúc và lưu phiên hội thoại.</td><td>Tùy chọn</td></tr>
+        <tr><td>POST</td><td><code>/stt/transcribe</code></td><td>WAV → văn bản tiếng Việt.</td><td>Có</td></tr>
+        <tr><td>POST</td><td><code>/tts</code></td><td>Văn bản → MP3.</td><td>Có</td></tr>
+        <tr><td>GET/POST</td><td><code>/calendar</code></td><td>Đọc/tạo mục lịch sức khỏe.</td><td>Có</td></tr>
+        <tr><td>DELETE</td><td><code>/calendar/{id}</code></td><td>Xóa mục lịch thuộc tài khoản.</td><td>Có</td></tr>
+        <tr><td>GET</td><td><code>/doctors</code></td><td>Lọc bác sĩ theo query, cơ sở, khoa, giờ.</td><td>Có</td></tr>
+        <tr><td>GET</td><td><code>/doctors/{id}/schedule</code></td><td>Lấy lịch trống của bác sĩ.</td><td>Có</td></tr>
+        <tr><td>POST</td><td><code>/doctors/{id}/book</code></td><td>Đặt lịch, lưu calendar và gửi email.</td><td>Có</td></tr>
+        <tr><td>GET/POST</td><td><code>/cycle</code></td><td>Đọc/ghi chu kỳ và dự đoán.</td><td>Có</td></tr>
+        <tr><td>DELETE</td><td><code>/cycle/{id}</code></td><td>Xóa lần ghi nhận chu kỳ.</td><td>Có</td></tr>
+      </tbody>
+    </table>
+
+    <div class="note"><strong>Quy ước:</strong> request có xác thực sử dụng header <code>Authorization: Bearer &lt;JWT&gt;</code>. Frontend tập trung các lệnh gọi API trong <code>src/lib/api.js</code>.</div>
+
+    <h3>6.1. Mô hình dữ liệu SQLite</h3>
+    <table>
+      <thead><tr><th>Bảng</th><th>Dữ liệu chính</th><th>Quan hệ</th></tr></thead>
+      <tbody>
+        <tr><td><code>users</code></td><td>Email, password hash/salt, thời điểm tạo.</td><td>Khóa gốc theo user.</td></tr>
+        <tr><td><code>health_profiles</code></td><td>Nhân khẩu học, bệnh nền, dị ứng, thuốc, bảo hiểm, liên hệ khẩn cấp.</td><td>1–1 với user.</td></tr>
+        <tr><td><code>calendar_entries</code></td><td>Ngày, loại sự kiện, giờ, bác sĩ, địa điểm, slot.</td><td>N–1 với user.</td></tr>
+        <tr><td><code>cycle_entries</code></td><td>Ngày bắt đầu kỳ kinh, ghi chú.</td><td>N–1 với user.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="page-break">
+    <div class="section-kicker">An toàn & vận hành</div>
+    <h2>7. Bảo mật, quyền riêng tư và an toàn y tế</h2>
+
+    <h3>7.1. Kiểm soát đã triển khai</h3>
+    <ul>
+      <li>Mật khẩu được băm bằng <strong>PBKDF2-SHA256</strong> với salt; không lưu plaintext.</li>
+      <li>JWT có thời hạn và được kiểm tra trên các API dữ liệu cá nhân.</li>
+      <li>Truy vấn/xóa calendar và cycle luôn gắn với <code>user_id</code>.</li>
+      <li>Khóa Groq/Gemini/SMTP/JWT nằm trong <code>.env</code>, không đưa vào frontend hoặc commit.</li>
+      <li>Email HTML escape dữ liệu và làm sạch header để hạn chế injection.</li>
+      <li>Giới hạn kích thước audio, kiểm tra MIME và xử lý lỗi STT.</li>
+      <li>Cảnh báo y tế nhấn mạnh đây không phải chẩn đoán và ưu tiên gọi 115 với red-flag.</li>
+    </ul>
+
+    <h3>7.2. Điểm cần gia cố trước production</h3>
+    <table>
+      <thead><tr><th>Rủi ro hiện tại</th><th>Khuyến nghị</th><th>Ưu tiên</th></tr></thead>
+      <tbody>
+        <tr><td>CORS đang cho phép mọi origin.</td><td>Chỉ cho phép domain frontend production.</td><td><span class="status status--partial">Cao</span></td></tr>
+        <tr><td>SQLite trên Render free là ephemeral.</td><td>Dùng PostgreSQL/persistent disk và backup.</td><td><span class="status status--partial">Cao</span></td></tr>
+        <tr><td>JWT mặc định dev có thể yếu.</td><td>Bắt buộc secret mạnh qua secret manager.</td><td><span class="status status--partial">Cao</span></td></tr>
+        <tr><td>SMTP gửi đồng bộ trong request.</td><td>Dùng queue, retry và delivery log.</td><td>Trung bình</td></tr>
+        <tr><td>Chưa có rate limit/MFA.</td><td>Thêm rate limit, lockout và MFA cho dữ liệu nhạy cảm.</td><td>Trung bình</td></tr>
+        <tr><td>Dữ liệu y tế chưa mã hóa riêng ở DB.</td><td>Encryption at rest, key management, audit log.</td><td>Trung bình</td></tr>
+      </tbody>
+    </table>
+
+    <div class="warning">
+      <strong>Lưu ý y tế:</strong> hệ thống là công cụ hỗ trợ thông tin và điều hướng dịch vụ,
+      không thay thế bác sĩ, chẩn đoán hoặc điều trị. Các mốc chu kỳ và gợi ý AI đều cần được
+      diễn giải trong giới hạn dữ liệu đầu vào.
+    </div>
+  </section>
+
+  <section class="page-break">
+    <div class="section-kicker">Chất lượng phần mềm</div>
+    <h2>8. Kiểm thử và khả năng quan sát</h2>
+
+    <h3>8.1. Cơ chế kiểm thử có trong repo</h3>
+    <ul>
+      <li><code>backend/run_eval.py</code> và dữ liệu runs để đánh giá hành vi model/tool.</li>
+      <li><code>backend/scripts/smoke_test.py</code> kiểm tra nhanh các luồng backend.</li>
+      <li>Các test STT cho recognizer, module và speaker.</li>
+      <li><code>test_email_service.py</code> kiểm tra nội dung email và chuỗi SMTP STARTTLS/login/send.</li>
+      <li>Vite production build dùng kiểm tra tích hợp frontend.</li>
+    </ul>
+
+    <h3>8.2. Kết quả xác minh gần nhất</h3>
+    <table>
+      <thead><tr><th>Hạng mục</th><th>Kết quả</th><th>Ghi chú</th></tr></thead>
+      <tbody>
+        <tr><td>Frontend production build</td><td><span class="status status--done">Đạt</span></td><td>2.197 modules transformed.</td></tr>
+        <tr><td>Backend syntax compile</td><td><span class="status status--done">Đạt</span></td><td><code>server.py</code>, email service.</td></tr>
+        <tr><td>SMTP unit tests</td><td><span class="status status--done">2/2 đạt</span></td><td>Không kết nối mail thật.</td></tr>
+        <tr><td>Whitespace/diff check</td><td><span class="status status--done">Đạt</span></td><td>Không có lỗi patch.</td></tr>
+      </tbody>
+    </table>
+
+    <h3>8.3. Logging và truy vết</h3>
+    <ul>
+      <li>Transcript AI được lưu theo provider/thời gian để phân tích hành vi.</li>
+      <li>Version artifact và model được trả trong health check.</li>
+      <li>Lỗi SMTP được log kèm booking ID nhưng không làm lộ mật khẩu SMTP.</li>
+      <li>Session memory có TTL và có thể lưu vector để truy hồi.</li>
+    </ul>
+  </section>
+
+  <section class="page-break">
+    <div class="section-kicker">Triển khai</div>
+    <h2>9. Cài đặt và vận hành</h2>
+
+    <h3>9.1. Chạy local</h3>
+    <div class="code-block">cd Yen/backend
+pip install -r requirements.txt
+copy .env.example .env
+
+cd ../frontend
+npm install
+npm run dev:all</div>
+    <p>Frontend mặc định chạy tại <code>http://localhost:5173</code>; backend tại <code>http://localhost:8787</code>.</p>
+
+    <h3>9.2. Biến môi trường quan trọng</h3>
+    <table>
+      <thead><tr><th>Nhóm</th><th>Biến</th><th>Mục đích</th></tr></thead>
+      <tbody>
+        <tr><td>AI</td><td><code>TRIAGE_PROVIDER</code>, <code>TRIAGE_MODEL</code></td><td>Chọn provider và model.</td></tr>
+        <tr><td>Provider</td><td><code>GROQ_API_KEY</code>, <code>GEMINI_API_KEY</code></td><td>Khóa truy cập LLM.</td></tr>
+        <tr><td>Auth</td><td><code>JWT_SECRET</code></td><td>Ký token phiên.</td></tr>
+        <tr><td>SMTP</td><td><code>SMTP_HOST</code>, <code>SMTP_USERNAME</code>, <code>SMTP_PASSWORD</code></td><td>Gửi email xác nhận.</td></tr>
+        <tr><td>Server</td><td><code>PORT</code>, <code>STT_MAX_AUDIO_BYTES</code></td><td>Cổng và giới hạn audio.</td></tr>
+        <tr><td>Frontend</td><td><code>VITE_API_BASE_URL</code></td><td>URL backend tại build time.</td></tr>
+      </tbody>
+    </table>
+
+    <h3>9.3. Deploy Render</h3>
+    <ul>
+      <li><code>render.yaml</code> định nghĩa backend Python web service và frontend static site.</li>
+      <li>Secret được đặt qua Render Dashboard, không đưa vào repo.</li>
+      <li>Sau khi đổi <code>VITE_API_BASE_URL</code>, phải build/redeploy frontend.</li>
+      <li>Free plan có cold start và SQLite không bền vững qua redeploy.</li>
+    </ul>
+  </section>
+
+  <section class="page-break">
+    <div class="section-kicker">Kế hoạch phát triển</div>
+    <h2>10. Hạn chế và roadmap đề xuất</h2>
+
+    <h3>10.1. Hạn chế của prototype</h3>
+    <ul>
+      <li>Dữ liệu bác sĩ và lịch khám là dữ liệu mô phỏng, chưa đồng bộ HIS thực tế.</li>
+      <li>Email chưa có queue/retry/delivery tracking; Gmail cần App Password.</li>
+      <li>SQLite phù hợp demo một instance, chưa phù hợp tải lớn hoặc nhiều replica.</li>
+      <li>LLM và RAG cần đánh giá lâm sàng, kiểm thử nguồn và giám sát hallucination sâu hơn.</li>
+      <li>Chưa có dashboard quản trị lịch, người dùng và lịch sử gửi thông báo.</li>
+      <li>Chưa có tích hợp wearable, dữ liệu sinh hiệu thật hoặc bản đồ dịch bệnh.</li>
+    </ul>
+
+    <h3>10.2. Roadmap theo giai đoạn</h3>
+    <table>
+      <thead><tr><th>Giai đoạn</th><th>Mục tiêu</th><th>Hạng mục chính</th></tr></thead>
+      <tbody>
+        <tr><td>Giai đoạn 1</td><td>Ổn định MVP</td><td>PostgreSQL, CORS, rate limit, email queue, test API/UI, audit cơ bản.</td></tr>
+        <tr><td>Giai đoạn 2</td><td>Tích hợp bệnh viện</td><td>HIS/EMR, lịch bác sĩ thật, quản trị slot, SMS/push, xác nhận hai chiều.</td></tr>
+        <tr><td>Giai đoạn 3</td><td>Nâng chất lượng AI</td><td>Hybrid retrieval, citation UI, evaluation set y khoa, human review, observability.</td></tr>
+        <tr><td>Giai đoạn 4</td><td>Mở rộng sức khỏe số</td><td>Wearable, sinh hiệu, cảnh báo bất thường, FHIR và dashboard bác sĩ.</td></tr>
+      </tbody>
+    </table>
+
+    <h3>10.3. Chỉ số nên theo dõi</h3>
+    <div class="cards">
+      <div class="card"><h4>Sản phẩm</h4><p>Tỷ lệ hoàn tất đặt lịch, thời gian tìm bác sĩ, tỷ lệ sử dụng voice, tỷ lệ quay lại.</p></div>
+      <div class="card"><h4>AI</h4><p>Tool routing accuracy, under-triage, unsafe reassurance, citation correctness, latency.</p></div>
+      <div class="card"><h4>Vận hành</h4><p>API error rate, email delivery rate, cold start, DB latency, slot conflict rate.</p></div>
+      <div class="card"><h4>An toàn</h4><p>Red-flag recall, sự cố dữ liệu, quyền truy cập sai, phản hồi người dùng/bác sĩ.</p></div>
+    </div>
+  </section>
+
+  <section class="page-break">
+    <div class="section-kicker">Phụ lục</div>
+    <h2>11. Cấu trúc repo tiêu biểu</h2>
+    <div class="code-block tree">Yen/
+├── frontend/
+│   ├── src/pages/             # Landing, Chat, Lịch, Đặt lịch, Hồ sơ
+│   ├── src/components/        # Calendar, CycleTracker, Composer, UI dùng chung
+│   ├── src/lib/               # API client, recorder, live STT, calendar helpers
+│   └── src/index.css          # Design system và responsive UI
+├── backend/
+│   ├── server.py              # FastAPI routes và orchestration
+│   ├── chat.py / agent.py     # Vòng lặp hội thoại AI
+│   ├── db.py / auth.py        # SQLite, hồ sơ, JWT, password hash
+│   ├── email_service.py       # Email xác nhận lịch hẹn qua SMTP
+│   ├── providers/             # Groq, Gemini, OpenRouter, OpenAI, Anthropic
+│   ├── tools/                 # clarify, tra_gia, tra_cuu, xem_lich_kham
+│   ├── stt/                   # Speech recognition tiếng Việt
+│   ├── memory/                # Session, embedding, FAISS
+│   ├── artifacts/             # System prompt và tool declarations
+│   └── data/                  # Bác sĩ, lịch, bảng giá, RAG chunks
+├── docs/                      # Báo cáo dự án
+├── README.md
+└── AI_LOG.md</div>
+
+    <h2>12. Kết luận</h2>
+    <p class="lead">
+      Yên đã vượt khỏi một chatbot đơn lẻ để trở thành một prototype quản lý sức khỏe cá nhân
+      có các luồng kết nối tương đối đầy đủ: hỏi đáp AI có công cụ, hồ sơ cá nhân, lịch và thuốc,
+      chu kỳ kinh nguyệt, tìm bác sĩ, đặt lịch và email xác nhận. Kiến trúc hiện tại phù hợp cho
+      demo, nghiên cứu và kiểm chứng trải nghiệm người dùng.
+    </p>
+    <p>
+      Để tiến tới môi trường thật, ưu tiên lớn nhất là thay dữ liệu mô phỏng bằng tích hợp bệnh viện,
+      chuyển sang cơ sở dữ liệu bền vững, tăng kiểm soát bảo mật và xây dựng bộ đánh giá an toàn AI
+      có sự tham gia của chuyên gia y tế.
+    </p>
+
+    <div class="success">
+      <strong>Đánh giá tổng quan:</strong> phạm vi MVP có tính trình diễn tốt, giao diện đồng nhất,
+      kiến trúc đủ modular để mở rộng, và đã hình thành chuỗi giá trị từ tư vấn → quản lý sức khỏe
+      → tìm bác sĩ → đặt lịch → xác nhận.
+    </div>
+
+    <p class="footer-note">
+      Báo cáo được sinh từ trạng thái repo ngày 19/07/2026. Không chứa khóa API, mật khẩu,
+      dữ liệu trong <code>.env</code> hoặc thông tin định danh bệnh nhân thật.
+    </p>
+  </section>
+</body>
+</html>

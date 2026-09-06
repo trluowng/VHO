@@ -36,7 +36,7 @@ FOLDER_DEFAULTS = {
     "dvkt_yeu_cau": {
         "source_doc": "Quyết định 2823/QĐ-BVT; Quyết định 3165/QĐ-BVT",
         "category": "gia_dich_vu",
-        "approved_by": "Bệnh viện Tim Hà Nội",
+        "approved_by": "bệnh viện",
     },
     "huong_dan": {
         "source_doc": None,  # derive from each file's own `nguon`
@@ -44,7 +44,7 @@ FOLDER_DEFAULTS = {
         "approved_by": "",
     },
     "khoa_phong": {
-        "source_doc": "benhvientimhanoi.vn",
+        "source_doc": "website chính thức của bệnh viện",
         "category": "to_chuc_khoa_phong",
         "approved_by": "",
     },
@@ -54,12 +54,12 @@ FOLDER_DEFAULTS = {
         "approved_by": "",
     },
     "quy_trinh": {
-        "source_doc": "Quy trình QT.25.01 - Bệnh viện Tim Hà Nội",
+        "source_doc": "Quy trình QT.25.01 - bệnh viện",
         "category": "quy_trinh_noi_bo",
         "approved_by": None,  # derive from nguoi_phe_duyet
     },
     "lich_su_phat_trien": {
-        "source_doc": "benhvientimhanoi.vn",
+        "source_doc": "website chính thức của bệnh viện",
         "category": "gioi_thieu_benh_vien",
         "approved_by": "",
     },
@@ -69,7 +69,7 @@ FOLDER_DEFAULTS = {
         "approved_by": "",
     },
     "dich_vu": {
-        "source_doc": "benhvientimhanoi.vn",
+        "source_doc": "website chính thức của bệnh viện",
         "category": "dich_vu_y_te",
         "approved_by": "",
     },

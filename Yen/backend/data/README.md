@@ -1,6 +1,6 @@
-# Dữ liệu Bệnh viện Tim Hà Nội — chuẩn bị cho RAG
+# Dữ liệu bệnh viện — chuẩn bị cho RAG
 
-Thư mục này chứa dữ liệu đã crawl/trích xuất từ website Bệnh viện Tim Hà Nội và
+Thư mục này chứa dữ liệu đã crawl/trích xuất từ website bệnh viện và
 thuvienphapluat.vn, được tổ chức để đưa vào pipeline RAG:
 
 ```
@@ -24,12 +24,12 @@ Tài liệu gốc (PDF) → OCR/extract text → Markdown chunk (giữ bảng ng
 |---|---|---|---|---|
 | `luat_kbcb_2023` | Luật Khám bệnh, chữa bệnh 15/2023/QH15 | Văn bản pháp lý | — | 121 điều → 1.013 chunk (cấu trúc khoản-cha/điểm-con) |
 | `huong_dan` | Hướng dẫn cho người bệnh (đặt lịch khám; chi phí khám mẫu; lưu ý trước khi khám; giờ/lưu ý thăm bệnh) | Hướng dẫn hành chính | — | 21 chunk (cấu trúc phân cấp ##/###/khoản/điểm) |
-| `youmed_gioi_thieu` | Hướng dẫn khám tại BV Tim Hà Nội (YouMed, bên thứ ba) | Bài viết giới thiệu | youmed.vn, đăng 17/04/2026 | 17 chunk (cấu trúc phân cấp ##/###/khoản/điểm) |
+| `youmed_gioi_thieu` | Hướng dẫn khám tại bệnh viện (YouMed, bên thứ ba) | Bài viết giới thiệu | youmed.vn, đăng 17/04/2026 | 17 chunk (cấu trúc phân cấp ##/###/khoản/điểm) |
 | `quy_trinh` | Quy trình đón tiếp bệnh nhân và KCB ngoại trú tại khu Tự nguyện 1 - CS1 | Quy trình SOP nội bộ | QT.25.01, ban hành 05/12/2024, lần 07 (Giám đốc BVT phê duyệt) | 22 chunk (cấu trúc phân cấp theo bước/trách nhiệm) |
-| `khoa_phong` | Giới thiệu khoa/phòng (Khoa Dược, Khoa KBTN) + sơ đồ tổ chức 3 khối | Giới thiệu khoa phòng | benhvientimhanoi.vn (URL chưa xác định) | 23 chunk (cấu trúc phân cấp ##/###/khoản/điểm) |
-| `lich_su_phat_trien` | Quá trình phát triển bệnh viện (2001–2013+) | Giới thiệu lịch sử | benhvientimhanoi.vn (URL chưa xác định) | 3 chunk |
+| `khoa_phong` | Giới thiệu khoa/phòng (Khoa Dược, Khoa KBTN) + sơ đồ tổ chức 3 khối | Giới thiệu khoa phòng | website chính thức của bệnh viện (URL chưa xác định) | 23 chunk (cấu trúc phân cấp ##/###/khoản/điểm) |
+| `lich_su_phat_trien` | Quá trình phát triển bệnh viện (2001–2013+) | Giới thiệu lịch sử | website chính thức của bệnh viện (URL chưa xác định) | 3 chunk |
 | `bookingcare_gioi_thieu` | Tổng quan 2 cơ sở + 5 mũi nhọn chuyên môn | Bài viết giới thiệu (bên thứ ba) | bookingcare.vn (URL chưa xác định) | 9 chunk (cấu trúc phân cấp ##/###/khoản/điểm) |
-| `dich_vu` | Khám sức khỏe cho cơ quan - doanh nghiệp | Giới thiệu dịch vụ | benhvientimhanoi.vn (URL chưa xác định) | 9 chunk (cấu trúc phân cấp ##/###/khoản/điểm) |
+| `dich_vu` | Khám sức khỏe cho cơ quan - doanh nghiệp | Giới thiệu dịch vụ | website chính thức của bệnh viện (URL chưa xác định) | 9 chunk (cấu trúc phân cấp ##/###/khoản/điểm) |
 | `bhyt_2023` | Bảng giá Bảo hiểm y tế | Bảng giá dịch vụ | Thông tư 22/2023/TT-BYT | 701 dòng |
 | `dvkt_2025` | Giá dịch vụ kỹ thuật 2025 | Bảng giá dịch vụ | Nghị quyết 45/2024/NQ-HĐND | 2.946 dòng |
 | `dvkt_thuong` | Bảng giá Dịch vụ kỹ thuật | Bảng giá dịch vụ | Thông tư 14/2019/TT-BYT | 925 dòng |

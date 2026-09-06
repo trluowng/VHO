@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Link, useParams, useSearchParams } from 'react-router-dom'
-import { useAuth } from '../context/AuthContext.jsx'
+import { useSession } from '../context/SessionContext.jsx'
 import { doctorsApi } from '../lib/api.js'
 import {
   ArrowRight,
@@ -52,7 +52,7 @@ export default function DoctorDetailPage() {
   const { doctorId } = useParams()
   const [searchParams] = useSearchParams()
   const preferredTimeSlot = searchParams.get('time_slot') || ''
-  const { token, user, profile } = useAuth()
+  const { clientId, profile } = useSession()
   const [doctor, setDoctor] = useState(null)
   const [slots, setSlots] = useState([])
   const [loading, setLoading] = useState(true)
@@ -68,7 +68,7 @@ export default function DoctorDetailPage() {
     setLoading(true)
     setError(null)
     try {
-      const data = await doctorsApi.schedule(token, doctorId)
+      const data = await doctorsApi.schedule(clientId, doctorId)
       setDoctor(data.doctor)
       setSlots(data.slots || [])
     } catch (err) {
@@ -81,7 +81,7 @@ export default function DoctorDetailPage() {
   useEffect(() => {
     load()
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [token, doctorId])
+  }, [clientId, doctorId])
 
   const groups = useMemo(() => {
     const map = new Map()
@@ -134,7 +134,7 @@ export default function DoctorDetailPage() {
     setBooking(true)
     setBookError(null)
     try {
-      const result = await doctorsApi.book(token, doctorId, {
+      const result = await doctorsApi.book(clientId, doctorId, {
         visit_date: selected.visit_date,
         time_slot: selected.time_slot,
       })
@@ -194,7 +194,7 @@ export default function DoctorDetailPage() {
                   <strong>Đặt lịch khám thành công</strong>
                   <p>{formatGroupDate(booked.visit_date)} · {booked.time_slot} với {doctor.full_name}</p>
                   {booked.emailNotification === 'sent' && (
-                    <small className="doctor-booking-success__email">Email xác nhận đã được gửi tới {user?.email}.</small>
+                    <small className="doctor-booking-success__email">Email xác nhận đã được gửi tới {profile?.email}.</small>
                   )}
                   {(booked.emailNotification === 'failed' || booked.emailNotification === 'disabled') && (
                     <small className="doctor-booking-success__email is-error" role="alert">
@@ -238,7 +238,7 @@ export default function DoctorDetailPage() {
                     <span className="doctor-schedule-card__live"><i /> Lịch trực tuyến</span>
                   </div>
 
-                  {bookError && !confirmOpen && <p className="auth-error doctor-schedule-card__error">{bookError}</p>}
+                  {bookError && !confirmOpen && <p className="form-error doctor-schedule-card__error">{bookError}</p>}
 
                   {groups.length === 0 && !loading ? (
                     <div className="booking-state">
@@ -317,7 +317,7 @@ export default function DoctorDetailPage() {
             )}
 
             <p className="cal-disclaimer">
-              Yên là trợ lý hỗ trợ khách hàng của Bệnh viện Tim Hà Nội. Vui lòng đến sớm 15 phút và mang theo giấy tờ tùy thân, thẻ BHYT nếu có.
+              Yên là trợ lý hỗ trợ sức khỏe. Vui lòng đến sớm 15 phút và mang theo giấy tờ tùy thân, thẻ BHYT nếu có.
             </p>
           </div>
         </div>
@@ -351,7 +351,7 @@ export default function DoctorDetailPage() {
               <div>
                 <span><small>Họ và tên</small><strong>{profile?.full_name || 'Chưa cập nhật'}</strong></span>
                 <span><small>Số điện thoại</small><strong>{profile?.phone || 'Chưa cập nhật'}</strong></span>
-                <span><small>Email</small><strong>{user?.email || '—'}</strong></span>
+                <span><small>Email</small><strong>{profile?.email || 'Chưa cập nhật'}</strong></span>
               </div>
               {!profile?.phone && <p><Phone width={13} height={13} /> Bạn nên cập nhật số điện thoại trong Hồ sơ để bệnh viện dễ liên hệ.</p>}
             </div>
@@ -360,10 +360,10 @@ export default function DoctorDetailPage() {
               <Shield width={15} height={15} />
               <span>
                 Khi xác nhận, lịch hẹn sẽ được thêm vào tab Lịch của bạn.
-                <strong>Email xác nhận sẽ được gửi tới {user?.email || 'email tài khoản của bạn'}.</strong>
+                <strong>{profile?.email ? `Email xác nhận sẽ được gửi tới ${profile.email}.` : 'Hãy cập nhật email trong Hồ sơ nếu bạn muốn nhận thư xác nhận.'}</strong>
               </span>
             </div>
-            {bookError && <p className="auth-error">{bookError}</p>}
+            {bookError && <p className="form-error">{bookError}</p>}
             <div className="cal-modal__actions">
               <button type="button" className="btn btn--ghost" onClick={() => setConfirmOpen(false)} disabled={booking}>Quay lại</button>
               <button type="button" className="btn btn--primary" onClick={confirmBooking} disabled={booking}>

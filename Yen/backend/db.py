@@ -1,4 +1,4 @@
-"""SQLite persistence: accounts, health profile, calendar, cycle tracking.
+"""SQLite persistence: anonymous browser profiles, calendar, cycle tracking.
 
 Kept intentionally simple (stdlib sqlite3, no ORM) — this is a prototype
 backend, not a production data layer. Swap for Postgres/SQLAlchemy if the
@@ -35,6 +35,7 @@ CREATE TABLE IF NOT EXISTS health_profiles (
     full_name TEXT,
     birth_date TEXT,
     phone TEXT,
+    email TEXT,
     address TEXT,
     occupation TEXT,
     blood_type TEXT,
@@ -79,7 +80,7 @@ TABLE_MIGRATIONS = {
         "date_end TEXT", "times TEXT", "doctor_id TEXT", "time_slot TEXT",
     ],
     "health_profiles": [
-        "full_name TEXT", "birth_date TEXT", "phone TEXT", "address TEXT", "occupation TEXT",
+        "full_name TEXT", "birth_date TEXT", "phone TEXT", "email TEXT", "address TEXT", "occupation TEXT",
         "blood_type TEXT", "insurance_status TEXT", "insurance_number TEXT",
         "emergency_contact_name TEXT", "emergency_contact_relationship TEXT", "emergency_contact_phone TEXT",
     ],
@@ -116,24 +117,29 @@ def new_id() -> str:
 # Users
 # ---------------------------------------------------------------------------
 
-def create_user(email: str, password_hash: str, password_salt: str, created_at: str) -> str:
-    user_id = new_id()
+def ensure_anonymous_user(client_id: str, created_at: str) -> None:
+    """Create storage rows for a browser-local session when it is first seen.
+
+    The legacy ``users`` table is kept so existing SQLite databases do not need
+    a destructive migration. Anonymous sessions have no credentials; the
+    synthetic email only satisfies the old NOT NULL/UNIQUE constraint.
+    """
     with get_conn() as conn:
+        existing_user = conn.execute("SELECT email FROM users WHERE id = ?", (client_id,)).fetchone()
         conn.execute(
-            "INSERT INTO users (id, email, password_hash, password_salt, created_at) VALUES (?, ?, ?, ?, ?)",
-            (user_id, email, password_hash, password_salt, created_at),
+            "INSERT OR IGNORE INTO users "
+            "(id, email, password_hash, password_salt, created_at) VALUES (?, ?, '', '', ?)",
+            (client_id, f"{client_id}@anonymous.yen.local", created_at),
         )
-    return user_id
-
-
-def get_user_by_email(email: str) -> sqlite3.Row | None:
-    with get_conn() as conn:
-        return conn.execute("SELECT * FROM users WHERE email = ?", (email,)).fetchone()
-
-
-def get_user_by_id(user_id: str) -> sqlite3.Row | None:
-    with get_conn() as conn:
-        return conn.execute("SELECT * FROM users WHERE id = ?", (user_id,)).fetchone()
+        conn.execute(
+            "INSERT OR IGNORE INTO health_profiles (user_id, updated_at) VALUES (?, ?)",
+            (client_id, created_at),
+        )
+        if existing_user and not existing_user["email"].endswith("@anonymous.yen.local"):
+            conn.execute(
+                "UPDATE health_profiles SET email = COALESCE(email, ?) WHERE user_id = ?",
+                (existing_user["email"], client_id),
+            )
 
 
 # ---------------------------------------------------------------------------
@@ -141,18 +147,10 @@ def get_user_by_id(user_id: str) -> sqlite3.Row | None:
 # ---------------------------------------------------------------------------
 
 PROFILE_TEXT_FIELDS = (
-    "full_name", "birth_date", "phone", "address", "occupation", "blood_type",
+    "full_name", "birth_date", "phone", "email", "address", "occupation", "blood_type",
     "insurance_status", "insurance_number",
     "emergency_contact_name", "emergency_contact_relationship", "emergency_contact_phone",
 )
-
-
-def create_profile(user_id: str, age: int | None, gender: str | None, updated_at: str) -> None:
-    with get_conn() as conn:
-        conn.execute(
-            "INSERT INTO health_profiles (user_id, age, gender, updated_at) VALUES (?, ?, ?, ?)",
-            (user_id, age, gender, updated_at),
-        )
 
 
 def get_profile(user_id: str) -> dict | None:

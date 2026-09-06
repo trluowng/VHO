@@ -1,5 +1,5 @@
 """
-Smoke test for the Bệnh viện Tim Hà Nội assistant.
+Smoke test for the Yên healthcare assistant.
 
 Runs the in-process triage() flow (text-in -> text-out) against data/smoke_cases.json
 and reports three metrics:

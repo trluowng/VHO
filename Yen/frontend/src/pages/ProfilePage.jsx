@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { useAuth } from '../context/AuthContext.jsx'
+import { useSession } from '../context/SessionContext.jsx'
 import { Alert, Calendar as CalendarIcon, Clock, Cross, Heart, Phone, Pill, Pulse, Shield, User } from '../components/icons.jsx'
 import TabNav from '../components/TabNav.jsx'
 import EditableTagList from '../components/EditableTagList.jsx'
@@ -27,7 +27,7 @@ const PERSONAL_FIELDS = [
   },
   { key: 'gender', label: 'Giới tính', type: 'select', options: GENDER_OPTIONS, format: (v) => GENDER_OPTIONS.find((g) => g.value === v)?.label || '—' },
   { key: 'phone', label: 'Số điện thoại', type: 'tel', placeholder: 'vd: 0901 234 567' },
-  { key: 'email', label: 'Email', readOnly: true },
+  { key: 'email', label: 'Email', type: 'email', placeholder: 'vd: ban@example.com' },
   { key: 'address', label: 'Địa chỉ', placeholder: 'vd: 123 Đường Lê Lợi, Q.1, TP.HCM' },
   { key: 'occupation', label: 'Nghề nghiệp', placeholder: 'vd: Nhân viên văn phòng' },
   { key: 'blood_type', label: 'Nhóm máu', placeholder: 'vd: O+' },
@@ -93,10 +93,10 @@ function MedicationReminderList({ reminders, loading }) {
 }
 
 export default function ProfilePage() {
-  const { token, user, profile, updateProfile } = useAuth()
+  const { clientId, profile, updateProfile } = useSession()
   const [medicationReminders, setMedicationReminders] = useState([])
   const [loadingReminders, setLoadingReminders] = useState(true)
-  const profileValues = { ...(profile || {}), email: user?.email || '' }
+  const profileValues = profile || {}
   const activeMedicationReminders = useMemo(() => {
     const today = toISODate(new Date())
     return medicationReminders
@@ -143,14 +143,9 @@ export default function ProfilePage() {
   useEffect(() => {
     let cancelled = false
     async function loadMedicationReminders() {
-      if (!token) {
-        setMedicationReminders([])
-        setLoadingReminders(false)
-        return
-      }
       setLoadingReminders(true)
       try {
-        const data = await calendarApi.list(token)
+        const data = await calendarApi.list(clientId)
         if (!cancelled) setMedicationReminders(data.entries || [])
       } catch {
         if (!cancelled) setMedicationReminders([])
@@ -160,7 +155,7 @@ export default function ProfilePage() {
     }
     loadMedicationReminders()
     return () => { cancelled = true }
-  }, [token])
+  }, [clientId])
 
   async function save(updates) {
     // age phải là số nguyên nếu đổi giới tính đi kèm form khác cập nhật riêng —
@@ -193,7 +188,7 @@ export default function ProfilePage() {
 
         <div className="calendar-page__body">
           <div className="profile-layout">
-            <ProfileSidebar user={user} profile={profile || {}} />
+            <ProfileSidebar profile={profile || {}} />
 
             <div className="profile-main">
               <ProfileInfoCard

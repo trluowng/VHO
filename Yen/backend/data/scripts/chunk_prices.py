@@ -161,7 +161,7 @@ chunk_document(
         ("Ghi_chu", "Ghi chú", False),
     ],
     source_meta={
-        "benh_vien": "Bệnh viện Tim Hà Nội",
+        "benh_vien": "bệnh viện",
         "co_so_phap_ly": "Thông tư 22/2023/TT-BYT",
         "doi_tuong_ap_dung": "Người bệnh có thẻ BHYT",
         "file_goc": "raw/banggiaBHYT.pdf",
@@ -185,7 +185,7 @@ chunk_document(
         ("Ghi_chu", "Ghi chú", False),
     ],
     source_meta={
-        "benh_vien": "Bệnh viện Tim Hà Nội",
+        "benh_vien": "bệnh viện",
         "co_so_phap_ly": "Phụ lục số 06 Nghị quyết số 45/2024/NQ-HĐND ngày 10/12/2024 của HĐND TP Hà Nội",
         "doi_tuong_ap_dung": "Người bệnh có và không có thẻ BHYT",
         "file_goc": "raw/gia_dv_ky_thuat_2025.pdf",
@@ -208,7 +208,7 @@ chunk_document(
         ("Ghi_chu", "Ghi chú", False),
     ],
     source_meta={
-        "benh_vien": "Bệnh viện Tim Hà Nội",
+        "benh_vien": "bệnh viện",
         "co_so_phap_ly": "Thông tư 14/2019/TT-BYT",
         "doi_tuong_ap_dung": "Giá dịch vụ kỹ thuật (không phân biệt BHYT)",
         "file_goc": "raw/banggiaDVKT.pdf",
@@ -233,7 +233,7 @@ chunk_document(
         ("Ghi_chu", "Ghi chú", False),
     ],
     source_meta={
-        "benh_vien": "Bệnh viện Tim Hà Nội",
+        "benh_vien": "bệnh viện",
         "co_so_phap_ly": "Quyết định 2823/QĐ-BVT (khám theo yêu cầu); Quyết định 3165/QĐ-BVT (MRI/CLVT ngoài giờ theo yêu cầu)",
         "doi_tuong_ap_dung": "Dịch vụ kỹ thuật theo yêu cầu (tự nguyện)",
         "file_goc": "raw/banggiaDVKTYC.pdf",

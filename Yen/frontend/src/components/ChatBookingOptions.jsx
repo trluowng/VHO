@@ -17,7 +17,7 @@ function doctorLabel(option) {
   return option.doctor_name || option.doctor?.full_name || 'Bác sĩ'
 }
 
-export default function ChatBookingOptions({ options = [], token, confirmed, onBooked }) {
+export default function ChatBookingOptions({ options = [], clientId, confirmed, onBooked }) {
   const [bookingKey, setBookingKey] = useState(null)
   const [booked, setBooked] = useState(confirmed || null)
   const [error, setError] = useState(null)
@@ -27,7 +27,7 @@ export default function ChatBookingOptions({ options = [], token, confirmed, onB
     setBookingKey(key)
     setError(null)
     try {
-      const result = await doctorsApi.book(token, option.doctor_id, {
+      const result = await doctorsApi.book(clientId, option.doctor_id, {
         visit_date: option.visit_date,
         time_slot: option.time_slot,
       })
@@ -49,7 +49,7 @@ export default function ChatBookingOptions({ options = [], token, confirmed, onB
         <div className="chat-booking-card__success-copy">
           <strong>Đã chốt lịch khám</strong>
           <p>{formatDate(booked.visit_date)} · {booked.time_slot} với {doctorName}</p>
-          {booked.emailNotification === 'sent' && <small>Email xác nhận đã được gửi tới email tài khoản của bạn.</small>}
+          {booked.emailNotification === 'sent' && <small>Email xác nhận đã được gửi tới địa chỉ trong hồ sơ của bạn.</small>}
           {(booked.emailNotification === 'failed' || booked.emailNotification === 'disabled') && (
             <small className="is-error">Chưa gửi được email xác nhận, nhưng lịch khám đã được lưu.</small>
           )}
@@ -96,7 +96,7 @@ export default function ChatBookingOptions({ options = [], token, confirmed, onB
         })}
       </div>
 
-      {error && <p className="auth-error">{error}</p>}
+      {error && <p className="form-error">{error}</p>}
     </div>
   )
 }

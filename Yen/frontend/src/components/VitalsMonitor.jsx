@@ -82,7 +82,7 @@ export default function VitalsMonitor({ profile }) {
   const [updatedAt, setUpdatedAt] = useState(() => new Date())
 
   useEffect(() => {
-    // Đổi hồ sơ (đổi tài khoản) -> reset lại quanh baseline mới ngay lập tức.
+    // Đổi hồ sơ -> reset lại quanh baseline mới ngay lập tức.
     setHr(baselineRef.current.hr)
     setBp({ sys: baselineRef.current.sys, dia: baselineRef.current.dia })
     setHrHistory(Array(HISTORY_LEN).fill(baselineRef.current.hr))

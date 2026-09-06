@@ -454,17 +454,17 @@ export function setSymptoms(prev, symptoms) {
    ------------------------------------------------------------
    Frontend KHÔNG giữ API key. Backend Gemini nằm ở Yen/backend/
    (server.py) — gọi Gemini với system prompt triage và trả về cùng
-   schema { events, profile } mà UI dùng. Nếu có token đăng nhập, backend
-   tự nạp hồ sơ sức khỏe (tuổi/giới tính/bệnh nền/chu kỳ) vào ngữ cảnh.
+   schema { events, profile } mà UI dùng. Backend dùng mã phiên ẩn danh của
+   trình duyệt để nạp hồ sơ sức khỏe vào ngữ cảnh.
 
    Bật: trỏ VITE_API_BASE_URL → http://localhost:8787
    (xem .env.example và Yen/README.md chi tiết). Lỗi → App tự fallback.
    ============================================================ */
-export async function callRealModel(history, userText, token, sessionId) {
+export async function callRealModel(history, userText, clientId, sessionId) {
   const base = import.meta.env.VITE_API_BASE_URL
   if (!base) throw new Error('VITE_API_BASE_URL chưa cấu hình — đang dùng rule-based engine.')
   const headers = { 'Content-Type': 'application/json' }
-  if (token) headers.Authorization = `Bearer ${token}`
+  if (clientId) headers['X-Client-ID'] = clientId
   const res = await fetch(`${base.replace(/\/$/, '')}/triage`, {
     method: 'POST',
     headers,

@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { useAuth } from '../context/AuthContext.jsx'
+import { useSession } from '../context/SessionContext.jsx'
 import { doctorsApi, calendarApi } from '../lib/api.js'
 import { Calendar as CalendarIcon, ChevronRight, Clock, Cross, MapPin, Search, Shield, Stethoscope, X } from '../components/icons.jsx'
 import TabNav from '../components/TabNav.jsx'
@@ -18,13 +18,13 @@ function formatUpcomingDate(iso) {
 // Lịch hẹn vừa đặt (qua trang này hoặc qua Yên) không có nơi nào hiện lại trên tab
 // "Đặt lịch khám" -- trang chỉ có banner báo thành công một lần rồi mất khi rời trang.
 // Lấy trực tiếp từ /calendar (không giới hạn tháng) để luôn thấy lịch sắp tới ở đây.
-function UpcomingBookings({ token }) {
+function UpcomingBookings({ clientId }) {
   const [entries, setEntries] = useState([])
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     let cancelled = false
-    calendarApi.list(token)
+    calendarApi.list(clientId)
       .then((data) => {
         if (cancelled) return
         const today = todayIso()
@@ -36,7 +36,7 @@ function UpcomingBookings({ token }) {
       .catch(() => {})
       .finally(() => { if (!cancelled) setLoading(false) })
     return () => { cancelled = true }
-  }, [token])
+  }, [clientId])
 
   if (loading || entries.length === 0) return null
 
@@ -147,7 +147,7 @@ function DoctorCard({ doctor, timeSlot }) {
 }
 
 export default function BookingPage() {
-  const { token } = useAuth()
+  const { clientId } = useSession()
   const [rawQuery, setRawQuery] = useState('')
   const [query, setQuery] = useState('')
   const [campus, setCampus] = useState('')
@@ -169,7 +169,7 @@ export default function BookingPage() {
       setLoading(true)
       setError(null)
       try {
-        const data = await doctorsApi.list(token, { query, campus, specialty, timeSlot })
+        const data = await doctorsApi.list(clientId, { query, campus, specialty, timeSlot })
         if (!cancelled) setDoctors(data.doctors || [])
       } catch (err) {
         if (!cancelled) setError(err.message)
@@ -179,7 +179,7 @@ export default function BookingPage() {
     }
     load()
     return () => { cancelled = true }
-  }, [token, query, campus, specialty, timeSlot])
+  }, [clientId, query, campus, specialty, timeSlot])
 
   const resultCountLabel = useMemo(() => {
     if (loading) return 'Đang tải…'
@@ -229,11 +229,11 @@ export default function BookingPage() {
               </div>
               <div className="booking-hero__trust">
                 <Shield width={22} height={22} />
-                <span><strong>Thông tin được bảo mật</strong><small>Xác nhận ngay trên tài khoản của bạn</small></span>
+                <span><strong>Thông tin được bảo mật</strong><small>Xác nhận bằng hồ sơ trên trình duyệt này</small></span>
               </div>
             </section>
 
-            <UpcomingBookings token={token} />
+            <UpcomingBookings clientId={clientId} />
 
             <BookingStepper current={1} />
 
@@ -335,7 +335,7 @@ export default function BookingPage() {
             </div>
 
             <p className="cal-disclaimer">
-              Yên là trợ lý hỗ trợ khách hàng của Bệnh viện Tim Hà Nội. Lịch hiển thị chỉ mang tính tham khảo, vui lòng gọi tổng đài để xác nhận trước khi đến khám.
+              Lịch hiển thị chỉ mang tính tham khảo, vui lòng gọi cơ sở y tế để xác nhận trước khi đến khám.
             </p>
           </div>
         </div>

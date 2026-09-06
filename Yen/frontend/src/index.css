@@ -1114,7 +1114,7 @@ input, textarea { font-family: inherit; }
 }
 
 /* ============================================================
-   Buttons (shared: landing, auth, calendar)
+   Buttons (shared: landing, forms, calendar)
    ============================================================ */
 .btn--lg { padding: 15px 26px; font-size: 15px; }
 
@@ -1313,40 +1313,14 @@ input, textarea { font-family: inherit; }
   .landing__banner { flex-direction: column; text-align: center; }
 }
 
-/* ============================================================
-   Auth pages (login / signup)
-   ============================================================ */
-.auth-page {
-  position: relative;
-  height: 100dvh;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  display: grid; place-items: center;
-  padding: 24px;
-}
-.auth-card {
-  position: relative; z-index: 1;
-  width: 100%; max-width: 420px;
-  background: var(--card);
-  border: 1px solid var(--card-edge);
-  border-radius: var(--r-xl);
-  box-shadow: var(--sh-3), var(--sh-inset);
-  padding: 36px 32px;
-}
-.auth-card__brand { text-decoration: none; margin-bottom: 22px; width: fit-content; }
-.auth-card__title {
-  font-family: var(--font-display); font-weight: 500; font-size: 27px; color: var(--ink);
-  margin: 0 0 8px;
-}
-.auth-card__lede { font-size: 13.5px; line-height: 1.55; color: var(--ink-soft); margin: 0 0 26px; }
-.auth-form { display: flex; flex-direction: column; gap: 16px; }
-.auth-field { display: flex; flex-direction: column; gap: 7px; }
-.auth-field > span {
+/* Shared form fields */
+.form-field { display: flex; flex-direction: column; gap: 7px; }
+.form-field > span {
   font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
   color: var(--ink-faint);
 }
-.auth-field input,
-.auth-field select {
+.form-field input,
+.form-field select {
   font-size: 14.5px; color: var(--ink);
   background: var(--paper-warm);
   border: 1.5px solid var(--card-edge);
@@ -1355,26 +1329,12 @@ input, textarea { font-family: inherit; }
   outline: none;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
-.auth-field input:focus,
-.auth-field select:focus {
+.form-field input:focus,
+.form-field select:focus {
   border-color: var(--sage-bright);
   box-shadow: 0 0 0 4px rgba(31, 122, 140, 0.16);
 }
-.auth-field__hint { font-size: 12px; color: var(--sage-deep); line-height: 1.5; margin: 8px 2px 0; }
-.gender-picker { display: flex; gap: 8px; }
-.gender-chip {
-  flex: 1;
-  font-size: 13.5px; font-weight: 600; color: var(--ink-2);
-  background: var(--paper-warm);
-  border: 1.5px solid var(--card-edge);
-  padding: 10px; border-radius: 12px;
-  transition: transform 0.16s var(--ease), border-color 0.2s, background 0.2s, color 0.2s;
-}
-.gender-chip:hover { transform: translateY(-1px); }
-.gender-chip.is-active {
-  background: var(--sage); border-color: var(--sage); color: #f1f5ee;
-}
-.auth-error {
+.form-error {
   font-size: 13px; color: var(--red-deep);
   background: var(--red-tint);
   border: 1px solid #e6c3bd;
@@ -1382,10 +1342,6 @@ input, textarea { font-family: inherit; }
   padding: 10px 13px;
   margin: 0;
 }
-.auth-submit { width: 100%; justify-content: center; margin-top: 4px; }
-.auth-card__switch { text-align: center; font-size: 13.5px; color: var(--ink-soft); margin: 22px 0 0; }
-.auth-card__switch a { color: var(--sage-deep); font-weight: 600; text-decoration: none; }
-.auth-card__switch a:hover { text-decoration: underline; }
 
 /* ============================================================
    Tab navigation (Trò chuyện / Lịch) — inside app topbar
@@ -2432,7 +2388,7 @@ input, textarea { font-family: inherit; }
 .profile-main__row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start; }
 .profile-card__title { display: flex; align-items: center; gap: 7px; }
 .profile-card__form { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-.profile-card__form .auth-field { grid-column: span 1; }
+.profile-card__form .form-field { grid-column: span 1; }
 .profile-card__form select, .profile-card__form input { width: 100%; }
 
 .profile-sidebar { display: flex; flex-direction: column; align-items: center; gap: 4px; text-align: center; padding: 26px 22px; }
@@ -2624,7 +2580,7 @@ input, textarea { font-family: inherit; }
   line-height: 1.55;
 }
 .shell--profile .profile-card__form { gap: 12px; }
-.shell--profile .profile-card__form .auth-field span { color: #647ca4; font-family: var(--font-ui); }
+.shell--profile .profile-card__form .form-field span { color: #647ca4; font-family: var(--font-ui); }
 .shell--profile .profile-card__form input:disabled {
   color: #667895;
   background: #f3f6f9;
@@ -3639,7 +3595,7 @@ input, textarea { font-family: inherit; }
 .doctor-confirm-modal__note > svg { flex: none; margin-top: 2px; color: #1389c2; }
 .doctor-confirm-modal__note > span { display: flex; min-width: 0; flex-direction: column; gap: 2px; }
 .doctor-confirm-modal__note strong { color: #147f9e; font-size: 8.5px; font-weight: 700; overflow-wrap: anywhere; }
-.doctor-confirm-modal > .auth-error { margin: 12px 22px 0; }
+.doctor-confirm-modal > .form-error { margin: 12px 22px 0; }
 .doctor-confirm-modal .cal-modal__actions { padding: 17px 22px 20px; }
 .doctor-confirm-modal .cal-modal__actions .btn { font-size: 10px; }
 
@@ -4373,7 +4329,7 @@ input, textarea { font-family: inherit; }
 }
 .shell--calendar .cycle-form input:focus { border-color: #6dc1e3; box-shadow: 0 0 0 3px rgba(32, 153, 205, 0.08); }
 .shell--calendar .cycle-form .btn { width: 100%; min-height: 40px; justify-content: center; border: 0; border-radius: 10px; background: linear-gradient(135deg, #168fca, #09a6d2); font-size: 10px; box-shadow: 0 6px 14px rgba(15, 143, 199, 0.16); }
-.cycle-record-card > .auth-error { margin: 10px 0 0; }
+.cycle-record-card > .form-error { margin: 10px 0 0; }
 
 .shell--calendar .cycle-history { gap: 0; overflow: hidden; border: 1px solid #e5ebf2; border-radius: 10px; }
 .shell--calendar .cycle-history li {

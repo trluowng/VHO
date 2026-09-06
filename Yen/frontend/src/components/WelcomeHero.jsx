@@ -20,14 +20,14 @@ export default function WelcomeHero({ onPick }) {
   return (
     <motion.div className="hero" variants={container} initial="hidden" animate="show">
       <motion.div className="hero__eyebrow" variants={item}>
-        Trợ lý Bệnh viện Tim Hà Nội
+        Trợ lý sức khỏe cá nhân
       </motion.div>
       <motion.h1 className="hero__title" variants={item}>
         Hỏi đáp dịch vụ, giá khám & <em>hỗ trợ</em> tại viện
       </motion.h1>
       <motion.p className="hero__lede" variants={item}>
         Tra cứu giá dịch vụ, hướng dẫn quy trình khám BHYT, đặt lịch hay mô tả triệu chứng — mình
-        sẽ hướng dẫn bạn <strong>bước tiếp theo phù hợp</strong> tại Bệnh viện Tim Hà Nội.
+        sẽ hướng dẫn bạn <strong>bước tiếp theo phù hợp</strong> để chăm sóc sức khỏe.
       </motion.p>
       <motion.div className="hero__examples" variants={item}>
         {EXAMPLES.map((ex) => (

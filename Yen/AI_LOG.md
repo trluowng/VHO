@@ -1,4 +1,4 @@
-# AI Log — Yên (Bệnh viện Tim Hà Nội)
+# AI Log — Yên
 
 Nhật ký sử dụng công cụ AI trong quá trình phát triển, theo yêu cầu của ban tổ chức:
 

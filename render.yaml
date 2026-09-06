@@ -1,5 +1,5 @@
 services:
-  # Backend — FastAPI: /triage, /auth/*, /profile, /calendar, /cycle
+  # Backend — FastAPI: /triage, /profile, /calendar, /cycle
   - type: web
     name: vho-yen-backend
     runtime: python
@@ -19,8 +19,6 @@ services:
       - key: GROQ_API_KEY
         sync: false
       - key: GEMINI_API_KEY
-        sync: false
-      - key: JWT_SECRET
         sync: false
       # requirements.txt pulls in sentence-transformers + faiss-cpu for the optional
       # conversation-recall feature (memory/embedder.py), which tries to download and

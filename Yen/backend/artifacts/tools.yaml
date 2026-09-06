@@ -1,6 +1,6 @@
 tools:
   - name: clarify
-    description: "Gửi một câu hỏi/làm rõ cho khách hàng của Bệnh viện Tim Hà Nội."
+    description: "Gửi một câu hỏi/làm rõ cho người dùng."
     parameters:
       type: object
       properties:
@@ -10,7 +10,7 @@ tools:
       required: [question]
 
   - name: tra_gia
-    description: "Tra cứu giá dịch vụ kỹ thuật/khám bệnh tại Bệnh viện Tim Hà Nội."
+    description: "Tra cứu giá dịch vụ kỹ thuật/khám bệnh."
     parameters:
       type: object
       properties:

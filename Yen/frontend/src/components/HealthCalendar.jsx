@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import { useLocation } from 'react-router-dom'
-import { useAuth } from '../context/AuthContext.jsx'
+import { useSession } from '../context/SessionContext.jsx'
 import { calendarApi } from '../lib/api.js'
 import { CATEGORIES, categoryMeta } from '../lib/calendarCategories.js'
 import { toISODate, monthKey, buildMonthGrid, addDays } from '../lib/calendarGrid.js'
@@ -12,7 +12,7 @@ import CalendarEntryModal from './calendar/CalendarEntryModal.jsx'
 const WEEKDAYS = ['T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'CN']
 
 export default function HealthCalendar() {
-  const { token } = useAuth()
+  const { clientId } = useSession()
   const location = useLocation()
   const [cursor, setCursor] = useState(() => new Date())
   const [entries, setEntries] = useState([])
@@ -33,8 +33,8 @@ export default function HealthCalendar() {
   async function load() {
     try {
       const [monthData, allData] = await Promise.all([
-        calendarApi.list(token, key),
-        calendarApi.list(token),
+        calendarApi.list(clientId, key),
+        calendarApi.list(clientId),
       ])
       setEntries(monthData.entries)
       setAllEntries(allData.entries)
@@ -46,7 +46,7 @@ export default function HealthCalendar() {
   useEffect(() => {
     load()
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [key])
+  }, [clientId, key])
 
   // Vừa đặt lịch xong ở tab "Đặt lịch khám" và bấm "Xem trong tab Lịch" → nhảy thẳng
   // tới tháng của lịch hẹn đó thay vì luôn mở tháng hiện tại (lịch demo hay rơi vào
@@ -130,7 +130,7 @@ export default function HealthCalendar() {
   async function removeEntry(id) {
     setBusy(true)
     try {
-      await calendarApi.remove(token, id)
+      await calendarApi.remove(clientId, id)
       await load()
     } finally {
       setBusy(false)
@@ -319,7 +319,7 @@ export default function HealthCalendar() {
         )}
 
         <p className="cal-disclaimer">
-          Yên là trợ lý hỗ trợ khách hàng của Bệnh viện Tim Hà Nội. Nội dung chỉ mang tính tham khảo, không thay thế chẩn đoán y khoa.
+          Yên là trợ lý hỗ trợ sức khỏe. Nội dung chỉ mang tính tham khảo, không thay thế chẩn đoán y khoa.
         </p>
       </div>
 

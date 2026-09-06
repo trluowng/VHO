@@ -1,28 +1,19 @@
 """
-Yên — HTTP server (Trợ lý Bệnh viện Tim Hà Nội)
+Yên — HTTP server (Trợ lý sức khỏe cá nhân)
 ================================================
-Cầu nối giữa frontend React và logic agent trong chat.py, cộng thêm tài
-khoản người dùng + hồ sơ sức khỏe + lịch theo dõi sức khỏe.
+Cầu nối giữa frontend React và logic agent trong chat.py, cộng thêm hồ sơ sức
+khỏe và lịch theo dõi được tách theo một mã phiên ẩn danh của từng trình duyệt.
 
-- POST /triage              body: { history, message }, header Authorization tùy chọn
+- POST /triage              body: { history, message }, header X-Client-ID
                              trả về: { events, profile }
-- POST /stt/transcribe       body: audio/wav, header Authorization bắt buộc
+- POST /stt/transcribe       body: audio/wav
                              trả về: { text, language }
-- POST /tts                  body: { text }, header Authorization bắt buộc
+- POST /tts                  body: { text }
                              trả về: audio/mpeg (MP3) để trình duyệt tự phát
 - GET  /health               kiểm tra server
-- POST /auth/register        { email, password, age, gender } -> { token, user, profile }
-- POST /auth/login           { email, password } -> { token, user, profile }
-- GET  /profile               (auth) -> HealthProfile
-- PUT  /profile               (auth) -> cập nhật HealthProfile
-- GET  /calendar?month=YYYY-MM  (auth) -> danh sách lịch sức khỏe
-- POST /calendar               (auth) -> thêm mục lịch
-- DELETE /calendar/{id}        (auth)
-- GET  /cycle                  (auth) -> danh sách chu kỳ + dự đoán
-- POST /cycle                  (auth) -> thêm ngày bắt đầu kỳ kinh
-- DELETE /cycle/{id}           (auth)
-- GET  /doctors?query=&campus=&specialty=   (auth) -> danh sách bác sĩ + 2 lịch trống gần nhất
-- GET  /doctors/{id}/schedule                (auth) -> toàn bộ lịch trống của 1 bác sĩ
+- GET/PUT /profile, /calendar, /cycle dùng cùng X-Client-ID
+- GET  /doctors?query=&campus=&specialty= -> danh sách bác sĩ + 2 lịch trống gần nhất
+- GET  /doctors/{id}/schedule             -> toàn bộ lịch trống của 1 bác sĩ
 
 Chạy:
     cd Yen/backend
@@ -37,11 +28,11 @@ import json
 import logging
 import os
 import re
-from datetime import date, datetime, timezone
+from datetime import date, datetime
 from pathlib import Path
 from typing import Any
 
-from fastapi import Body, FastAPI, Header, HTTPException, Response
+from fastapi import Body, Depends, FastAPI, Header, HTTPException, Response
 from fastapi.middleware.cors import CORSMiddleware
 
 import db
@@ -49,13 +40,11 @@ from env_loader import load_lab_env
 from providers import make_provider
 from tools import load_tool_declarations, to_openai_tools
 from tools._shared import fold_text
-from auth import create_token, hash_password, verify_password, verify_token
 from email_service import AppointmentEmail, AppointmentEmailService
 
 # Import the core agent loop and helpers from chat.py
 from chat import run_model_tool_loop, trim_history, write_transcript, safe_slug, now_iso
 from versioning import artifact_version_dict, build_artifact_version
-from seed_demo import seed_demo_accounts
 from artifacts.skills import load_skills, build_skills_section
 from stt import (
     InvalidAudioError,
@@ -76,7 +65,6 @@ ROOT = Path(__file__).resolve().parent
 ARTIFACTS_DIR = ROOT / "artifacts"
 load_lab_env(ROOT)
 db.init_db()
-seed_demo_accounts()
 
 PROVIDER_NAME = os.getenv("TRIAGE_PROVIDER", "gemini")
 MODEL = os.getenv("TRIAGE_MODEL", None)          # None → provider's default_model
@@ -143,24 +131,21 @@ app.add_middleware(
 
 
 # ---------------------------------------------------------------------------
-# Auth helpers
+# Anonymous browser session helpers
 # ---------------------------------------------------------------------------
 
-def _bearer_user_id(authorization: str | None) -> str | None:
-    if not authorization or not authorization.startswith("Bearer "):
-        return None
-    return verify_token(authorization.removeprefix("Bearer ").strip())
+CLIENT_ID_RE = re.compile(r"[A-Za-z0-9_-]{16,128}")
 
 
-def _require_user_id(authorization: str | None = Header(None)) -> str:
-    user_id = _bearer_user_id(authorization)
-    if not user_id or not db.get_user_by_id(user_id):
-        raise HTTPException(status_code=401, detail="unauthorized")
-    return user_id
-
-
-def _user_public(row) -> dict:
-    return {"id": row["id"], "email": row["email"], "created_at": row["created_at"]}
+def _require_client_user_id(
+    x_client_id: str | None = Header(None, alias="X-Client-ID"),
+) -> str:
+    """Resolve the browser-local identity used to partition persisted data."""
+    client_id = (x_client_id or "").strip()
+    if not CLIENT_ID_RE.fullmatch(client_id):
+        raise HTTPException(status_code=400, detail="client_id_required")
+    db.ensure_anonymous_user(client_id, now_iso())
+    return client_id
 
 
 # ---------------------------------------------------------------------------
@@ -194,6 +179,8 @@ def _profile_context_message(user_id: str) -> dict | None:
         return None
 
     parts = []
+    if profile.get("full_name"):
+        parts.append(f"Họ tên: {profile['full_name']}")
     if profile.get("age") is not None:
         parts.append(f"Tuổi: {profile['age']}")
     gender_label = {"nam": "Nam", "nu": "Nữ"}.get(profile.get("gender") or "")
@@ -205,6 +192,12 @@ def _profile_context_message(user_id: str) -> dict | None:
         parts.append("Dị ứng: " + ", ".join(profile["allergies"]))
     if profile.get("medications"):
         parts.append("Thuốc đang dùng: " + ", ".join(profile["medications"]))
+    # Only clinically useful fields are sent back to the LLM. Contact and
+    # insurance details remain in SQLite for UI/booking use and are not added
+    # to every model request.
+    for key, label in (("occupation", "Nghề nghiệp"), ("blood_type", "Nhóm máu")):
+        if profile.get(key):
+            parts.append(f"{label}: {profile[key]}")
 
     if profile.get("gender") == "nu":
         entries = db.list_cycle_entries(user_id)
@@ -223,7 +216,7 @@ def _profile_context_message(user_id: str) -> dict | None:
     return {
         "role": "system",
         "content": (
-            "HỒ SƠ BỆNH NHÂN (đã biết từ tài khoản — KHÔNG hỏi lại các mục này trừ khi "
+            "HỒ SƠ BỆNH NHÂN (đã lưu — KHÔNG hỏi lại các mục này trừ khi "
             "cần làm rõ thêm chi tiết):\n" + "\n".join(f"- {p}" for p in parts)
         ),
     }
@@ -280,6 +273,179 @@ def _normalize_profile(profile: dict) -> dict:
     return profile
 
 
+HEALTH_PROFILE_LIST_FIELDS = ("chronic_conditions", "allergies", "medications")
+HEALTH_PROFILE_SCALAR_FIELDS = (
+    "full_name",
+    "phone",
+    "email",
+    "address",
+    "occupation",
+    "blood_type",
+    "insurance_status",
+    "insurance_number",
+    "emergency_contact_name",
+    "emergency_contact_relationship",
+    "emergency_contact_phone",
+)
+
+
+def _sanitize_health_profile_updates(raw_updates: Any) -> dict[str, Any]:
+    """Validate profile facts extracted by the model before persisting them.
+
+    The model is instructed to emit only facts explicitly stated by the user,
+    but its output is still untrusted. Invalid or unsupported values are ignored
+    instead of allowing a chat turn to corrupt the stored health profile.
+    """
+    if not isinstance(raw_updates, dict):
+        return {}
+
+    updates: dict[str, Any] = {}
+
+    age = raw_updates.get("age")
+    if isinstance(age, str) and age.strip().isdigit():
+        age = int(age.strip())
+    if isinstance(age, int) and not isinstance(age, bool) and 0 < age < 120:
+        updates["age"] = age
+
+    gender = raw_updates.get("gender")
+    if isinstance(gender, str):
+        normalized_gender = {
+            "nam": "nam",
+            "male": "nam",
+            "nu": "nu",
+            "nữ": "nu",
+            "female": "nu",
+        }.get(gender.strip().lower())
+        if normalized_gender:
+            updates["gender"] = normalized_gender
+
+    birth_date = raw_updates.get("birth_date")
+    if isinstance(birth_date, str) and birth_date.strip():
+        try:
+            parsed_birth_date = date.fromisoformat(birth_date.strip())
+            today = date.today()
+            calculated_age = today.year - parsed_birth_date.year - (
+                (today.month, today.day) < (parsed_birth_date.month, parsed_birth_date.day)
+            )
+            if parsed_birth_date <= today and 0 < calculated_age < 120:
+                updates["birth_date"] = parsed_birth_date.isoformat()
+                updates["age"] = calculated_age
+        except ValueError:
+            pass
+
+    for key in HEALTH_PROFILE_LIST_FIELDS:
+        value = raw_updates.get(key)
+        if not isinstance(value, list):
+            continue
+        cleaned: list[str] = []
+        seen: set[str] = set()
+        for item in value:
+            if not isinstance(item, str):
+                continue
+            text = item.strip()[:200]
+            folded = fold_text(text)
+            if text and folded not in seen:
+                seen.add(folded)
+                cleaned.append(text)
+        updates[key] = cleaned[:30]
+
+    for key in HEALTH_PROFILE_SCALAR_FIELDS:
+        value = raw_updates.get(key)
+        if not isinstance(value, str) or not value.strip():
+            continue
+        text = value.strip()[:500]
+        if key == "email":
+            text = text.lower()
+            if "@" not in text:
+                continue
+        updates[key] = text
+
+    return updates
+
+
+def _persist_extracted_health_profile(user_id: str | None, parsed: dict) -> dict | None:
+    """Persist explicit profile facts returned by the LLM and return the merged profile."""
+    if not user_id:
+        return None
+    updates = _sanitize_health_profile_updates(parsed.get("health_profile_updates"))
+    if updates:
+        db.update_profile(user_id, updates, now_iso())
+    return db.get_profile(user_id)
+
+
+PROFILE_EXTRACTION_SIGNAL_TERMS = (
+    "tuoi", "gioi tinh", "sinh ngay", "ngay sinh", "sinh nam", "toi ten", "ten toi",
+    "ho ten", "so dien thoai", "sdt", "email", "dia chi", "nghe nghiep", "lam nghe",
+    "nhom mau", "bao hiem", "bhyt", "benh nen", "tien su", "di ung", "thuoc dang",
+    "dang dung thuoc", "dang uong", "lien he khan cap", "nguoi lien he", "toi bi",
+    "minh bi", "em bi",
+)
+
+
+def _message_may_contain_health_profile(message: str) -> bool:
+    folded = fold_text(message or "")
+    return (
+        any(term in folded for term in PROFILE_EXTRACTION_SIGNAL_TERMS)
+        or bool(re.search(r"\b(nam|nu)\b", folded))
+    )
+
+
+def _extract_health_profile_before_triage(user_id: str | None, message: str) -> dict | None:
+    """Use a focused LLM pass to persist profile facts before triage reasoning.
+
+    This makes facts stated in the current message available in the system
+    profile context for that same turn. It runs only when lightweight keyword
+    detection indicates that the message may contain profile information.
+    """
+    if not user_id or not _message_may_contain_health_profile(message):
+        return db.get_profile(user_id) if user_id else None
+
+    current_profile = db.get_profile(user_id) or {}
+    # Existing scalar/contact values are not needed for extraction. Only list
+    # fields must be shown so the model can return their complete updated value.
+    extraction_context = {
+        key: current_profile.get(key) or [] for key in HEALTH_PROFILE_LIST_FIELDS
+    }
+    extraction_messages = [
+        {
+            "role": "system",
+            "content": (
+                "Bạn là bộ trích xuất hồ sơ sức khỏe, không tư vấn và không suy đoán. "
+                "Chỉ lấy thông tin nhân khẩu học, liên hệ, bảo hiểm, bệnh nền, dị ứng và thuốc "
+                "mà khách nói rõ trong TIN NHẮN HIỆN TẠI. Không đưa triệu chứng cấp tính, thời gian "
+                "hay mức độ đau vào bệnh nền. Với chronic_conditions/allergies/medications, nếu có "
+                "cập nhật thì trả toàn bộ danh sách đúng sau khi kết hợp HỒ SƠ HIỆN TẠI; nếu không "
+                "có cập nhật thì trả null. Các scalar không được nói tới trả null. "
+                "Để đáp ứng schema: events=[], profile={stage:'intake', symptoms:[], confidence:0, "
+                "confTier:'none', missing:[], facts:{duration:null,severity:null,associated:null}}. "
+                "Đặt dữ liệu trích xuất trong health_profile_updates."
+            ),
+        },
+        {
+            "role": "user",
+            "content": (
+                "HỒ SƠ HIỆN TẠI:\n"
+                f"{json.dumps(extraction_context, ensure_ascii=False, default=str)}\n\n"
+                "TIN NHẮN HIỆN TẠI:\n"
+                f"{message}"
+            ),
+        },
+    ]
+    try:
+        response = PROVIDER.complete(
+            extraction_messages,
+            [],
+            model=SELECTED_MODEL,
+            temperature=0.0,
+        )
+        parsed = _extract_json(response.text or "")
+        if parsed:
+            return _persist_extracted_health_profile(user_id, parsed)
+    except Exception:
+        LOGGER.exception("health profile extraction failed, continuing with existing profile")
+    return db.get_profile(user_id)
+
+
 # Last known-good profile per session, for when the model breaks the mandatory JSON
 # contract mid-conversation (seen live on Groq/Qwen deep in multi-round tool-calling —
 # it occasionally answers in plain prose instead of the JSON schema). Without this, the
@@ -287,6 +453,32 @@ def _normalize_profile(profile: dict) -> dict:
 # silently discarding everything gathered in earlier turns.
 _LAST_PROFILE: dict[str, dict] = {}
 _LAST_BOOKING_OPTIONS: dict[str, list[dict]] = {}
+
+TOOL_INTENT_TERMS = (
+    "gia", "chi phi", "bhyt", "bao hiem", "thu tuc", "giay to", "dich vu",
+    "dat lich", "lich trong", "bac si", "chuyen khoa", "tong dai", "gio lam viec",
+    "quy trinh", "luat kham", "dia chi benh vien", "kham o dau",
+)
+
+
+def _tools_for_turn(history: list[dict], message: str) -> list[dict[str, Any]]:
+    """Expose lookup tools only for turns that actually need hospital data.
+
+    Giving lookup tools to a symptom-only turn made smaller models repeatedly
+    call ``tra_cuu`` even though the prompt forbids it. Besides adding latency,
+    hitting the tool-round cap also discarded structured profile extraction.
+    """
+    current = fold_text(message or "")
+    if any(term in current for term in TOOL_INTENT_TERMS):
+        return OPENAI_TOOLS
+
+    # Short replies such as "Có" or "Sáng mai" inherit booking/service intent
+    # from the immediately preceding assistant question.
+    if len(current) <= 40 and history:
+        previous = fold_text((history[-1].get("text") or ""))
+        if any(term in previous for term in TOOL_INTENT_TERMS):
+            return OPENAI_TOOLS
+    return []
 
 
 def _booking_options_from_tool_events(tool_events: list[dict[str, Any]]) -> list[dict]:
@@ -360,7 +552,7 @@ def _booking_error_message(detail: str | None) -> str:
     return labels.get(detail or "", "Mình chưa chốt lịch được vì có lỗi khi lưu lịch. Bạn thử chọn lại khung giờ nhé.")
 
 
-def _agent_result_to_response(result: dict, session_id: str) -> dict:
+def _agent_result_to_response(result: dict, session_id: str, user_id: str | None = None) -> dict:
     booking_options = _booking_options_from_tool_events(result.get("tool_events") or [])
     if booking_options:
         _LAST_BOOKING_OPTIONS[session_id] = booking_options
@@ -376,7 +568,11 @@ def _agent_result_to_response(result: dict, session_id: str) -> dict:
             parsed.get("profile") if isinstance(parsed.get("profile"), dict) else {}
         )
         _LAST_PROFILE[session_id] = profile
-        return {"events": events, "profile": profile}
+        return {
+            "events": events,
+            "profile": profile,
+            "health_profile": _persist_extracted_health_profile(user_id, parsed),
+        }
 
     # Model didn't return valid JSON this round -- carry forward the last profile we
     # actually parsed for this session (nothing about the tracked symptoms/stage changed,
@@ -387,7 +583,11 @@ def _agent_result_to_response(result: dict, session_id: str) -> dict:
     profile = dict(profile) if profile else _normalize_profile({"stage": "questioning"})
     if booking_options:
         events.append({"type": "booking_options", "options": booking_options})
-    return {"events": events, "profile": profile}
+    return {
+        "events": events,
+        "profile": profile,
+        "health_profile": db.get_profile(user_id) if user_id else None,
+    }
 
 
 def _session_id(payload: dict, user_id: str | None) -> str:
@@ -421,6 +621,11 @@ def triage(payload: dict, user_id: str | None) -> dict:
         }
     if chat_booking:
         return chat_booking
+
+    # Persist explicit profile facts before building the main prompt so age,
+    # gender, medical history, allergies and medication can affect this turn's
+    # assessment instead of becoming available only on the next request.
+    _extract_health_profile_before_triage(user_id, message)
 
     # Lấy lại 1 cặp hội thoại gần nhất từ vector store (bge-m3, k=1, không rerank).
     # Chỉ là gợi nhớ tham khảo (không bắt buộc) -- lỗi ở đây (model embedding quá nặng
@@ -476,7 +681,7 @@ def triage(payload: dict, user_id: str | None) -> dict:
     result = run_model_tool_loop(
         provider=PROVIDER,
         messages=messages,
-        tools=OPENAI_TOOLS,
+        tools=_tools_for_turn(payload.get("history", []), message),
         model=SELECTED_MODEL,
         max_tool_rounds=MAX_TOOL_ROUNDS,
     )
@@ -494,13 +699,15 @@ def triage(payload: dict, user_id: str | None) -> dict:
         except Exception:
             LOGGER.exception("memory.record_turn failed, response still returned to client")
 
-    return _agent_result_to_response(result, session_id)
+    return _agent_result_to_response(result, session_id, user_id)
 
 
 @app.post("/triage/end")
-def triage_end_route(payload: dict = Body(...), authorization: str | None = Header(None)) -> dict:
+def triage_end_route(
+    payload: dict = Body(...),
+    user_id: str = Depends(_require_client_user_id),
+) -> dict:
     """Client gọi khi user rời đi / mất kết nối: lưu conversation (TTL 1h) + embed vào vector store."""
-    user_id = _bearer_user_id(authorization)
     session_id = _session_id(payload, user_id)
     try:
         summary = get_memory_manager().end_session(session_id)
@@ -521,11 +728,8 @@ def health() -> dict:
 @app.post("/stt/transcribe")
 def transcribe_speech(
     audio: bytes = Body(..., media_type="audio/wav"),
-    authorization: str | None = Header(None),
 ) -> dict:
     """Convert a short browser-recorded WAV clip to Vietnamese text."""
-    _require_user_id(authorization)
-
     if not audio:
         raise HTTPException(status_code=400, detail="empty_audio")
     if len(audio) > STT_MAX_AUDIO_BYTES:
@@ -547,7 +751,7 @@ TTS_MAX_CHARS = 2000
 
 
 @app.post("/tts")
-def synthesize_speech(payload: dict = Body(...), authorization: str | None = Header(None)) -> Response:
+def synthesize_speech(payload: dict = Body(...)) -> Response:
     """Sinh giọng đọc tiếng Việt cho 1 đoạn text, trả về audio/mpeg để trình duyệt tự phát.
 
     Không dùng backend/stt/speaker.py (module đó phát âm thanh bằng pygame.mixer trên
@@ -555,7 +759,6 @@ def synthesize_speech(payload: dict = Body(...), authorization: str | None = Hea
     lần "phát" sẽ chặn cả request thêm vài giây). gTTS.write_to_fp() sinh MP3 thẳng vào
     bộ nhớ rồi trả về qua HTTP, để trình duyệt phát bằng thẻ <audio> phía client.
     """
-    _require_user_id(authorization)
     text = (payload.get("text") or "").strip()
     if not text:
         raise HTTPException(status_code=400, detail="empty_text")
@@ -573,8 +776,10 @@ def synthesize_speech(payload: dict = Body(...), authorization: str | None = Hea
 
 
 @app.post("/triage")
-def triage_route(payload: dict = Body(...), authorization: str | None = Header(None)) -> dict:
-    user_id = _bearer_user_id(authorization)
+def triage_route(
+    payload: dict = Body(...),
+    user_id: str = Depends(_require_client_user_id),
+) -> dict:
     try:
         return triage(payload, user_id)
     except Exception as exc:
@@ -583,56 +788,11 @@ def triage_route(payload: dict = Body(...), authorization: str | None = Header(N
 
 
 # ---------------------------------------------------------------------------
-# Routes — auth
-# ---------------------------------------------------------------------------
-
-@app.post("/auth/register")
-def register(payload: dict = Body(...)) -> dict:
-    email = (payload.get("email") or "").strip().lower()
-    password = payload.get("password") or ""
-    age = payload.get("age")
-    gender = payload.get("gender")
-
-    if "@" not in email:
-        raise HTTPException(status_code=400, detail="invalid_email")
-    if len(password) < 6:
-        raise HTTPException(status_code=400, detail="password_too_short")
-    if gender not in GENDERS:
-        raise HTTPException(status_code=400, detail="invalid_gender")
-    if not isinstance(age, int) or not (0 < age < 120):
-        raise HTTPException(status_code=400, detail="invalid_age")
-    if db.get_user_by_email(email):
-        raise HTTPException(status_code=409, detail="email_taken")
-
-    password_hash, salt = hash_password(password)
-    now = now_iso()
-    user_id = db.create_user(email, password_hash, salt, now)
-    db.create_profile(user_id, age, gender, now)
-
-    token = create_token(user_id)
-    return {"token": token, "user": {"id": user_id, "email": email, "created_at": now}, "profile": db.get_profile(user_id)}
-
-
-@app.post("/auth/login")
-def login(payload: dict = Body(...)) -> dict:
-    email = (payload.get("email") or "").strip().lower()
-    password = payload.get("password") or ""
-
-    row = db.get_user_by_email(email)
-    if not row or not verify_password(password, row["password_hash"], row["password_salt"]):
-        raise HTTPException(status_code=401, detail="invalid_credentials")
-
-    token = create_token(row["id"])
-    return {"token": token, "user": _user_public(row), "profile": db.get_profile(row["id"])}
-
-
-# ---------------------------------------------------------------------------
 # Routes — health profile
 # ---------------------------------------------------------------------------
 
 @app.get("/profile")
-def get_profile(authorization: str | None = Header(None)) -> dict:
-    user_id = _require_user_id(authorization)
+def get_profile(user_id: str = Depends(_require_client_user_id)) -> dict:
     profile = db.get_profile(user_id)
     if not profile:
         raise HTTPException(status_code=404, detail="profile_not_found")
@@ -640,19 +800,46 @@ def get_profile(authorization: str | None = Header(None)) -> dict:
 
 
 @app.put("/profile")
-def put_profile(payload: dict = Body(...), authorization: str | None = Header(None)) -> dict:
-    user_id = _require_user_id(authorization)
+def put_profile(
+    payload: dict = Body(...),
+    user_id: str = Depends(_require_client_user_id),
+) -> dict:
     updates: dict[str, Any] = {}
 
     if "gender" in payload:
-        if payload["gender"] not in GENDERS:
+        gender = payload.get("gender") or None
+        if gender is not None and gender not in GENDERS:
             raise HTTPException(status_code=400, detail="invalid_gender")
-        updates["gender"] = payload["gender"]
+        updates["gender"] = gender
     if "age" in payload:
         age = payload["age"]
         if not isinstance(age, int) or not (0 < age < 120):
             raise HTTPException(status_code=400, detail="invalid_age")
         updates["age"] = age
+    if "email" in payload:
+        email = (payload.get("email") or "").strip().lower()
+        if email and "@" not in email:
+            raise HTTPException(status_code=400, detail="invalid_email")
+        updates["email"] = email or None
+    if "birth_date" in payload:
+        birth_date = (payload.get("birth_date") or "").strip()
+        if birth_date:
+            try:
+                parsed_birth_date = date.fromisoformat(birth_date)
+            except ValueError as exc:
+                raise HTTPException(status_code=400, detail="invalid_birth_date") from exc
+            if parsed_birth_date > date.today():
+                raise HTTPException(status_code=400, detail="invalid_birth_date")
+            today = date.today()
+            updates["age"] = today.year - parsed_birth_date.year - (
+                (today.month, today.day) < (parsed_birth_date.month, parsed_birth_date.day)
+            )
+            if not (0 < updates["age"] < 120):
+                raise HTTPException(status_code=400, detail="invalid_birth_date")
+            updates["birth_date"] = birth_date
+        else:
+            updates["birth_date"] = None
+            updates["age"] = None
     for key in ("chronic_conditions", "allergies", "medications"):
         if key in payload:
             value = payload[key]
@@ -660,6 +847,8 @@ def put_profile(payload: dict = Body(...), authorization: str | None = Header(No
                 raise HTTPException(status_code=400, detail=f"invalid_{key}")
             updates[key] = value
     for key in db.PROFILE_TEXT_FIELDS:
+        if key in {"email", "birth_date"}:
+            continue
         if key in payload:
             value = payload[key]
             if value is not None and not isinstance(value, str):
@@ -680,16 +869,20 @@ TIME_SLOT_RE = re.compile(r"\d{2}:\d{2}-\d{2}:\d{2}")
 
 
 @app.get("/calendar")
-def list_calendar(month: str | None = None, authorization: str | None = Header(None)) -> dict:
-    user_id = _require_user_id(authorization)
+def list_calendar(
+    month: str | None = None,
+    user_id: str = Depends(_require_client_user_id),
+) -> dict:
     if month and not re.fullmatch(r"\d{4}-\d{2}", month):
         raise HTTPException(status_code=400, detail="invalid_month")
     return {"entries": db.list_calendar_entries(user_id, month)}
 
 
 @app.post("/calendar")
-def create_calendar_entry(payload: dict = Body(...), authorization: str | None = Header(None)) -> dict:
-    user_id = _require_user_id(authorization)
+def create_calendar_entry(
+    payload: dict = Body(...),
+    user_id: str = Depends(_require_client_user_id),
+) -> dict:
     entry_date = payload.get("entry_date")
     entry_type = payload.get("type", "khac")
     title = (payload.get("title") or "").strip()
@@ -744,8 +937,10 @@ def create_calendar_entry(payload: dict = Body(...), authorization: str | None =
 
 
 @app.delete("/calendar/{entry_id}")
-def delete_calendar_entry(entry_id: str, authorization: str | None = Header(None)) -> dict:
-    user_id = _require_user_id(authorization)
+def delete_calendar_entry(
+    entry_id: str,
+    user_id: str = Depends(_require_client_user_id),
+) -> dict:
     if not db.delete_calendar_entry(user_id, entry_id):
         raise HTTPException(status_code=404, detail="not_found")
     return {"ok": True}
@@ -835,12 +1030,12 @@ def _book_doctor_slot_for_user(user_id: str, doctor_id: str, visit_date: str, ti
     )
 
     email_notification = "disabled"
-    user = db.get_user_by_id(user_id)
-    if EMAIL_SERVICE.configured and user:
-        profile = db.get_profile(user_id) or {}
+    profile = db.get_profile(user_id) or {}
+    recipient_email = profile.get("email")
+    if EMAIL_SERVICE.configured and recipient_email:
         try:
             EMAIL_SERVICE.send_confirmation(AppointmentEmail(
-                recipient_email=user["email"],
+                recipient_email=recipient_email,
                 patient_name=profile.get("full_name") or "Quý khách",
                 doctor_name=doctor["full_name"],
                 doctor_degree=doctor["degree"],
@@ -889,7 +1084,7 @@ def _maybe_book_from_chat_confirmation(message: str, session_id: str, user_id: s
 
     doctor = booking["doctor"]
     email_text = {
-        "sent": "Email xác nhận đã được gửi tới email tài khoản của bạn.",
+        "sent": "Email xác nhận đã được gửi tới địa chỉ trong hồ sơ của bạn.",
         "failed": "Chưa gửi được email xác nhận, nhưng lịch khám đã được lưu.",
         "disabled": "Chưa cấu hình SMTP nên chưa gửi email, nhưng lịch khám đã được lưu.",
     }.get(booking["email_notification"], "")
@@ -915,9 +1110,7 @@ def list_doctors(
     campus: str | None = None,
     specialty: str | None = None,
     time_slot: str | None = None,
-    authorization: str | None = Header(None),
 ) -> dict:
-    _require_user_id(authorization)
     folded_query = fold_text(query.strip()) if query and query.strip() else None
     if time_slot and not TIME_SLOT_RE.fullmatch(time_slot):
         raise HTTPException(status_code=400, detail="invalid_time_slot")
@@ -949,8 +1142,7 @@ def list_doctors(
 
 
 @app.get("/doctors/{doctor_id}/schedule")
-def get_doctor_schedule(doctor_id: str, authorization: str | None = Header(None)) -> dict:
-    _require_user_id(authorization)
+def get_doctor_schedule(doctor_id: str) -> dict:
     doctor = next((d for d in _load_doctors() if d["id_doctor"] == doctor_id), None)
     if not doctor:
         raise HTTPException(status_code=404, detail="doctor_not_found")
@@ -964,8 +1156,11 @@ def get_doctor_schedule(doctor_id: str, authorization: str | None = Header(None)
 
 
 @app.post("/doctors/{doctor_id}/book")
-def book_doctor_slot(doctor_id: str, payload: dict = Body(...), authorization: str | None = Header(None)) -> dict:
-    user_id = _require_user_id(authorization)
+def book_doctor_slot(
+    doctor_id: str,
+    payload: dict = Body(...),
+    user_id: str = Depends(_require_client_user_id),
+) -> dict:
     return _book_doctor_slot_for_user(
         user_id,
         doctor_id,
@@ -1034,15 +1229,16 @@ def _cycle_prediction(entries: list[dict]) -> dict:
 
 
 @app.get("/cycle")
-def list_cycle(authorization: str | None = Header(None)) -> dict:
-    user_id = _require_user_id(authorization)
+def list_cycle(user_id: str = Depends(_require_client_user_id)) -> dict:
     entries = db.list_cycle_entries(user_id)
     return {"entries": entries, "prediction": _cycle_prediction(entries)}
 
 
 @app.post("/cycle")
-def create_cycle_entry(payload: dict = Body(...), authorization: str | None = Header(None)) -> dict:
-    user_id = _require_user_id(authorization)
+def create_cycle_entry(
+    payload: dict = Body(...),
+    user_id: str = Depends(_require_client_user_id),
+) -> dict:
     period_start_date = payload.get("period_start_date")
     if not period_start_date:
         raise HTTPException(status_code=400, detail="period_start_date_required")
@@ -1059,8 +1255,10 @@ def create_cycle_entry(payload: dict = Body(...), authorization: str | None = He
 
 
 @app.delete("/cycle/{entry_id}")
-def delete_cycle_entry(entry_id: str, authorization: str | None = Header(None)) -> dict:
-    user_id = _require_user_id(authorization)
+def delete_cycle_entry(
+    entry_id: str,
+    user_id: str = Depends(_require_client_user_id),
+) -> dict:
     if not db.delete_cycle_entry(user_id, entry_id):
         raise HTTPException(status_code=404, detail="not_found")
     entries = db.list_cycle_entries(user_id)

@@ -47,7 +47,7 @@ export default function ProfileInfoCard({ icon: Icon, title, fields, values, onS
       {editing ? (
         <div className="profile-card__form">
           {fields.map((f) => (
-            <label key={f.key} className="auth-field">
+            <label key={f.key} className="form-field">
               <span>{f.label}</span>
               {f.readOnly ? (
                 <input value={draft[f.key]} readOnly disabled />

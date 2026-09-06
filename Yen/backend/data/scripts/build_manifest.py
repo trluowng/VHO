@@ -80,13 +80,13 @@ for item in youmed_idx:
     all_chunks.append(chunk)
 documents.append({
     "source_id": "youmed_gioi_thieu",
-    "title": "Hướng dẫn chi tiết khám bệnh tại Bệnh viện Tim Hà Nội (YouMed)",
+    "title": "Hướng dẫn chi tiết khám bệnh tại bệnh viện (YouMed)",
     "loai_tai_lieu": "bai_viet_gioi_thieu",
     "category": "gioi_thieu_benh_vien",
     "source_doc": "youmed.vn",
     "nguon_ben_thu_ba": True,
     "raw_file": None,
-    "nguon": "https://youmed.vn/tin-tuc/benh-vien-tim-ha-noi/",
+    "nguon": "https://youmed.vn/",
     "tac_gia": "YouMed",
     "ngay_dang": "2026-04-17",
     "ngay_cap_nhat": "2026-06-10",
@@ -124,25 +124,25 @@ simple_doc_groups = [
             "raw/nv_sodo_Ck.pdf",
             "raw/sodo.jpg",
         ],
-        "nguon": "benhvientimhanoi.vn (URL cụ thể chưa xác định)",
+        "nguon": "website chính thức của bệnh viện (URL cụ thể chưa xác định)",
         "dir": "khoa_phong",
     },
     {
         "source_id": "lich_su_phat_trien",
-        "title": "Quá trình phát triển Bệnh viện Tim Hà Nội",
+        "title": "Quá trình phát triển bệnh viện",
         "loai_tai_lieu": "gioi_thieu_lich_su",
         "category": "gioi_thieu_benh_vien",
         "raw_files": ["raw/Qua_trinh_phat_trien_bv.pdf"],
-        "nguon": "benhvientimhanoi.vn (URL cụ thể chưa xác định)",
+        "nguon": "website chính thức của bệnh viện (URL cụ thể chưa xác định)",
         "dir": "lich_su_phat_trien",
     },
     {
         "source_id": "bookingcare_gioi_thieu",
-        "title": "Bệnh viện Tim Hà Nội — tổng quan và 5 mũi nhọn (BookingCare)",
+        "title": "bệnh viện — tổng quan và 5 mũi nhọn (BookingCare)",
         "loai_tai_lieu": "bai_viet_gioi_thieu",
         "category": "gioi_thieu_benh_vien",
         "nguon_ben_thu_ba": True,
-        "raw_files": ["raw/Bệnh viện Tim Hà Nội.pdf", "raw/5 mũi nhọn của Bệnh viện Tim Hà Nội.pdf"],
+        "raw_files": [],
         "nguon": "bookingcare.vn (URL cụ thể chưa xác định)",
         "dir": "bookingcare_gioi_thieu",
     },
@@ -152,7 +152,7 @@ simple_doc_groups = [
         "loai_tai_lieu": "gioi_thieu_dich_vu",
         "category": "dich_vu_y_te",
         "raw_files": ["raw/Khám sức khỏe cá nhân và tổ chức.pdf"],
-        "nguon": "benhvientimhanoi.vn (URL cụ thể chưa xác định)",
+        "nguon": "website chính thức của bệnh viện (URL cụ thể chưa xác định)",
         "dir": "dich_vu",
     },
 ]
@@ -186,7 +186,7 @@ for sd in simple_doc_groups:
 price_docs = [
     {
         "source_id": "bhyt_2023",
-        "title": "Bảng giá Bảo hiểm y tế - Bệnh viện Tim Hà Nội",
+        "title": "Bảng giá Bảo hiểm y tế - bệnh viện",
         "raw_file": "raw/banggiaBHYT.pdf",
         "structured_files": ["structured/bang_gia_BHYT_full.csv", "structured/bang_gia_BHYT_full.xlsx"],
         "dir": "bhyt_2023",
@@ -194,7 +194,7 @@ price_docs = [
     },
     {
         "source_id": "dvkt_2025",
-        "title": "Giá dịch vụ kỹ thuật áp dụng tại Bệnh viện Tim Hà Nội 2025",
+        "title": "Giá dịch vụ kỹ thuật áp dụng tại bệnh viện 2025",
         "raw_file": "raw/gia_dv_ky_thuat_2025.pdf",
         "structured_files": ["structured/gia_dv_ky_thuat_2025_full.csv", "structured/gia_dv_ky_thuat_2025_full.xlsx"],
         "dir": "dvkt_2025",
@@ -202,7 +202,7 @@ price_docs = [
     },
     {
         "source_id": "dvkt_thuong",
-        "title": "Bảng giá Dịch vụ kỹ thuật - Bệnh viện Tim Hà Nội",
+        "title": "Bảng giá Dịch vụ kỹ thuật - bệnh viện",
         "raw_file": "raw/banggiaDVKT.pdf",
         "structured_files": ["structured/banggiaDVKT_full.csv", "structured/banggiaDVKT_full.xlsx"],
         "dir": "dvkt_thuong",
@@ -210,7 +210,7 @@ price_docs = [
     },
     {
         "source_id": "dvkt_yeu_cau",
-        "title": "Bảng giá Dịch vụ kỹ thuật theo yêu cầu - Bệnh viện Tim Hà Nội",
+        "title": "Bảng giá Dịch vụ kỹ thuật theo yêu cầu - bệnh viện",
         "raw_file": "raw/banggiaDVKTYC.pdf",
         "structured_files": ["structured/banggiaDVKTYC_full.csv", "structured/banggiaDVKTYC_full.xlsx"],
         "dir": "dvkt_yeu_cau",
@@ -240,7 +240,7 @@ for pd_ in price_docs:
 
 manifest = {
     "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
-    "benh_vien": "Bệnh viện Tim Hà Nội",
+    "benh_vien": "bệnh viện",
     "so_luong_tai_lieu": len(documents),
     "so_luong_chunk": len(all_chunks),
     "documents": documents,
