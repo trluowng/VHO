@@ -36,6 +36,7 @@ function snapshotProfile(s) {
     missing: s.missing || [],
     facts: s.facts || {},
     stage: s.stage,
+    patientContext: s.patientContext || null,
   }
 }
 function lastLevel(items) {
@@ -229,7 +230,14 @@ export default function ChatPage() {
         const data = await callRealModel(history, text, clientId, sidRef.current)
         const ms = data?._meta?.latencyMs ?? Math.round(performance.now() - t0)
         setTyping(false)
-        if (data.profile) setSession((s) => ({ ...createSession(), ...data.profile, result: s.result }))
+        if (data.profile) {
+          setSession((s) => ({
+            ...createSession(),
+            ...data.profile,
+            patientContext: data.patient_context || s.patientContext || null,
+            result: s.result,
+          }))
+        }
         if (data.health_profile) syncProfile(data.health_profile)
         await playEvents(data.events || [], { ms, source: 'gemini' })
       } catch (err) {

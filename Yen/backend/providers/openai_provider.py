@@ -93,6 +93,7 @@ _TRIAGE_TRIAGE_SCHEMA: dict[str, Any] = {
         "eyebrow": {"type": "string"},
         "label": {"type": "string"},
         "icon": {"type": "string"},
+        "preliminaryAssessment": {"type": "string"},
         "reason": {"type": "string"},
         "conditions": {
             "type": "array",
@@ -117,7 +118,10 @@ _TRIAGE_TRIAGE_SCHEMA: dict[str, Any] = {
             },
         },
     },
-    "required": ["level", "eyebrow", "label", "icon", "reason", "conditions", "actions", "missing", "confTier", "confidence", "ctas"],
+    "required": [
+        "level", "eyebrow", "label", "icon", "preliminaryAssessment", "reason",
+        "conditions", "actions", "missing", "confTier", "confidence", "ctas",
+    ],
     "additionalProperties": False,
 }
 
@@ -176,6 +180,34 @@ _HEALTH_PROFILE_UPDATES_SCHEMA: dict[str, Any] = {
     "additionalProperties": False,
 }
 
+_PATIENT_CONTEXT_SCHEMA: dict[str, Any] = {
+    "type": "object",
+    "properties": {
+        "relationship": {
+            "type": ["string", "null"],
+            "enum": ["self", "son", "daughter", "mother", "father", "spouse", "other", None],
+        },
+        "age": {"type": ["integer", "null"]},
+        "gender": {"type": ["string", "null"], "enum": ["nam", "nu", None]},
+        "chronic_conditions": {
+            "type": ["array", "null"],
+            "items": {"type": "string"},
+        },
+        "allergies": {
+            "type": ["array", "null"],
+            "items": {"type": "string"},
+        },
+        "medications": {
+            "type": ["array", "null"],
+            "items": {"type": "string"},
+        },
+    },
+    "required": [
+        "relationship", "age", "gender", "chronic_conditions", "allergies", "medications",
+    ],
+    "additionalProperties": False,
+}
+
 _TRIAGE_RESPONSE_SCHEMA: dict[str, Any] = {
     "type": "object",
     "properties": {
@@ -211,8 +243,9 @@ _TRIAGE_RESPONSE_SCHEMA: dict[str, Any] = {
             "additionalProperties": False,
         },
         "health_profile_updates": _HEALTH_PROFILE_UPDATES_SCHEMA,
+        "patient_context": _PATIENT_CONTEXT_SCHEMA,
     },
-    "required": ["events", "profile", "health_profile_updates"],
+    "required": ["events", "profile", "health_profile_updates", "patient_context"],
     "additionalProperties": False,
 }
 

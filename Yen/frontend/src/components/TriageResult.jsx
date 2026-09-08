@@ -2,7 +2,19 @@ import { motion } from 'framer-motion'
 import { Info, ArrowRight } from './icons.jsx'
 
 export default function TriageResult({ triage, onCta }) {
-  const { level, eyebrow, label, icon, reason, conditions = [], actions = [], missing = [], confTier, ctas = [] } = triage
+  const {
+    level,
+    eyebrow,
+    label,
+    icon,
+    preliminaryAssessment,
+    reason,
+    conditions = [],
+    actions = [],
+    missing = [],
+    confTier,
+    ctas = [],
+  } = triage
 
   return (
     <motion.div
@@ -27,9 +39,16 @@ export default function TriageResult({ triage, onCta }) {
       </div>
 
       <div className="triage__body">
+        {preliminaryAssessment && (
+          <div>
+            <div className="triage__section-l">Nhận định sơ bộ</div>
+            <p className="triage__reason">{preliminaryAssessment}</p>
+          </div>
+        )}
+
         <div>
           <div className="triage__section-l">Vì sao có kết luận này</div>
-          <p className="triage__reason" dangerouslySetInnerHTML={{ __html: reason.replace(/Dựa trên/g, '<b>Dựa trên</b>') }} />
+          <p className="triage__reason" dangerouslySetInnerHTML={{ __html: (reason || '').replace(/Dựa trên/g, '<b>Dựa trên</b>') }} />
         </div>
 
         {confTier === 'low' && missing.length > 0 && (
@@ -65,7 +84,7 @@ export default function TriageResult({ triage, onCta }) {
 
         <div className="triage__disc">
           <Info />
-          <span>Đây <b>không phải chẩn đoán y khoa</b>. Kết quả chỉ mang tính tham khảo để giúp bạn quyết định bước tiếp theo.</span>
+          <span>Đây là <b>nhận định sơ bộ, không phải chẩn đoán xác định</b>. Kết quả giúp bạn quyết định bước tiếp theo.</span>
         </div>
 
         <div className="triage__foot">

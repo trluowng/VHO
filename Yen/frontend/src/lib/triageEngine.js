@@ -37,6 +37,7 @@ const SYMPTOMS = [
   { label: 'Tiêu chảy', kw: ['tiêu chảy', 'đi ngoài', 'đi lỏng'], specific: true },
   { label: 'Đau lưng', kw: ['đau lưng', 'đau thắt lưng'], specific: true },
   { label: 'Phát ban', kw: ['phát ban', 'nổi mẩn', 'nổi mề đay', 'ngứa da'], specific: true },
+  { label: 'Mộng tinh', kw: ['mộng tinh', 'xuất tinh khi ngủ', 'ướt quần khi ngủ'], specific: true },
 ]
 
 /* ---- Bệnh nền / thuốc — dùng cho Correction path ---- */
@@ -90,7 +91,16 @@ export function createSession() {
   return {
     stage: 'intake', // intake → questioning → done → emergency
     symptoms: [],
-    facts: { duration: null, severity: null, associated: null, temp: null, context: null },
+    facts: {
+      duration: null,
+      severity: null,
+      associated: null,
+      temp: null,
+      context: null,
+      progression: null,
+      impact: null,
+      frequency: null,
+    },
     pendingDim: null,
     askedDims: [],
     turns: 0,
@@ -99,6 +109,7 @@ export function createSession() {
     missing: [],
     redFlag: null,
     result: null,
+    patientContext: null,
   }
 }
 
@@ -110,6 +121,18 @@ const uniqBy = (arr, key) => {
 /* ---- Confidence + missing-info ---- */
 function score(s) {
   const specific = s.symptoms.filter((x) => x.specific).length
+  const isWetDream = s.symptoms.some((x) => x.label === 'Mộng tinh')
+  if (isWetDream) {
+    const dims = [specific > 0, s.facts.associated !== null, !!s.facts.frequency, !!s.facts.impact]
+    const known = dims.filter(Boolean).length
+    const conf = Math.max(20, Math.min(94, 28 + known * 15))
+    const missing = []
+    if (s.facts.associated === null) missing.push('Đau, sưng, sốt, buốt tiểu, máu hoặc dịch bất thường')
+    if (!s.facts.frequency) missing.push('Tần suất và việc chỉ xảy ra khi ngủ hay cả lúc thức')
+    if (!s.facts.impact) missing.push('Mức ảnh hưởng đến giấc ngủ hoặc tâm lý')
+    const tier = conf >= 72 ? 'high' : conf >= 50 ? 'mid' : 'low'
+    return { conf, tier, missing }
+  }
   const dims = [
     specific > 0,
     !!s.facts.duration,
@@ -140,6 +163,25 @@ function nextQuestion(s) {
   const has = (d) => asked.includes(d)
   const sl = s.symptoms.map((x) => x.label)
   const isResp = sl.includes('Sốt') || sl.includes('Đau họng') || sl.includes('Ho')
+  const isWetDream = sl.includes('Mộng tinh')
+
+  if (isWetDream) {
+    if (s.facts.associated === null && !has('pubertyWarning')) {
+      return {
+        dim: 'pubertyWarning',
+        text: 'Ngoài mộng tinh, cháu có đau hoặc sưng vùng tinh hoàn, sốt, buốt tiểu, có máu hay dịch bất thường không?',
+        quick: ['Không có', 'Đau hoặc sưng', 'Buốt tiểu/sốt', 'Có máu hoặc dịch bất thường'],
+      }
+    }
+    if (!s.facts.frequency && !has('pubertyPattern')) {
+      return {
+        dim: 'pubertyPattern',
+        text: 'Tình trạng chỉ xảy ra khi ngủ hay cả lúc thức, và có làm cháu mất ngủ hoặc lo lắng nhiều không?',
+        quick: ['Chỉ khi ngủ, không ảnh hưởng', 'Chỉ khi ngủ nhưng cháu lo lắng', 'Có cả lúc thức'],
+      }
+    }
+    return null
+  }
 
   if (!s.facts.duration && !has('duration')) {
     return {
@@ -170,6 +212,20 @@ function nextQuestion(s) {
       quick: ['Có', 'Không'],
     }
   }
+  if (!s.facts.progression && !has('progression')) {
+    return {
+      dim: 'progression',
+      text: 'Trong thời gian theo dõi, triệu chứng đang đỡ dần, gần như không đổi hay nặng lên?',
+      quick: ['Đỡ dần', 'Gần như không đổi', 'Nặng lên'],
+    }
+  }
+  if (!s.facts.impact && !has('impact')) {
+    return {
+      dim: 'impact',
+      text: 'Triệu chứng ảnh hưởng đến ăn uống, ngủ nghỉ hoặc sinh hoạt của bạn ở mức nào?',
+      quick: ['Gần như không ảnh hưởng', 'Ảnh hưởng một phần', 'Không ăn/uống/ngủ được'],
+    }
+  }
   return null
 }
 
@@ -195,6 +251,17 @@ function applyAnswer(s, text) {
     s.facts.associated = /có|đúng|ừ|phải|vâng/.test(t) && !/không/.test(t)
   } else if (dim === 'severity') {
     s.facts.severity = /nặng|dữ|nhiều/.test(t) ? 'nặng' : /vừa|trung/.test(t) ? 'vừa' : 'nhẹ'
+  } else if (dim === 'progression') {
+    s.facts.progression = text.trim()
+  } else if (dim === 'impact') {
+    s.facts.impact = text.trim()
+  } else if (dim === 'pubertyWarning') {
+    const deniesWarning = /không có|không bị|không đau|không sưng|không sốt|không buốt|không thấy máu/.test(t)
+    const addsWarning = /nhưng|tuy nhiên/.test(t) && /đau|sưng|sốt|buốt|máu|dịch bất thường/.test(t)
+    s.facts.associated = addsWarning || !deniesWarning
+  } else if (dim === 'pubertyPattern') {
+    s.facts.frequency = text.trim()
+    s.facts.impact = text.trim()
   }
   s.pendingDim = null
 }
@@ -206,6 +273,10 @@ function decideLevel(s) {
   const severe = s.facts.severity === 'nặng'
   const longDur = /hơn 3|tuần|nhiều/.test(s.facts.duration || '')
   const specific = s.symptoms.filter((x) => x.specific).length
+
+  if (sl.includes('Mộng tinh')) {
+    return s.facts.associated ? 'amber' : 'green'
+  }
 
   // See Doctor (amber): sốt + ≥1 triệu chứng hô hấp, hoặc sốt cao, hoặc nặng + kéo dài
   const respCombo = sl.includes('Sốt') && (sl.includes('Đau họng') || sl.includes('Ho') || s.facts.associated)
@@ -223,6 +294,7 @@ function buildResult(s) {
   const level = decideLevel(s)
   const sl = s.symptoms.map((x) => x.label)
   const lowConf = tier === 'low'
+  const isWetDream = sl.includes('Mộng tinh')
 
   const symptomPhrase = () => {
     const parts = [...sl]
@@ -242,6 +314,10 @@ function buildResult(s) {
     symptoms: sl,
     facts: s.facts,
   }
+  const conditionSummary = sl.map((name) => ({
+    name: s.facts.duration ? `${name} — ${s.facts.duration}` : name,
+    pct: '',
+  }))
 
   if (level === 'green') {
     return {
@@ -249,15 +325,24 @@ function buildResult(s) {
       eyebrow: 'Khuyến nghị',
       label: 'Theo dõi & tự chăm sóc tại nhà',
       icon: '🌿',
+      preliminaryAssessment: isWetDream
+        ? 'Khả năng phù hợp nhất là hiện tượng sinh lý của tuổi dậy thì (xuất tinh trong lúc ngủ), chưa gợi ý bệnh lý khi không kèm dấu hiệu bất thường.'
+        : 'Các thông tin hiện tại phù hợp hơn với một tình trạng nhẹ hoặc biến đổi sinh lý; chưa đủ cơ sở để khẳng định một bệnh cụ thể.',
       reason: lowConf
         ? `Dựa trên thông tin hiện có (${symptomPhrase()}), triệu chứng chưa đủ rõ để đánh giá chắc chắn, nhưng chưa thấy dấu hiệu cần xử lý gấp.`
         : `Dựa trên ${symptomPhrase()}, các dấu hiệu hiện ở mức nhẹ và thường tự cải thiện.`,
-      conditions: lowConf ? [] : [{ name: 'Mệt mỏi do căng thẳng / thiếu ngủ', pct: '' }, { name: 'Nhiễm siêu vi nhẹ', pct: '' }],
-      actions: [
-        'Nghỉ ngơi, uống đủ nước và theo dõi thêm 24–48h',
-        'Ghi lại nếu triệu chứng nặng lên hoặc xuất hiện dấu hiệu mới',
-        'Đến khám nếu kéo dài quá 3 ngày hoặc bạn thấy bất an',
-      ],
+      conditions: conditionSummary,
+      actions: isWetDream
+        ? [
+            'Giải thích cho trẻ rằng đây thường là thay đổi tự nhiên của tuổi dậy thì và không đáng xấu hổ',
+            'Giữ vệ sinh thông thường, thay quần áo hoặc ga giường khi cần và tôn trọng sự riêng tư của trẻ',
+            'Đưa trẻ đi khám nếu xuất hiện đau, sưng, sốt, buốt tiểu, máu hoặc dịch bất thường',
+          ]
+        : [
+            'Nghỉ ngơi, uống đủ nước và theo dõi thêm 24–48h',
+            'Ghi lại nếu triệu chứng nặng lên hoặc xuất hiện dấu hiệu mới',
+            'Đến khám nếu kéo dài quá 3 ngày hoặc bạn thấy bất an',
+          ],
       missing: lowConf ? missing : [],
       ctas: lowConf
         ? [{ label: 'Mô tả thêm', kind: 'ghost' }, { label: 'Lưu tóm tắt', kind: 'primary' }]
@@ -271,16 +356,21 @@ function buildResult(s) {
     eyebrow: 'Khuyến nghị',
     label: 'Nên gặp bác sĩ trong 24 giờ',
     icon: '🩺',
-    reason: `Dựa trên ${symptomPhrase()}. Tổ hợp triệu chứng này nên được bác sĩ thăm khám để loại trừ nhiễm trùng cần điều trị.`,
-    conditions: [
-      { name: 'Cúm mùa (Influenza)', pct: '' },
-      { name: 'Viêm họng do virus', pct: '' },
-    ],
-    actions: [
-      'Uống nhiều nước, có thể dùng thuốc hạ sốt theo liều khuyến cáo',
-      'Đặt lịch khám trong 24h, mang theo bản tóm tắt này',
-      'Đến cấp cứu ngay nếu khó thở, sốt > 39.5°C hoặc lơ mơ',
-    ],
+    preliminaryAssessment: isWetDream
+      ? 'Đây là biểu hiện xuất tinh trong lúc ngủ, nhưng dấu hiệu đi kèm chưa cho phép xem là biến đổi sinh lý đơn thuần và cần được đánh giá trực tiếp.'
+      : 'Có dấu hiệu cần được khám trực tiếp để làm rõ nguyên nhân; chưa thể xác định bệnh cụ thể chỉ qua hội thoại.',
+    reason: `Dựa trên ${symptomPhrase()}, các dấu hiệu đi kèm cần được bác sĩ thăm khám trực tiếp để làm rõ.`,
+    conditions: conditionSummary,
+    actions: isWetDream
+      ? [
+          'Đặt lịch khám chuyên khoa Nhi để đánh giá các dấu hiệu đi kèm',
+          'Đến cấp cứu ngay nếu đau tinh hoàn đột ngột, dữ dội hoặc kèm sưng, buồn nôn/nôn',
+        ]
+      : [
+          'Nghỉ ngơi, uống đủ nước và theo dõi diễn tiến',
+          'Đặt lịch khám trong 24 giờ, mang theo bản tóm tắt này',
+          'Đến cấp cứu ngay nếu khó thở, sốt rất cao hoặc lơ mơ',
+        ],
     missing: lowConf ? missing : [],
     ctas: [{ label: 'Lưu tóm tắt cho bác sĩ', kind: 'primary' }, { label: 'Bắt đầu lại', kind: 'ghost' }],
   }
@@ -368,9 +458,10 @@ export function handleUser(prev, text) {
     s.missing = sc.missing
 
     const enough = sc.tier !== 'low' && s.facts.duration && (s.facts.associated !== null || s.facts.severity || s.facts.temp)
+    const minimumFollowupsDone = s.turns >= 2
     const q = nextQuestion(s)
 
-    if (q && s.turns < 3 && !enough) {
+    if (q && s.turns < 3 && (!enough || !minimumFollowupsDone)) {
       s.pendingDim = q.dim
       s.askedDims = [...s.askedDims, q.dim]
       return { session: s, events: [{ type: 'question', text: q.text, quick: q.quick }] }

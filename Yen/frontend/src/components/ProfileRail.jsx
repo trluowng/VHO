@@ -10,6 +10,14 @@ const TIER = {
   high: { cls: 'high', text: 'Độ chắc chắn: Cao' },
 }
 const RING_COLOR = { none: '#c3bca8', low: '#d99a45', mid: '#3e6b5c', high: '#4f8a5f' }
+const RELATIONSHIP_LABEL = {
+  son: 'Con trai',
+  daughter: 'Con gái',
+  mother: 'Mẹ',
+  father: 'Bố',
+  spouse: 'Vợ/chồng',
+  other: 'Người thân',
+}
 
 function useCountUp(target) {
   const [val, setVal] = useState(target)
@@ -62,7 +70,9 @@ function ConfidenceRing({ value, tier }) {
 }
 
 export default function ProfileRail({ session, onEditSymptoms }) {
-  const { symptoms = [], confidence = 0, confTier = 'none', missing = [], stage, facts = {} } = session
+  const {
+    symptoms = [], confidence = 0, confTier = 'none', missing = [], stage, facts = {}, patientContext,
+  } = session
   const tier = TIER[confTier] || TIER.none
   const [editing, setEditing] = useState(false)
   const [adding, setAdding] = useState(false)
@@ -84,6 +94,21 @@ export default function ProfileRail({ session, onEditSymptoms }) {
 
   return (
     <aside className="rail">
+      {patientContext?.relationship && patientContext.relationship !== 'self' && (
+        <section className="panel">
+          <p className="panel__label">Đang đánh giá cho</p>
+          <div className="chips">
+            <span className="chip chip--fact">
+              {RELATIONSHIP_LABEL[patientContext.relationship] || 'Người thân'}
+            </span>
+            {patientContext.age && <span className="chip chip--fact">{patientContext.age} tuổi</span>}
+            {patientContext.gender && (
+              <span className="chip chip--fact">{patientContext.gender === 'nam' ? 'Nam' : 'Nữ'}</span>
+            )}
+          </div>
+        </section>
+      )}
+
       {/* Confidence */}
       <section className="panel">
         <p className="panel__label">Độ chắc chắn đánh giá</p>
