@@ -7,9 +7,6 @@
 > tab theo dõi chu kỳ kinh nguyệt). Ô chat hỗ trợ **nhập tiếng Việt bằng micro** qua module
 > `backend/stt`. Lấy cảm hứng & cải tiến từ Ada Health (track Healthcare).
 
-Prototype cho Day 06 — built với React + Vite + Framer Motion (frontend), FastAPI + SQLite (backend).
-
----
 
 ## Sử dụng không cần đăng nhập
 
